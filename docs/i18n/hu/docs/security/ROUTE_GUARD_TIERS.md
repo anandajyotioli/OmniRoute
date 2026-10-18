@@ -194,6 +194,7 @@ szerverfolyamatot.
 | `/api/settings/import-json`               | Lecseréli a teljes beállításblokkot                                            |
 | `/api/providers/health-autopilot/actions` | Végrehajtja az autopilot helyreállítási műveleteit                             |
 | `/api/settings/obsidian`                  | Újrafelhasználható WebDAV-hitelesítőadatokat hoz létre bármely vault-gyökérhez |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                   |
 
 **Válasz szabálysértés esetén:** `401 Authentication required`
 

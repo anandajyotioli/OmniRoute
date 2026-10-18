@@ -47,7 +47,7 @@ Repository map and Reference Documentation sections below.
 
 ## Project at a Glance
 
-**OmniRoute** — unified AI proxy/router. One endpoint, 375 LLM providers, auto-fallback.
+**OmniRoute** — unified AI proxy/router. One endpoint, 374 LLM providers, auto-fallback.
 
 | Layer         | Location                | Purpose                                                                                                                                                                   |
 | ------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -57,7 +57,7 @@ Repository map and Reference Documentation sections below.
 | Translators   | `open-sse/translator/`  | Format conversion (OpenAI↔Claude↔Gemini)                                                                                                                                  |
 | Transformer   | `open-sse/transformer/` | Responses API ↔ Chat Completions                                                                                                                                          |
 | Services      | `open-sse/services/`    | Combo routing, rate limits, caching, etc                                                                                                                                  |
-| Database      | `src/lib/db/`           | SQLite domain modules (203 migrations)                                                                                                                                    |
+| Database      | `src/lib/db/`           | SQLite domain modules (206 migrations)                                                                                                                                    |
 | Domain/Policy | `src/domain/`           | Policy engine, cost rules, fallback logic                                                                                                                                 |
 | MCP Server    | `open-sse/mcp-server/`  | 110 tools (45 canonical + memory/skill/GitHub/pool/gamification/plugin/Notion/Obsidian/local-corpus/RTK modules), 3 transports (stdio / SSE / Streamable HTTP), 33 scopes |
 | A2A Server    | `src/lib/a2a/`          | JSON-RPC 2.0 agent protocol                                                                                                                                               |
@@ -115,7 +115,9 @@ upstream/service level, so one unhealthy provider does not slow down every reque
 
 - `CLOSED`: normal traffic is allowed.
 - `DEGRADED`: early-warning band — failures crossed the degradation threshold but not the
-  breaker threshold yet; traffic still flows, dashboards show the warning.
+  breaker threshold yet; traffic still flows, dashboards show the warning. A valid connection
+  test or a quiet window with no new failure returns it to `CLOSED`
+  (`docs/architecture/RESILIENCE_GUIDE.md` has the window).
 - `OPEN`: provider is temporarily blocked; callers get a provider-circuit-open response
   or combo routing skips to another target.
 - `HALF_OPEN`: reset timeout has elapsed; allow a probe request. Success closes the

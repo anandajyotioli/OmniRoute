@@ -49,9 +49,9 @@ OmniRoute berjalan di `http://localhost:20128`. Dasbor akan terbuka secara otoma
 
 ## Langkah 3: Hubungkan Penyedia yang Memenuhi Syarat
 
-Pilih penyedia dengan ketentuan dan kuota yang sesuai dengan kebutuhan Anda. Di **Dasbor → Penyedia**, hubungkan akun atau kunci API Anda sendiri, lalu uji koneksinya. Akses gratis dan ketersediaan tanpa kunci tidak dijamin.
+Pilih penyedia yang ketentuan dan kuotanya sesuai dengan kebutuhan Anda. Di **Dashboard → Providers**, hubungkan akun atau kunci API Anda sendiri, lalu uji koneksinya. Akses gratis dan ketersediaan tanpa kunci tidak dijamin.
 
-Secara default, `auto` mengecualikan penyedia yang ditandai `tos: avoid`, termasuk Kiro dan OpenCode Free. Menghubungkan akun tidak mengubah kebijakan tersebut. Opsi persetujuan di **Dasbor → Kombinasi** berlaku untuk semua kombinasi otomatis. Tinjau [Panduan Tingkat Gratis](./FREE-TIERS-GUIDE.md) sebelum memilih penyedia.
+`auto` secara default mengecualikan penyedia yang ditandai `tos: avoid`, termasuk Kiro. Menghubungkan akun tidak mengubah kebijakan tersebut. Pilihan untuk ikut serta di **Dashboard → Combos** berlaku untuk semua kombinasi otomatis. Tinjau [Panduan Tingkat Gratis](./FREE-TIERS-GUIDE.md) sebelum memilih penyedia.
 
 ---
 
@@ -128,7 +128,7 @@ Anda dapat melihat detail permintaan dengan mengeklik [Pemantauan/Log](http://lo
 
 ---
 
-## Selanjutnya?
+## Apa Selanjutnya?
 
 - **[Panduan Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Biarkan OmniRoute memilih AI terbaik untuk Anda
 - **[Panduan Penyedia](./PROVIDERS-GUIDE.md)** — Hubungkan lebih banyak penyedia (gratis dan berbayar)
@@ -141,21 +141,21 @@ Anda dapat melihat detail permintaan dengan mengeklik [Pemantauan/Log](http://lo
 
 ### "Apakah saya memerlukan kunci API?"
 
-Kunci API OmniRoute mengautentikasi alat Anda. Kredensial upstream bergantung pada penyedia: beberapa memerlukan kunci API atau login akun. Akses gratis tidak dijamin.
+Kunci API OmniRoute mengautentikasi alat Anda. Kredensial upstream bergantung pada penyedia: beberapa penyedia memerlukan kunci API atau login akun. Akses gratis tidak dijamin.
 
 ### "Apa itu `auto`?"
 
-`auto` menginstruksikan OmniRoute untuk secara otomatis memilih penyedia terbaik bagi setiap permintaan. Pilihan ini mempertimbangkan kecepatan, biaya, kualitas, dan ketersediaan. Lihat [Panduan Auto-Combo](./AUTO-COMBO-GUIDE.md) untuk detailnya.
+`auto` memberi tahu OmniRoute agar secara otomatis memilih penyedia terbaik untuk setiap permintaan. Pilihan ini mempertimbangkan kecepatan, biaya, kualitas, dan ketersediaan. Lihat [Panduan Auto-Combo](./AUTO-COMBO-GUIDE.md) untuk detailnya.
 
 ### "Berapa biayanya?"
 
-OmniRoute sendiri **gratis dan bersumber terbuka**. Anda hanya membayar penyedia yang Anda gunakan. Banyak penyedia memiliki tingkat layanan gratis — lihat [Panduan Tingkat Layanan Gratis](./FREE-TIERS-GUIDE.md).
+OmniRoute sendiri **gratis dan bersumber terbuka**. Anda hanya membayar penyedia yang Anda gunakan. Banyak penyedia memiliki paket gratis — lihat [Panduan Paket Gratis](./FREE-TIERS-GUIDE.md).
 
-### "Bisakah saya menggunakannya dengan Claude Code / Cursor / Copilot?"
+### "Dapatkah saya menggunakannya dengan Claude Code / Cursor / Copilot?"
 
-**Ya!** OmniRoute dapat digunakan dengan alat apa pun yang mendukung format OpenAI. Cukup atur URL dasar ke `http://localhost:20128/v1`. Lihat [Panduan Alat CLI](../reference/CLI-TOOLS.md) untuk petunjuk penyiapan spesifik.
+**Ya!** OmniRoute berfungsi dengan alat apa pun yang mendukung format OpenAI. Cukup atur URL dasar ke `http://localhost:20128/v1`. Lihat [Panduan Alat CLI](../reference/CLI-TOOLS.md) untuk petunjuk penyiapan khusus.
 
-### "Bagaimana jika suatu penyedia mengalami gangguan?"
+### "Bagaimana jika suatu penyedia tidak berfungsi?"
 
 OmniRoute secara otomatis melewati penyedia yang gagal dan mencoba penyedia berikutnya. Anda tidak perlu melakukan apa pun. Lihat [Panduan Auto-Combo](./AUTO-COMBO-GUIDE.md) untuk detailnya.
 

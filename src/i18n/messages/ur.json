@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "دستیابی کے مطابق کنکشنز کو دوبارہ ترتیب دیں",
     "reorderByAvailabilityError": "دستیابی کے مطابق کنکشنز کو دوبارہ ترتیب دینے میں ناکامی",
     "distributeProxies": "پروکسیز تقسیم کریں",
+    "clearAccountProxies": "اکاؤنٹ پراکسیز ہٹائیں",
+    "clearAccountProxyAssignments": "تفویضات ہٹائیں",
+    "clearAccountProxiesConfirm": "اس فراہم کنندہ کے تمام {count} اکاؤنٹس سے انفرادی پراکسی تفویضات ہٹا دیں، بشمول غیر فعال اکاؤنٹس؟ محفوظ شدہ پراکسیز اور فراہم کنندہ/عالمی تفویضات برقرار رہیں گی۔ اکاؤنٹس دوبارہ فراہم کنندہ/عالمی پراکسی ترتیبات اپنائیں گے۔",
+    "accountProxiesCleared": "اکاؤنٹ پراکسی تفویضات ہٹا دی گئیں۔",
+    "clearAccountProxiesPartial": "{count} اکاؤنٹ (اکاؤنٹس) کو مکمل طور پر ری سیٹ نہیں کیا جا سکا۔ دکھائی گئی تفویضات تازہ کر دی گئی ہیں؛ آپ دوبارہ کوشش کر سکتے ہیں۔",
+    "clearAccountProxiesError": "اکاؤنٹ پراکسیز کو ری سیٹ یا ان کی حیثیت کو تازہ نہیں کیا جا سکا۔ براہ کرم دوبارہ لوڈ کر کے پھر کوشش کریں۔",
     "distributing": "تقسیم کیا جا رہا ہے...",
     "selectedCount": "{count, plural, one {# منتخب شدہ} other {# منتخب شدہ}}",
     "accountsCount": "{count, plural, one {# اکاؤنٹ} other {# اکاؤنٹس}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "بطور ڈیفالٹ ہر 6 گھنٹے بعد ماڈل کی فہرست خودکار طور پر ریفریش کریں (MODEL_SYNC_INTERVAL_HOURS کے ذریعے قابلِ ترتیب)",
     "autoSyncEnabled": "خودکار مطابقت پذیری فعال ہے — ماڈلز وقتاً فوقتاً تازہ ہوتے رہیں گے",
     "autoSyncDisabled": "خودکار مطابقت پذیری غیر فعال ہے",
+    "autoSyncLastSynced": "{time} مطابقت پذیر ہوا",
+    "autoSyncNeverSynced": "کبھی مطابقت پذیر نہیں ہوا",
+    "autoSyncImmediateFailed": "خودکار مطابقت پذیری فعال ہے، مگر ماڈلز کی فوری تازہ کاری ناکام رہی",
+    "autoSyncImmediatePartialFailure": "خودکار مطابقت پذیری فعال ہے، مگر کچھ ماڈلز کی فوری تازہ کاری ناکام رہی",
     "autoSyncToggleFailed": "خودکار مطابقت پذیری تبدیل کرنے میں ناکامی",
     "autoSyncPartialFailure": "کچھ کنکشنز کے لیے خودکار مطابقت پذیری اپ ڈیٹ ہو گئی، مگر سب کے لیے نہیں",
     "clearAllModels": "تمام ماڈلز صاف کریں",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "تقسیم کیا جا رہا ہے...",
       "complete": "مکمل کریں",
-      "defaultLabel": "پراکسیز تقسیم کریں"
+      "defaultLabel": "پراکسیز تقسیم کریں",
+      "confirmMessage": "اس گروپ کے ہر اکاؤنٹ کو محفوظ شدہ پراکسیز تفویض کریں؟ یہ موجودہ اکاؤنٹ تفویضات کو بدل دے گا اور پراکسی روٹنگ فعال کر دے گا، بشمول غیر فعال اکاؤنٹس کے لیے۔",
+      "confirmDistribute": "پراکسیز تقسیم کریں",
+      "cancel": "منسوخ کریں"
     }
   },
   "providerTest": {

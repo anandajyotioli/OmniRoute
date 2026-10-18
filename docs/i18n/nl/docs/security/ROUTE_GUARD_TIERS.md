@@ -198,6 +198,7 @@ serverproces kunnen beëindigen.
 | `/api/settings/import-json`               | Vervangt de volledige instellingenblob                              |
 | `/api/providers/health-autopilot/actions` | Voert herstelacties van de autopilot uit                            |
 | `/api/settings/obsidian`                  | Genereert herbruikbare WebDAV-inloggegevens voor elke kluishoofdmap |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                        |
 
 **Respons bij overtreding:** `401 Authentication required`
 

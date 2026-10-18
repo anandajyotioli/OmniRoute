@@ -180,6 +180,7 @@ LOCAL_ONLYగా వర్గీకరించబడాలి.
 | `/api/settings/import-json`               | పూర్తి సెట్టింగ్స్ బ్లాబ్ను భర్తీ చేస్తుంది                              |
 | `/api/providers/health-autopilot/actions` | ఆటోపైలట్ పరిష్కార చర్యలను అమలు చేస్తుంది                                 |
 | `/api/settings/obsidian`                  | ఏ vault రూట్కైనా పునర్వినియోగించగల WebDAV క్రెడెన్షియల్లను సృష్టిస్తుంది |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                             |
 
 **ఉల్లంఘనపై ప్రతిస్పందన:** `401 Authentication required`
 

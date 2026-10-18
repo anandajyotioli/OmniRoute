@@ -51,7 +51,7 @@ OmniRoute se pokreće na adresi `http://localhost:20128`. Nadzorna ploča otvara
 
 Odaberite pružatelja usluge čiji uvjeti i kvota odgovaraju vašim potrebama. U odjeljku **Nadzorna ploča → Pružatelji usluga** povežite vlastiti račun ili API ključ, a zatim testirajte vezu. Besplatan pristup i dostupnost bez ključa nisu zajamčeni.
 
-`auto` prema zadanim postavkama isključuje pružatelje usluga označene s `tos: avoid`, uključujući Kiro i OpenCode Free. Povezivanje računa ne mijenja ta pravila. Uključivanje opcije u odjeljku **Nadzorna ploča → Kombinacije** primjenjuje se na sve automatske kombinacije. Prije odabira pružatelja usluge pregledajte [Vodič kroz besplatne razine](./FREE-TIERS-GUIDE.md).
+`auto` prema zadanim postavkama isključuje pružatelje usluga označene s `tos: avoid`, uključujući Kiro. Povezivanje računa ne mijenja ta pravila. Dobrovoljno uključivanje u odjeljku **Nadzorna ploča → Kombinacije** primjenjuje se na sve automatske kombinacije. Prije odabira pružatelja usluge pregledajte [Vodič kroz besplatne pakete](./FREE-TIERS-GUIDE.md).
 
 ---
 
@@ -130,10 +130,10 @@ Pojedinosti zahtjeva možete vidjeti klikom na [Nadzor/Zapisnici](http://localho
 
 ## Što slijedi?
 
-- **[Vodič za Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Prepustite OmniRouteu da odabere najbolji AI za vas
+- **[Vodič za Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Dopustite OmniRouteu da odabere najbolji AI za vas
 - **[Vodič za pružatelje usluga](./PROVIDERS-GUIDE.md)** — Povežite više pružatelja usluga (besplatnih i plaćenih)
-- **[Vodič za besplatne razine](./FREE-TIERS-GUIDE.md)** — Pregledajte uvjete pružatelja usluga i ograničenja besplatnih razina
-- **[Rješavanje problema](../guides/TROUBLESHOOTING.md)** — Riješite uobičajene probleme
+- **[Vodič za besplatne pakete](./FREE-TIERS-GUIDE.md)** — Pregledajte uvjete pružatelja usluga i ograničenja besplatnih paketa
+- **[Rješavanje problema](../guides/TROUBLESHOOTING.md)** — Riješite česte probleme
 
 ---
 
@@ -141,7 +141,7 @@ Pojedinosti zahtjeva možete vidjeti klikom na [Nadzor/Zapisnici](http://localho
 
 ### "Trebam li API ključ?"
 
-API ključ za OmniRoute služi za autentifikaciju vaših alata. Pristupni podaci za vanjske pružatelje ovise o pružatelju: neki zahtijevaju API ključ ili prijavu na račun. Besplatan pristup nije zajamčen.
+OmniRoute API ključ služi za autentifikaciju vaših alata. Vjerodajnice za vanjske pružatelje ovise o pružatelju: neki zahtijevaju API ključ ili prijavu na račun. Besplatan pristup nije zajamčen.
 
 ### "Što je `auto`?"
 
@@ -149,15 +149,15 @@ API ključ za OmniRoute služi za autentifikaciju vaših alata. Pristupni podaci
 
 ### "Koliko košta?"
 
-Sam OmniRoute je **besplatan i otvorenog koda**. Plaćate samo pružatelje koje koristite. Mnogi pružatelji imaju besplatne razine — pogledajte [Vodič za besplatne razine](./FREE-TIERS-GUIDE.md).
+Sam OmniRoute je **besplatan i otvorenog koda**. Plaćate samo pružatelje koje upotrebljavate. Mnogi pružatelji imaju besplatne razine — pogledajte [Vodič za besplatne razine](./FREE-TIERS-GUIDE.md).
 
-### "Mogu li ga koristiti s Claude Codeom / Cursorom / Copilotom?"
+### "Mogu li ga upotrebljavati s Claude Codeom / Cursorom / Copilotom?"
 
-**Da!** OmniRoute radi sa svakim alatom koji podržava format OpenAI. Samo postavite osnovni URL na `http://localhost:20128/v1`. Za konkretne upute za postavljanje pogledajte [Vodič za CLI alate](../reference/CLI-TOOLS.md).
+**Da!** OmniRoute radi sa svim alatima koji podržavaju format OpenAI. Samo postavite osnovni URL na `http://localhost:20128/v1`. Konkretne upute za postavljanje potražite u [Vodiču za CLI alate](../reference/CLI-TOOLS.md).
 
 ### "Što ako pružatelj prestane raditi?"
 
-OmniRoute automatski preskače pružatelje koji nisu dostupni i pokušava sa sljedećim. Ne morate ništa poduzeti. Pojedinosti potražite u [Vodiču za Auto-Combo](./AUTO-COMBO-GUIDE.md).
+OmniRoute automatski preskače pružatelje koji ne rade i pokušava sa sljedećim. Ne morate ništa poduzeti. Pojedinosti potražite u [Vodiču za Auto-Combo](./AUTO-COMBO-GUIDE.md).
 
 ---
 

@@ -24,7 +24,7 @@ Ezek az adatok a katalógus különálló külső fiókjait és jogosultsági fe
 | **+ regionális személyazonosság-ellenőrzés mögött** | **+~6M**               | `modelscope` (Alibaba Cloud-összekapcsolás + szárazföldi kínai, valódi névvel történő ellenőrzés). Valós, ismétlődő kvóta, amely `gatedRecurringTokens` / `gatedProviders` néven és az irányítópulton jelenik meg. Soha nem adjuk hozzá a főértékhez: +~6M regionális személyazonosság-ellenőrzés mögött.                                                  |
 | Elméleti felső határ (minden sebességkorlát, 24/7)  | ~10 mrd.               | Minden szolgáltatói sebességkorlát összege, folyamatos használatra kivetítve. **Nem garancia** — ne ezt használja főértékként.                                                                                                                                                                                                                             |
 
-**Őszinte főállítás:** _Az OmniRoute havonta **~1,62 milliárd dokumentált ingyenes tokent** összesít 35 ingyenes csomaghoz tartozó közös kereten keresztül (az első hónapban a regisztrációs jóváírásokkal akár ~2,22 milliárdot), emellett pedig tartósan ingyenes, korlát nélküli szolgáltatók hosszú sorát kínálja — az RTK + Caveman tömörítés pedig ezt tovább növeli (15–95%-os tokenmegtakarítással)._
+**Őszinte főállítás:** _Az OmniRoute havonta **~1,62 milliárd dokumentált ingyenes tokent** összesít 34 ingyenes csomaghoz tartozó közös kereten keresztül (az első hónapban a regisztrációs jóváírásokkal akár ~2,22 milliárdot), emellett pedig tartósan ingyenes, korlát nélküli szolgáltatók hosszú sorát kínálja — az RTK + Caveman tömörítés pedig ezt tovább növeli (15–95%-os tokenmegtakarítással)._
 
 > **Miért csökkent a korábbi ~1,94B értékről.** A 2026-06-17-i frissítés egy pontossági korrekció, nem veszteség: a `gemini` mostantól készletszinten deduplikált (korábban az egyes Flash-változatok külön-külön történő beszámítása felfújta az értéket, 462M → 60M), a `cloudflare-ai` értékét a tényleges napi 10k Neuronra korrigáltuk (122M → 30M), a `doubao` egyszeri regisztrációs jóváírásként lett újrabesorolva (nem ismétlődő), a megszüntetett csomagokat pedig eltávolítottuk (a `chutes`/`phind`/`kluster` megszűnt). Ezt részben ellensúlyozza az `llm7` (a helyes napi 5M → 150M) és az új ingyenes szolgáltatók (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Ezek az adatok a katalógus különálló külső fiókjait és jogosultsági fe
 >
 > **Korrigálva 2026-09-03-án (#11773):** a `cerebras` a havi ismétlődő 30M keretből (a régi, bankkártya nélküli napi 1M tokenes próbaidőszak) egyszeri, fizetési módot igénylő $5 regisztrációs jóváírássá lett újrabesorolva. Ugyanaz a pontossági szabály, mint a LongCat esetében.
 >
-> **Továbbá xKiro (2026-09-03):** az új `xkiro-free` készlet (150M/hó) egy 35. ismétlődő készletkulcsot ad hozzá. A Felo Web továbbra is ki van zárva, amíg a GPL-ből származó eredete/licencelése FELFÜGGESZTETT állapotban van. A forrás most **35 ismétlődő készletkulcsot** és **~1,62B stabil keretet** jelez — ez az élő, CI által ellenőrzött szám (a `check:docs-counts` sikertelenné teszi a buildet, ha ez eltér a `computeFreeModelTotals()` eredményétől).
+> **Továbbá xKiro (2026-09-03):** az új `xkiro-free` készlet (150M/hó) egy 35. ismétlődő készletkulcsot ad hozzá. A Felo Web továbbra is ki van zárva, amíg a GPL-ből származó eredete/licencelése FELFÜGGESZTETT állapotban van. A forrás most **34 ismétlődő készletkulcsot** és **~1,62B stabil keretet** jelez — ez az élő, CI által ellenőrzött szám (a `check:docs-counts` sikertelenné teszi a buildet, ha ez eltér a `computeFreeModelTotals()` eredményétől).
 
 A legnagyobb **dokumentált** hozzájárulók: `mistral` 1,00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (öt modellenkénti korlát), `cloudflare-ai` 30M, `api-airforce` 24M. (A `longcat` ki van zárva — a 10M LongCat-2.0 kerete egyszeri, KYC-hez kötött regisztrációs jóváírás, nem pedig ismétlődő havi keret.)
 
@@ -135,7 +135,6 @@ A legtöbb „ingyenes token havonta” érték ezen a területen a modellenkén
 | `modal`          | A szolgáltatási feltételek 1.3 szakasza kifejezetten tiltja „a Szolgáltatás bérbeadását, viszonteladását, illetve azt, hogy bármely harmadik fél közvetlen hozzáférést kapjon a Szolgáltatáshoz vagy használhassa azt” — egy saját üzemeltetésű… |
 | `muse-spark-web` | A Meta szolgáltatási feltételei kifejezetten tiltják az előzetes engedély nélküli automatizált hozzáférést, az írásos engedély nélküli visszafejtést és a technológiai korlátozások megkerülését…                                                |
 | `nlpcloud`       | A szolgáltatási feltételek kifejezetten tiltják „olyan proxy vagy más eszköz létrehozását, amelyen keresztül mások hozzáférhetnek a Szolgáltatáshoz”, és kizárólag nem átruházható,…                                                             |
-| `opencode`       | A szolgáltatási feltételek (Anomaly Innovations, Inc.) kifejezetten „saját belső használatra, nem pedig harmadik fél nevében vagy javára” korlátozzák a használatot — az ope…                                                                    |
 | `t3-web`         | A szolgáltatási feltételek kifejezetten kizárólag személyes használatra korlátozzák a fiókokat, tiltják a hitelesítő adatok harmadik felekkel való megosztását, valamint az automatizált/bot-/scraping-hozzáférést — egy s…                      |
 
 ### ✅ Általában megengedő — figyelem / nem egyértelmű / rendben (a többi)
@@ -278,7 +277,6 @@ A legtöbb „ingyenes token havonta” érték ezen a területen a modellenkén
 | `muse-spark-web` | kulcs nélküli          | —               | —                  | kerülendő  | 3        |
 | `nlpcloud`       | kulcs nélküli          | —               | —                  | kerülendő  | 1        |
 | `nvidia`         | kulcs nélküli          | —               | —                  | óvatosság  | 13       |
-| `opencode`       | kulcs nélküli          | —               | —                  | kerülendő  | 7        |
 | `pollinations`   | kulcs nélküli          | —               | —                  | óvatosság  | 31       |
 | `publicai`       | kulcs nélküli          | —               | —                  | óvatosság  | 3        |
 | `reka`           | kulcs nélküli          | —               | —                  | óvatosan   | 2        |
@@ -289,10 +287,6 @@ A legtöbb „ingyenes token havonta” érték ezen a területen a modellenkén
 | `uncloseai`      | kulcs nélküli          | —               | —                  | óvatosan   | 3        |
 
 ---
-
-## OpenCode Free: kliensszerződés-korlátozás (#14313)
-
-A kulcs nélküli `opencode` szolgáltató (nyilvános `https://opencode.ai/zen/v1`) minden olyan kérést elutasít **403 `FreeTierError`** hibával és az _„Az OpenCode ingyenes csomagja csak az OpenCode-on belül használható”_ mondattal, amely nem felel meg az OpenCode kliensszerződésének. Ez egy kérésre vonatkozó elutasítás (azonos kérésstruktúra esetén minden fióknál ugyanaz az eredmény), nem modelltiltás vagy kapcsolati várakozási idő — az OmniRoute `project_route_error` kategóriába sorolja, kihagyja a modell zárolását / várakoztatását, és (a szintetikus `noauth` útvonalon) rövid TTL-időre szünetelteti az automatikus kombináció újbóli kiválasztását. Küldjön olyan kéréseket, amelyek nem üres eszközlistát, `stream: true` értéket, valamint az OpenCode munkamenet-/UA-fejléceit (`opencodeFreeTierContract.ts`) tartalmazzák, különben 403-as válaszra számíthat.
 
 ## Mi változott a kiadott katalógus (`freeNote`) óta?
 

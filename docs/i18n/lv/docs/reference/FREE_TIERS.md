@@ -24,7 +24,7 @@
 | **+ nepieciešama reģionālā identitātes pārbaude**     | **+~6M**             | `modelscope` (Alibaba Cloud piesaiste + kontinentālās Ķīnas īstā vārda verifikācija). Reāla regulāra kvota, kas pieejama kā `gatedRecurringTokens` / `gatedProviders` un informācijas panelī. Nekad netiek pieskaitīta kopsavilkuma rādītājam: +~6M pēc reģionālās identitātes verifikācijas.                                                            |
 | Teorētiskie griesti (visi ātruma ierobežojumi, 24/7)  | ~10B                 | Visu nodrošinātāju ātruma ierobežojumu summa, ekstrapolējot uz nepārtrauktu izmantošanu. **Nav garantija** — neizmantojiet to kā galveno rādītāju.                                                                                                                                                                                                       |
 
-**Godīgs kopsavilkums:** _OmniRoute apkopo **~1,62B dokumentētu bezmaksas tokenu mēnesī** (līdz ~2,22B pirmajā mēnesī kopā ar reģistrācijas kredītiem) 35 bezmaksas līmeņu fondos, kā arī piedāvā virkni pastāvīgi bezmaksas nodrošinātāju bez noteikta limita, savukārt RTK + Caveman saspiešana (15–95% tokenu ietaupījums) ļauj šo apjomu izmantot vēl ilgāk._
+**Godīgs kopsavilkums:** _OmniRoute apkopo **~1,62B dokumentētu bezmaksas tokenu mēnesī** (līdz ~2,22B pirmajā mēnesī kopā ar reģistrācijas kredītiem) 34 bezmaksas līmeņu fondos, kā arī piedāvā virkni pastāvīgi bezmaksas nodrošinātāju bez noteikta limita, savukārt RTK + Caveman saspiešana (15–95% tokenu ietaupījums) ļauj šo apjomu izmantot vēl ilgāk._
 
 > **Kāpēc šis skaitlis samazinājās no iepriekšējiem ~1.94B.** 2026-06-17 atjauninājums ir godīguma labojums, nevis zaudējums: `gemini` tagad tiek deduplicēts kopfonda līmenī (iepriekš skaitlis bija palielināts, katru Flash variantu uzskaitot atsevišķi, 462M → 60M), `cloudflare-ai` labots atbilstoši tā faktiskajam 10k Neurons dienā ierobežojumam (122M → 30M), `doubao` pārklasificēts par vienreizēju reģistrācijas kredītu (nevis periodisku), un slēgtie līmeņi noņemti (`chutes`/`phind`/`kluster` darbība pārtraukta). To daļēji kompensē `llm7` (pareizais apjoms 5M dienā → 150M) un jauni bezmaksas nodrošinātāji (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@
 >
 > **Labots 2026-09-03 (#11773):** `cerebras` tika pārklasificēts no periodiska 30M mēnesī piešķīruma (vecais izmēģinājuma piedāvājums bez kartes ar 1M tokenu dienā) uz vienreizēju $5 reģistrācijas kredītu, kam nepieciešams maksāšanas līdzeklis. Tas pats godīguma princips kā LongCat gadījumā.
 >
-> **Turklāt xKiro (2026-09-03):** jaunais `xkiro-free` kopfonds (150M mēnesī) pievieno 35. periodisko kopfonda atslēgu. Felo Web joprojām ir izslēgts, kamēr tā no GPL atvasinātās izcelsmes/licencēšanas statuss paliek HOLD. Avots tagad ziņo par **35 periodiskām kopfonda atslēgām** un **~1.62B stabilā apjomā** — tas ir dinamiskais, CI kontrolētais skaitlis (`check:docs-counts` izraisa būvējuma kļūmi, ja tas novirzās no `computeFreeModelTotals()`).
+> **Turklāt xKiro (2026-09-03):** jaunais `xkiro-free` kopfonds (150M mēnesī) pievieno 35. periodisko kopfonda atslēgu. Felo Web joprojām ir izslēgts, kamēr tā no GPL atvasinātās izcelsmes/licencēšanas statuss paliek HOLD. Avots tagad ziņo par **34 periodiskām kopfonda atslēgām** un **~1.62B stabilā apjomā** — tas ir dinamiskais, CI kontrolētais skaitlis (`check:docs-counts` izraisa būvējuma kļūmi, ja tas novirzās no `computeFreeModelTotals()`).
 
 Lielākie **dokumentētie** avoti: `mistral` 1.00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (pieci katram modelim atsevišķi ierobežojumi), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` ir izslēgts — tā 10M LongCat-2.0 piešķīrums ir vienreizējs, ar KYC ierobežots reģistrācijas kredīts, nevis periodisks mēneša budžets.)
 
@@ -130,7 +130,6 @@ Vairums šajā jomā minēto „bezmaksas žetonu mēnesī” skaitļu ir katram
 | `modal`               | ToS 1.3. sadaļa skaidri aizliedz „iznomāt, tālākpārdot vai citādi ļaut jebkurai trešajai pusei tieši piekļūt Pakalpojumam vai to izmantot” — pašmitināta pakalpojuma izveide…                             |
 | `muse-spark-web`      | Meta ToS skaidri aizliedz automatizētu piekļuvi bez iepriekšējas atļaujas, reverso inženieriju bez rakstiskas atļaujas un tehnoloģisku… apiešanu                                                          |
 | `nlpcloud`            | ToS skaidri aizliedz „izveidot starpniekserveri vai citu ierīci, kas ļauj citiem caur to piekļūt Pakalpojumam”, un piešķir tikai nenododamu,…                                                             |
-| `opencode`            | ToS (Anomaly Innovations, Inc.) skaidri ierobežo izmantošanu līdz „jūsu pašu iekšējai lietošanai, nevis jebkuras trešās puses vārdā vai labā” — ope…                                                      |
 | `t3-web`              | ToS skaidri ierobežo kontus tikai personīgai lietošanai, aizliedz koplietot akreditācijas datus ar trešajām pusēm un liedz automatizētu/robotu/datu ievākšanas piekļuvi — paš…                            |
 
 ### ✅ Kopumā atļaujoši — piesardzība / neskaidrs / atļauts (pārējie)
@@ -273,7 +272,6 @@ Vairums šajā jomā minēto „bezmaksas žetonu mēnesī” skaitļu ir katram
 | `muse-spark-web`      | bez atslēgas          | —                     | —                    | izvairīties          | 3      |
 | `nlpcloud`            | bez atslēgas          | —                     | —                    | izvairīties          | 1      |
 | `nvidia`              | bez atslēgas          | —                     | —                    | piesardzība          | 13     |
-| `opencode`            | bez atslēgas          | —                     | —                    | izvairīties          | 7      |
 | `pollinations`        | bez atslēgas          | —                     | —                    | piesardzība          | 31     |
 | `publicai`            | bez atslēgas          | —                     | —                    | piesardzība          | 3      |
 | `reka`                | bez atslēgas          | —                     | —                    | piesardzīgi          | 2      |
@@ -284,17 +282,6 @@ Vairums šajā jomā minēto „bezmaksas žetonu mēnesī” skaitļu ir katram
 | `uncloseai`           | bez atslēgas          | —                     | —                    | piesardzīgi          | 3      |
 
 ---
-
-## OpenCode Free: klienta līguma ierobežojums (#14313)
-
-Pakalpojuma sniedzējs `opencode` bez atslēgas (publiskais `https://opencode.ai/zen/v1`) noraida ikvienu pieprasījumu,
-kas neatbilst OpenCode klienta līgumam, atgriežot **403 `FreeTierError`** un
-teikumu _"OpenCode bezmaksas līmeni var izmantot tikai no OpenCode"_. Tas ir
-konkrētā pieprasījuma līmeņa atteikums (vienāds rezultāts katram kontam ar vienādu pieprasījuma struktūru), nevis
-modeļa aizliegums vai savienojuma gaidīšanas periods — OmniRoute to klasificē kā `project_route_error`, izlaiž
-modeļa bloķēšanu / gaidīšanas periodu un (sintētiskajā `noauth` ceļā) uz īsu TTL aptur automātiskās kombinācijas atkārtotu atlasi.
-Nosūtiet pieprasījumus, kuros ir netukšs rīku saraksts, `stream: true` un
-OpenCode sesijas/UA galvenes (`opencodeFreeTierContract.ts`), vai arī sagaidiet 403.
 
 ## Kas ir mainījies kopš piegādātā kataloga (`freeNote`)
 

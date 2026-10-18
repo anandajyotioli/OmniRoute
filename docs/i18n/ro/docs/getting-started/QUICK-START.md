@@ -4,7 +4,7 @@
 
 ---
 
-> **Pe scurt**: Instalează → Conectează un furnizor eligibil → Configurează IDE-ul să utilizeze OmniRoute. Gata.
+> **Pe scurt**: Instalați → Conectați un furnizor eligibil → Configurați IDE-ul să utilizeze OmniRoute. Gata.
 
 ---
 
@@ -49,9 +49,9 @@ OmniRoute pornește la `http://localhost:20128`. Panoul de control se deschide a
 
 ## Pasul 3: Conectați un furnizor eligibil
 
-Alegeți un furnizor ale cărui condiții și cote corespund nevoilor dumneavoastră. În **Panou de control → Furnizori**, conectați-vă propriul cont sau propria cheie API, apoi testați conexiunea. Accesul gratuit și disponibilitatea fără cheie nu sunt garantate.
+Alegeți un furnizor ale cărui condiții și cotă corespund nevoilor dumneavoastră. În **Panou de control → Furnizori**, conectați-vă propriul cont sau propria cheie API, apoi testați conexiunea. Accesul gratuit și disponibilitatea fără cheie nu sunt garantate.
 
-`auto` exclude în mod implicit furnizorii marcați cu `tos: avoid`, inclusiv Kiro și OpenCode Free. Conectarea unui cont nu modifică această politică. Opțiunea de participare din **Panou de control → Combinații** se aplică tuturor combinațiilor automate. Consultați [Ghidul nivelurilor gratuite](./FREE-TIERS-GUIDE.md) înainte de a alege un furnizor.
+În mod implicit, `auto` exclude furnizorii marcați cu `tos: avoid`, inclusiv Kiro. Conectarea unui cont nu modifică această politică. Opțiunea de participare din **Panou de control → Combinații** se aplică tuturor combinațiilor automate. Consultați [Ghidul nivelurilor gratuite](./FREE-TIERS-GUIDE.md) înainte de a alege un furnizor.
 
 ---
 
@@ -130,10 +130,10 @@ Puteți vedea detaliile solicitării făcând clic pe [Monitorizare/Jurnale](htt
 
 ## Ce urmează?
 
-- **[Ghid Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Lasă OmniRoute să aleagă cel mai bun AI pentru tine
-- **[Ghidul furnizorilor](./PROVIDERS-GUIDE.md)** — Conectează mai mulți furnizori (gratuiți și cu plată)
-- **[Ghidul nivelurilor gratuite](./FREE-TIERS-GUIDE.md)** — Consultă condițiile furnizorilor și limitele nivelurilor gratuite
-- **[Depanare](../guides/TROUBLESHOOTING.md)** — Remediază problemele frecvente
+- **[Ghid Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Permiteți-i lui OmniRoute să aleagă cel mai bun AI pentru dvs.
+- **[Ghidul furnizorilor](./PROVIDERS-GUIDE.md)** — Conectați mai mulți furnizori (gratuiți și contra cost)
+- **[Ghidul nivelurilor gratuite](./FREE-TIERS-GUIDE.md)** — Consultați condițiile furnizorilor și limitele nivelurilor gratuite
+- **[Depanare](../guides/TROUBLESHOOTING.md)** — Remediați problemele frecvente
 
 ---
 
@@ -141,23 +141,23 @@ Puteți vedea detaliile solicitării făcând clic pe [Monitorizare/Jurnale](htt
 
 ### „Am nevoie de o cheie API?”
 
-Cheia API OmniRoute vă autentifică instrumentele. Datele de autentificare pentru serviciile din amonte depind de furnizor: unele necesită o cheie API sau autentificarea într-un cont. Accesul gratuit nu este garantat.
+Cheia API OmniRoute autentifică instrumentele tale. Datele de autentificare pentru serviciile din amonte depind de furnizor: unele necesită o cheie API sau autentificarea într-un cont. Accesul gratuit nu este garantat.
 
 ### „Ce este `auto`?”
 
-`auto` îi indică lui OmniRoute să aleagă automat cel mai bun furnizor pentru fiecare solicitare. Acesta ia în considerare viteza, costul, calitatea și disponibilitatea. Consultați [Ghidul Auto-Combo](./AUTO-COMBO-GUIDE.md) pentru detalii.
+`auto` îi indică lui OmniRoute să aleagă automat cel mai bun furnizor pentru fiecare solicitare. Acesta ia în considerare viteza, costul, calitatea și disponibilitatea. Consultă [Ghidul Auto-Combo](./AUTO-COMBO-GUIDE.md) pentru detalii.
 
 ### „Cât costă?”
 
-OmniRoute este **gratuit și open-source**. Plătiți doar pentru furnizorii pe care îi utilizați. Mulți furnizori oferă niveluri gratuite — consultați [Ghidul nivelurilor gratuite](./FREE-TIERS-GUIDE.md).
+OmniRoute este **gratuit și open-source**. Plătești doar pentru furnizorii pe care îi utilizezi. Mulți furnizori oferă niveluri gratuite — consultă [Ghidul nivelurilor gratuite](./FREE-TIERS-GUIDE.md).
 
 ### „Îl pot folosi cu Claude Code / Cursor / Copilot?”
 
-**Da!** OmniRoute funcționează cu orice instrument care acceptă formatul OpenAI. Trebuie doar să setați URL-ul de bază la `http://localhost:20128/v1`. Consultați [Ghidul instrumentelor CLI](../reference/CLI-TOOLS.md) pentru instrucțiuni de configurare specifice.
+**Da!** OmniRoute funcționează cu orice instrument care acceptă formatul OpenAI. Trebuie doar să setezi URL-ul de bază la `http://localhost:20128/v1`. Consultă [Ghidul instrumentelor CLI](../reference/CLI-TOOLS.md) pentru instrucțiuni specifice de configurare.
 
-### „Ce se întâmplă dacă un furnizor devine indisponibil?”
+### „Ce se întâmplă dacă un furnizor nu mai funcționează?”
 
-OmniRoute omite automat furnizorii care au eșuat și îl încearcă pe următorul. Nu trebuie să faceți nimic. Consultați [Ghidul Auto-Combo](./AUTO-COMBO-GUIDE.md) pentru detalii.
+OmniRoute omite automat furnizorii care nu funcționează și îl încearcă pe următorul. Nu trebuie să faci nimic. Consultă [Ghidul Auto-Combo](./AUTO-COMBO-GUIDE.md) pentru detalii.
 
 ---
 

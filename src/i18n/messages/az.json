@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Bağlantıları əlçatanlığa görə yenidən sırala",
     "reorderByAvailabilityError": "Bağlantıları əlçatanlığa görə yenidən sıralamaq alınmadı",
     "distributeProxies": "Proksiləri paylayın",
+    "clearAccountProxies": "Hesab proksilərini sil",
+    "clearAccountProxyAssignments": "Təyinatları sil",
+    "clearAccountProxiesConfirm": "Bu provayderin bütün {count} hesabından, deaktiv edilmiş hesablar da daxil olmaqla, fərdi proksi təyinatları silinsin? Yadda saxlanılmış proksilər və provayder/qlobal təyinatlar qorunur. Hesablar yenidən provayder/qlobal proksi parametrlərini miras alacaq.",
+    "accountProxiesCleared": "Hesab proksi təyinatları silindi.",
+    "clearAccountProxiesPartial": "{count} hesabı tam sıfırlamaq mümkün olmadı. Göstərilən təyinatlar yeniləndi; yenidən cəhd edə bilərsiniz.",
+    "clearAccountProxiesError": "Hesab proksilərini sıfırlamaq və ya onların statusunu yeniləmək mümkün olmadı. Lütfən, səhifəni yenidən yükləyin və təkrar cəhd edin.",
     "distributing": "Paylanır...",
     "selectedCount": "{count, plural, one {# seçilib} other {# seçilib}}",
     "accountsCount": "{count, plural, one {# hesab} other {# hesab}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Defolt olaraq model siyahısını hər 6 saatdan bir avtomatik yeniləyin (MODEL_SYNC_INTERVAL_HOURS vasitəsilə konfiqurasiya edilə bilər)",
     "autoSyncEnabled": "Avtomatik sinxronizasiya aktivdir — modellər vaxtaşırı yenilənəcək",
     "autoSyncDisabled": "Avtomatik sinxronizasiya deaktivdir",
+    "autoSyncLastSynced": "Son sinxronlaşdırma: {time}",
+    "autoSyncNeverSynced": "Hələ sinxronlaşdırılmayıb",
+    "autoSyncImmediateFailed": "Avtomatik sinxronizasiya aktivdir, lakin modellərin dərhal yenilənməsi alınmadı",
+    "autoSyncImmediatePartialFailure": "Avtomatik sinxronizasiya aktivdir, lakin bəzi modellərin dərhal yenilənməsi alınmadı",
     "autoSyncToggleFailed": "Avtomatik sinxronizasiya dəyişdirilə bilmədi",
     "autoSyncPartialFailure": "Avtomatik sinxronizasiya bəzi bağlantılar üçün yeniləndi, lakin hamısı üçün deyil",
     "clearAllModels": "Bütün modelləri təmizlə",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Paylanır...",
       "complete": "Tamamlandı",
-      "defaultLabel": "Proksiləri Paylaşın"
+      "defaultLabel": "Proksiləri Paylaşın",
+      "confirmMessage": "Yadda saxlanılmış proksilər bu qrupdakı bütün hesablara təyin edilsin? Bu, mövcud hesab təyinatlarını əvəz edir və deaktiv edilmiş hesablar da daxil olmaqla proksi marşrutlaşdırmasını aktivləşdirir.",
+      "confirmDistribute": "Proksiləri payla",
+      "cancel": "Ləğv et"
     }
   },
   "providerTest": {

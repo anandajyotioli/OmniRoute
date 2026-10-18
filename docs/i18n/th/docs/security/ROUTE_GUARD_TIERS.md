@@ -197,6 +197,7 @@ Tunnel, Tailscale, Ngrok) การตรวจสอบลูปแบ็กย
 | `/api/settings/import-json`               | แทนที่ข้อมูลการตั้งค่าทั้งหมด                                     |
 | `/api/providers/health-autopilot/actions` | ดำเนินการแก้ไขปัญหาโดย autopilot                                  |
 | `/api/settings/obsidian`                  | สร้างข้อมูลประจำตัว WebDAV ที่ใช้ซ้ำได้สำหรับรากของ vault ใดก็ได้ |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                      |
 
 **การตอบกลับเมื่อมีการละเมิด:** `401 Authentication required`
 

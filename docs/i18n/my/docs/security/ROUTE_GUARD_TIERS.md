@@ -146,6 +146,7 @@ host ကို probe လုပ်သည့် read route အသစ်သည် �
 | `/api/settings/import-json`               | settings blob အပြည့်အစုံကို အစားထိုးသည်                                                   |
 | `/api/providers/health-autopilot/actions` | autopilot ပြန်လည်ပြုပြင်ရေး လုပ်ဆောင်ချက်များကို လုပ်ဆောင်သည်                             |
 | `/api/settings/obsidian`                  | မည်သည့် vault root အတွက်မဆို ပြန်လည်အသုံးပြုနိုင်သော WebDAV credential များကို ထုတ်ပေးသည် |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                              |
 
 **ချိုးဖောက်သည့်အခါ response:** `401 Authentication required`
 

@@ -204,6 +204,7 @@ serverprocessen.
 | `/api/settings/import-json`               | Erstatter hele indstillingsobjektet                                          |
 | `/api/providers/health-autopilot/actions` | Udfører autopilotens afhjælpningshandlinger                                  |
 | `/api/settings/obsidian`                  | Udsteder genanvendelige WebDAV-legitimationsoplysninger for enhver vault-rod |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                 |
 
 **Svar ved overtrædelse:** `401 Godkendelse påkrævet`
 

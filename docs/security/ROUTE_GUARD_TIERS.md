@@ -196,6 +196,7 @@ server process.
 | `/api/settings/import-json`               | Replaces the full settings blob                |
 | `/api/providers/health-autopilot/actions` | Executes autopilot remediation actions         |
 | `/api/settings/obsidian`                  | Mints reusable WebDAV creds for any vault root |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens   |
 
 **Response on violation:** `401 Authentication required`
 

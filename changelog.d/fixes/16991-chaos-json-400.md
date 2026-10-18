@@ -1,0 +1,1 @@
+- **fix(api):** `POST /api/chaos/run` and `POST /api/skills/collect/chaos` answered 500 when the request body was not JSON; both now answer 400 with `Invalid JSON body` ([#16991](https://github.com/diegosouzapw/OmniRoute/pull/16991)) — thanks @pacocartones

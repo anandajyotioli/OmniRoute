@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Verbindingen herschikken op beschikbaarheid",
     "reorderByAvailabilityError": "Verbindingen herschikken op beschikbaarheid is mislukt",
     "distributeProxies": "Proxy's distribueren",
+    "clearAccountProxies": "Accountproxy's verwijderen",
+    "clearAccountProxyAssignments": "Toewijzingen verwijderen",
+    "clearAccountProxiesConfirm": "Afzonderlijke proxytoewijzingen verwijderen uit alle {count} accounts van deze provider, inclusief uitgeschakelde accounts? Opgeslagen proxy's en toewijzingen op provider- en globaal niveau blijven behouden. De accounts nemen daarna opnieuw de proxy-instellingen op provider- en globaal niveau over.",
+    "accountProxiesCleared": "Proxytoewijzingen voor accounts verwijderd.",
+    "clearAccountProxiesPartial": "Het resetten van {count} account(s) is niet volledig gelukt. De weergegeven toewijzingen zijn vernieuwd; je kunt het opnieuw proberen.",
+    "clearAccountProxiesError": "De accountproxy's konden niet worden gereset en hun status kon niet worden vernieuwd. Laad de pagina opnieuw en probeer het nogmaals.",
     "distributing": "Distribueren...",
     "selectedCount": "{count, plural, one {# geselecteerd} other {# geselecteerd}}",
     "accountsCount": "{count, plural, one {# account} other {# accounts}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Modellenlijst standaard elke 6 uur automatisch vernieuwen (configureerbaar via MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Automatische synchronisatie ingeschakeld: modellen worden periodiek vernieuwd",
     "autoSyncDisabled": "Automatische synchronisatie uitgeschakeld",
+    "autoSyncLastSynced": "Gesynchroniseerd {time}",
+    "autoSyncNeverSynced": "Nooit gesynchroniseerd",
+    "autoSyncImmediateFailed": "Automatische synchronisatie ingeschakeld, maar het direct vernieuwen van modellen is mislukt",
+    "autoSyncImmediatePartialFailure": "Automatische synchronisatie ingeschakeld, maar sommige directe modelvernieuwingen zijn mislukt",
     "autoSyncToggleFailed": "Kan automatische synchronisatie niet in- of uitschakelen",
     "autoSyncPartialFailure": "Automatische synchronisatie bijgewerkt voor sommige verbindingen, maar niet alle",
     "clearAllModels": "Wis alle modellen",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Distributie...",
       "complete": "Voltooid",
-      "defaultLabel": "Proxies Verdelen"
+      "defaultLabel": "Proxies Verdelen",
+      "confirmMessage": "Opgeslagen proxy's toewijzen aan elk account in deze groep? Dit vervangt bestaande accounttoewijzingen en schakelt proxyroutering in, ook voor uitgeschakelde accounts.",
+      "confirmDistribute": "Proxy's verdelen",
+      "cancel": "Annuleren"
     }
   },
   "providerTest": {

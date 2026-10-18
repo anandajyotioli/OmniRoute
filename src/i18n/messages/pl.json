@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Zmień kolejność połączeń według dostępności",
     "reorderByAvailabilityError": "Nie udało się zmienić kolejności połączeń według dostępności",
     "distributeProxies": "Rozdziel proxy",
+    "clearAccountProxies": "Usuń proxy kont",
+    "clearAccountProxyAssignments": "Usuń przypisania",
+    "clearAccountProxiesConfirm": "Usunąć indywidualne przypisania proxy ze wszystkich {count} kont tego dostawcy, w tym z kont wyłączonych? Zapisane proxy oraz przypisania dostawcy/globalne zostaną zachowane. Konta ponownie odziedziczą ustawienia proxy dostawcy/globalne.",
+    "accountProxiesCleared": "Usunięto przypisania proxy kont.",
+    "clearAccountProxiesPartial": "Nie udało się całkowicie zresetować {count} kont. Wyświetlane przypisania zostały odświeżone; możesz spróbować ponownie.",
+    "clearAccountProxiesError": "Nie udało się zresetować proxy kont ani odświeżyć ich stanu. Załaduj ponownie i spróbuj jeszcze raz.",
     "distributing": "Rozdzielanie...",
     "selectedCount": "{count, plural, one {# wybrany} other {# wybranych}}",
     "accountsCount": "{count, plural, one {# konto} other {# kont}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Domyślnie automatycznie odświeżaj listę modeli co 6 godz. (można skonfigurować za pomocą MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Auto-sync włączony — models będą odświeżane okresowo",
     "autoSyncDisabled": "Auto-sync wyłączony",
+    "autoSyncLastSynced": "Zsynchronizowano {time}",
+    "autoSyncNeverSynced": "Nigdy nie synchronizowano",
+    "autoSyncImmediateFailed": "Automatyczna synchronizacja włączona, ale natychmiastowe odświeżenie modeli nie powiodło się",
+    "autoSyncImmediatePartialFailure": "Automatyczna synchronizacja włączona, ale niektóre natychmiastowe odświeżenia modeli nie powiodły się",
     "autoSyncToggleFailed": "Nie udało się przełączyć auto-sync",
     "autoSyncPartialFailure": "Automatyczna synchronizacja zaktualizowana dla niektórych połączeń, ale nie wszystkich",
     "clearAllModels": "Wyczyść wszystkie models",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Rozsyłanie...",
       "complete": "Zakończone",
-      "defaultLabel": "Rozdziel Proksy"
+      "defaultLabel": "Rozdziel Proksy",
+      "confirmMessage": "Przypisać zapisane proxy do każdego konta w tej grupie? Spowoduje to zastąpienie istniejących przypisań kont i włączenie routingu przez proxy, również dla wyłączonych kont.",
+      "confirmDistribute": "Rozdziel proxy",
+      "cancel": "Anuluj"
     }
   },
   "providerTest": {

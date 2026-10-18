@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: I-install → Ikonekta ang isang kwalipikadong provider → Ituro ang iyong IDE sa OmniRoute. Tapos na.
+> **TL;DR**: I-install → Kumonekta sa isang kwalipikadong provider → Ituro ang iyong IDE sa OmniRoute. Tapos na.
 
 ---
 
@@ -49,9 +49,9 @@ Magsisimula ang OmniRoute sa `http://localhost:20128`. Awtomatikong bubukas ang 
 
 ## Hakbang 3: Kumonekta sa isang Kwalipikadong Provider
 
-Pumili ng provider na ang mga tuntunin at quota ay angkop sa iyong mga pangangailangan. Sa **Dashboard → Providers**, ikonekta ang sarili mong account o API key, pagkatapos ay subukan ang koneksyon. Hindi garantisado ang libreng access at pagkakaroon nang walang key.
+Pumili ng provider na ang mga tuntunin at quota ay angkop sa iyong mga pangangailangan. Sa **Dashboard → Providers**, ikonekta ang sarili mong account o API key, pagkatapos ay subukan ang koneksyon. Hindi ginagarantiya ang libreng access at availability na walang key.
 
-Hindi isinasama ng `auto` bilang default ang mga provider na minarkahang `tos: avoid`, kabilang ang Kiro at OpenCode Free. Hindi binabago ng pagkonekta ng account ang patakarang iyon. Ang pag-opt in sa **Dashboard → Combos** ay nalalapat sa lahat ng auto combo. Suriin ang [Gabay sa mga Libreng Tier](./FREE-TIERS-GUIDE.md) bago pumili ng provider.
+Bilang default, hindi isinasama ng `auto` ang mga provider na minarkahang `tos: avoid`, kabilang ang Kiro. Hindi binabago ng pagkonekta ng account ang patakarang iyon. Nalalapat sa lahat ng auto combo ang pag-opt in sa **Dashboard → Combos**. Basahin ang [Gabay sa Mga Libreng Tier](./FREE-TIERS-GUIDE.md) bago pumili ng provider.
 
 ---
 
@@ -130,10 +130,10 @@ Makikita mo ang mga detalye ng request sa pamamagitan ng pag-click sa [Monitorin
 
 ## Ano ang Susunod?
 
-- **[Gabay sa Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Hayaan ang OmniRoute na pumili ng pinakamahusay na AI para sa iyo
+- **[Gabay sa Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Hayaan ang OmniRoute na piliin ang pinakamahusay na AI para sa iyo
 - **[Gabay sa mga Provider](./PROVIDERS-GUIDE.md)** — Kumonekta sa mas maraming provider (libre at may bayad)
 - **[Gabay sa mga Libreng Tier](./FREE-TIERS-GUIDE.md)** — Suriin ang mga tuntunin ng provider at mga limitasyon ng libreng tier
-- **[Pag-troubleshoot](../guides/TROUBLESHOOTING.md)** — Ayusin ang mga karaniwang problema
+- **[Pag-troubleshoot](../guides/TROUBLESHOOTING.md)** — Ayusin ang mga karaniwang isyu
 
 ---
 
@@ -141,23 +141,23 @@ Makikita mo ang mga detalye ng request sa pamamagitan ng pag-click sa [Monitorin
 
 ### "Kailangan ko ba ng API key?"
 
-Pinapatotohanan ng OmniRoute API key ang iyong mga tool. Nakadepende sa provider ang mga kredensyal ng upstream: nangangailangan ang ilan ng API key o pag-login sa account. Hindi garantisado ang libreng access.
+Pinatutunayan ng OmniRoute API key ang pagkakakilanlan ng iyong mga tool. Nakadepende sa provider ang mga upstream credential: nangangailangan ang ilan ng API key o pag-login sa account. Hindi garantisado ang libreng access.
 
 ### "Ano ang `auto`?"
 
-Inuutusan ng `auto` ang OmniRoute na awtomatikong piliin ang pinakamahusay na provider para sa bawat kahilingan. Isinasaalang-alang nito ang bilis, gastos, kalidad, at availability. Tingnan ang [Gabay sa Auto-Combo](./AUTO-COMBO-GUIDE.md) para sa mga detalye.
+Sinasabi ng `auto` sa OmniRoute na awtomatikong piliin ang pinakamahusay na provider para sa bawat request. Isinasaalang-alang nito ang bilis, gastos, kalidad, at availability. Tingnan ang [Gabay sa Auto-Combo](./AUTO-COMBO-GUIDE.md) para sa mga detalye.
 
-### "Magkano ang halaga nito?"
+### "Magkano ito?"
 
-Ang OmniRoute mismo ay **libre at open-source**. Magbabayad ka lamang para sa mga provider na ginagamit mo. Maraming provider ang may mga libreng tier — tingnan ang [Gabay sa Mga Libreng Tier](./FREE-TIERS-GUIDE.md).
+Ang OmniRoute mismo ay **libre at open-source**. Babayaran mo lamang ang mga provider na ginagamit mo. Maraming provider ang may mga libreng tier — tingnan ang [Gabay sa Mga Libreng Tier](./FREE-TIERS-GUIDE.md).
 
-### "Maaari ko ba itong gamitin sa Claude Code / Cursor / Copilot?"
+### "Magagamit ko ba ito sa Claude Code / Cursor / Copilot?"
 
-**Oo!** Gumagana ang OmniRoute sa anumang tool na sumusuporta sa OpenAI format. Itakda lamang ang base URL sa `http://localhost:20128/v1`. Tingnan ang [Gabay sa Mga CLI Tool](../reference/CLI-TOOLS.md) para sa mga partikular na tagubilin sa pag-setup.
+**Oo!** Gumagana ang OmniRoute sa anumang tool na sumusuporta sa format ng OpenAI. Itakda lamang ang base URL sa `http://localhost:20128/v1`. Tingnan ang [Gabay sa Mga CLI Tool](../reference/CLI-TOOLS.md) para sa mga partikular na tagubilin sa pag-set up.
 
-### "Paano kung tumigil sa paggana ang isang provider?"
+### "Paano kung hindi gumana ang isang provider?"
 
-Awtomatikong nilalaktawan ng OmniRoute ang mga provider na pumalya at sinusubukan ang susunod. Wala kang kailangang gawin. Tingnan ang [Gabay sa Auto-Combo](./AUTO-COMBO-GUIDE.md) para sa mga detalye.
+Awtomatikong nilalaktawan ng OmniRoute ang mga provider na hindi gumana at sinusubukan ang susunod. Wala kang kailangang gawin. Tingnan ang [Gabay sa Auto-Combo](./AUTO-COMBO-GUIDE.md) para sa mga detalye.
 
 ---
 

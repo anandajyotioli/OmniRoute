@@ -198,6 +198,7 @@ server process.
 | `/api/settings/import-json`               | Pinapalitan ang buong settings blob                                  |
 | `/api/providers/health-autopilot/actions` | Isinasagawa ang mga autopilot remediation action                     |
 | `/api/settings/obsidian`                  | Gumagawa ng magagamit-muling WebDAV creds para sa anumang vault root |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                         |
 
 **Response kapag may paglabag:** `401 Authentication required`
 

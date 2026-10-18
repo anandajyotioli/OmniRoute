@@ -205,6 +205,7 @@ lub zakończyć proces serwera.
 | `/api/settings/import-json`               | Zastępuje pełny obiekt ustawień                                                          |
 | `/api/providers/health-autopilot/actions` | Wykonuje działania naprawcze autopilota                                                  |
 | `/api/settings/obsidian`                  | Generuje poświadczenia WebDAV wielokrotnego użytku dla dowolnego katalogu głównego sejfu |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                             |
 
 **Odpowiedź w przypadku naruszenia:** `401 Authentication required`
 

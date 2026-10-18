@@ -24,7 +24,7 @@ Need arvud kirjeldavad kataloogi eri kolmandate osapoolte kontosid ja sobivustin
 | **+ piirkondliku isikutuvastuse taga**              | **+~6M**             | `modelscope` (Alibaba Cloudiga sidumine + Mandri-Hiina pärisnime kontroll). Tegelik korduv kvoot, mis on esitatud väljadena `gatedRecurringTokens` / `gatedProviders` ja juhtpaneelil. Seda ei liideta kunagi põhinäitajale: +~6M piirkondliku isikutuvastuse taga.                                                                                                        |
 | Teoreetiline ülempiir (kõik kiirusepiirangud, 24/7) | ~10B                 | Kõigi teenusepakkujate kiirusepiirangute summa, mis on ekstrapoleeritud katkematule kasutusele. **Ei ole garantii** — ärge kasutage seda põhinäitajana.                                                                                                                                                                                                                    |
 
-**Aus põhisõnum:** _OmniRoute koondab **~1.62B dokumenteeritud tasuta tokenit kuus** (registreerumiskrediitidega esimesel kuul kuni ~2.22B) 35 tasuta taseme kogumist — lisaks pikk nimekiri püsivalt tasuta, ülempiirita teenusepakkujaid — ning RTK + Cavemani tihendus (15–95% tokenisääst) suurendab seda mahtu veelgi._
+**Aus põhisõnum:** _OmniRoute koondab **~1.62B dokumenteeritud tasuta tokenit kuus** (registreerumiskrediitidega esimesel kuul kuni ~2.22B) 34 tasuta taseme kogumist — lisaks pikk nimekiri püsivalt tasuta, ülempiirita teenusepakkujaid — ning RTK + Cavemani tihendus (15–95% tokenisääst) suurendab seda mahtu veelgi._
 
 > **Miks see vähenes varasemalt ~1,94 miljardilt.** 2026-06-17 värskendus on ausust parandav korrektsioon, mitte kadu: `gemini` arvestatakse nüüd puuli tasandil duplikaatideta (varem oli maht paisutatud, sest iga Flashi varianti arvestati eraldi, 462M → 60M), `cloudflare-ai` parandati selle tegelikule 10k neuronile päevas (122M → 30M), `doubao` liigitati ümber ühekordseks registreerumiskrediidiks (mitte korduvaks) ning suletud tasemed eemaldati (`chutes`/`phind`/`kluster` lõpetasid tegevuse). Seda tasakaalustavad osaliselt `llm7` (õige 5M päevas → 150M) ja uued tasuta pakkujad (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Need arvud kirjeldavad kataloogi eri kolmandate osapoolte kontosid ja sobivustin
 >
 > **Parandatud 2026-09-03 (#11773):** `cerebras` liigitati ümber 30M/kuu korduvast toetusest (vana ilma kaardita 1M tokenit päevas prooviperiood) ühekordseks $5 registreerumiskrediidiks, mis nõuab makseviisi. Sama aususe põhimõte nagu LongCati puhul.
 >
-> **Lisaks xKiro (2026-09-03):** uus `xkiro-free` puul (150M/kuu) lisab 35. korduva puulivõtme. Felo Web jääb välja, kuni selle GPL-ist tuletatud päritolu/litsentsimine on OOTEL. Lähtekood teatab nüüd **35 korduvast puulivõtmest** ja **~1,62 miljardi suurusest püsivast mahust** — see arvutatakse reaalajas ja on CI-ga kontrollitud (`check:docs-counts` nurjab koostamise, kui see erineb funktsiooni `computeFreeModelTotals()` tulemusest).
+> **Lisaks xKiro (2026-09-03):** uus `xkiro-free` puul (150M/kuu) lisab 35. korduva puulivõtme. Felo Web jääb välja, kuni selle GPL-ist tuletatud päritolu/litsentsimine on OOTEL. Lähtekood teatab nüüd **34 korduvast puulivõtmest** ja **~1,62 miljardi suurusest püsivast mahust** — see arvutatakse reaalajas ja on CI-ga kontrollitud (`check:docs-counts` nurjab koostamise, kui see erineb funktsiooni `computeFreeModelTotals()` tulemusest).
 
 Suurimad **dokumenteeritud** panustajad: `mistral` 1,00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (viis mudelipõhist ülempiiri), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` on välja jäetud — selle 10M LongCat-2.0 toetus on ühekordne, KYC-ga piiratud registreerumiskrediit, mitte korduv kuueelarve.)
 
@@ -134,7 +134,6 @@ Enamik selle valdkonna „tasuta žetoone kuus” näitajaid saadakse mudelipõh
 | `modal`          | ToS-i jaotis 1.3 keelab sõnaselgelt „rentida, edasi müüa või muul viisil võimaldada kolmandale osapoolele otsest juurdepääsu teenusele või selle kasutamist” — isemajutatud teenuse loomine…                    |
 | `muse-spark-web` | Meta ToS keelab sõnaselgelt automatiseeritud juurdepääsu ilma eelneva loata, pöördprojekteerimise ilma kirjaliku loata ja tehnoloogilistest meetmetest kõrvalehoidmise…                                         |
 | `nlpcloud`       | ToS keelab sõnaselgelt „puhverserveri või muu seadme seadistamise, mis võimaldab teistel selle kaudu teenusele juurde pääseda” ning annab ainult mitteüleantava,…                                               |
-| `opencode`       | ToS (Anomaly Innovations, Inc.) piirab kasutuse sõnaselgelt „teie enda sisekasutusega, mitte ühegi kolmanda osapoole nimel ega kasuks” — ope…                                                                   |
 | `t3-web`         | ToS piirab kontod sõnaselgelt ainult isikliku kasutusega, keelab autentimisandmete jagamise kolmandate osapooltega ning automatiseeritud/roboti kaudu/andmekraapimisega juurdepääsu — i…                        |
 
 ### ✅ Üldiselt lubavad — ettevaatlik / ebaselge / korras (ülejäänud)
@@ -277,7 +276,6 @@ Enamik selle valdkonna „tasuta žetoone kuus” näitajaid saadakse mudelipõh
 | `muse-spark-web` | võtmeta               | —                      | —                   | vältida           | 3       |
 | `nlpcloud`       | võtmeta               | —                      | —                   | vältida           | 1       |
 | `nvidia`         | võtmeta               | —                      | —                   | ettevaatust       | 13      |
-| `opencode`       | võtmeta               | —                      | —                   | vältida           | 7       |
 | `pollinations`   | võtmeta               | —                      | —                   | ettevaatust       | 31      |
 | `publicai`       | võtmeta               | —                      | —                   | ettevaatust       | 3       |
 | `reka`           | võtmeta               | —                      | —                   | ettevaatust       | 2       |
@@ -288,17 +286,6 @@ Enamik selle valdkonna „tasuta žetoone kuus” näitajaid saadakse mudelipõh
 | `uncloseai`      | võtmeta               | —                      | —                   | ettevaatust       | 3       |
 
 ---
-
-## OpenCode Free: kliendilepingu piirang (#14313)
-
-Võtmeta `opencode`-pakkuja (avalik `https://opencode.ai/zen/v1`) keeldub kõigist päringutest,
-mis ei vasta OpenCode'i kliendilepingule, tagastades **403 `FreeTierError`** ja lause
-_"OpenCode'i tasuta taset saab kasutada ainult OpenCode'i seest"_. See on
-päringupõhine keeldumine (sama otsus iga konto puhul sama päringustruktuuriga), mitte
-mudeli blokeering ega ühenduse ooteaeg — OmniRoute liigitab selle kui `project_route_error`, jätab
-mudeli lukustamise / ooteaja vahele ning peatab (sünteetilisel `noauth`-teel) automaatse kombinatsiooni uuesti valimise
-lühikeseks TTL-iks. Saatke päringuid, mis sisaldavad mittetühja tööriistade loendit, väärtust `stream: true` ja
-OpenCode'i seansi-/UA-päiseid (`opencodeFreeTierContract.ts`), või arvestage vastusega 403.
 
 ## Mis on pärast avaldatud kataloogi (`freeNote`) muutunud
 

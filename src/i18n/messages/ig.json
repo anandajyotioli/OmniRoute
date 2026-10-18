@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Hazigharịa njikọ dịka nnweta ha si dị",
     "reorderByAvailabilityError": "Ịhazigharị njikọ dịka nnweta ha si dị kụrụ afọ n'ala",
     "distributeProxies": "Kesaa Proxies",
+    "clearAccountProxies": "Wepụ proxy akaụntụ",
+    "clearAccountProxyAssignments": "Wepụ nhọpụta",
+    "clearAccountProxiesConfirm": "Wepụ nhọpụta proxy nke akaụntụ ọ bụla na akaụntụ {count} niile nke onye na-eweta a, gụnyere akaụntụ ndị agbanyụrụ? A ga-echekwa proxy ndị echekwara na nhọpụta onye na-eweta/nke zuru ụwa ọnụ. Akaụntụ ga-amalitekwa iji ntọala proxy nke onye na-eweta/nke zuru ụwa ọnụ.",
+    "accountProxiesCleared": "Ewepụla nhọpụta proxy akaụntụ.",
+    "clearAccountProxiesPartial": "Enweghị ike ịtọgharịa akaụntụ {count} niile kpamkpam. Emeela ka nhọpụta ndị egosiri dị ọhụrụ; ị nwere ike ịnwale ọzọ.",
+    "clearAccountProxiesError": "Enweghị ike ịtọgharịa proxy akaụntụ ma ọ bụ mee ka ọnọdụ ha dị ọhụrụ. Biko bugharịa ibe ahụ ma nwalee ọzọ.",
     "distributing": "Na-ekesa...",
     "selectedCount": "{count, plural, one {# ahọpụtara} other {# ahọpụtara}}",
     "accountsCount": "{count, plural, one {# akaụntụ} other {# akaụntụ}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Na ndabara, na-emelite ndepụta ụdịdị na-akpaghị aka kwa awa 6 (enwere ike ịhazi ya site na MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Agbanyere mmekọrịta akpaaka — a ga-eme ka ụdị dị ọhụrụ site n'oge ruo n'oge",
     "autoSyncDisabled": "Agbanyụrụ mmekọrịta akpaaka",
+    "autoSyncLastSynced": "Emekọrịtara {time}",
+    "autoSyncNeverSynced": "Ọ dịbeghị mgbe emekọrịtara ya",
+    "autoSyncImmediateFailed": "Agbanyere mmekọrịta akpaaka, mana imelite ụdị ozugbo emeghị nke ọma",
+    "autoSyncImmediatePartialFailure": "Agbanyere mmekọrịta akpaaka, mana ụfọdụ mmelite ụdị ozugbo emeghị nke ọma",
     "autoSyncToggleFailed": "Ịgbanye ma ọ bụ ịgbanyụ mmekọrịta akpaaka kụrụ afọ n'ala",
     "autoSyncPartialFailure": "Emelitere mmekọrịta akpaaka maka ụfọdụ njikọ, mana ọ bụghị ha niile",
     "clearAllModels": "Hichapụ Ụdị Niile",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Na-ekesa...",
       "complete": "Emechala",
-      "defaultLabel": "Kesa Proxies"
+      "defaultLabel": "Kesa Proxies",
+      "confirmMessage": "Kenye proxy ndị echekwara n'akaụntụ niile dị n'òtù a? Nke a ga-anọchi nhọpụta akaụntụ ndị dị ugbu a ma gbanye ntụgharị okporo ụzọ site na proxy, gụnyere maka akaụntụ ndị agbanyụrụ.",
+      "confirmDistribute": "Kesaa proxy",
+      "cancel": "Kagbuo"
     }
   },
   "providerTest": {

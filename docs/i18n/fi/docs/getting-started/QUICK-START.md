@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Asenna → Yhdistä soveltuva palveluntarjoaja → Ohjaa IDE:si OmniRouteen. Valmis.
+> **Lyhyesti**: Asenna → Yhdistä kelpoinen palveluntarjoaja → Määritä IDE käyttämään OmniRoutea. Valmis.
 
 ---
 
@@ -47,11 +47,11 @@ OmniRoute käynnistyy osoitteessa `http://localhost:20128`. Hallintapaneeli avau
 
 ---
 
-## Vaihe 3: Yhdistä ehdot täyttävä palveluntarjoaja
+## Vaihe 3: Yhdistä kelvollinen palveluntarjoaja
 
-Valitse palveluntarjoaja, jonka ehdot ja kiintiö sopivat tarpeisiisi. Yhdistä oma tilisi tai API-avaimesi kohdassa **Hallintapaneeli → Palveluntarjoajat** ja testaa sitten yhteys. Maksutonta käyttöä ja saatavuutta ilman avainta ei taata.
+Valitse palveluntarjoaja, jonka ehdot ja kiintiö sopivat tarpeisiisi. Yhdistä oma tilisi tai API-avaimesi kohdassa **Dashboard → Providers** ja testaa sitten yhteys. Maksutonta käyttöä ja saatavuutta ilman avainta ei taata.
 
-`auto` sulkee oletusarvoisesti pois palveluntarjoajat, jotka on merkitty tunnisteella `tos: avoid`, mukaan lukien Kiro ja OpenCode Free. Tilin yhdistäminen ei muuta tätä käytäntöä. Kohdassa **Hallintapaneeli → Yhdistelmät** tehty suostumus koskee kaikkia automaattisia yhdistelmiä. Tutustu [maksuttomien tasojen oppaaseen](./FREE-TIERS-GUIDE.md) ennen palveluntarjoajan valitsemista.
+`auto` sulkee oletusarvoisesti pois palveluntarjoajat, joille on merkitty `tos: avoid`, mukaan lukien Kiro. Tilin yhdistäminen ei muuta tätä käytäntöä. Kohdassa **Dashboard → Combos** tehtävä suostumus koskee kaikkia automaattisia yhdistelmiä. Tutustu [maksuttomien tasojen oppaaseen](./FREE-TIERS-GUIDE.md) ennen palveluntarjoajan valitsemista.
 
 ---
 
@@ -132,7 +132,7 @@ Näet pyynnön tiedot napsauttamalla vasemmasta sivupalkista kohtaa [Monitoring/
 
 - **[Automaattisen yhdistelmän opas](./AUTO-COMBO-GUIDE.md)** — Anna OmniRouten valita sinulle paras tekoäly
 - **[Palveluntarjoajien opas](./PROVIDERS-GUIDE.md)** — Yhdistä lisää palveluntarjoajia (maksuttomia ja maksullisia)
-- **[Maksuttomien tasojen opas](./FREE-TIERS-GUIDE.md)** — Tarkista palveluntarjoajien ehdot ja maksuttomien tasojen rajoitukset
+- **[Maksuttomien tasojen opas](./FREE-TIERS-GUIDE.md)** — Tutustu palveluntarjoajien ehtoihin ja maksuttomien tasojen rajoituksiin
 - **[Vianmääritys](../guides/TROUBLESHOOTING.md)** — Korjaa yleisiä ongelmia
 
 ---
@@ -141,23 +141,23 @@ Näet pyynnön tiedot napsauttamalla vasemmasta sivupalkista kohtaa [Monitoring/
 
 ### "Tarvitsenko API-avaimen?"
 
-OmniRoute API-avain todentaa työkalusi. Ulkoisen palveluntarjoajan tunnukset riippuvat palveluntarjoajasta: jotkin vaativat API-avaimen tai kirjautumisen tilille. Maksutonta käyttöä ei taata.
+OmniRoute-API-avain todentaa työkalusi. Ulkoisen palveluntarjoajan tunnistetiedot riippuvat palveluntarjoajasta: jotkin vaativat API-avaimen tai kirjautumisen tilille. Maksutonta käyttöä ei taata.
 
 ### "Mikä on `auto`?"
 
-`auto` käskee OmniRoutea valitsemaan automaattisesti parhaan palveluntarjoajan kutakin pyyntöä varten. Valinnassa huomioidaan nopeus, hinta, laatu ja saatavuus. Katso lisätietoja [automaattisen yhdistelmän oppaasta](./AUTO-COMBO-GUIDE.md).
+`auto` ohjeistaa OmniRoutea valitsemaan automaattisesti parhaan palveluntarjoajan kutakin pyyntöä varten. Se ottaa huomioon nopeuden, hinnan, laadun ja saatavuuden. Lisätietoja on [Auto-Combo-oppaassa](./AUTO-COMBO-GUIDE.md).
 
 ### "Kuinka paljon se maksaa?"
 
-OmniRoute itsessään on **maksuton ja avoimen lähdekoodin ohjelmisto**. Maksat vain käyttämistäsi palveluntarjoajista. Monilla palveluntarjoajilla on maksuttomia käyttötasoja — katso [maksuttomien käyttötasojen opas](./FREE-TIERS-GUIDE.md).
+OmniRoute itsessään on **maksuton ja avoimen lähdekoodin ohjelmisto**. Maksat vain käyttämistäsi palveluntarjoajista. Monilla palveluntarjoajilla on maksuttomia käyttöportaita — katso [maksuttomien käyttöportaiden opas](./FREE-TIERS-GUIDE.md).
 
 ### "Voinko käyttää sitä Claude Coden / Cursorin / Copilotin kanssa?"
 
-**Kyllä!** OmniRoute toimii kaikkien OpenAI-muotoa tukevien työkalujen kanssa. Aseta perus-URL-osoitteeksi `http://localhost:20128/v1`. Katso työkalukohtaiset määritysohjeet [komentorivityökalujen oppaasta](../reference/CLI-TOOLS.md).
+**Kyllä!** OmniRoute toimii kaikkien OpenAI-muotoa tukevien työkalujen kanssa. Aseta perus-URL-osoitteeksi `http://localhost:20128/v1`. Työkalukohtaiset määritysohjeet ovat [CLI-työkalujen oppaassa](../reference/CLI-TOOLS.md).
 
 ### "Entä jos palveluntarjoaja lakkaa toimimasta?"
 
-OmniRoute ohittaa automaattisesti epäonnistuneet palveluntarjoajat ja kokeilee seuraavaa. Sinun ei tarvitse tehdä mitään. Katso lisätietoja [automaattisen yhdistelmän oppaasta](./AUTO-COMBO-GUIDE.md).
+OmniRoute ohittaa epäonnistuneet palveluntarjoajat automaattisesti ja kokeilee seuraavaa. Sinun ei tarvitse tehdä mitään. Lisätietoja on [Auto-Combo-oppaassa](./AUTO-COMBO-GUIDE.md).
 
 ---
 

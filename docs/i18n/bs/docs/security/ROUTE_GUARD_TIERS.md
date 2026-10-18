@@ -198,6 +198,7 @@ serverski proces.
 | `/api/settings/import-json`               | Zamjenjuje puni skup postavki                                                                 |
 | `/api/providers/health-autopilot/actions` | Izvršava autopilot radnje otklanjanja problema                                                |
 | `/api/settings/obsidian`                  | Izdaje višekratno upotrebljive WebDAV vjerodajnice za bilo koji korijenski direktorij trezora |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                                  |
 
 **Odgovor pri kršenju:** `401 Authentication required`
 

@@ -183,6 +183,7 @@ server process-ஐ நிறுத்தவோ முடியும் என�
 | `/api/settings/import-json`               | முழு settings blob-ஐ மாற்றுகிறது                                                       |
 | `/api/providers/health-autopilot/actions` | Autopilot remediation செயல்களை இயக்குகிறது                                             |
 | `/api/settings/obsidian`                  | எந்த vault root-க்கும் மீண்டும் பயன்படுத்தக்கூடிய WebDAV credential-களை உருவாக்குகிறது |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                           |
 
 **மீறலுக்கான response:** `401 Authentication required`
 

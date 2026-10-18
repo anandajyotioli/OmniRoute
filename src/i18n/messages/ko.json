@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "가용성에 따라 연결 재정렬",
     "reorderByAvailabilityError": "가용성에 따라 연결을 재정렬하지 못했습니다",
     "distributeProxies": "프록시 배포",
+    "clearAccountProxies": "계정 프록시 제거",
+    "clearAccountProxyAssignments": "할당 제거",
+    "clearAccountProxiesConfirm": "비활성화된 계정을 포함하여 이 제공업체의 {count}개 계정 모두에서 개별 프록시 할당을 제거하시겠습니까? 저장된 프록시와 제공업체/전역 할당은 유지됩니다. 계정은 제공업체/전역 프록시 설정을 다시 상속합니다.",
+    "accountProxiesCleared": "계정 프록시 할당이 제거되었습니다.",
+    "clearAccountProxiesPartial": "{count}개 계정을 완전히 재설정하지 못했습니다. 표시된 할당을 새로 고쳤습니다. 다시 시도할 수 있습니다.",
+    "clearAccountProxiesError": "계정 프록시를 재설정하거나 상태를 새로 고치지 못했습니다. 페이지를 새로고침한 후 다시 시도해 주세요.",
     "distributing": "배포 중...",
     "selectedCount": "{count, plural, one {#개 선택됨} other {#개 선택됨}}",
     "accountsCount": "{count, plural, one {#개 계정} other {#개 계정}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "기본적으로 6시간마다 모델 목록 자동 새로고침(MODEL_SYNC_INTERVAL_HOURS를 통해 설정 가능)",
     "autoSyncEnabled": "자동 동기화 활성화 — 모델이 주기적으로 업데이트됩니다",
     "autoSyncDisabled": "자동 동기화 비활성화",
+    "autoSyncLastSynced": "{time} 동기화됨",
+    "autoSyncNeverSynced": "동기화된 적 없음",
+    "autoSyncImmediateFailed": "자동 동기화가 활성화되었지만 즉시 모델 새로고침에 실패했습니다",
+    "autoSyncImmediatePartialFailure": "자동 동기화가 활성화되었지만 일부 즉시 모델 새로고침에 실패했습니다",
     "autoSyncToggleFailed": "자동 동기화 전환 실패",
     "autoSyncPartialFailure": "자동 동기화가 일부 연결에 대해 업데이트되었지만 모두는 아닙니다",
     "clearAllModels": "모든 모델 삭제",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "배포 중...",
       "complete": "완료",
-      "defaultLabel": "프록시 배포"
+      "defaultLabel": "프록시 배포",
+      "confirmMessage": "저장된 프록시를 이 그룹의 모든 계정에 할당하시겠습니까? 기존 계정 할당이 대체되고, 비활성화된 계정을 포함하여 프록시 라우팅이 활성화됩니다.",
+      "confirmDistribute": "프록시 배포",
+      "cancel": "취소"
     }
   },
   "providerTest": {

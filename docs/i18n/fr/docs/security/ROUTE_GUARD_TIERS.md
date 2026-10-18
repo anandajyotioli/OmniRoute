@@ -199,6 +199,7 @@ processus serveur.
 | `/api/settings/import-json`               | Remplace l’ensemble des paramètres                                                  |
 | `/api/providers/health-autopilot/actions` | Exécute les actions correctives du pilote automatique                               |
 | `/api/settings/obsidian`                  | Génère des identifiants WebDAV réutilisables pour n’importe quelle racine de coffre |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                        |
 
 **Réponse en cas de violation :** `401 Authentication required`
 

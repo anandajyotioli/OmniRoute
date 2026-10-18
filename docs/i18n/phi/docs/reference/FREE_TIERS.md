@@ -24,7 +24,7 @@ Inilalarawan ng mga bilang na ito ang magkakahiwalay na third-party account at m
 | **+ nangangailangan ng panrehiyong pagsusuri ng identidad** | **+~6M**           | `modelscope` (pag-bind sa Alibaba Cloud + real-name verification sa mainland China). Tunay na umuulit na quota, inilalantad bilang `gatedRecurringTokens` / `gatedProviders` at sa dashboard. Hindi kailanman isinasama sa headline: +~6M na nangangailangan ng panrehiyong beripikasyon ng identidad.                                                                          |
 | Teoretikal na maximum (lahat ng rate limit, 24/7)           | ~10B               | Kabuuan ng lahat ng rate limit ng provider na ini-extrapolate para sa walang-hintong paggamit. **Hindi ito garantiya** — huwag itong gawing headline.                                                                                                                                                                                                                           |
 
-**Tapat na headline:** _Pinagsasama-sama ng OmniRoute ang **~1.62B dokumentadong libreng token bawat buwan** (hanggang ~2.22B sa iyong unang buwan kasama ang mga signup credit) mula sa 35 free-tier pool — kasama pa ang mahabang listahan ng mga permanenteng libre at walang-cap na provider — at lalo pa itong napahahaba ng RTK + Caveman compression (15–95% na pagtitipid sa token)._
+**Tapat na headline:** _Pinagsasama-sama ng OmniRoute ang **~1.62B dokumentadong libreng token bawat buwan** (hanggang ~2.22B sa iyong unang buwan kasama ang mga signup credit) mula sa 34 free-tier pool — kasama pa ang mahabang listahan ng mga permanenteng libre at walang-cap na provider — at lalo pa itong napahahaba ng RTK + Caveman compression (15–95% na pagtitipid sa token)._
 
 > **Bakit bumaba ito mula sa dating ~1.94B.** Ang pag-refresh noong 2026-06-17 ay pagwawasto para sa katapatan, hindi pagkawala: ang `gemini` ay dine-duplicate na ngayon ayon sa pool (dati itong pinalobo sa pamamagitan ng hiwalay na pagbilang sa bawat variant ng Flash, 462M → 60M), ang `cloudflare-ai` ay itinama sa aktuwal nitong 10k-Neurons/araw (122M → 30M), ang `doubao` ay muling inuri bilang isang beses na credit sa pag-sign up (hindi umuulit), at inalis ang mga itinigil na tier (`chutes`/`phind`/`kluster` ay itinigil na). Bahagya itong nabawi ng `llm7` (tamang 5M/araw → 150M) at mga bagong libreng provider (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Inilalarawan ng mga bilang na ito ang magkakahiwalay na third-party account at m
 >
 > **Itinama noong 2026-09-03 (#11773):** ang `cerebras` ay muling inuri mula sa umuulit na grant na 30M/buwan (dating no-card na trial na 1M token/araw) tungo sa isang beses na $5 credit sa pag-sign up na nangangailangan ng paraan ng pagbabayad. Parehong tuntunin ng katapatan tulad ng sa LongCat.
 >
-> **Dagdag ang xKiro (2026-09-03):** nagdaragdag ang bagong `xkiro-free` pool (150M/buwan) ng ika-35 umuulit na pool key. Hindi pa rin kasama ang Felo Web habang naka-HOLD ang pinagmulan/paglilisensiya nitong nagmula sa GPL. Nag-uulat na ngayon ang source ng **35 umuulit na pool key** at **~1.62B na tuloy-tuloy** — ang live na numerong may CI gate (`check:docs-counts` ay magpapabagsak sa build kung lumihis ito mula sa `computeFreeModelTotals()`).
+> **Dagdag ang xKiro (2026-09-03):** nagdaragdag ang bagong `xkiro-free` pool (150M/buwan) ng ika-35 umuulit na pool key. Hindi pa rin kasama ang Felo Web habang naka-HOLD ang pinagmulan/paglilisensiya nitong nagmula sa GPL. Nag-uulat na ngayon ang source ng **34 umuulit na pool key** at **~1.62B na tuloy-tuloy** — ang live na numerong may CI gate (`check:docs-counts` ay magpapabagsak sa build kung lumihis ito mula sa `computeFreeModelTotals()`).
 
 Pinakamalalaking **nakadokumentong** kontribyutor: `mistral` 1.00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (limang cap para sa bawat modelo), `cloudflare-ai` 30M, `api-airforce` 24M. (Hindi kasama ang `longcat` — ang 10M LongCat-2.0 grant nito ay isang beses na credit sa pag-sign up na nangangailangan ng KYC, hindi isang umuulit na buwanang badyet.)
 
@@ -130,7 +130,6 @@ Karamihan sa mga bilang ng "libreng token kada buwan" sa larangang ito ay mga ka
 | `modal`          | Tahasang ipinagbabawal ng Seksiyon 1.3 ng ToS ang "pagpapaupa, muling pagbebenta, o anumang pagpapahintulot sa sinumang third party ng direktang access sa o paggamit ng Serbisyo" — ang pagbuo ng self-hoste…        |
 | `muse-spark-web` | Tahasang ipinagbabawal ng Meta ToS ang awtomatikong access nang walang paunang pahintulot, reverse engineering nang walang nakasulat na pahintulot, at pag-iwas sa mga teknolohiya…                                   |
 | `nlpcloud`       | Tahasang ipinagbabawal ng ToS ang "pag-set up ng proxy o iba pang device na nagpapahintulot sa iba na i-access ang Serbisyo sa pamamagitan nito" at nagbibigay lamang ng hindi naililipat,…                           |
-| `opencode`       | Tahasang nililimitahan ng ToS (Anomaly Innovations, Inc.) ang paggamit sa "sarili mong panloob na paggamit, at hindi sa ngalan o para sa kapakinabangan ng sinumang third party" — ope…                               |
 | `t3-web`         | Tahasang nililimitahan ng ToS ang mga account sa personal na paggamit lamang, ipinagbabawal ang pagbabahagi ng credential sa mga third party, at ipinagbabawal ang awtomatiko/bot/scraping na access — isang s…       |
 
 ### ✅ Karaniwang maluwag — pag-iingat / hindi malinaw / ok (ang iba pa)
@@ -273,7 +272,6 @@ Karamihan sa mga bilang ng "libreng token kada buwan" sa larangang ito ay mga ka
 | `muse-spark-web` | walang key                 | —                          | —                      | iwasan     | 3          |
 | `nlpcloud`       | walang key                 | —                          | —                      | iwasan     | 1          |
 | `nvidia`         | walang key                 | —                          | —                      | mag-ingat  | 13         |
-| `opencode`       | walang key                 | —                          | —                      | iwasan     | 7          |
 | `pollinations`   | walang key                 | —                          | —                      | mag-ingat  | 31         |
 | `publicai`       | walang key                 | —                          | —                      | mag-ingat  | 3          |
 | `reka`           | walang key                 | —                          | —                      | mag-ingat  | 2          |
@@ -284,17 +282,6 @@ Karamihan sa mga bilang ng "libreng token kada buwan" sa larangang ito ay mga ka
 | `uncloseai`      | walang key                 | —                          | —                      | mag-ingat  | 3          |
 
 ---
-
-## OpenCode Free: paghihigpit sa client-contract (#14313)
-
-Tinatanggihan ng keyless na `opencode` provider (pampublikong `https://opencode.ai/zen/v1`) ang anumang request
-na hindi tumutugma sa OpenCode client contract gamit ang **403 `FreeTierError`** at ang
-pangungusap na _"Magagamit lamang ang libreng tier ng OpenCode mula sa loob ng OpenCode"_. Isa itong
-pagtangging nakabatay sa request (parehong pasya sa bawat account para sa parehong anyo ng request), hindi isang
-pag-ban sa modelo o cooldown ng koneksyon — inuuri ito ng OmniRoute bilang `project_route_error`, nilalampasan ang
-model lockout / cooldown, at (sa sintetikong `noauth` path) pansamantalang ipinapahinto ang muling pagpili ng auto-combo
-sa loob ng maikling TTL. Magpadala ng mga request na may hindi bakanteng listahan ng tool, `stream: true`, at mga
-OpenCode session/UA header (`opencodeFreeTierContract.ts`), kung hindi ay asahan ang 403.
 
 ## Ano ang nagbago mula sa inilabas na catalog (`freeNote`)
 

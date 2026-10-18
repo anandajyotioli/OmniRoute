@@ -147,6 +147,7 @@ Tunnel, Tailscale, Ngrok) ಹಿಂದೆ ಚಲಾಯಿಸಿದರೆ, ಮೇ
 | `/api/settings/import-json`               | ಸಂಪೂರ್ಣ ಸೆಟ್ಟಿಂಗ್ಗಳ ಬ್ಲಾಬ್ ಅನ್ನು ಬದಲಿಸುತ್ತದೆ                                 |
 | `/api/providers/health-autopilot/actions` | ಆಟೋಪೈಲಟ್ ಪರಿಹಾರಾತ್ಮಕ ಕ್ರಿಯೆಗಳನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸುತ್ತದೆ                         |
 | `/api/settings/obsidian`                  | ಯಾವುದೇ ವಾಲ್ಟ್ ರೂಟ್ಗಾಗಿ ಮರುಬಳಕೆ ಮಾಡಬಹುದಾದ WebDAV ರುಜುವಾತುಗಳನ್ನು ಸೃಷ್ಟಿಸುತ್ತದೆ |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                 |
 
 **ಉಲ್ಲಂಘನೆಯಾಗುವಾಗ ಪ್ರತಿಕ್ರಿಯೆ:** `401 Authentication required`
 

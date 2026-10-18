@@ -163,6 +163,7 @@ LOCAL_ONLY に分類します。
 | `/api/settings/import-json`               | 設定 BLOB 全体を置き換える                                    |
 | `/api/providers/health-autopilot/actions` | 自動修復アクションを実行する                                  |
 | `/api/settings/obsidian`                  | 任意の vault ルート用に再利用可能な WebDAV 認証情報を発行する |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                  |
 
 **違反時のレスポンス:** `401 Authentication required`
 

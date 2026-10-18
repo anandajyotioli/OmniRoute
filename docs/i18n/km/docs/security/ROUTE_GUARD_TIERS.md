@@ -196,6 +196,7 @@ server process បានដែរ។
 | `/api/settings/import-json`               | ជំនួស settings blob ទាំងមូល                                     |
 | `/api/providers/health-autopilot/actions` | ប្រតិបត្តិសកម្មភាពកែតម្រូវរបស់ autopilot                        |
 | `/api/settings/obsidian`                  | បង្កើត WebDAV creds ដែលអាចប្រើឡើងវិញបានសម្រាប់ vault root ណាមួយ |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                    |
 
 **Response នៅពេលមានការបំពាន៖** `401 Authentication required`
 

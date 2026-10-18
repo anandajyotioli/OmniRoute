@@ -47,11 +47,11 @@ OmniRoute 将在 `http://localhost:20128` 上启动。仪表板会自动打开�
 
 ---
 
-## 第 3 步：连接符合条件的提供者
+## 步骤 3：连接符合条件的提供者
 
-选择条款和配额符合你需求的提供者。在 **Dashboard → Providers** 中，连接你自己的账户或 API 密钥，然后测试连接。免费访问和免密钥使用无法得到保证。
+选择其条款和配额符合你需求的提供者。在 **Dashboard → Providers** 中，连接你自己的账户或 API 密钥，然后测试连接。免费访问和免密钥可用性无法保证。
 
-默认情况下，`auto` 会排除标记为 `tos: avoid` 的提供者，包括 Kiro 和 OpenCode Free。连接账户不会改变此策略。**Dashboard → Combos** 中的选择加入设置适用于所有自动组合。选择提供者之前，请阅读[免费套餐指南](./FREE-TIERS-GUIDE.md)。
+默认情况下，`auto` 会排除标记为 `tos: avoid` 的提供者，包括 Kiro。连接账户不会改变此策略。**Dashboard → Combos** 中的选择加入设置适用于所有自动组合。选择提供者之前，请查看[免费套餐指南](./FREE-TIERS-GUIDE.md)。
 
 ---
 
@@ -133,7 +133,7 @@ omniroute launch-codex --model auto
 - **[自动组合指南](./AUTO-COMBO-GUIDE.md)** — 让 OmniRoute 为你选择最佳 AI
 - **[提供者指南](./PROVIDERS-GUIDE.md)** — 连接更多提供者（免费和付费）
 - **[免费套餐指南](./FREE-TIERS-GUIDE.md)** — 查看提供者条款和免费套餐限制
-- **[故障排除](../guides/TROUBLESHOOTING.md)** — 解决常见问题
+- **[故障排除](../guides/TROUBLESHOOTING.md)** — 修复常见问题
 
 ---
 
@@ -141,7 +141,7 @@ omniroute launch-codex --model auto
 
 ### “我需要 API 密钥吗？”
 
-OmniRoute API 密钥用于对您的工具进行身份验证。上游凭据取决于提供者：某些提供者需要 API 密钥或登录账户。不保证能够免费访问。
+OmniRoute API 密钥用于验证您的工具。上游凭据取决于提供者：有些提供者需要 API 密钥或账户登录。不保证可免费使用。
 
 ### “`auto` 是什么？”
 
@@ -153,7 +153,7 @@ OmniRoute 本身是**免费且开源的**。您只需为所使用的提供者付
 
 ### “我可以将它与 Claude Code / Cursor / Copilot 一起使用吗？”
 
-**可以！** OmniRoute 可与任何支持 OpenAI 格式的工具配合使用。只需将基础 URL 设置为 `http://localhost:20128/v1`。有关具体的设置说明，请参阅 [CLI 工具指南](../reference/CLI-TOOLS.md)。
+**可以！** OmniRoute 适用于任何支持 OpenAI 格式的工具。只需将基础 URL 设置为 `http://localhost:20128/v1`。有关具体的设置说明，请参阅 [CLI 工具指南](../reference/CLI-TOOLS.md)。
 
 ### “如果某个提供者出现故障怎么办？”
 

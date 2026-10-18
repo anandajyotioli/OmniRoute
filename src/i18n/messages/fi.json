@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Järjestä yhteydet uudelleen saatavuuden mukaan",
     "reorderByAvailabilityError": "Yhteyksien uudelleenjärjestäminen saatavuuden mukaan epäonnistui",
     "distributeProxies": "Jaa välityspalvelimet",
+    "clearAccountProxies": "Poista tilien välityspalvelimet",
+    "clearAccountProxyAssignments": "Poista määritykset",
+    "clearAccountProxiesConfirm": "Poistetaanko yksittäiset välityspalvelinmääritykset kaikilta tämän palveluntarjoajan {count} tililtä, myös käytöstä poistetuilta tileiltä? Tallennetut välityspalvelimet ja palveluntarjoaja-/yleiset määritykset säilytetään. Tilit perivät jälleen palveluntarjoajan/yleiset välityspalvelinasetukset.",
+    "accountProxiesCleared": "Tilien välityspalvelinmääritykset poistettu.",
+    "clearAccountProxiesPartial": "Kaikkia {count} tiliä ei voitu palauttaa oletusasetuksiin. Näytetyt määritykset on päivitetty; voit yrittää uudelleen.",
+    "clearAccountProxiesError": "Tilien välityspalvelimia ei voitu palauttaa oletusasetuksiin eikä niiden tilaa päivittää. Lataa sivu uudelleen ja yritä uudelleen.",
     "distributing": "Jaetaan...",
     "selectedCount": "{count, plural, one {# valittu} other {# valittua}}",
     "accountsCount": "{count, plural, one {# tili} other {# tiliä}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Päivitä malliluettelo automaattisesti oletusarvoisesti 6 tunnin välein (määritettävissä asetuksella MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Automaattinen synkronointi käytössä – mallit päivittyvät säännöllisesti",
     "autoSyncDisabled": "Automaattinen synkronointi poistettu käytöstä",
+    "autoSyncLastSynced": "Synkronoitu {time}",
+    "autoSyncNeverSynced": "Ei koskaan synkronoitu",
+    "autoSyncImmediateFailed": "Automaattinen synkronointi on käytössä, mutta mallien välitön päivitys epäonnistui",
+    "autoSyncImmediatePartialFailure": "Automaattinen synkronointi on käytössä, mutta joidenkin mallien välitön päivitys epäonnistui",
     "autoSyncToggleFailed": "Automaattisen synkronoinnin vaihtaminen epäonnistui",
     "autoSyncPartialFailure": "Automaattinen synkronointi päivitetty joillekin yhteyksille, mutta ei kaikille",
     "clearAllModels": "Tyhjennä kaikki mallit",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Jakaminen...",
       "complete": "Valmis",
-      "defaultLabel": "Jaa Välityspalvelimet"
+      "defaultLabel": "Jaa Välityspalvelimet",
+      "confirmMessage": "Määritetäänkö tallennetut välityspalvelimet kaikille tämän ryhmän tileille? Tämä korvaa nykyiset tilikohtaiset määritykset ja ottaa välityspalvelinreitityksen käyttöön myös käytöstä poistetuilla tileillä.",
+      "confirmDistribute": "Jaa välityspalvelimet",
+      "cancel": "Peruuta"
     }
   },
   "providerTest": {

@@ -203,6 +203,7 @@ hostውን probe የሚያደርግ አዲስ read route ተመሳሳይ pattern
 | `/api/settings/import-json`               | ሙሉውን settings blob ይተካል                                     |
 | `/api/providers/health-autopilot/actions` | የautopilot remediation actionsን ያስፈጽማል                      |
 | `/api/settings/obsidian`                  | ለማንኛውም vault root እንደገና ጥቅም ላይ ሊውሉ የሚችሉ WebDAV credsን ይፈጥራል |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                |
 
 **ጥሰት ሲኖር የሚሰጥ ምላሽ፦** `401 Authentication required`
 

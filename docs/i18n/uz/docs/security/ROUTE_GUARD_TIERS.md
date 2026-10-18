@@ -199,6 +199,7 @@ bo‘lardi.
 | `/api/settings/import-json`               | To‘liq sozlamalar blokini almashtiradi                                                |
 | `/api/providers/health-autopilot/actions` | Avtopilotning tuzatish amallarini bajaradi                                            |
 | `/api/settings/obsidian`                  | Istalgan ombor ildizi uchun qayta ishlatiladigan WebDAV hisob ma’lumotlarini yaratadi |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                          |
 
 **Buzilish holatidagi javob:** `401 Authentication required`
 

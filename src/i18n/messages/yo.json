@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Tún àwọn ìsopọ̀ ṣètò nípa bí wọ́n ṣe wà lárọwọ́tó",
     "reorderByAvailabilityError": "Ó kùnà láti tún àwọn ìsopọ̀ ṣètò nípa bí wọ́n ṣe wà lárọwọ́tó",
     "distributeProxies": "Pín Àwọn Proxy Ká",
+    "clearAccountProxies": "Yọ àwọn aṣojú àkọọ́lẹ̀ kúrò",
+    "clearAccountProxyAssignments": "Yọ àwọn ìyànṣí kúrò",
+    "clearAccountProxiesConfirm": "Ṣé o fẹ́ yọ àwọn ìyànṣí aṣojú kọ̀ọ̀kan kúrò nínú gbogbo àkọọ́lẹ̀ {count} ti olùpèsè yìí, títí kan àwọn àkọọ́lẹ̀ tí a ti pa? Àwọn aṣojú tí a fipamọ́ àti àwọn ìyànṣí olùpèsè/àgbáyé ni a ó pa mọ́. Àwọn àkọọ́lẹ̀ yóò tún jogún àwọn ààtò aṣojú olùpèsè/àgbáyé.",
+    "accountProxiesCleared": "A ti yọ àwọn ìyànṣí aṣojú àkọọ́lẹ̀ kúrò.",
+    "clearAccountProxiesPartial": "A kò lè tún gbogbo àkọọ́lẹ̀ {count} náà padà sí ìpilẹ̀ pátápátá. A ti sọ àwọn ìyànṣí tí a fi hàn di tuntun; o lè gbìyànjú lẹ́ẹ̀kan sí i.",
+    "clearAccountProxiesError": "A kò lè tún àwọn aṣojú àkọọ́lẹ̀ padà sí ìpilẹ̀ tàbí sọ ipò wọn di tuntun. Jọ̀wọ́ tún ojú ìwé náà gbé, kí o sì gbìyànjú lẹ́ẹ̀kan sí i.",
     "distributing": "Ń pín ká...",
     "selectedCount": "{count, plural, one {# ni a yàn} other {# ni a yàn}}",
     "accountsCount": "{count, plural, one {# àkọọ́lẹ̀} other {# àkọọ́lẹ̀}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Máa tún àtòjọ àwọn model ṣe láìfọwọ́yí ní gbogbo wákàtí 6 gẹ́gẹ́ bí àtúnṣe àkọ́kọ́ (a lè ṣètò rẹ̀ nípasẹ̀ MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Ìmúdọ́gba aládàáṣiṣẹ́ ti ṣiṣẹ́ — a ó máa sọ àwọn módẹ́lì di tuntun lẹ́ẹ̀kọ̀ọ̀kan",
     "autoSyncDisabled": "Ìmúdọ́gba aládàáṣiṣẹ́ ti dáwọ́ dúró",
+    "autoSyncLastSynced": "Ti múdọ́gba {time}",
+    "autoSyncNeverSynced": "A kò tíì múdọ́gba rí",
+    "autoSyncImmediateFailed": "Ìmúdọ́gba aládàáṣiṣẹ́ ti ṣiṣẹ́, ṣùgbọ́n sísọ àwọn módẹ́lì di tuntun lẹ́sẹ̀kẹsẹ̀ kùnà",
+    "autoSyncImmediatePartialFailure": "Ìmúdọ́gba aládàáṣiṣẹ́ ti ṣiṣẹ́, ṣùgbọ́n díẹ̀ lára sísọ àwọn módẹ́lì di tuntun lẹ́sẹ̀kẹsẹ̀ kùnà",
     "autoSyncToggleFailed": "Yíyí ìmúdọ́gba aládàáṣiṣẹ́ padà kò ṣàṣeyọrí",
     "autoSyncPartialFailure": "A ṣe àtúnṣe ìmúdọ́gba aládàáṣiṣẹ́ fún àwọn ìsopọ̀ kan, ṣùgbọ́n kì í ṣe gbogbo wọn",
     "clearAllModels": "Pa Gbogbo Àwọn Módẹ́lì",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Ń pín káàkiri...",
       "complete": "Parí",
-      "defaultLabel": "Pín àwọn Prọ́ọ̀sì káàkiri"
+      "defaultLabel": "Pín àwọn Prọ́ọ̀sì káàkiri",
+      "confirmMessage": "Ṣé o fẹ́ yan àwọn aṣojú tí a fipamọ́ fún gbogbo àkọọ́lẹ̀ inú ẹgbẹ́ yìí? Èyí yóò rọ́pò àwọn ìyànṣí àkọọ́lẹ̀ tó wà tẹ́lẹ̀, yóò sì mú ìdarí ọ̀nà nípasẹ̀ aṣojú ṣiṣẹ́, títí kan fún àwọn àkọọ́lẹ̀ tí a ti pa.",
+      "confirmDistribute": "Pín àwọn aṣojú ká",
+      "cancel": "Fagilé"
     }
   },
   "providerTest": {

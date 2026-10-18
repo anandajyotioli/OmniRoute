@@ -203,6 +203,7 @@ serverio procesą.
 | `/api/settings/import-json`               | Pakeičia visą nustatymų objektą                                                      |
 | `/api/providers/health-autopilot/actions` | Vykdo automatinio valdymo taisomuosius veiksmus                                      |
 | `/api/settings/obsidian`                  | Sugeneruoja pakartotinai naudojamus WebDAV kredencialus bet kuriai saugyklos šakniai |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                         |
 
 **Atsakymas pažeidimo atveju:** `401 Authentication required`
 

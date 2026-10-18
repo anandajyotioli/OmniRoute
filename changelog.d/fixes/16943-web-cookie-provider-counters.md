@@ -1,0 +1,1 @@
+- **fix(providers):** Count imported Web Cookie sessions (`authType: cookie`) on the matching provider cards and section totals, while keeping cookie credentials excluded from unrelated API-key and OAuth cards (refs [#16943](https://github.com/diegosouzapw/OmniRoute/issues/16943)) — thanks @fabioKoruja00

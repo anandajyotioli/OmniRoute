@@ -24,7 +24,7 @@ Aceste valori descriu conturi terțe și condiții de eligibilitate distincte di
 | **+ condiționat de o verificare regională a identității** | **+~6 mil.**      | `modelscope` (asociere cu Alibaba Cloud + verificarea numelui real în China continentală). Cotă recurentă reală, expusă drept `gatedRecurringTokens` / `gatedProviders` și în panoul de control. Nu este însumată niciodată în valoarea principală: +~6 mil. în spatele verificării regionale a identității.                                       |
 | Plafon teoretic (toate limitele de rată, 24/7)            | ~10 mld.          | Suma tuturor limitelor de rată ale furnizorilor, extrapolată pentru utilizare neîntreruptă. **Nu este o garanție** — nu prezentați această valoare drept titlu principal.                                                                                                                                                                          |
 
-**Rezumat sincer:** _OmniRoute agregă **~1,62 mld. de tokenuri gratuite documentate pe lună** (până la ~2,22 mld. în prima lună, incluzând creditele de înscriere) în 35 de pool-uri de nivel gratuit — plus o listă lungă de furnizori gratuiți permanent, fără plafon — iar compresia RTK + Caveman (economii de tokenuri de 15–95%) extinde și mai mult această capacitate._
+**Rezumat sincer:** _OmniRoute agregă **~1,62 mld. de tokenuri gratuite documentate pe lună** (până la ~2,22 mld. în prima lună, incluzând creditele de înscriere) în 34 de pool-uri de nivel gratuit — plus o listă lungă de furnizori gratuiți permanent, fără plafon — iar compresia RTK + Caveman (economii de tokenuri de 15–95%) extinde și mai mult această capacitate._
 
 > **De ce această valoare a scăzut față de cea anterioară, de ~1,94B.** Actualizarea din 2026-06-17 este o corecție pentru acuratețe, nu o pierdere: `gemini` este acum deduplicat la nivel de pool (anterior, valoarea era umflată prin numărarea separată a fiecărei variante Flash, 462M → 60M), `cloudflare-ai` a fost corectat la valoarea sa reală de 10k neuroni/zi (122M → 30M), `doubao` a fost reclasificat drept credit unic acordat la înscriere (nu recurent), iar nivelurile închise au fost eliminate (`chutes`/`phind`/`kluster` au fost întrerupte). Scăderea este compensată parțial de `llm7` (valoarea corectă de 5M/zi → 150M) și de noii furnizori gratuiți (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Aceste valori descriu conturi terțe și condiții de eligibilitate distincte di
 >
 > **Corectat pe 2026-09-03 (#11773):** `cerebras` a fost reclasificat de la o alocare recurentă de 30M/lună (vechea perioadă de probă fără card, de 1M tokenuri/zi) la un credit unic de înscriere în valoare de $5, care necesită o metodă de plată. Se aplică aceeași regulă de acuratețe ca în cazul LongCat.
 >
-> **Plus xKiro (2026-09-03):** noul pool `xkiro-free` (150M/lună) adaugă o a 35-a cheie de pool recurentă. Felo Web rămâne exclus cât timp proveniența/licențierea sa derivată din GPL rămâne în așteptare. Sursa raportează acum **35 de chei de pool recurente** și **~1,62B în regim constant** — valoarea actualizată în timp real și validată prin CI (`check:docs-counts` oprește compilarea dacă aceasta diferă de `computeFreeModelTotals()`).
+> **Plus xKiro (2026-09-03):** noul pool `xkiro-free` (150M/lună) adaugă o a 35-a cheie de pool recurentă. Felo Web rămâne exclus cât timp proveniența/licențierea sa derivată din GPL rămâne în așteptare. Sursa raportează acum **34 de chei de pool recurente** și **~1,62B în regim constant** — valoarea actualizată în timp real și validată prin CI (`check:docs-counts` oprește compilarea dacă aceasta diferă de `computeFreeModelTotals()`).
 
 Cei mai mari contribuitori **documentați**: `mistral` 1,00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (cinci plafoane per model), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` este exclus — alocarea sa LongCat-2.0 de 10M este un credit unic de înscriere, condiționat de verificarea KYC, nu un buget lunar recurent.)
 
@@ -130,7 +130,6 @@ Majoritatea cifrelor privind „tokenurile gratuite pe lună” din acest domeni
 | `modal`          | Secțiunea 1.3 din ToS interzice în mod explicit „închirierea, revânzarea sau permiterea în alt mod a accesului direct ori a utilizării Serviciului de către orice terț” — crearea unui proxy autogăzduit…      |
 | `muse-spark-web` | ToS-ul Meta interzice în mod explicit accesul automatizat fără permisiune prealabilă, ingineria inversă fără permisiune scrisă și eludarea măsurilor tehnologice…                                              |
 | `nlpcloud`       | ToS interzice în mod explicit „configurarea unui proxy sau a altui dispozitiv care permite altor persoane să acceseze Serviciul prin intermediul acestuia” și acordă doar un drept netransferabil,…            |
-| `opencode`       | ToS-ul (Anomaly Innovations, Inc.) limitează în mod explicit utilizarea la „uzul dumneavoastră intern și nu în numele sau în beneficiul vreunui terț” — ope…                                                   |
 | `t3-web`         | ToS limitează în mod explicit conturile numai la uz personal, interzice partajarea acreditărilor cu terți și interzice accesul automatizat/prin boți/pentru extragerea datelor — un…                           |
 
 ### ✅ În general permisiv — caution / ambiguous / ok (restul)
@@ -273,7 +272,6 @@ Majoritatea cifrelor privind „tokenurile gratuite pe lună” din acest domeni
 | `muse-spark-web` | fără cheie          | —                     | —                    | de evitat  | 3      |
 | `nlpcloud`       | fără cheie          | —                     | —                    | de evitat  | 1      |
 | `nvidia`         | fără cheie          | —                     | —                    | prudență   | 13     |
-| `opencode`       | fără cheie          | —                     | —                    | de evitat  | 7      |
 | `pollinations`   | fără cheie          | —                     | —                    | prudență   | 31     |
 | `publicai`       | fără cheie          | —                     | —                    | prudență   | 3      |
 | `reka`           | fără cheie          | —                     | —                    | precauție  | 2      |
@@ -284,17 +282,6 @@ Majoritatea cifrelor privind „tokenurile gratuite pe lună” din acest domeni
 | `uncloseai`      | fără cheie          | —                     | —                    | precauție  | 3      |
 
 ---
-
-## OpenCode Free: restricție privind contractul clientului (#14313)
-
-Furnizorul `opencode` fără cheie (public `https://opencode.ai/zen/v1`) refuză orice solicitare
-care nu respectă contractul clientului OpenCode, cu **403 `FreeTierError`** și propoziția
-_"Nivelul gratuit al OpenCode poate fi utilizat numai din OpenCode"_. Acesta este un
-refuz la nivelul solicitării (același verdict pentru fiecare cont în cazul aceleiași structuri a solicitării), nu o
-interdicție a modelului sau o perioadă de așteptare a conexiunii — OmniRoute îl clasifică drept `project_route_error`, omite
-blocarea modelului / perioada de așteptare și (pe ruta sintetică `noauth`) întrerupe temporar reselectarea automată
-a combinației pentru un TTL scurt. Trimiteți solicitări care conțin o listă nevidă de instrumente, `stream: true` și
-anteturile de sesiune/UA OpenCode (`opencodeFreeTierContract.ts`) sau așteptați-vă la răspunsul 403.
 
 ## Ce s-a schimbat față de catalogul livrat (`freeNote`)
 

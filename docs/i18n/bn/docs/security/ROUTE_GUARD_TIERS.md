@@ -144,6 +144,7 @@ route-গুলোকে সুরক্ষিত রাখে — যে reques
 | `/api/settings/import-json`               | সম্পূর্ণ settings blob প্রতিস্থাপন করে                                 |
 | `/api/providers/health-autopilot/actions` | autopilot remediation action সম্পাদন করে                               |
 | `/api/settings/obsidian`                  | যেকোনো vault root-এর জন্য পুনর্ব্যবহারযোগ্য WebDAV credential তৈরি করে |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                           |
 
 **লঙ্ঘনের ক্ষেত্রে response:** `401 Authentication required`
 

@@ -196,6 +196,7 @@ Tunnel, Tailscale, Ngrok) հետևում, loopback ստուգումը շարու
 | `/api/settings/import-json`               | Փոխարինում է կարգավորումների ամբողջ blob-ը                                      |
 | `/api/providers/health-autopilot/actions` | Կատարում է autopilot-ի վերականգնման գործողությունները                           |
 | `/api/settings/obsidian`                  | Ստեղծում է բազմակի օգտագործման WebDAV հավատարմագրեր ցանկացած vault root-ի համար |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                    |
 
 **Պատասխան խախտման դեպքում՝** `401 Authentication required`
 

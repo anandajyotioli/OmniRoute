@@ -197,6 +197,7 @@ sulgeda.
 | `/api/settings/import-json`               | Asendab kogu seadete objekti                                                   |
 | `/api/providers/health-autopilot/actions` | Käivitab autopiloodi parandustoimingud                                         |
 | `/api/settings/obsidian`                  | Väljastab korduskasutatavad WebDAV-mandaadid mis tahes hoidla juurkausta jaoks |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                   |
 
 **Vastus rikkumise korral:** `401 Authentication required`
 

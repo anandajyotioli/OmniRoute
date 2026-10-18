@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Riordina le connessioni in base alla disponibilità",
     "reorderByAvailabilityError": "Impossibile riordinare le connessioni in base alla disponibilità",
     "distributeProxies": "Distribuisci proxy",
+    "clearAccountProxies": "Rimuovi proxy dagli account",
+    "clearAccountProxyAssignments": "Rimuovi assegnazioni",
+    "clearAccountProxiesConfirm": "Rimuovere le singole assegnazioni dei proxy da tutti i {count} account di questo provider, inclusi gli account disabilitati? I proxy salvati e le assegnazioni a livello di provider/globale verranno mantenuti. Gli account erediteranno nuovamente le impostazioni proxy del provider/globali.",
+    "accountProxiesCleared": "Assegnazioni dei proxy agli account rimosse.",
+    "clearAccountProxiesPartial": "Non è stato possibile reimpostare completamente {count} account. Le assegnazioni visualizzate sono state aggiornate; puoi riprovare.",
+    "clearAccountProxiesError": "Non è stato possibile reimpostare i proxy degli account o aggiornarne lo stato. Ricarica la pagina e riprova.",
     "distributing": "Distribuzione in corso...",
     "selectedCount": "{count, plural, one {# selezionato} other {# selezionati}}",
     "accountsCount": "{count, plural, one {# account} other {# account}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Aggiorna automaticamente l'elenco dei modelli ogni 6 ore per impostazione predefinita (configurabile tramite MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Sincronizzazione automatica abilitata — i modelli verranno aggiornati periodicamente",
     "autoSyncDisabled": "Sincronizzazione automatica disabilitata",
+    "autoSyncLastSynced": "Sincronizzato {time}",
+    "autoSyncNeverSynced": "Mai sincronizzato",
+    "autoSyncImmediateFailed": "Sincronizzazione automatica abilitata, ma l'aggiornamento immediato dei modelli non è riuscito",
+    "autoSyncImmediatePartialFailure": "Sincronizzazione automatica abilitata, ma alcuni aggiornamenti immediati dei modelli non sono riusciti",
     "autoSyncToggleFailed": "Impossibile attivare la sincronizzazione automatica",
     "autoSyncPartialFailure": "Sincronizzazione automatica aggiornata per alcune connessioni, ma non tutte",
     "clearAllModels": "Cancella tutti i modelli",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Distribuzione...",
       "complete": "Completo",
-      "defaultLabel": "Distribuire Proxy"
+      "defaultLabel": "Distribuire Proxy",
+      "confirmMessage": "Assegnare i proxy salvati a tutti gli account di questo gruppo? Questa operazione sostituisce le assegnazioni esistenti e abilita l'instradamento tramite proxy, anche per gli account disabilitati.",
+      "confirmDistribute": "Distribuisci proxy",
+      "cancel": "Annulla"
     }
   },
   "providerTest": {

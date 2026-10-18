@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Bağlantıları kullanılabilirliğe göre yeniden sırala",
     "reorderByAvailabilityError": "Bağlantılar kullanılabilirliğe göre yeniden sıralanamadı",
     "distributeProxies": "Proxy'leri Dağıt",
+    "clearAccountProxies": "Hesap proxy'lerini kaldır",
+    "clearAccountProxyAssignments": "Atamaları kaldır",
+    "clearAccountProxiesConfirm": "Bu sağlayıcıya ait {count} hesabın tümünden, devre dışı bırakılmış hesaplar da dahil olmak üzere, hesap bazlı proxy atamaları kaldırılsın mı? Kaydedilmiş proxy'ler ile sağlayıcı/genel atamalar korunur. Hesaplar yeniden sağlayıcı/genel proxy ayarlarını devralacaktır.",
+    "accountProxiesCleared": "Hesap proxy atamaları kaldırıldı.",
+    "clearAccountProxiesPartial": "{count} hesap tamamen sıfırlanamadı. Görüntülenen atamalar yenilendi; yeniden deneyebilirsiniz.",
+    "clearAccountProxiesError": "Hesap proxy'leri sıfırlanamadı veya durumları yenilenemedi. Lütfen sayfayı yeniden yükleyip tekrar deneyin.",
     "distributing": "Dağıtılıyor...",
     "selectedCount": "{count, plural, one {# seçildi} other {# seçildi}}",
     "accountsCount": "{count, plural, one {# hesap} other {# hesap}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Model listesini varsayılan olarak her 6 saatte bir otomatik yenile (MODEL_SYNC_INTERVAL_HOURS ile yapılandırılabilir)",
     "autoSyncEnabled": "Otomatik senkronizasyon etkin — modeller periyodik olarak yenilenecek",
     "autoSyncDisabled": "Otomatik senkronizasyon devre dışı bırakıldı",
+    "autoSyncLastSynced": "{time} senkronize edildi",
+    "autoSyncNeverSynced": "Hiç senkronize edilmedi",
+    "autoSyncImmediateFailed": "Otomatik senkronizasyon etkinleştirildi, ancak anlık model yenilemesi başarısız oldu",
+    "autoSyncImmediatePartialFailure": "Otomatik senkronizasyon etkinleştirildi, ancak bazı anlık model yenilemeleri başarısız oldu",
     "autoSyncToggleFailed": "Otomatik senkronizasyon durumu değiştirilemedi",
     "autoSyncPartialFailure": "Otomatik senkronizasyon bazı bağlantılar için güncellendi, ancak hepsi değil",
     "clearAllModels": "Tüm Modelleri Temizle",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Dağıtılıyor...",
       "complete": "Tamamla",
-      "defaultLabel": "Proxy'leri Dağıtın"
+      "defaultLabel": "Proxy'leri Dağıtın",
+      "confirmMessage": "Kaydedilmiş proxy'ler bu gruptaki tüm hesaplara atansın mı? Bu işlem mevcut hesap atamalarını değiştirir ve devre dışı bırakılmış hesaplar da dahil olmak üzere proxy yönlendirmesini etkinleştirir.",
+      "confirmDistribute": "Proxy'leri dağıt",
+      "cancel": "İptal"
     }
   },
   "providerTest": {

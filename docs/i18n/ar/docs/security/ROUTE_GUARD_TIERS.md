@@ -197,6 +197,7 @@ Tunnel أو Tailscale أو Ngrok)، فسيظل فحص العنوان الاست�
 | `/api/settings/import-json`               | يستبدل كائن الإعدادات الكامل                                   |
 | `/api/providers/health-autopilot/actions` | ينفّذ إجراءات المعالجة التلقائية                               |
 | `/api/settings/obsidian`                  | يُصدر بيانات اعتماد WebDAV قابلة لإعادة الاستخدام لأي جذر مخزن |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                   |
 
 **الاستجابة عند الانتهاك:** `401 Authentication required`
 

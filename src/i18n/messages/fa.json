@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "ترتیب مجدد اتصالات بر اساس در دسترس بودن",
     "reorderByAvailabilityError": "ترتیب مجدد اتصالات بر اساس در دسترس بودن ناموفق بود",
     "distributeProxies": "توزیع پروکسی‌ها",
+    "clearAccountProxies": "حذف پراکسیهای حساب",
+    "clearAccountProxyAssignments": "حذف تخصیصها",
+    "clearAccountProxiesConfirm": "تخصیصهای پراکسی جداگانه از همه {count} حساب این ارائهدهنده، از جمله حسابهای غیرفعال، حذف شوند؟ پراکسیهای ذخیرهشده و تخصیصهای ارائهدهنده/سراسری حفظ میشوند. حسابها دوباره تنظیمات پراکسی ارائهدهنده/سراسری را به ارث خواهند برد.",
+    "accountProxiesCleared": "تخصیصهای پراکسی حساب حذف شدند.",
+    "clearAccountProxiesPartial": "بازنشانی {count} حساب بهطور کامل انجام نشد. تخصیصهای نمایشدادهشده بهروزرسانی شدهاند؛ میتوانید دوباره تلاش کنید.",
+    "clearAccountProxiesError": "بازنشانی پراکسیهای حساب یا بهروزرسانی وضعیت آنها انجام نشد. لطفاً صفحه را دوباره بارگیری و مجدداً تلاش کنید.",
     "distributing": "در حال توزیع...",
     "selectedCount": "{count, plural, one {# انتخاب شده} other {# انتخاب شده}}",
     "accountsCount": "{count, plural, one {# حساب} other {# حساب}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "تازهسازی خودکار فهرست مدلها هر ۲۴ ساعت (قابل تنظیم از طریق MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "همگامسازی خودکار فعال شد — مدلها بهصورت دورهای تازهسازی خواهند شد",
     "autoSyncDisabled": "همگامسازی خودکار غیرفعال شد",
+    "autoSyncLastSynced": "همگام‌سازی‌شده در {time}",
+    "autoSyncNeverSynced": "هرگز همگام‌سازی نشده است",
+    "autoSyncImmediateFailed": "همگام‌سازی خودکار فعال شد، اما به‌روزرسانی فوری مدل‌ها ناموفق بود",
+    "autoSyncImmediatePartialFailure": "همگام‌سازی خودکار فعال شد، اما برخی به‌روزرسانی‌های فوری مدل‌ها ناموفق بودند",
     "autoSyncToggleFailed": "تغییر وضعیت همگامسازی خودکار ناموفق بود",
     "autoSyncPartialFailure": "همگامسازی خودکار برای برخی اتصالها بهروزرسانی شد، اما نه برای همه",
     "clearAllModels": "پاک کردن همه مدلها",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "در حال توزیع...",
       "complete": "کامل شده",
-      "defaultLabel": "توزیع پروکسی‌ها"
+      "defaultLabel": "توزیع پروکسی‌ها",
+      "confirmMessage": "پراکسیهای ذخیرهشده به همه حسابهای این گروه اختصاص داده شوند؟ این کار تخصیصهای فعلی حسابها را جایگزین میکند و مسیریابی از طریق پراکسی را، از جمله برای حسابهای غیرفعال، فعال میکند.",
+      "confirmDistribute": "توزیع پراکسیها",
+      "cancel": "لغو"
     }
   },
   "providerTest": {

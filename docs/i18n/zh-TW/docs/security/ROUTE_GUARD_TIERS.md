@@ -170,6 +170,7 @@ LAN 上的任何人都能清除資料庫或終止伺服器程序。
 | `/api/settings/import-json`               | 取代完整設定資料塊                              |
 | `/api/providers/health-autopilot/actions` | 執行 autopilot 修復動作                         |
 | `/api/settings/obsidian`                  | 為任何 Vault 根目錄簽發可重複使用的 WebDAV 認證 |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens    |
 
 **違規時的回應：** `401 Authentication required`
 

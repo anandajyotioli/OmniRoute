@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort fortalt**: Installer → Tilslut en kvalificeret udbyder → Peg dit IDE på OmniRoute. Færdig.
+> **Kort fortalt**: Installér → Tilslut en kvalificeret udbyder → Peg din IDE på OmniRoute. Færdig.
 
 ---
 
@@ -49,9 +49,9 @@ OmniRoute starter på `http://localhost:20128`. Dashboardet åbnes automatisk.
 
 ## Trin 3: Tilslut en kvalificeret udbyder
 
-Vælg en udbyder, hvis vilkår og kvote passer til dine behov. I **Dashboard → Providers** skal du tilslutte din egen konto eller API-nøgle og derefter teste forbindelsen. Gratis adgang og nøglefri tilgængelighed er ikke garanteret.
+Vælg en udbyder, hvis vilkår og kvote passer til dine behov. I **Dashboard → Providers** skal du tilslutte din egen konto eller API-nøgle og derefter teste forbindelsen. Gratis adgang og adgang uden nøgle er ikke garanteret.
 
-`auto` udelukker som standard udbydere, der er markeret med `tos: avoid`, herunder Kiro og OpenCode Free. Tilslutning af en konto ændrer ikke denne politik. Tilvalget i **Dashboard → Combos** gælder for alle automatiske kombinationer. Gennemgå [vejledningen til gratis niveauer](./FREE-TIERS-GUIDE.md), før du vælger en udbyder.
+`auto` udelukker som standard udbydere, der er markeret med `tos: avoid`, herunder Kiro. Tilslutning af en konto ændrer ikke denne politik. Tilvalget i **Dashboard → Combos** gælder for alle automatiske kombinationer. Gennemgå [vejledningen til gratis niveauer](./FREE-TIERS-GUIDE.md), før du vælger en udbyder.
 
 ---
 
@@ -130,9 +130,9 @@ Du kan se oplysningerne om anmodningen ved at klikke på [Overvågning/logfiler]
 
 ## Hvad er det næste?
 
-- **[Guide til Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Lad OmniRoute vælge den bedste AI for dig
+- **[Guide til automatisk kombination](./AUTO-COMBO-GUIDE.md)** — Lad OmniRoute vælge den bedste AI for dig
 - **[Guide til udbydere](./PROVIDERS-GUIDE.md)** — Tilslut flere udbydere (gratis og betalte)
-- **[Guide til gratis niveauer](./FREE-TIERS-GUIDE.md)** — Gennemgå udbydervilkår og grænser for gratis niveauer
+- **[Guide til gratis niveauer](./FREE-TIERS-GUIDE.md)** — Gennemgå udbydernes vilkår og grænser for gratis niveauer
 - **[Fejlfinding](../guides/TROUBLESHOOTING.md)** — Løs almindelige problemer
 
 ---
@@ -141,23 +141,23 @@ Du kan se oplysningerne om anmodningen ved at klikke på [Overvågning/logfiler]
 
 ### "Har jeg brug for en API-nøgle?"
 
-OmniRoute API-nøglen godkender dine værktøjer. Legitimationsoplysninger til upstream-udbydere afhænger af udbyderen: Nogle kræver en API-nøgle eller login på en konto. Gratis adgang er ikke garanteret.
+OmniRoute API-nøglen godkender dine værktøjer. Legitimationsoplysninger til upstream-tjenester afhænger af udbyderen: Nogle kræver en API-nøgle eller login til en konto. Gratis adgang er ikke garanteret.
 
 ### "Hvad er `auto`?"
 
-`auto` får OmniRoute til automatisk at vælge den bedste udbyder til hver anmodning. Der tages højde for hastighed, pris, kvalitet og tilgængelighed. Se [guiden til Auto-Combo](./AUTO-COMBO-GUIDE.md) for nærmere oplysninger.
+`auto` får OmniRoute til automatisk at vælge den bedste udbyder for hver anmodning. Den tager højde for hastighed, pris, kvalitet og tilgængelighed. Se [vejledningen til Auto-Combo](./AUTO-COMBO-GUIDE.md) for nærmere oplysninger.
 
 ### "Hvad koster det?"
 
-OmniRoute er i sig selv **gratis og open source**. Du betaler kun for de udbydere, du bruger. Mange udbydere har gratis niveauer — se [guiden til gratis niveauer](./FREE-TIERS-GUIDE.md).
+OmniRoute er **gratis og open source**. Du betaler kun for de udbydere, du bruger. Mange udbydere har gratis abonnementer – se [vejledningen til gratis abonnementer](./FREE-TIERS-GUIDE.md).
 
 ### "Kan jeg bruge det med Claude Code / Cursor / Copilot?"
 
-**Ja!** OmniRoute fungerer med ethvert værktøj, der understøtter OpenAI-formatet. Du skal blot indstille basis-URL'en til `http://localhost:20128/v1`. Se [guiden til CLI-værktøjer](../reference/CLI-TOOLS.md) for specifikke opsætningsvejledninger.
+**Ja!** OmniRoute fungerer med alle værktøjer, der understøtter OpenAI-formatet. Du skal blot angive basis-URL'en som `http://localhost:20128/v1`. Se [vejledningen til CLI-værktøjer](../reference/CLI-TOOLS.md) for specifikke opsætningsinstruktioner.
 
 ### "Hvad sker der, hvis en udbyder går ned?"
 
-OmniRoute springer automatisk udbydere med fejl over og prøver den næste. Du behøver ikke at gøre noget. Se [guiden til Auto-Combo](./AUTO-COMBO-GUIDE.md) for nærmere oplysninger.
+OmniRoute springer automatisk over udbydere, der fejler, og prøver den næste. Du behøver ikke at gøre noget. Se [vejledningen til Auto-Combo](./AUTO-COMBO-GUIDE.md) for nærmere oplysninger.
 
 ---
 

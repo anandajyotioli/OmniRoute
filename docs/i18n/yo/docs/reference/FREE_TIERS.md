@@ -24,7 +24,7 @@
 | **+ lẹ́yìn àyẹ̀wò ìdánimọ̀ ẹkùn kan**              | **+~6M**                   | `modelscope` (àsopọ̀ Alibaba Cloud + ìjẹ́rìísí orúkọ gidi ní ilẹ̀ China). Ìpín àsọtúnsọ gidi, tí a fi hàn gẹ́gẹ́ bí `gatedRecurringTokens` / `gatedProviders` àti lórí pátákó ìṣàkóso. A kò kó o pọ̀ mọ́ àkòrí láéláé: +~6M lẹ́yìn ìjẹ́rìísí ìdánimọ̀ ẹkùn.                                                              |
 | Òrùlé àfojúsùn (gbogbo ààlà oṣùwọ̀n, 24/7)       | ~10B                       | Àpapọ̀ gbogbo ààlà oṣùwọ̀n olùpèsè tí a gbòòrò sí lílò láìdáwọ́ dúró. **Kì í ṣe ìdánilójú** — má ṣe lò èyí gẹ́gẹ́ bí àkòrí.                                                                                                                                                                                         |
 
-**Àkòrí olóòtítọ́:** _OmniRoute ń kójọ **~1.62B àwọn token ọ̀fẹ́ tí a ṣàkọsílẹ̀ ní oṣù kan** (títí dé ~2.22B ní oṣù àkọ́kọ́ rẹ pẹ̀lú àwọn kirẹ́díìtì ìforúkọsílẹ̀) jákèjádò àwọn adágún ìpele ọ̀fẹ́ 35 — pẹ̀lú ọ̀pọ̀lọpọ̀ àwọn olùpèsè ọ̀fẹ́ títí láé tí kò ní ààlà — RTK + ìfúnpọ̀ Caveman (ìfipamọ́ token 15–95%) sì ń mú kí ó lọ síwájú sí i._
+**Àkòrí olóòtítọ́:** _OmniRoute ń kójọ **~1.62B àwọn token ọ̀fẹ́ tí a ṣàkọsílẹ̀ ní oṣù kan** (títí dé ~2.22B ní oṣù àkọ́kọ́ rẹ pẹ̀lú àwọn kirẹ́díìtì ìforúkọsílẹ̀) jákèjádò àwọn adágún ìpele ọ̀fẹ́ 34 — pẹ̀lú ọ̀pọ̀lọpọ̀ àwọn olùpèsè ọ̀fẹ́ títí láé tí kò ní ààlà — RTK + ìfúnpọ̀ Caveman (ìfipamọ́ token 15–95%) sì ń mú kí ó lọ síwájú sí i._
 
 > **Ìdí tí èyí fi dín kù láti ~1.94B tẹ́lẹ̀.** Ìmúdójúìwọ̀n 2026-06-17 jẹ́ àtúnṣe òtítọ́, kì í ṣe àdánù: `gemini` ti ń yọ àwọn àdákojọ inú àkójọpọ̀ kúrò báyìí (ó ti pọ̀ ju nítorí pé a ka ẹ̀yà Flash kọ̀ọ̀kan lọ́tọ̀, 462M → 60M), a ṣàtúnṣe `cloudflare-ai` sí iye gidi rẹ̀ ti 10k-Neurons/ọjọ́ (122M → 30M), a tún pín `doubao` sí kirẹ́díìtì ìforúkọsílẹ̀ ẹ̀ẹ̀kan ṣoṣo (kì í ṣe ohun tó ń tún wá), a sì yọ àwọn ipele tí a ti dáwọ́ dúró (`chutes`/`phind`/`kluster` ti dáwọ́ iṣẹ́ dúró). `llm7` (iye tó tọ́ 5M/ọjọ́ → 150M) àti àwọn olupèsè ọ̀fẹ́ tuntun (Kilo, OpenCode Zen, Z.AI GLM-Flash) dín apá kan nínú ìyàtọ̀ náà kù.
 >
@@ -36,7 +36,7 @@
 >
 > **A ṣàtúnṣe ní 2026-09-03 (#11773):** a tún pín `cerebras` láti ẹ̀bùn 30M/oṣù tó ń tún wá (ìdánwò àtijọ́ ti token 1M/ọjọ́ láìsí káàdì) sí kirẹ́díìtì ìforúkọsílẹ̀ $5 ẹ̀ẹ̀kan ṣoṣo tó nílò ọ̀nà ìsanwó. Òfin òtítọ́ kan náà bíi ti LongCat.
 >
-> **Àfikún xKiro (2026-09-03):** àkójọpọ̀ tuntun `xkiro-free` (150M/oṣù) fi kọ́kọ́rọ́ àkójọpọ̀ tó ń tún wá ti 35th kún un. Felo Web ṣì wà níta nígbà tí ìpilẹ̀ṣẹ̀/ìfúnniláṣẹ rẹ̀ tó jẹyọ láti GPL ṣì wà ní HOLD. Orísun náà ròyìn **àwọn kọ́kọ́rọ́ àkójọpọ̀ tó ń tún wá 35** àti **~1.62B tó dúró ṣinṣin** báyìí — nọ́ńbà tó wà láàyè tí CI ń ṣọ́ (`check:docs-counts` yóò mú kí ìkọ́lé kùnà bí èyí bá yà kúrò ní `computeFreeModelTotals()`).
+> **Àfikún xKiro (2026-09-03):** àkójọpọ̀ tuntun `xkiro-free` (150M/oṣù) fi kọ́kọ́rọ́ àkójọpọ̀ tó ń tún wá ti 35th kún un. Felo Web ṣì wà níta nígbà tí ìpilẹ̀ṣẹ̀/ìfúnniláṣẹ rẹ̀ tó jẹyọ láti GPL ṣì wà ní HOLD. Orísun náà ròyìn **àwọn kọ́kọ́rọ́ àkójọpọ̀ tó ń tún wá 34** àti **~1.62B tó dúró ṣinṣin** báyìí — nọ́ńbà tó wà láàyè tí CI ń ṣọ́ (`check:docs-counts` yóò mú kí ìkọ́lé kùnà bí èyí bá yà kúrò ní `computeFreeModelTotals()`).
 
 Àwọn olùkópa **tí a ní àkọsílẹ̀ wọn** tó tóbi jù lọ: `mistral` 1.00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (òrùlé márùn-ún fún àwòṣe kọ̀ọ̀kan), `cloudflare-ai` 30M, `api-airforce` 24M. (A yọ `longcat` sílẹ̀ — ẹ̀bùn LongCat-2.0 10M rẹ̀ jẹ́ kirẹ́díìtì ìforúkọsílẹ̀ ẹ̀ẹ̀kan ṣoṣo tó nílò KYC, kì í ṣe ìnáwó oṣooṣù tó ń tún wá.)
 
@@ -129,7 +129,6 @@ mọ́.
 | `modal`          | Abala 1.3 ti ToS fi òfin de “yíyálò, títún tà tàbí fífàyè gba ẹnikẹ́ta ní ọ̀nà mìíràn láti ráyè sí tàbí lo Iṣẹ́ náà ní tààrà” ní kedere — kíkọ́ iṣẹ́ tí a gbàlejò fúnra wa…               |
 | `muse-spark-web` | ToS Meta fi òfin de àyè aládàáṣiṣẹ́ láìgba àṣẹ ṣáájú, ìtúpalẹ̀ ẹ̀yìn láìgba àṣẹ ní kíkọ, àti yíyẹra fún àwọn ìdènà ìmọ̀-ẹ̀rọ ní kedere…                                                   |
 | `nlpcloud`       | ToS fi òfin de “ṣíṣe àgbékalẹ̀ proxy tàbí ẹ̀rọ mìíràn tí ó ń jẹ́ kí àwọn ẹlòmíràn ráyè sí Iṣẹ́ náà nípasẹ̀ rẹ̀” ní kedere, ó sì fúnni ní ẹ̀tọ́ tí kò ṣeé gbé lọ sí ẹlòmíràn nìkan,…          |
-| `opencode`       | ToS (Anomaly Innovations, Inc.) fi òpin sí lílo fún “lílo inú tìrẹ nìkan, kì í ṣe ní orúkọ tàbí fún àǹfààní ẹnikẹ́ta” ní kedere — ope…                                                |
 | `t3-web`         | ToS fi òpin sí àwọn àkọọ́lẹ̀ fún lílo ti ara ẹni nìkan ní kedere, ó fi òfin de pínpín ẹ̀rí ìdánimọ̀ pẹ̀lú ẹnikẹ́ta, ó sì ka àyè aládàáṣiṣẹ́/bot/scraping sí èèwọ̀ — s…                       |
 
 ### ✅ Ó fàyè gbà ní gbogbogbòò — ìṣọ́ra / kò ṣe kedere / ó dára (àwọn tó kù)
@@ -272,7 +271,6 @@ mọ́.
 | `muse-spark-web` | láìsí kọ́kọ́rọ́          | —                      | —                   | yẹra fún      | 3          |
 | `nlpcloud`       | láìsí kọ́kọ́rọ́          | —                      | —                   | yẹra fún      | 1          |
 | `nvidia`         | láìsí kọ́kọ́rọ́          | —                      | —                   | ìṣọ́ra         | 13         |
-| `opencode`       | láìsí kọ́kọ́rọ́          | —                      | —                   | yẹra fún      | 7          |
 | `pollinations`   | láìsí kọ́kọ́rọ́          | —                      | —                   | ìṣọ́ra         | 31         |
 | `publicai`       | láìsí kọ́kọ́rọ́          | —                      | —                   | ìṣọ́ra         | 3          |
 | `reka`           | láìsí kọ́kọ́rọ́          | —                      | —                   | ìṣọ́ra         | 2          |
@@ -283,17 +281,6 @@ mọ́.
 | `uncloseai`      | láìsí kọ́kọ́rọ́          | —                      | —                   | ìṣọ́ra         | 3          |
 
 ---
-
-## OpenCode Ọ̀fẹ́: ìhámọ́ àdéhùn oníbàárà (#14313)
-
-Olùpèsè `opencode` tí kò nílò kọ́kọ́rọ́ (ti gbogbo ènìyàn `https://opencode.ai/zen/v1`) kọ gbogbo ìbéèrè
-tí kò bá àdéhùn oníbàárà OpenCode mu pẹ̀lú **403 `FreeTierError`** àti
-gbólóhùn náà _"Ìpele ọ̀fẹ́ OpenCode lè jẹ́ lílò láti inú OpenCode nìkan"_. Èyí jẹ́
-ìkọ̀ tí ó dá lórí ìbéèrè (ìdájọ́ kan náà lórí gbogbo àkọọ́lẹ̀ fún ìrísí ìbéèrè kan náà), kì í ṣe
-ìfòfindè awoṣe tàbí àkókò ìsinmi àsopọ̀ — OmniRoute ń pín in sí `project_route_error`, ó ń fo
-títìpa awoṣe / àkókò ìsinmi, àti (lórí ọ̀nà àtọwọ́dá `noauth`) ó ń dá àtúnyàn àkójọpọ̀ aládàáṣiṣẹ́ dúró
-fún TTL kúkúrú. Fi àwọn ìbéèrè ránṣẹ́ tí ó ní àkójọ irinṣẹ́ tí kò ṣófo, `stream: true`, àti
-àwọn àkọlé ìgbà OpenCode/UA (`opencodeFreeTierContract.ts`), bí bẹ́ẹ̀ kọ́, retí 403 náà.
 
 ## Ohun tí ó yí padà láti ìgbà àkójọ tí a fi jáde (`freeNote`)
 

@@ -4,7 +4,7 @@
 
 ---
 
-> **Qısaca**: Quraşdırın → Uyğun provayderə qoşulun → IDE-nizi OmniRoute-a yönləndirin. Hazırdır.
+> **Qısaca**: Quraşdırın → Uyğun provayderi qoşun → IDE-nizi OmniRoute-a yönləndirin. Hazırdır.
 
 ---
 
@@ -47,11 +47,11 @@ OmniRoute `http://localhost:20128` ünvanında işə düşür. İdarə paneli av
 
 ---
 
-## Addım 3: Uyğun Provayderi Qoşun
+## Addım 3: Uyğun Provayderə Qoşulun
 
-Şərtləri və kvotası ehtiyaclarınıza uyğun olan provayderi seçin. **İdarəetmə paneli → Provayderlər** bölməsində öz hesabınızı və ya API açarınızı qoşun, sonra bağlantını sınaqdan keçirin. Pulsuz girişə və açarsız istifadəyə zəmanət verilmir.
+Şərtləri və kvotası ehtiyaclarınıza uyğun olan provayderi seçin. **İdarəetmə paneli → Provayderlər** bölməsində öz hesabınızı və ya API açarınızı qoşun, sonra bağlantını yoxlayın. Pulsuz girişə və açarsız əlçatanlığa zəmanət verilmir.
 
-`auto`, Kiro və OpenCode Free daxil olmaqla, `tos: avoid` kimi işarələnmiş provayderləri standart olaraq istisna edir. Hesabın qoşulması bu siyasəti dəyişmir. **İdarəetmə paneli → Kombinasiyalar** bölməsindəki könüllü qoşulma bütün avtomatik kombinasiyalara tətbiq olunur. Provayder seçməzdən əvvəl [Pulsuz Tariflər üzrə Təlimat](./FREE-TIERS-GUIDE.md) sənədini nəzərdən keçirin.
+`auto`, Kiro da daxil olmaqla, `tos: avoid` ilə işarələnmiş provayderləri standart olaraq istisna edir. Hesab qoşmaq bu siyasəti dəyişmir. **İdarəetmə paneli → Kombinasiyalar** bölməsindəki qoşulma seçimi bütün avtomatik kombinasiyalara tətbiq olunur. Provayder seçməzdən əvvəl [Pulsuz Tariflər üzrə Təlimat](./FREE-TIERS-GUIDE.md) sənədini nəzərdən keçirin.
 
 ---
 
@@ -128,12 +128,12 @@ Sol yan paneldə [Monitoring/Logs](http://localhost:20128/dashboard/logs) bölm�
 
 ---
 
-## Növbədə nə var?
+## Növbəti addım nədir?
 
-- **[Avtomatik kombinasiya təlimatı](./AUTO-COMBO-GUIDE.md)** — Qoy OmniRoute sizin üçün ən yaxşı süni intellekti seçsin
-- **[Provayderlər üzrə təlimat](./PROVIDERS-GUIDE.md)** — Daha çox provayderə qoşulun (pulsuz və ödənişli)
-- **[Pulsuz tariflər üzrə təlimat](./FREE-TIERS-GUIDE.md)** — Provayder şərtlərini və pulsuz tarif məhdudiyyətlərini nəzərdən keçirin
-- **[Nasazlıqların aradan qaldırılması](../guides/TROUBLESHOOTING.md)** — Ümumi problemləri həll edin
+- **[Avtomatik kombinasiya bələdçisi](./AUTO-COMBO-GUIDE.md)** — OmniRoute-un sizin üçün ən yaxşı süni intellekti seçməsinə imkan verin
+- **[Provayderlər üzrə bələdçi](./PROVIDERS-GUIDE.md)** — Daha çox provayderə qoşulun (pulsuz və ödənişli)
+- **[Pulsuz paketlər üzrə bələdçi](./FREE-TIERS-GUIDE.md)** — Provayder şərtlərini və pulsuz paket məhdudiyyətlərini nəzərdən keçirin
+- **[Problemlərin aradan qaldırılması](../guides/TROUBLESHOOTING.md)** — Ümumi problemləri həll edin
 
 ---
 
@@ -145,11 +145,11 @@ OmniRoute API açarı alətlərinizi autentifikasiya edir. Yuxarı axın giriş 
 
 ### "`auto` nədir?"
 
-`auto` OmniRoute-a hər sorğu üçün ən yaxşı provayderi avtomatik seçməyi bildirir. O, sürəti, xərci, keyfiyyəti və əlçatanlığı nəzərə alır. Ətraflı məlumat üçün [Avtomatik Kombinasiya Təlimatına](./AUTO-COMBO-GUIDE.md) baxın.
+`auto` OmniRoute-a hər sorğu üçün ən yaxşı provayderi avtomatik seçməyi bildirir. O, sürəti, qiyməti, keyfiyyəti və əlçatanlığı nəzərə alır. Ətraflı məlumat üçün [Avtomatik Kombinasiya Təlimatına](./AUTO-COMBO-GUIDE.md) baxın.
 
 ### "Qiyməti nə qədərdir?"
 
-OmniRoute özü **pulsuz və açıq mənbəlidir**. Yalnız istifadə etdiyiniz provayderlər üçün ödəniş edirsiniz. Bir çox provayder pulsuz tariflər təklif edir — [Pulsuz Tariflər Təlimatına](./FREE-TIERS-GUIDE.md) baxın.
+OmniRoute özü **pulsuz və açıq mənbəlidir**. Yalnız istifadə etdiyiniz provayderlər üçün ödəniş edirsiniz. Bir çox provayderin pulsuz tarifləri var — [Pulsuz Tariflər Təlimatına](./FREE-TIERS-GUIDE.md) baxın.
 
 ### "Onu Claude Code / Cursor / Copilot ilə istifadə edə bilərəm?"
 
@@ -157,7 +157,7 @@ OmniRoute özü **pulsuz və açıq mənbəlidir**. Yalnız istifadə etdiyiniz 
 
 ### "Provayderlərdən biri işləməsə nə baş verər?"
 
-OmniRoute uğursuz provayderləri avtomatik olaraq ötürür və növbətisini sınayır. Heç nə etməyinizə ehtiyac yoxdur. Ətraflı məlumat üçün [Avtomatik Kombinasiya Təlimatına](./AUTO-COMBO-GUIDE.md) baxın.
+OmniRoute nasaz provayderləri avtomatik olaraq ötürür və növbəti provayderi sınayır. Heç nə etməyinizə ehtiyac yoxdur. Ətraflı məlumat üçün [Avtomatik Kombinasiya Təlimatına](./AUTO-COMBO-GUIDE.md) baxın.
 
 ---
 

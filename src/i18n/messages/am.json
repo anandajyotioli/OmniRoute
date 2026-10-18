@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "ግንኙነቶችን በተገኝነት እንደገና ደርድር",
     "reorderByAvailabilityError": "ግንኙነቶችን በተገኝነት እንደገና መደርደር አልተሳካም",
     "distributeProxies": "ፕሮክሲዎችን አከፋፍል",
+    "clearAccountProxies": "የመለያ ፕሮክሲዎችን አስወግድ",
+    "clearAccountProxyAssignments": "ምደባዎችን አስወግድ",
+    "clearAccountProxiesConfirm": "ከዚህ አቅራቢ ሁሉም {count} መለያዎች፣ የተሰናከሉ መለያዎችንም ጨምሮ፣ የግል ፕሮክሲ ምደባዎች ይወገዱ? የተቀመጡ ፕሮክሲዎች እና የአቅራቢ/ዓለም አቀፍ ምደባዎች እንዳሉ ይቆያሉ። መለያዎቹ የአቅራቢ/ዓለም አቀፍ ፕሮክሲ ቅንብሮችን እንደገና ይወርሳሉ።",
+    "accountProxiesCleared": "የመለያ ፕሮክሲ ምደባዎች ተወግደዋል።",
+    "clearAccountProxiesPartial": "{count} መለያዎችን ሙሉ በሙሉ ዳግም ማቀናበር አልተቻለም። የሚታዩት ምደባዎች ታድሰዋል፤ እንደገና መሞከር ይችላሉ።",
+    "clearAccountProxiesError": "የመለያ ፕሮክሲዎችን ዳግም ማቀናበር ወይም ሁኔታቸውን ማደስ አልተቻለም። እባክዎ ገጹን እንደገና ጭነው ይሞክሩ።",
     "distributing": "በማከፋፈል ላይ...",
     "selectedCount": "{count, plural, one {# ተመርጧል} other {# ተመርጠዋል}}",
     "accountsCount": "{count, plural, one {# መለያ} other {# መለያዎች}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "በነባሪነት በየ6 ሰዓቱ የሞዴል ዝርዝሩን በራስ-ሰር አድስ (በMODEL_SYNC_INTERVAL_HOURS ሊዋቀር ይችላል)",
     "autoSyncEnabled": "ራስ-ሰር ማመሳሰል ነቅቷል — ሞዴሎች በየጊዜው ይታደሳሉ",
     "autoSyncDisabled": "ራስ-ሰር ማመሳሰል ተሰናክሏል",
+    "autoSyncLastSynced": "የመጨረሻ ማመሳሰል፦ {time}",
+    "autoSyncNeverSynced": "እስካሁን አልተመሳሰለም",
+    "autoSyncImmediateFailed": "ራስ-ሰር ማመሳሰል ነቅቷል፣ ነገር ግን የሞዴል ፈጣን ማደስ አልተሳካም",
+    "autoSyncImmediatePartialFailure": "ራስ-ሰር ማመሳሰል ነቅቷል፣ ነገር ግን የአንዳንድ ሞዴሎች ፈጣን ማደስ አልተሳካም",
     "autoSyncToggleFailed": "የራስ-ሰር ማመሳሰል ቅንብርን መቀየር አልተሳካም",
     "autoSyncPartialFailure": "ራስ-ሰር ማመሳሰል ለአንዳንድ ግንኙነቶች ተዘምኗል፣ ለሁሉም ግን አልተዘመነም",
     "clearAllModels": "ሁሉንም ሞዴሎች አስወግድ",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "በማሰራጨት ላይ...",
       "complete": "ተጠናቋል",
-      "defaultLabel": "ፕሮክሲዎችን አሰራጭ"
+      "defaultLabel": "ፕሮክሲዎችን አሰራጭ",
+      "confirmMessage": "የተቀመጡ ፕሮክሲዎች በዚህ ቡድን ውስጥ ላሉ ሁሉም መለያዎች ይመደቡ? ይህ ነባር የመለያ ምደባዎችን ይተካል፣ እንዲሁም ለተሰናከሉ መለያዎችም ጭምር የፕሮክሲ ማስተላለፍን ያነቃል።",
+      "confirmDistribute": "ፕሮክሲዎችን አሰራጭ",
+      "cancel": "ይቅር"
     }
   },
   "providerTest": {

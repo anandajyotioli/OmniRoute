@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Järjesta ühendused saadavuse järgi",
     "reorderByAvailabilityError": "Ühenduste järjestamine saadavuse järgi ebaõnnestus",
     "distributeProxies": "Jaota puhverserverid",
+    "clearAccountProxies": "Eemalda kontode puhverserverid",
+    "clearAccountProxyAssignments": "Eemalda määrangud",
+    "clearAccountProxiesConfirm": "Kas eemaldada selle teenusepakkuja kõigilt {count} kontolt individuaalsed puhverserveri määrangud, sealhulgas keelatud kontodelt? Salvestatud puhverserverid ning teenusepakkuja/globaalsed määrangud säilitatakse. Kontod pärivad taas teenusepakkuja/globaalsed puhverserveri sätted.",
+    "accountProxiesCleared": "Kontode puhverserveri määrangud on eemaldatud.",
+    "clearAccountProxiesPartial": "{count} konto(de) täielik lähtestamine nurjus. Kuvatud määranguid on värskendatud; võite uuesti proovida.",
+    "clearAccountProxiesError": "Kontode puhverserverite lähtestamine või nende oleku värskendamine nurjus. Laadige leht uuesti ja proovige veel kord.",
     "distributing": "Jaotamine...",
     "selectedCount": "{count, plural, one {# valitud} other {# valitud}}",
     "accountsCount": "{count, plural, one {# konto} other {# kontot}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Värskenda mudelite loendit vaikimisi automaatselt iga 6 tunni järel (seadistatav muutuja MODEL_SYNC_INTERVAL_HOURS kaudu)",
     "autoSyncEnabled": "Automaatne sünkroonimine on lubatud — mudeleid värskendatakse perioodiliselt",
     "autoSyncDisabled": "Automaatne sünkroonimine on keelatud",
+    "autoSyncLastSynced": "Viimati sünkroonitud: {time}",
+    "autoSyncNeverSynced": "Pole kunagi sünkroonitud",
+    "autoSyncImmediateFailed": "Automaatne sünkroonimine on lubatud, kuid mudelite kohene värskendamine nurjus",
+    "autoSyncImmediatePartialFailure": "Automaatne sünkroonimine on lubatud, kuid mõne mudeli kohene värskendamine nurjus",
     "autoSyncToggleFailed": "Automaatse sünkroonimise lülitamine nurjus",
     "autoSyncPartialFailure": "Mõne ühenduse automaatset sünkroonimist värskendati, kuid mitte kõigi",
     "clearAllModels": "Kustuta kõik mudelid",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Puhverserverite jaotamine...",
       "complete": "Valmis",
-      "defaultLabel": "Jaota puhverserverid"
+      "defaultLabel": "Jaota puhverserverid",
+      "confirmMessage": "Kas määrata salvestatud puhverserverid selle rühma igale kontole? See asendab olemasolevad kontode määrangud ja lubab puhverserveri kaudu marsruutimise, sealhulgas keelatud kontode puhul.",
+      "confirmDistribute": "Jaota puhverserverid",
+      "cancel": "Loobu"
     }
   },
   "providerTest": {

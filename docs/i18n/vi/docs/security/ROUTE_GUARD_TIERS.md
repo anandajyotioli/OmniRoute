@@ -197,6 +197,7 @@ tiến trình máy chủ.
 | `/api/settings/import-json`               | Thay thế toàn bộ khối cài đặt                                                     |
 | `/api/providers/health-autopilot/actions` | Thực thi các hành động khắc phục tự động                                          |
 | `/api/settings/obsidian`                  | Tạo thông tin xác thực WebDAV có thể tái sử dụng cho bất kỳ thư mục gốc vault nào |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                      |
 
 **Phản hồi khi vi phạm:** `401 Authentication required`
 

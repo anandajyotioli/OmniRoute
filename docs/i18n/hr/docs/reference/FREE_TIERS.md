@@ -24,7 +24,7 @@ Ove brojke opisuju zasebne račune trećih strana i uvjete prihvatljivosti u cij
 | **+ iza regionalne provjere identiteta**                | **+~6M**                     | `modelscope` (povezivanje s Alibaba Cloudom + provjera stvarnog imena u kontinentalnoj Kini). Stvarna redovita kvota, izložena kao `gatedRecurringTokens` / `gatedProviders` i prikazana na nadzornoj ploči. Nikad se ne pribraja glavnoj brojci: +~6M iza regionalne provjere identiteta.                                                                    |
 | Teoretska gornja granica (sva ograničenja brzine, 24/7) | ~10B                         | Zbroj svih ograničenja brzine pružatelja usluga ekstrapoliran na neprekidnu upotrebu. **Nije jamstvo** — nemojte ovo isticati kao glavnu brojku.                                                                                                                                                                                                              |
 
-**Iskrena glavna poruka:** _OmniRoute objedinjuje **~1.62B dokumentiranih besplatnih tokena mjesečno** (do ~2.22B tijekom prvog mjeseca s kreditima za registraciju) u 35 skupova besplatnih paketa — uz dugi niz trajno besplatnih pružatelja bez ograničenja — a kompresija RTK + Caveman (ušteda tokena od 15–95 %) omogućuje da to traje još dulje._
+**Iskrena glavna poruka:** _OmniRoute objedinjuje **~1.62B dokumentiranih besplatnih tokena mjesečno** (do ~2.22B tijekom prvog mjeseca s kreditima za registraciju) u 34 skupova besplatnih paketa — uz dugi niz trajno besplatnih pružatelja bez ograničenja — a kompresija RTK + Caveman (ušteda tokena od 15–95 %) omogućuje da to traje još dulje._
 
 > **Zašto je ova brojka pala s prethodnih ~1,94B.** Osvježavanje od 2026-06-17 ispravak je radi točnosti, a ne gubitak: `gemini` se sada deduplicira na razini skupa (prethodno je brojka bila uvećana zasebnim brojanjem svake Flash varijante, 462M → 60M), `cloudflare-ai` je ispravljen na stvarnih 10k Neurons/dan (122M → 30M), `doubao` je reklasificiran kao jednokratni kredit pri registraciji (nije ponavljajući), a ugašene su razine uklonjene (`chutes`/`phind`/`kluster` više nisu dostupni). To je djelomično nadoknađeno pružateljem `llm7` (ispravnih 5M/dan → 150M) i novim besplatnim pružateljima (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Ove brojke opisuju zasebne račune trećih strana i uvjete prihvatljivosti u cij
 >
 > **Ispravljeno 2026-09-03 (#11773):** `cerebras` je reklasificiran iz ponavljajuće dodjele od 30M/mj. (staro probno razdoblje bez kartice s 1M tokena/dan) u jednokratni kredit od $5 pri registraciji koji zahtijeva način plaćanja. Primijenjeno je isto pravilo točnosti kao i za LongCat.
 >
-> **Uz xKiro (2026-09-03):** novi skup `xkiro-free` (150M/mj.) dodaje 35. ključ ponavljajućeg skupa. Felo Web ostaje isključen dok njegov status podrijetla/licenciranja izvedenog iz GPL-a ostaje na čekanju (HOLD). Izvor sada navodi **35 ključeva ponavljajućih skupova** i **~1,62B stabilno** — brojku izračunatu uživo i provjerenu kroz CI (`check:docs-counts` prekida izgradnju ako se ona razlikuje od rezultata funkcije `computeFreeModelTotals()`).
+> **Uz xKiro (2026-09-03):** novi skup `xkiro-free` (150M/mj.) dodaje 35. ključ ponavljajućeg skupa. Felo Web ostaje isključen dok njegov status podrijetla/licenciranja izvedenog iz GPL-a ostaje na čekanju (HOLD). Izvor sada navodi **34 ključeva ponavljajućih skupova** i **~1,62B stabilno** — brojku izračunatu uživo i provjerenu kroz CI (`check:docs-counts` prekida izgradnju ako se ona razlikuje od rezultata funkcije `computeFreeModelTotals()`).
 
 Najveći **dokumentirani** doprinosi: `mistral` 1,00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (pet ograničenja po modelu), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` je isključen — njegova dodjela od 10M za LongCat-2.0 jednokratni je kredit pri registraciji uvjetovan KYC provjerom, a ne ponavljajući mjesečni budžet.)
 
@@ -130,7 +130,6 @@ Većina podataka o „besplatnim tokenima mjesečno” u ovom području zbrojevi
 | `modal`          | Odjeljak 1.3 ToS-a izričito zabranjuje „iznajmljivanje, preprodaju ili omogućavanje bilo kojoj trećoj strani izravnog pristupa Usluzi ili njezina korištenja” — izrada proxyja s vlastitim hostingom… |
 | `muse-spark-web` | ToS za Metu izričito zabranjuje automatizirani pristup bez prethodnog dopuštenja, obrnuti inženjering bez pisanog dopuštenja i zaobilaženje tehnoloških…                                              |
 | `nlpcloud`       | ToS izričito zabranjuje „postavljanje proxyja ili drugog uređaja koji drugima omogućuje pristup Usluzi putem njega” i dodjeljuje samo neprenosivo,…                                                   |
-| `opencode`       | ToS (Anomaly Innovations, Inc.) izričito ograničava upotrebu na „vašu vlastitu internu upotrebu, a ne u ime ili u korist bilo koje treće strane” — ope…                                               |
 | `t3-web`         | ToS izričito ograničava račune samo na osobnu upotrebu, zabranjuje dijeljenje vjerodajnica s trećim stranama i automatizirani/bot/scraping pristup —…                                                 |
 
 ### ✅ Općenito dopušteno — oprez / nejasno / u redu (ostali)
@@ -273,7 +272,6 @@ Većina podataka o „besplatnim tokenima mjesečno” u ovom području zbrojevi
 | `muse-spark-web` | bez ključa             | —                 | —                     | izbjegavati       | 3      |
 | `nlpcloud`       | bez ključa             | —                 | —                     | izbjegavati       | 1      |
 | `nvidia`         | bez ključa             | —                 | —                     | oprez             | 13     |
-| `opencode`       | bez ključa             | —                 | —                     | izbjegavati       | 7      |
 | `pollinations`   | bez ključa             | —                 | —                     | oprez             | 31     |
 | `publicai`       | bez ključa             | —                 | —                     | oprez             | 3      |
 | `reka`           | bez ključa             | —                 | —                     | oprez             | 2      |
@@ -284,17 +282,6 @@ Većina podataka o „besplatnim tokenima mjesečno” u ovom području zbrojevi
 | `uncloseai`      | bez ključa             | —                 | —                     | oprez             | 3      |
 
 ---
-
-## OpenCode Free: ograničenje klijentskog ugovora (#14313)
-
-Pružatelj `opencode` bez ključa (javni `https://opencode.ai/zen/v1`) odbija svaki zahtjev
-koji nije u skladu s klijentskim ugovorom OpenCodea uz **403 `FreeTierError`** i
-rečenicu _"Besplatna razina OpenCodea može se upotrebljavati samo unutar OpenCodea"_. To je
-odbijanje na razini zahtjeva (ista odluka za svaki račun pri istom obliku zahtjeva), a ne
-zabrana modela ili razdoblje mirovanja veze — OmniRoute ga klasificira kao `project_route_error`, preskače
-zaključavanje modela / razdoblje mirovanja i (na sintetičkoj putanji `noauth`) nakratko pauzira automatski ponovni odabir
-kombinacije, tijekom kratkog TTL-a. Šaljite zahtjeve koji sadrže neprazan popis alata, `stream: true` i
-OpenCode zaglavlja sesije/UA-a (`opencodeFreeTierContract.ts`) ili očekujte odgovor 403.
 
 ## Što se promijenilo u odnosu na isporučeni katalog (`freeNote`)
 

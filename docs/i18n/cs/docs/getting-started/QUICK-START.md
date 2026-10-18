@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Nainstalujte → Připojte podporovaného poskytovatele → Nastavte své IDE na OmniRoute. Hotovo.
+> **Ve zkratce**: Nainstalujte → Připojte podporovaného poskytovatele → Nastavte své IDE na OmniRoute. Hotovo.
 
 ---
 
@@ -47,11 +47,11 @@ OmniRoute se spustí na adrese `http://localhost:20128`. Ovládací panel se ote
 
 ---
 
-## Krok 3: Připojte vhodného poskytovatele
+## Krok 3: Připojení vhodného poskytovatele
 
-Vyberte poskytovatele, jehož podmínky a kvóty vyhovují vašim potřebám. V části **Dashboard → Providers** připojte vlastní účet nebo klíč API a poté připojení otestujte. Bezplatný přístup ani dostupnost bez klíče nejsou zaručeny.
+Vyberte poskytovatele, jehož podmínky a kvóta vyhovují vašim potřebám. V části **Dashboard → Providers** připojte svůj účet nebo API klíč a poté připojení otestujte. Bezplatný přístup ani dostupnost bez klíče nejsou zaručeny.
 
-`auto` ve výchozím nastavení vylučuje poskytovatele označené jako `tos: avoid`, včetně Kiro a OpenCode Free. Připojení účtu toto pravidlo nemění. Aktivace v části **Dashboard → Combos** platí pro všechny automatické kombinace. Před výběrem poskytovatele si přečtěte [průvodce bezplatnými úrovněmi](./FREE-TIERS-GUIDE.md).
+`auto` ve výchozím nastavení vylučuje poskytovatele označené jako `tos: avoid`, včetně Kiro. Připojení účtu tyto zásady nemění. Souhlas v části **Dashboard → Combos** se vztahuje na všechny automatické kombinace. Před výběrem poskytovatele si přečtěte [Průvodce bezplatnými tarify](./FREE-TIERS-GUIDE.md).
 
 ---
 
@@ -130,14 +130,14 @@ Podrobnosti požadavku zobrazíte kliknutím na [Monitorování/Protokoly](http:
 
 ## Co dál?
 
-- **[Průvodce automatickými kombinacemi](./AUTO-COMBO-GUIDE.md)** — Nechte OmniRoute vybrat pro vás nejlepší AI
+- **[Průvodce funkcí Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Nechte OmniRoute, aby za vás vybral nejlepší AI
 - **[Průvodce poskytovateli](./PROVIDERS-GUIDE.md)** — Připojte další poskytovatele (bezplatné i placené)
 - **[Průvodce bezplatnými tarify](./FREE-TIERS-GUIDE.md)** — Projděte si podmínky poskytovatelů a limity bezplatných tarifů
 - **[Řešení problémů](../guides/TROUBLESHOOTING.md)** — Vyřešte běžné problémy
 
 ---
 
-## Časté otázky
+## Časté dotazy
 
 ### „Potřebuji API klíč?“
 
@@ -145,19 +145,19 @@ API klíč OmniRoute ověřuje vaše nástroje. Přihlašovací údaje pro navaz
 
 ### „Co je `auto`?“
 
-`auto` sděluje OmniRoute, aby pro každý požadavek automaticky vybral nejlepšího poskytovatele. Zohledňuje rychlost, cenu, kvalitu a dostupnost. Podrobnosti najdete v [průvodci Auto-Combo](./AUTO-COMBO-GUIDE.md).
+`auto` říká OmniRoute, aby pro každý požadavek automaticky vybral nejlepšího poskytovatele. Zohledňuje rychlost, cenu, kvalitu a dostupnost. Podrobnosti naleznete v [průvodci Auto-Combo](./AUTO-COMBO-GUIDE.md).
 
 ### „Kolik to stojí?“
 
-Samotný OmniRoute je **bezplatný a open source**. Platíte pouze za poskytovatele, které používáte. Mnoho poskytovatelů nabízí bezplatné tarify — viz [průvodce bezplatnými tarify](./FREE-TIERS-GUIDE.md).
+Samotný OmniRoute je **bezplatný a open-source**. Platíte pouze za poskytovatele, které používáte. Mnoho poskytovatelů nabízí bezplatné tarify — viz [průvodce bezplatnými tarify](./FREE-TIERS-GUIDE.md).
 
 ### „Mohu jej používat s Claude Code / Cursor / Copilot?“
 
-**Ano!** OmniRoute funguje s jakýmkoli nástrojem, který podporuje formát OpenAI. Stačí nastavit základní URL na `http://localhost:20128/v1`. Konkrétní pokyny k nastavení najdete v [průvodci nástroji CLI](../reference/CLI-TOOLS.md).
+**Ano!** OmniRoute funguje s jakýmkoli nástrojem, který podporuje formát OpenAI. Stačí nastavit základní adresu URL na `http://localhost:20128/v1`. Konkrétní pokyny k nastavení naleznete v [průvodci nástroji CLI](../reference/CLI-TOOLS.md).
 
 ### „Co když dojde k výpadku poskytovatele?“
 
-OmniRoute automaticky přeskočí nefunkční poskytovatele a zkusí dalšího. Nemusíte dělat nic. Podrobnosti najdete v [průvodci Auto-Combo](./AUTO-COMBO-GUIDE.md).
+OmniRoute automaticky přeskočí nefunkční poskytovatele a vyzkouší dalšího. Nemusíte nic dělat. Podrobnosti naleznete v [průvodci Auto-Combo](./AUTO-COMBO-GUIDE.md).
 
 ---
 

@@ -4,7 +4,7 @@
 
 ---
 
-> **Kurz gesagt**: Installieren → Einen unterstützten Anbieter verbinden → Die IDE auf OmniRoute verweisen. Fertig.
+> **Kurz gesagt**: Installieren → Einen berechtigten Anbieter verbinden → Ihre IDE auf OmniRoute verweisen. Fertig.
 
 ---
 
@@ -49,9 +49,9 @@ OmniRoute startet unter `http://localhost:20128`. Das Dashboard wird automatisch
 
 ## Schritt 3: Einen geeigneten Anbieter verbinden
 
-Wählen Sie einen Anbieter, dessen Bedingungen und Kontingent Ihren Anforderungen entsprechen. Verbinden Sie unter **Dashboard → Providers** Ihr eigenes Konto oder Ihren API-Schlüssel und testen Sie anschließend die Verbindung. Kostenloser Zugriff und schlüssellose Verfügbarkeit sind nicht garantiert.
+Wählen Sie einen Anbieter, dessen Bedingungen und Kontingent Ihren Anforderungen entsprechen. Verbinden Sie unter **Dashboard → Providers** Ihr eigenes Konto oder Ihren API-Schlüssel und testen Sie anschließend die Verbindung. Kostenloser Zugriff und eine Verfügbarkeit ohne Schlüssel sind nicht garantiert.
 
-`auto` schließt Anbieter, die mit `tos: avoid` gekennzeichnet sind, darunter Kiro und OpenCode Free, standardmäßig aus. Das Verbinden eines Kontos ändert diese Richtlinie nicht. Die Anmeldung unter **Dashboard → Combos** gilt für alle automatischen Kombinationen. Lesen Sie den [Leitfaden zu kostenlosen Kontingenten](./FREE-TIERS-GUIDE.md), bevor Sie einen Anbieter auswählen.
+`auto` schließt Anbieter, die mit `tos: avoid` gekennzeichnet sind, darunter Kiro, standardmäßig aus. Das Verbinden eines Kontos ändert diese Richtlinie nicht. Die Einwilligung unter **Dashboard → Combos** gilt für alle automatischen Kombinationen. Lesen Sie den [Leitfaden zu kostenlosen Kontingenten](./FREE-TIERS-GUIDE.md), bevor Sie einen Anbieter auswählen.
 
 ---
 
@@ -137,27 +137,27 @@ Sie können die Details der Anfrage einsehen, indem Sie in der linken Seitenleis
 
 ---
 
-## Häufige Fragen
+## Häufig gestellte Fragen
 
 ### „Benötige ich einen API-Schlüssel?“
 
-Der OmniRoute-API-Schlüssel authentifiziert deine Tools. Die Anmeldedaten für Upstream-Anbieter hängen vom jeweiligen Anbieter ab: Einige erfordern einen API-Schlüssel oder eine Kontoanmeldung. Ein kostenloser Zugriff ist nicht garantiert.
+Der OmniRoute-API-Schlüssel authentifiziert Ihre Tools. Die Anmeldedaten für vorgelagerte Dienste hängen vom jeweiligen Anbieter ab: Einige erfordern einen API-Schlüssel oder eine Kontoanmeldung. Ein kostenloser Zugriff ist nicht garantiert.
 
 ### „Was ist `auto`?“
 
-`auto` weist OmniRoute an, für jede Anfrage automatisch den besten Anbieter auszuwählen. Dabei werden Geschwindigkeit, Kosten, Qualität und Verfügbarkeit berücksichtigt. Weitere Informationen findest du im [Leitfaden zur automatischen Kombination](./AUTO-COMBO-GUIDE.md).
+`auto` weist OmniRoute an, für jede Anfrage automatisch den besten Anbieter auszuwählen. Dabei werden Geschwindigkeit, Kosten, Qualität und Verfügbarkeit berücksichtigt. Weitere Informationen finden Sie im [Auto-Combo-Leitfaden](./AUTO-COMBO-GUIDE.md).
 
 ### „Wie viel kostet es?“
 
-OmniRoute selbst ist **kostenlos und Open Source**. Du zahlst nur für die Anbieter, die du nutzt. Viele Anbieter haben kostenlose Tarifstufen – siehe den [Leitfaden zu kostenlosen Tarifstufen](./FREE-TIERS-GUIDE.md).
+OmniRoute selbst ist **kostenlos und quelloffen**. Sie zahlen nur für die Anbieter, die Sie nutzen. Viele Anbieter bieten kostenlose Tarife an – siehe den [Leitfaden zu kostenlosen Tarifen](./FREE-TIERS-GUIDE.md).
 
 ### „Kann ich es mit Claude Code / Cursor / Copilot verwenden?“
 
-**Ja!** OmniRoute funktioniert mit jedem Tool, das das OpenAI-Format unterstützt. Setze einfach die Basis-URL auf `http://localhost:20128/v1`. Spezifische Einrichtungsanweisungen findest du im [Leitfaden zu CLI-Tools](../reference/CLI-TOOLS.md).
+**Ja!** OmniRoute funktioniert mit jedem Tool, das das OpenAI-Format unterstützt. Setzen Sie einfach die Basis-URL auf `http://localhost:20128/v1`. Konkrete Einrichtungsanweisungen finden Sie im [Leitfaden für CLI-Tools](../reference/CLI-TOOLS.md).
 
 ### „Was passiert, wenn ein Anbieter ausfällt?“
 
-OmniRoute überspringt fehlgeschlagene Anbieter automatisch und versucht es mit dem nächsten. Du musst nichts tun. Weitere Informationen findest du im [Leitfaden zur automatischen Kombination](./AUTO-COMBO-GUIDE.md).
+OmniRoute überspringt fehlgeschlagene Anbieter automatisch und versucht es mit dem nächsten. Sie müssen nichts tun. Weitere Informationen finden Sie im [Auto-Combo-Leitfaden](./AUTO-COMBO-GUIDE.md).
 
 ---
 

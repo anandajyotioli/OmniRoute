@@ -128,7 +128,7 @@ const OPENCODE_LEGACY_FREE_MODELS = new Set([
 ]);
 
 /** Provider ids whose live catalog feeds the `opencode` family (canonical + aliases). */
-const OPENCODE_CATALOG_PROVIDER_IDS = ["opencode", "opencode-zen"] as const;
+const OPENCODE_CATALOG_PROVIDER_IDS = ["opencode-zen", "opencode"] as const;
 
 let freeCatalogCache: OpencodeFreeCatalog | null = null;
 
@@ -151,7 +151,8 @@ function deriveFreeIdsFromCatalog(): Set<string> | null {
     if (available.size === 0) return null;
     const free = new Set<string>();
     const pricing = getModelsDevPricing();
-    const byProvider = pricing[OPENCODE_CATALOG_PROVIDER_IDS[0]] ?? pricing["opencode-zen"];
+    const byProvider =
+      pricing[OPENCODE_CATALOG_PROVIDER_IDS[0]] ?? pricing[OPENCODE_CATALOG_PROVIDER_IDS[1]];
     for (const id of available) {
       const cost = byProvider?.[id];
       if (!cost || cost.input !== 0 || cost.output !== 0) continue;

@@ -24,7 +24,7 @@ Déanann na figiúirí seo cur síos ar chuntais tríú páirtí ar leith agus a
 | **+ taobh thiar de sheiceáil aitheantais réigiúnach**   | **+~6M**              | `modelscope` (ceangal Alibaba Cloud + fíorú fíorainmne sa tSín mhórthír). Cuóta athfhillteach iarbhír, nochtaithe mar `gatedRecurringTokens` / `gatedProviders` agus ar an deais. Ní shuimítear sa phríomhfhigiúr riamh é: +~6M taobh thiar de fhíorú aitheantais réigiúnach.                                                                         |
 | Uasteorainn theoiriciúil (gach teorainn ráta, 24/7)     | ~10B                  | Suim theorainneacha ráta gach soláthraí arna heachtarshuíomh chuig úsáid gan stad. **Ní ráthaíocht í** — ná húsáid é seo mar phríomhfhigiúr.                                                                                                                                                                                                          |
 
-**Príomhfhigiúr macánta:** _Comhbhailíonn OmniRoute **~1.62B tócan saor in aisce doiciméadaithe in aghaidh na míosa** (suas le ~2.22B sa chéad mhí agat le creidmheasanna clárúcháin) thar 35 linn sraithe saor in aisce — chomh maith le slabhra fada soláthraithe atá saor in aisce go buan agus gan uasteorainn — agus síneann comhbhrú RTK + Caveman (coigilteas tócan 15–95%) é sin níos faide fós._
+**Príomhfhigiúr macánta:** _Comhbhailíonn OmniRoute **~1.62B tócan saor in aisce doiciméadaithe in aghaidh na míosa** (suas le ~2.22B sa chéad mhí agat le creidmheasanna clárúcháin) thar 34 linn sraithe saor in aisce — chomh maith le slabhra fada soláthraithe atá saor in aisce go buan agus gan uasteorainn — agus síneann comhbhrú RTK + Caveman (coigilteas tócan 15–95%) é sin níos faide fós._
 
 > **Cén fáth ar thit sé seo ón ~1.94B roimhe seo.** Is ceartúchán macántachta é athnuachan 2026-06-17, ní caillteanas: déantar `gemini` a dhídhúbailt de réir comhthiomsaithe anois (bhí sé á áibhéil trí gach malairt Flash a chomhaireamh ar leithligh, 462M → 60M), ceartaíodh `cloudflare-ai` go dtí a fhíor-theorainn 10k-Néarón/lá (122M → 30M), athaicmíodh `doubao` mar chreidmheas clárúcháin aonuaire (ní creidmheas athfhillteach), agus baineadh na sraitheanna a dúnadh (`chutes`/`phind`/`kluster` scortha). Déantar é seo a fhritháireamh go páirteach le `llm7` (5M/lá i gceart → 150M) agus soláthraithe nua saor in aisce (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Déanann na figiúirí seo cur síos ar chuntais tríú páirtí ar leith agus a
 >
 > **Ceartaithe ar 2026-09-03 (#11773):** athaicmíodh `cerebras` ó dheontas athfhillteach 30M/mí (an seantriail gan chárta de 1M comhartha/lá) go creidmheas clárúcháin aonuaire $5 a éilíonn modh íocaíochta. An riail mhacántachta chéanna le LongCat.
 >
-> **xKiro freisin (2026-09-03):** cuireann an comhthiomsú nua `xkiro-free` (150M/mí) an 35ú heochair chomhthiomsaithe athfhillteach leis. Fágtar Felo Web as an áireamh fad atá a bhunús/cheadúnú díorthaithe ó GPL ar HOLD. Tuairiscíonn an fhoinse anois **35 eochair chomhthiomsaithe athfhillteacha** agus **~1.62B seasmhach** — an uimhir bheo faoi gheata CI (teipeann ar `check:docs-counts` an tógáil mura mbíonn sí ag teacht le `computeFreeModelTotals()`).
+> **xKiro freisin (2026-09-03):** cuireann an comhthiomsú nua `xkiro-free` (150M/mí) an 35ú heochair chomhthiomsaithe athfhillteach leis. Fágtar Felo Web as an áireamh fad atá a bhunús/cheadúnú díorthaithe ó GPL ar HOLD. Tuairiscíonn an fhoinse anois **34 eochair chomhthiomsaithe athfhillteacha** agus **~1.62B seasmhach** — an uimhir bheo faoi gheata CI (teipeann ar `check:docs-counts` an tógáil mura mbíonn sí ag teacht le `computeFreeModelTotals()`).
 
 Na ranníocóirí **doiciméadaithe** is mó: `mistral` 1.00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (cúig theorainn de réir samhla), `cloudflare-ai` 30M, `api-airforce` 24M. (Fágtar `longcat` as an áireamh — is creidmheas clárúcháin aonuaire atá faoi réir KYC é a dheontas 10M LongCat-2.0, ní buiséad míosúil athfhillteach.)
 
@@ -124,7 +124,6 @@ Is suimeanna lipéad in aghaidh na samhla iad formhór na bhfigiúirí “comhar
 | `modal`          | Cuireann Alt 1.3 den ToS cosc sainráite ar “an tSeirbhís a ligean ar cíos, a athdhíol nó rochtain dhíreach ar an tSeirbhís nó úsáid na Seirbhíse a cheadú ar shlí eile d’aon tríú páirtí” — seachfhreastalaí féinhóstáilte a thógáil… |
 | `muse-spark-web` | Cuireann ToS Meta cosc sainráite ar rochtain uathoibrithe gan cead roimh ré, ar innealtóireacht droim ar ais gan cead i scríbhinn, agus ar dhul timpeall ar theicneolaíochtaí…                                                        |
 | `nlpcloud`       | Cuireann an ToS cosc sainráite ar “sheachfhreastalaí nó gléas eile a chur ar bun a ligeann do dhaoine eile rochtain a fháil ar an tSeirbhís tríd” agus ní dheonaíonn sé ach ceart neamh-inaistrithe,…                                 |
-| `opencode`       | Cuireann an ToS (Anomaly Innovations, Inc.) srian sainráite ar úsáid go “d’úsáid inmheánach féin, agus ní thar ceann ná chun tairbhe aon tríú páirtí” — ope…                                                                          |
 | `t3-web`         | Cuireann an ToS srian sainráite ar chuntais d’úsáid phearsanta amháin, cuireann sé cosc ar dhintiúir a roinnt le tríú páirtithe, agus cuireann sé cosc ar rochtain uathoibrithe/bot/scríobtha —…                                      |
 
 ### ✅ Ceadaitheach go ginearálta — aire / débhríoch / ceart go leor (an chuid eile)
@@ -267,7 +266,6 @@ Is suimeanna lipéad in aghaidh na samhla iad formhór na bhfigiúirí “comhar
 | `muse-spark-web` | gan eochair            | —                    | —                       | seachain          | 3         |
 | `nlpcloud`       | gan eochair            | —                    | —                       | seachain          | 1         |
 | `nvidia`         | gan eochair            | —                    | —                       | rabhadh           | 13        |
-| `opencode`       | gan eochair            | —                    | —                       | seachain          | 7         |
 | `pollinations`   | gan eochair            | —                    | —                       | rabhadh           | 31        |
 | `publicai`       | gan eochair            | —                    | —                       | rabhadh           | 3         |
 | `reka`           | gan eochair            | —                    | —                       | rabhadh           | 2         |
@@ -278,17 +276,6 @@ Is suimeanna lipéad in aghaidh na samhla iad formhór na bhfigiúirí “comhar
 | `uncloseai`      | gan eochair            | —                    | —                       | rabhadh           | 3         |
 
 ---
-
-## OpenCode Saor in Aisce: srian ar chonradh an chliaint (#14313)
-
-Diúltaíonn an soláthraí `opencode` gan eochair (`https://opencode.ai/zen/v1` poiblí) d’aon iarratas
-nach gcomhlíonann conradh cliaint OpenCode le **403 `FreeTierError`** agus an abairt
-_"Ní féidir sraith saor in aisce OpenCode a úsáid ach amháin laistigh de OpenCode"_. Is
-diúltú a bhaineann go sonrach leis an iarratas é seo (an breithiúnas céanna ar gach cuntas don chruth iarratais céanna), ní
-toirmeasc samhla ná tréimhse mhoillithe naisc é — aicmíonn OmniRoute é mar `project_route_error`, seachnaíonn sé
-frithdhúnadh / tréimhse mhoillithe na samhla, agus (ar an gcosán sintéiseach `noauth`) cuireann sé athroghnú uathoibríoch teaglama
-ar sos ar feadh TTL gairid. Seol iarratais ina bhfuil liosta uirlisí nach bhfuil folamh, `stream: true`, agus
-ceanntásca seisiúin/UA OpenCode (`opencodeFreeTierContract.ts`), nó bí ag súil leis an 403.
 
 ## Cad a d’athraigh ón gcatalóg a seoladh (`freeNote`)
 

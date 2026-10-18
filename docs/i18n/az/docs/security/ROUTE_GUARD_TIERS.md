@@ -186,6 +186,7 @@ prosesini dayandıra bilməsi demək olardı.
 | `/api/settings/import-json`               | Tam parametr blokunu əvəz edir                                                      |
 | `/api/providers/health-autopilot/actions` | Avtopilotun düzəldici tədbirlərini icra edir                                        |
 | `/api/settings/obsidian`                  | İstənilən vault kökü üçün təkrar istifadə edilə bilən WebDAV etimadnamələri yaradır |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                        |
 
 **Pozuntu zamanı cavab:** `401 Authentication required`
 

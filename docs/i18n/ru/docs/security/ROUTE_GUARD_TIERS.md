@@ -200,6 +200,7 @@ Tunnel, Tailscale, Ngrok), проверка loopback-интерфейса по-�
 | `/api/settings/import-json`               | Заменяет полный объект настроек                                                  |
 | `/api/providers/health-autopilot/actions` | Выполняет корректирующие действия автопилота                                     |
 | `/api/settings/obsidian`                  | Выпускает повторно используемые учётные данные WebDAV для любого корня хранилища |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                     |
 
 **Ответ при нарушении:** `401 Требуется аутентификация`
 

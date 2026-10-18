@@ -222,6 +222,14 @@ export const ALWAYS_PROTECTED_API_PATHS: ReadonlyArray<string> = [
   // requireLogin=false (GHSA-qxg2-rm3h-4cxp). The dashboard consumers send the
   // session cookie, so ALWAYS_PROTECTED keeps them working through a tunnel.
   "/api/providers/client",
+  // Relay token management. POST mints a reusable inference credential and
+  // returns it in clear once, GET lists every token's id/prefix/limits, and the
+  // [id] child edits, toggles or revokes one. Credential issuance stays
+  // authenticated in open mode (requireLogin=false), like the WebDAV credentials
+  // above: "anonymous" is never the right audience for "mint me a token". The
+  // dashboard sends the session cookie and automation a manage-scoped key, so
+  // both keep working; the plain prefix covers the /{id} child routes.
+  "/api/relay/tokens",
 ];
 
 /**

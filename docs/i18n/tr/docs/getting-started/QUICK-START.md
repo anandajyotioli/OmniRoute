@@ -4,7 +4,7 @@
 
 ---
 
-> **Özet**: Kurulum → Uygun bir sağlayıcı bağlayın → IDE'nizi OmniRoute'a yönlendirin. Hepsi bu.
+> **Kısaca**: Kurun → Uygun bir sağlayıcı bağlayın → IDE'nizi OmniRoute'a yönlendirin. İşte bu kadar.
 
 ---
 
@@ -51,7 +51,7 @@ OmniRoute, `http://localhost:20128` adresinde başlatılır. Kontrol paneli otom
 
 Koşulları ve kotası ihtiyaçlarınıza uygun bir sağlayıcı seçin. **Dashboard → Providers** bölümünde kendi hesabınızı veya API anahtarınızı bağlayın, ardından bağlantıyı test edin. Ücretsiz erişim ve anahtarsız kullanılabilirlik garanti edilmez.
 
-`auto`, Kiro ve OpenCode Free dâhil olmak üzere `tos: avoid` olarak işaretlenen sağlayıcıları varsayılan olarak hariç tutar. Bir hesap bağlamak bu politikayı değiştirmez. **Dashboard → Combos** bölümündeki açık katılım seçeneği tüm otomatik kombinasyonlar için geçerlidir. Bir sağlayıcı seçmeden önce [Ücretsiz Katmanlar Kılavuzu'nu](./FREE-TIERS-GUIDE.md) inceleyin.
+`auto`, varsayılan olarak Kiro dahil `tos: avoid` şeklinde işaretlenmiş sağlayıcıları hariç tutar. Bir hesap bağlamak bu politikayı değiştirmez. **Dashboard → Combos** bölümündeki katılım tercihi tüm otomatik kombinasyonlar için geçerlidir. Bir sağlayıcı seçmeden önce [Ücretsiz Katmanlar Kılavuzu](./FREE-TIERS-GUIDE.md) belgesini inceleyin.
 
 ---
 
@@ -130,9 +130,9 @@ Sol kenar çubuğundaki [Monitoring/Logs](http://localhost:20128/dashboard/logs)
 
 ## Sırada Ne Var?
 
-- **[Otomatik Kombinasyon Rehberi](./AUTO-COMBO-GUIDE.md)** — OmniRoute'un sizin için en iyi yapay zekâyı seçmesine izin verin
-- **[Sağlayıcılar Rehberi](./PROVIDERS-GUIDE.md)** — Daha fazla sağlayıcı bağlayın (ücretsiz ve ücretli)
-- **[Ücretsiz Katmanlar Rehberi](./FREE-TIERS-GUIDE.md)** — Sağlayıcı koşullarını ve ücretsiz katman sınırlarını inceleyin
+- **[Otomatik Kombinasyon Kılavuzu](./AUTO-COMBO-GUIDE.md)** — OmniRoute'un sizin için en iyi yapay zekâyı seçmesine izin verin
+- **[Sağlayıcılar Kılavuzu](./PROVIDERS-GUIDE.md)** — Daha fazla sağlayıcı bağlayın (ücretsiz ve ücretli)
+- **[Ücretsiz Katmanlar Kılavuzu](./FREE-TIERS-GUIDE.md)** — Sağlayıcı koşullarını ve ücretsiz katman sınırlarını inceleyin
 - **[Sorun Giderme](../guides/TROUBLESHOOTING.md)** — Yaygın sorunları düzeltin
 
 ---
@@ -145,19 +145,19 @@ OmniRoute API anahtarı, araçlarınızın kimliğini doğrular. Üst sağlayıc
 
 ### "`auto` nedir?"
 
-`auto`, OmniRoute'a her istek için en iyi sağlayıcıyı otomatik olarak seçmesini söyler. Hız, maliyet, kalite ve kullanılabilirliği dikkate alır. Ayrıntılar için [Otomatik Kombinasyon Kılavuzu](./AUTO-COMBO-GUIDE.md) sayfasına bakın.
+`auto`, OmniRoute'a her istek için en iyi sağlayıcıyı otomatik olarak seçmesini söyler. Hız, maliyet, kalite ve kullanılabilirliği dikkate alır. Ayrıntılar için [Otomatik Kombinasyon Kılavuzu](./AUTO-COMBO-GUIDE.md) belgesine bakın.
 
-### "Maliyeti nedir?"
+### "Maliyeti ne kadar?"
 
-OmniRoute'un kendisi **ücretsiz ve açık kaynaklıdır**. Yalnızca kullandığınız sağlayıcılar için ödeme yaparsınız. Birçok sağlayıcının ücretsiz kullanım katmanları vardır — [Ücretsiz Kullanım Katmanları Kılavuzu](./FREE-TIERS-GUIDE.md) sayfasına bakın.
+OmniRoute'un kendisi **ücretsiz ve açık kaynaklıdır**. Yalnızca kullandığınız sağlayıcılar için ödeme yaparsınız. Birçok sağlayıcının ücretsiz kullanım katmanları vardır — [Ücretsiz Kullanım Katmanları Kılavuzu](./FREE-TIERS-GUIDE.md) belgesine bakın.
 
 ### "Claude Code / Cursor / Copilot ile kullanabilir miyim?"
 
-**Evet!** OmniRoute, OpenAI biçimini destekleyen tüm araçlarla çalışır. Temel URL'yi `http://localhost:20128/v1` olarak ayarlamanız yeterlidir. Kuruluma özel talimatlar için [CLI Araçları Kılavuzu](../reference/CLI-TOOLS.md) sayfasına bakın.
+**Evet!** OmniRoute, OpenAI biçimini destekleyen tüm araçlarla çalışır. Temel URL'yi `http://localhost:20128/v1` olarak ayarlamanız yeterlidir. Kuruluma özel talimatlar için [CLI Araçları Kılavuzu](../reference/CLI-TOOLS.md) belgesine bakın.
 
 ### "Bir sağlayıcı devre dışı kalırsa ne olur?"
 
-OmniRoute, başarısız olan sağlayıcıları otomatik olarak atlar ve bir sonrakini dener. Herhangi bir şey yapmanız gerekmez. Ayrıntılar için [Otomatik Kombinasyon Kılavuzu](./AUTO-COMBO-GUIDE.md) sayfasına bakın.
+OmniRoute, başarısız olan sağlayıcıları otomatik olarak atlar ve bir sonrakini dener. Herhangi bir şey yapmanız gerekmez. Ayrıntılar için [Otomatik Kombinasyon Kılavuzu](./AUTO-COMBO-GUIDE.md) belgesine bakın.
 
 ---
 

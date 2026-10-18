@@ -1,0 +1,1 @@
+- **fix(api):** `POST /api/skills/marketplace/install` and `POST /api/skills/skillssh/install` answered 500 when the request body was not JSON; both now answer 400 with `Invalid JSON body` ([#16992](https://github.com/diegosouzapw/OmniRoute/pull/16992)) — thanks @pacocartones

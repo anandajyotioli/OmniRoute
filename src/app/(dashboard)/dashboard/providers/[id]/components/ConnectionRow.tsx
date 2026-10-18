@@ -8,7 +8,7 @@ import ConnectionTestButton from "@/shared/components/ConnectionTestButton";
 
 import { readCookieExpiresAt } from "@/shared/utils/webCookieExpiry";
 import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Badge, Button, Toggle } from "@/shared/components";
 import { pickDisplayValue } from "@/shared/utils/maskEmail";
 import useEmailPrivacyStore from "@/store/emailPrivacyStore";
@@ -139,6 +139,7 @@ export default function ConnectionRow({
   onRefreshQuota,
 }: ConnectionRowProps) {
   const t = useTranslations("providers");
+  const locale = useLocale();
   const emailsVisible = useEmailPrivacyStore((s) => s.emailsVisible);
   const displayName = isOAuth
     ? pickDisplayValue(
@@ -289,6 +290,33 @@ export default function ConnectionRow({
   const effectiveUpstreamProxyMode = upstreamProxyMode ?? "native";
   const autoSyncEnabled = !!(connection.providerSpecificData as Record<string, unknown> | undefined)
     ?.autoSync;
+  const [syncClock, setSyncClock] = useState<number | null>(null);
+  useEffect(() => {
+    const update = () => setSyncClock(Date.now());
+    update();
+    const timer = setInterval(update, 60_000);
+    return () => clearInterval(timer);
+  }, []);
+  const lastSync = connection.syncedModelsAt ? Date.parse(connection.syncedModelsAt) : NaN;
+  const validSync = Number.isFinite(lastSync) && lastSync > 0;
+  const ageMinutes =
+    validSync && syncClock !== null
+      ? Math.max(0, Math.floor((syncClock - lastSync) / 60_000))
+      : null;
+  const ageUnit =
+    ageMinutes === null ? null : ageMinutes < 60 ? "minute" : ageMinutes < 1440 ? "hour" : "day";
+  const ageValue =
+    ageMinutes === null
+      ? 0
+      : ageUnit === "minute"
+        ? ageMinutes
+        : ageUnit === "hour"
+          ? Math.floor(ageMinutes / 60)
+          : Math.floor(ageMinutes / 1440);
+  const syncAgeLabel =
+    ageUnit === null
+      ? null
+      : new Intl.RelativeTimeFormat(locale, { numeric: "auto" }).format(-ageValue, ageUnit);
 
   return (
     <div
@@ -436,6 +464,17 @@ export default function ConnectionRow({
                   <span className="material-symbols-outlined text-[13px]">sync</span>
                   {t("autoSyncShort")}
                 </button>
+                <span
+                  className="text-xs text-text-muted"
+                  title={
+                    validSync ? new Date(lastSync).toLocaleString(locale) : t("autoSyncNeverSynced")
+                  }
+                  data-testid="connection-last-model-sync"
+                >
+                  {validSync && syncAgeLabel
+                    ? t("autoSyncLastSynced", { time: syncAgeLabel })
+                    : t("autoSyncNeverSynced")}
+                </span>
               </>
             )}
             {isClaude && (
@@ -623,7 +662,10 @@ export default function ConnectionRow({
                 return (
                   <>
                     <span className="text-text-muted/30 select-none">|</span>
-                    <span
+                    <button
+                      type="button"
+                      onClick={onProxy}
+                      disabled={!onProxy}
                       className={`inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-xs font-medium ${colorClass}`}
                       title={t("proxyConfiguredBySource", {
                         source: label,
@@ -632,7 +674,7 @@ export default function ConnectionRow({
                     >
                       <span className="material-symbols-outlined text-[13px]">vpn_lock</span>
                       {proxyName || proxyHost || t("proxy")}
-                    </span>
+                    </button>
                   </>
                 );
               })()}

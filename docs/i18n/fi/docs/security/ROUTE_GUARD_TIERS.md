@@ -197,6 +197,7 @@ palvelinprosessin.
 | `/api/settings/import-json`               | Korvaa koko asetusobjektin                                                       |
 | `/api/providers/health-autopilot/actions` | Suorittaa autopilotin korjaustoimenpiteitä                                       |
 | `/api/settings/obsidian`                  | Luo uudelleenkäytettävät WebDAV-tunnukset mille tahansa holvin juurihakemistolle |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                     |
 
 **Vastaus rikkomukseen:** `401 Authentication required`
 

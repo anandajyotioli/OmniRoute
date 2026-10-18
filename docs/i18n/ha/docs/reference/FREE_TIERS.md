@@ -24,7 +24,7 @@ Waɗannan alƙaluma suna bayyana asusun ɓangarori na uku daban-daban da sharuɗ
 | **+ wanda ke bayan tantance shaidar yanki**           | **+~6M**                     | `modelscope` (haɗawa da Alibaba Cloud + tantance ainihin suna ta babban yankin Sin). Ƙayyadadden adadin maimaituwa na gaske, ana nuna shi a matsayin `gatedRecurringTokens` / `gatedProviders` da kuma a dashboard. Ba a taɓa haɗa shi cikin babban adadin ba: +~6M bayan tantance shaidar yanki.                                                             |
 | Matsakaicin yiwuwar ka'ida (duk iyakokin ƙima, 24/7)  | ~10B                         | Jimillar iyakar ƙimar kowane mai samarwa idan aka faɗaɗa ta zuwa amfani ba tare da tsayawa ba. **Ba garanti ba ne** — kada a mai da wannan babban kanun labari.                                                                                                                                                                                               |
 
-**Babban bayani na gaskiya:** _OmniRoute yana tara **~1.62B na token kyauta da aka rubuta a kowane wata** (har zuwa ~2.22B a watan farko tare da kuɗin rajista) a faɗin rukunin matakan kyauta 35 — tare da ƙarin jerin masu samarwa masu kyauta na dindindin waɗanda ba su da iyakar adadi — sannan matse bayanai na RTK + Caveman (tanadin token 15–95%) yana ƙara tsawaita amfanin hakan._
+**Babban bayani na gaskiya:** _OmniRoute yana tara **~1.62B na token kyauta da aka rubuta a kowane wata** (har zuwa ~2.22B a watan farko tare da kuɗin rajista) a faɗin rukunin matakan kyauta 34 — tare da ƙarin jerin masu samarwa masu kyauta na dindindin waɗanda ba su da iyakar adadi — sannan matse bayanai na RTK + Caveman (tanadin token 15–95%) yana ƙara tsawaita amfanin hakan._
 
 > **Dalilin da ya sa wannan ya ragu daga ~1.94B na baya.** Sabuntawar 2026-06-17 gyaran gaskiya ne, ba asara ba: yanzu an cire maimaitawa tsakanin nau'ukan tafki na `gemini` (a baya an kumbura adadin ta hanyar kirga kowane nau'in Flash daban, 462M → 60M), an gyara `cloudflare-ai` zuwa ainihin 10k-Neurons/rana (122M → 30M), an sake rarraba `doubao` a matsayin kiredit na rajista na sau ɗaya (ba mai maimaituwa ba), sannan an cire matakan da aka rufe (`chutes`/`phind`/`kluster` an dakatar da su). An ɗan rama wannan da `llm7` (madaidaicin 5M/rana → 150M) da sabbin masu samarwa na kyauta (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Waɗannan alƙaluma suna bayyana asusun ɓangarori na uku daban-daban da sharuɗ
 >
 > **An gyara a 2026-09-03 (#11773):** an sake rarraba `cerebras` daga tallafin 30M/wata mai maimaituwa (tsohuwar gwajin 1M tokens/rana ba tare da kati ba) zuwa kiredit na rajista $5 na sau ɗaya wanda ke buƙatar hanyar biyan kuɗi. Ƙa'idar gaskiya iri ɗaya ce da ta LongCat.
 >
-> **Ƙari xKiro (2026-09-03):** sabon tafkin `xkiro-free` (150M/wata) ya ƙara maɓallin tafki mai maimaituwa na 35. Felo Web yana nan a ware muddin asali/lasisin da ya samo daga GPL yana matsayin HOLD. Yanzu lambar tushe tana nuna **maɓallan tafki masu maimaituwa 35** da **~1.62B tabbatacce** — adadin da ke gudana kai tsaye kuma CI ke tabbatarwa (`check:docs-counts` yana sa ginin ya gaza idan wannan ya kauce daga `computeFreeModelTotals()`).
+> **Ƙari xKiro (2026-09-03):** sabon tafkin `xkiro-free` (150M/wata) ya ƙara maɓallin tafki mai maimaituwa na 35. Felo Web yana nan a ware muddin asali/lasisin da ya samo daga GPL yana matsayin HOLD. Yanzu lambar tushe tana nuna **maɓallan tafki masu maimaituwa 34** da **~1.62B tabbatacce** — adadin da ke gudana kai tsaye kuma CI ke tabbatarwa (`check:docs-counts` yana sa ginin ya gaza idan wannan ya kauce daga `computeFreeModelTotals()`).
 
 Manyan masu ba da gudummawa da **aka rubuta takardunsu**: `mistral` 1.00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (iyakokin kowane model guda biyar), `cloudflare-ai` 30M, `api-airforce` 24M. (An ware `longcat` — tallafin LongCat-2.0 na 10M kiredit ne na rajista na sau ɗaya mai buƙatar KYC, ba kasafin wata-wata mai maimaituwa ba.)
 
@@ -130,7 +130,6 @@ Yawancin alkaluman "free tokens per month" a wannan fanni jimillar lambobin da a
 | `modal`          | Sashe na 1.3 na ToS ya haramta a sarari "ba da haya, sake sayarwa ko kuma ba wa wani ɓangare na uku damar shiga ko amfani da Sabis ɗin kai tsaye" — gina wani sabis mai masaukin kansa…            |
 | `muse-spark-web` | ToS na Meta ya haramta a sarari shiga ta atomatik ba tare da izini na farko ba, binciken yadda fasaha ke aiki ba tare da rubutaccen izini ba, da kauce wa matakan fasaha…                          |
 | `nlpcloud`       | ToS ya haramta a sarari "kafa wakili ko wata na'ura da ke ba wasu damar shiga Sabis ɗin ta cikinta" kuma yana bayar da lasisi ne kawai wanda ba za a iya miƙawa ba,…                               |
-| `opencode`       | ToS (Anomaly Innovations, Inc.) ya taƙaita amfani a sarari zuwa "amfanin cikinka kawai, ba a madadin ko don amfanin wani ɓangare na uku ba" — ope…                                                 |
 | `t3-web`         | ToS ya taƙaita asusu a sarari zuwa amfani na sirri kawai, ya haramta raba bayanan shiga da wasu, kuma ya hana shiga ta atomatik/bot/scraping — wani s…                                             |
 
 ### ✅ Gabaɗaya suna sassauci — a kula / ba a fayyace ba / babu matsala (sauran)
@@ -273,7 +272,6 @@ Yawancin alkaluman "free tokens per month" a wannan fanni jimillar lambobin da a
 | `muse-spark-web` | marar maɓalli            | —                    | —                      | a guje masa      | 3       |
 | `nlpcloud`       | marar maɓalli            | —                    | —                      | a guje masa      | 1       |
 | `nvidia`         | marar maɓalli            | —                    | —                      | a yi hattara     | 13      |
-| `opencode`       | marar maɓalli            | —                    | —                      | a guje masa      | 7       |
 | `pollinations`   | marar maɓalli            | —                    | —                      | a yi hattara     | 31      |
 | `publicai`       | marar maɓalli            | —                    | —                      | a yi hattara     | 3       |
 | `reka`           | ba tare da maɓalli ba    | —                    | —                      | yi hattara       | 2       |
@@ -284,17 +282,6 @@ Yawancin alkaluman "free tokens per month" a wannan fanni jimillar lambobin da a
 | `uncloseai`      | ba tare da maɓalli ba    | —                    | —                      | yi hattara       | 3       |
 
 ---
-
-## OpenCode Free: ƙuntatawar kwangilar abokin ciniki (#14313)
-
-Mai bayarwa na `opencode` marar maɓalli (na jama'a `https://opencode.ai/zen/v1`) yana ƙin duk wata buƙata
-da ba ta dace da kwangilar abokin cinikin OpenCode ba tare da **403 `FreeTierError`** da kuma
-jumlar _"Ana iya amfani da matakin kyauta na OpenCode ne kawai daga cikin OpenCode"_. Wannan
-ƙin amincewa ne da ya keɓanta ga buƙata (hukunci iri ɗaya a kowane asusu ga buƙata mai tsari iri ɗaya), ba
-haramcin samfuri ko lokacin jiran sake haɗi ba — OmniRoute yana rarraba shi a matsayin `project_route_error`, yana tsallake
-kulle samfuri / lokacin jira, sannan (a kan hanyar `noauth` ta kwaikwayo) yana dakatar da sake-zaɓen auto-combo
-na ɗan gajeren TTL. Tura buƙatun da ke ɗauke da jerin kayan aiki marar fanko, `stream: true`, da
-taken zaman OpenCode/UA (`opencodeFreeTierContract.ts`), in ba haka ba ku yi tsammanin 403.
 
 ## Abin da ya canza tun bayan kundin da aka fitar (`freeNote`)
 

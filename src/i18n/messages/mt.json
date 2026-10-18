@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Erġa’ ordna l-konnessjonijiet skont id-disponibbiltà",
     "reorderByAvailabilityError": "Ma rnexxilux jerġa’ jordna l-konnessjonijiet skont id-disponibbiltà",
     "distributeProxies": "Qassam il-Proxies",
+    "clearAccountProxies": "Neħħi l-proxy tal-kontijiet",
+    "clearAccountProxyAssignments": "Neħħi l-assenjazzjonijiet",
+    "clearAccountProxiesConfirm": "Tneħħi l-assenjazzjonijiet individwali tal-proxy mill-{count} kontijiet kollha ta' dan il-fornitur, inklużi l-kontijiet diżattivati? Il-proxy ssejvjati u l-assenjazzjonijiet tal-fornitur/globali se jinżammu. Il-kontijiet jerġgħu jirtu s-settings tal-proxy tal-fornitur/globali.",
+    "accountProxiesCleared": "L-assenjazzjonijiet tal-proxy tal-kontijiet tneħħew.",
+    "clearAccountProxiesPartial": "Ma setgħux jiġu rrisettjati kompletament {count} kont(ijiet). L-assenjazzjonijiet murija ġew aġġornati; tista' terġa' tipprova.",
+    "clearAccountProxiesError": "Ma setgħux jiġu rrisettjati l-proxy tal-kontijiet jew aġġornat l-istatus tagħhom. Jekk jogħġbok erġa' tella' l-paġna u erġa' pprova.",
     "distributing": "Qed jitqassmu...",
     "selectedCount": "{count, plural, one {# magħżul} other {# magħżula}}",
     "accountsCount": "{count, plural, one {# kont} other {# kontijiet}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Aġġorna awtomatikament il-lista tal-mudelli kull 6 sigħat b’mod awtomatiku (konfigurabbli permezz ta’ MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Is-sinkronizzazzjoni awtomatika hija attivata — il-mudelli se jiġu aġġornati perjodikament",
     "autoSyncDisabled": "Is-sinkronizzazzjoni awtomatika hija diżattivata",
+    "autoSyncLastSynced": "Sinkronizzat {time}",
+    "autoSyncNeverSynced": "Qatt ma ġie sinkronizzat",
+    "autoSyncImmediateFailed": "Is-sinkronizzazzjoni awtomatika hija attivata, iżda l-aġġornament immedjat tal-mudelli falla",
+    "autoSyncImmediatePartialFailure": "Is-sinkronizzazzjoni awtomatika hija attivata, iżda xi aġġornamenti immedjati tal-mudelli fallew",
     "autoSyncToggleFailed": "Ma rnexxiex jinbidel l-istat tas-sinkronizzazzjoni awtomatika",
     "autoSyncPartialFailure": "Is-sinkronizzazzjoni awtomatika ġiet aġġornata għal xi konnessjonijiet, iżda mhux għal kollha",
     "clearAllModels": "Neħħi l-Mudelli Kollha",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Qed jitqassmu...",
       "complete": "Lest",
-      "defaultLabel": "Qassam il-Proxies"
+      "defaultLabel": "Qassam il-Proxies",
+      "confirmMessage": "Tassenja l-proxy ssejvjati lil kull kont f'dan il-grupp? Dan jissostitwixxi l-assenjazzjonijiet eżistenti tal-kontijiet u jippermetti r-routing permezz tal-proxy, inkluż għall-kontijiet diżattivati.",
+      "confirmDistribute": "Qassam il-proxy",
+      "cancel": "Ikkanċella"
     }
   },
   "providerTest": {

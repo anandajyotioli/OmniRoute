@@ -196,6 +196,7 @@ server processକୁ ବନ୍ଦ କରିପାରିବେ।
 | `/api/settings/import-json`               | ସମ୍ପୂର୍ଣ୍ଣ settings blobକୁ ବଦଳାଇଦିଏ                                 |
 | `/api/providers/health-autopilot/actions` | autopilot remediation actionଗୁଡ଼ିକୁ execute କରେ                     |
 | `/api/settings/obsidian`                  | ଯେକୌଣସି vault root ପାଇଁ ପୁନଃବ୍ୟବହାରଯୋଗ୍ୟ WebDAV credential ଜାରି କରେ |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                        |
 
 **ଉଲ୍ଲଂଘନ ସମୟରେ response:** `401 Authentication required`
 

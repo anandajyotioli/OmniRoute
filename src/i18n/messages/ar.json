@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "إعادة ترتيب الاتصالات حسب التوفر",
     "reorderByAvailabilityError": "فشل في إعادة ترتيب الاتصالات حسب التوفر",
     "distributeProxies": "توزيع البروكسي",
+    "clearAccountProxies": "إزالة وكلاء الحسابات",
+    "clearAccountProxyAssignments": "إزالة التعيينات",
+    "clearAccountProxiesConfirm": "هل تريد إزالة تعيينات الوكلاء الفردية من جميع حسابات موفر الخدمة هذا، البالغ عددها {count}، بما في ذلك الحسابات المعطّلة؟ سيُحتفظ بالوكلاء المحفوظين وتعيينات موفر الخدمة/التعيينات العامة. سترث الحسابات إعدادات وكيل موفر الخدمة/الوكيل العام مرة أخرى.",
+    "accountProxiesCleared": "تمت إزالة تعيينات وكلاء الحسابات.",
+    "clearAccountProxiesPartial": "تعذّرت إعادة تعيين {count} من الحسابات بالكامل. تم تحديث التعيينات المعروضة؛ يمكنك إعادة المحاولة.",
+    "clearAccountProxiesError": "تعذّرت إعادة تعيين وكلاء الحسابات أو تحديث حالتهم. يُرجى إعادة التحميل والمحاولة مرة أخرى.",
     "distributing": "جاري التوزيع...",
     "selectedCount": "{count, plural, zero {لم يتم تحديد أي عنصر} one {تم تحديد عنصر واحد} two {تم تحديد عنصرين} few {تم تحديد # عناصر} many {تم تحديد # عنصرًا} other {تم تحديد # عنصر}}",
     "accountsCount": "{count, plural, zero {لا توجد حسابات} one {حساب واحد} two {حسابان} few {# حسابات} many {# حسابًا} other {# حساب}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "تحديث قائمة النماذج تلقائيًا كل 6 ساعات افتراضيًا (قابل للتهيئة عبر MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "تم تمكين المزامنة التلقائية — سيتم تحديث النماذج بشكل دوري",
     "autoSyncDisabled": "تم تعطيل المزامنة التلقائية",
+    "autoSyncLastSynced": "تمت المزامنة {time}",
+    "autoSyncNeverSynced": "لم تتم المزامنة قط",
+    "autoSyncImmediateFailed": "تم تفعيل المزامنة التلقائية، لكن فشل تحديث النماذج الفوري",
+    "autoSyncImmediatePartialFailure": "تم تفعيل المزامنة التلقائية، لكن فشل تحديث بعض النماذج فورًا",
     "autoSyncToggleFailed": "فشل في تبديل المزامنة التلقائية",
     "autoSyncPartialFailure": "تم تحديث المزامنة التلقائية لبعض الاتصالات، وليس كلها",
     "clearAllModels": "مسح كافة النماذج",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "توزيع...",
       "complete": "مكتمل",
-      "defaultLabel": "توزيع الوكلاء"
+      "defaultLabel": "توزيع الوكلاء",
+      "confirmMessage": "هل تريد تعيين الوكلاء المحفوظين لكل حساب في هذه المجموعة؟ سيؤدي ذلك إلى استبدال تعيينات الحسابات الحالية وتمكين التوجيه عبر الوكيل، بما في ذلك للحسابات المعطّلة.",
+      "confirmDistribute": "توزيع الوكلاء",
+      "cancel": "إلغاء"
     }
   },
   "providerTest": {

@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Omorganiser forbindelser efter tilgængelighed",
     "reorderByAvailabilityError": "Kunne ikke omorganisere forbindelser efter tilgængelighed",
     "distributeProxies": "Distribuer proxyer",
+    "clearAccountProxies": "Fjern kontoproxyer",
+    "clearAccountProxyAssignments": "Fjern tildelinger",
+    "clearAccountProxiesConfirm": "Fjern individuelle proxytildelinger fra alle {count} konti hos denne udbyder, inklusive deaktiverede konti? Gemte proxyer og udbyder-/globale tildelinger bevares. Kontiene arver derefter udbyderens/globale proxyindstillinger igen.",
+    "accountProxiesCleared": "Kontoproxytildelinger blev fjernet.",
+    "clearAccountProxiesPartial": "{count} konto/konti kunne ikke nulstilles fuldstændigt. De viste tildelinger er blevet opdateret. Du kan prøve igen.",
+    "clearAccountProxiesError": "Kontoproxyerne kunne ikke nulstilles, og deres status kunne ikke opdateres. Genindlæs siden, og prøv igen.",
     "distributing": "Distribuerer...",
     "selectedCount": "{count, plural, one {# valgt} other {# valgte}}",
     "accountsCount": "{count, plural, one {# konto} other {# konti}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Opdater automatisk modellisten hver 6. time som standard (kan konfigureres via MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Automatisk synkronisering aktiveret - modellerne opdateres med jævne mellemrum",
     "autoSyncDisabled": "Automatisk synkronisering deaktiveret",
+    "autoSyncLastSynced": "Synkroniseret {time}",
+    "autoSyncNeverSynced": "Aldrig synkroniseret",
+    "autoSyncImmediateFailed": "Automatisk synkronisering er aktiveret, men den øjeblikkelige modelopdatering mislykkedes",
+    "autoSyncImmediatePartialFailure": "Automatisk synkronisering er aktiveret, men nogle øjeblikkelige modelopdateringer mislykkedes",
     "autoSyncToggleFailed": "Automatisk synkronisering kunne ikke slås til eller fra",
     "autoSyncPartialFailure": "Automatisk synkronisering opdateret for nogle forbindelser, men ikke alle",
     "clearAllModels": "Ryd alle modeller",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Distribuerer...",
       "complete": "Færdig",
-      "defaultLabel": "Distribuer Proxies"
+      "defaultLabel": "Distribuer Proxies",
+      "confirmMessage": "Vil du tildele gemte proxyer til alle konti i denne gruppe? Dette erstatter eksisterende kontotildelinger og aktiverer proxyrouting, også for deaktiverede konti.",
+      "confirmDistribute": "Fordel proxyer",
+      "cancel": "Annuller"
     }
   },
   "providerTest": {

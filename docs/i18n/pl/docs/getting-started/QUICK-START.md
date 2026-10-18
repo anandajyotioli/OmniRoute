@@ -4,7 +4,7 @@
 
 ---
 
-> **W skrócie**: Zainstaluj → Połącz kwalifikującego się dostawcę → Skonfiguruj IDE, aby korzystało z OmniRoute. Gotowe.
+> **W skrócie**: Zainstaluj → Połącz kwalifikującego się dostawcę → Skieruj swoje IDE do OmniRoute. Gotowe.
 
 ---
 
@@ -49,9 +49,9 @@ OmniRoute uruchomi się pod adresem `http://localhost:20128`. Panel zostanie otw
 
 ## Krok 3: Połącz kwalifikującego się dostawcę
 
-Wybierz dostawcę, którego warunki i limity odpowiadają Twoim potrzebom. W sekcji **Dashboard → Providers** połącz własne konto lub klucz API, a następnie przetestuj połączenie. Bezpłatny dostęp i dostępność bez klucza nie są gwarantowane.
+Wybierz dostawcę, którego warunki i limit odpowiadają Twoim potrzebom. W sekcji **Dashboard → Providers** połącz własne konto lub klucz API, a następnie przetestuj połączenie. Bezpłatny dostęp i dostępność bez klucza nie są gwarantowane.
 
-`auto` domyślnie wyklucza dostawców oznaczonych jako `tos: avoid`, w tym Kiro i OpenCode Free. Połączenie konta nie zmienia tej zasady. Zgoda wyrażona w sekcji **Dashboard → Combos** dotyczy wszystkich automatycznych kombinacji. Przed wyborem dostawcy zapoznaj się z [Przewodnikiem po bezpłatnych planach](./FREE-TIERS-GUIDE.md).
+`auto` domyślnie wyklucza dostawców oznaczonych jako `tos: avoid`, w tym Kiro. Połączenie konta nie zmienia tej zasady. Zgoda udzielona w sekcji **Dashboard → Combos** dotyczy wszystkich automatycznych kombinacji. Przed wyborem dostawcy zapoznaj się z [Przewodnikiem po bezpłatnych planach](./FREE-TIERS-GUIDE.md).
 
 ---
 
@@ -130,8 +130,8 @@ Szczegóły żądania możesz zobaczyć, klikając [Monitorowanie/Dzienniki](htt
 
 ## Co dalej?
 
-- **[Przewodnik po Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Pozwól OmniRoute wybrać najlepszą sztuczną inteligencję dla Ciebie
-- **[Przewodnik po dostawcach](./PROVIDERS-GUIDE.md)** — Połącz więcej dostawców (bezpłatnych i płatnych)
+- **[Przewodnik po Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Pozwól OmniRoute wybrać dla Ciebie najlepszą AI
+- **[Przewodnik po dostawcach](./PROVIDERS-GUIDE.md)** — Połącz się z większą liczbą dostawców (bezpłatnych i płatnych)
 - **[Przewodnik po bezpłatnych planach](./FREE-TIERS-GUIDE.md)** — Zapoznaj się z warunkami dostawców i limitami bezpłatnych planów
 - **[Rozwiązywanie problemów](../guides/TROUBLESHOOTING.md)** — Rozwiąż typowe problemy
 
@@ -145,19 +145,19 @@ Klucz API OmniRoute uwierzytelnia Twoje narzędzia. Dane uwierzytelniające usł
 
 ### „Czym jest `auto`?”
 
-`auto` nakazuje OmniRoute automatycznie wybrać najlepszego dostawcę dla każdego żądania. Uwzględnia szybkość, koszt, jakość i dostępność. Szczegółowe informacje znajdziesz w [przewodniku po funkcji Auto-Combo](./AUTO-COMBO-GUIDE.md).
+`auto` nakazuje OmniRoute automatycznie wybrać najlepszego dostawcę dla każdego żądania. Uwzględnia szybkość, koszt, jakość i dostępność. Szczegółowe informacje znajdziesz w [przewodniku po trybie Auto-Combo](./AUTO-COMBO-GUIDE.md).
 
 ### „Ile to kosztuje?”
 
-Samo OmniRoute jest **bezpłatne i ma otwarty kod źródłowy**. Płacisz tylko za usługi dostawców, z których korzystasz. Wielu dostawców oferuje bezpłatne plany — zobacz [przewodnik po bezpłatnych planach](./FREE-TIERS-GUIDE.md).
+Sam OmniRoute jest **bezpłatny i ma otwarty kod źródłowy**. Płacisz wyłącznie za używanych dostawców. Wielu dostawców oferuje bezpłatne pakiety — zobacz [przewodnik po bezpłatnych pakietach](./FREE-TIERS-GUIDE.md).
 
-### „Czy mogę używać tego z Claude Code / Cursor / Copilot?”
+### „Czy mogę używać go z Claude Code / Cursor / Copilot?”
 
 **Tak!** OmniRoute działa z każdym narzędziem obsługującym format OpenAI. Wystarczy ustawić bazowy adres URL na `http://localhost:20128/v1`. Szczegółowe instrukcje konfiguracji znajdziesz w [przewodniku po narzędziach CLI](../reference/CLI-TOOLS.md).
 
 ### „Co się stanie, jeśli dostawca przestanie działać?”
 
-OmniRoute automatycznie pomija niedziałających dostawców i próbuje skorzystać z kolejnego. Nie musisz nic robić. Szczegółowe informacje znajdziesz w [przewodniku po funkcji Auto-Combo](./AUTO-COMBO-GUIDE.md).
+OmniRoute automatycznie pomija dostawców, u których wystąpił błąd, i próbuje skorzystać z następnego. Nie musisz nic robić. Szczegółowe informacje znajdziesz w [przewodniku po trybie Auto-Combo](./AUTO-COMBO-GUIDE.md).
 
 ---
 

@@ -216,9 +216,8 @@ test("shared set size includes live REGISTRY and retired Designer + Felo + Qwen 
   // SYNTX.ai (#14269) registers id "syntx" and alias "stx" — two more.
   // CodeBuddy International (#15173) adds id "codebuddy-intl" plus alias "cbai" (429 -> 431).
   // Measured on the merged tree: RESERVED_PROVIDER_PREFIXES.size = 431.
-  // NaN.Builders registers id "nan" with the same alias — one more (431 -> 432).
-  // DaoXE registers id "daoxe" with the same alias — one more (432 -> 433).
-  assert.equal(RESERVED_PREFIX_COUNT, 433);
+  // The current catalog removes the Free provider id and oc alias (432 -> 430).
+  assert.equal(RESERVED_PREFIX_COUNT, 431);
 });
 
 test("notrack-web registry id and alias stay reserved", () => {

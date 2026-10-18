@@ -190,6 +190,7 @@ işlemini sonlandırabilmesi anlamına gelir.
 | `/api/settings/import-json`               | Ayar verilerinin tamamını değiştirir                                                 |
 | `/api/providers/health-autopilot/actions` | Otomatik pilot iyileştirme eylemlerini yürütür                                       |
 | `/api/settings/obsidian`                  | Herhangi bir kasa kökü için yeniden kullanılabilir WebDAV kimlik bilgileri oluşturur |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                         |
 
 **İhlal durumundaki yanıt:** `401 Authentication required`
 

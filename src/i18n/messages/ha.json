@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Sake tsara haɗe-haɗe bisa samuwa",
     "reorderByAvailabilityError": "An kasa sake tsara haɗe-haɗe bisa samuwa",
     "distributeProxies": "Rarraba Proxies",
+    "clearAccountProxies": "Cire proxy na asusu",
+    "clearAccountProxyAssignments": "Cire rabawa",
+    "clearAccountProxiesConfirm": "A cire rabon proxy na kowane asusu daga dukkan asusun {count} na wannan mai samarwa, har da asusun da aka kashe? Za a kiyaye proxy da aka adana da kuma rabon mai samarwa/na gaba ɗaya. Asusun za su sake gaji saitunan proxy na mai samarwa/na gaba ɗaya.",
+    "accountProxiesCleared": "An cire rabon proxy na asusu.",
+    "clearAccountProxiesPartial": "Ba a iya sake saita asusu {count} gaba ɗaya ba. An sabunta rabon da ake nunawa; za ka iya sake gwadawa.",
+    "clearAccountProxiesError": "Ba a iya sake saita proxy na asusu ko sabunta matsayinsu ba. Da fatan za a sake loda shafin sannan a sake gwadawa.",
     "distributing": "Ana rarrabawa...",
     "selectedCount": "{count, plural, one {An zaɓi #} other {An zaɓi #}}",
     "accountsCount": "{count, plural, one {Asusu #} other {Asusu #}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Sabunta jerin samfura ta atomatik kowane awa 6 ta tsohuwa (ana iya saita ta ta MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "An kunna daidaitawa ta atomatik — za a sabunta samfuran lokaci-lokaci",
     "autoSyncDisabled": "An kashe daidaitawa ta atomatik",
+    "autoSyncLastSynced": "Daidaitawa ta ƙarshe: {time}",
+    "autoSyncNeverSynced": "Ba a taɓa daidaitawa ba",
+    "autoSyncImmediateFailed": "An kunna daidaitawa ta atomatik, amma sabunta samfura nan take ya kasa",
+    "autoSyncImmediatePartialFailure": "An kunna daidaitawa ta atomatik, amma wasu sabunta samfura nan take sun kasa",
     "autoSyncToggleFailed": "An kasa sauya yanayin daidaitawa ta atomatik",
     "autoSyncPartialFailure": "An sabunta daidaitawa ta atomatik ga wasu haɗe-haɗe, amma ba duka ba",
     "clearAllModels": "Share duk samfura",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Ana rarrabawa...",
       "complete": "An kammala",
-      "defaultLabel": "Rarraba Proxies"
+      "defaultLabel": "Rarraba Proxies",
+      "confirmMessage": "A sanya proxy da aka adana ga kowane asusu a wannan rukuni? Wannan zai maye gurbin rabon asusu na yanzu kuma ya kunna zirga-zirga ta proxy, har da na asusun da aka kashe.",
+      "confirmDistribute": "Rarraba proxy",
+      "cancel": "Soke"
     }
   },
   "providerTest": {

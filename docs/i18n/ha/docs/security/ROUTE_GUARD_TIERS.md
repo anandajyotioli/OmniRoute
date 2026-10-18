@@ -196,6 +196,7 @@ aikin server.
 | `/api/settings/import-json`               | Yana maye gurbin cikakken settings blob                           |
 | `/api/providers/health-autopilot/actions` | Yana aiwatar da matakan gyaran autopilot                          |
 | `/api/settings/obsidian`                  | Yana ƙirƙirar WebDAV creds masu sake amfani don kowace vault root |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                      |
 
 **Amsa idan an karya doka:** `401 Authentication required`
 

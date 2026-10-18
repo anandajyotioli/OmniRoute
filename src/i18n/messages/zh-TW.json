@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "依可用性重新排序連線",
     "reorderByAvailabilityError": "依可用性重新排序連線失敗",
     "distributeProxies": "分配代理",
+    "clearAccountProxies": "移除帳戶代理伺服器",
+    "clearAccountProxyAssignments": "移除指派",
+    "clearAccountProxiesConfirm": "要從此提供者的全部 {count} 個帳戶（包括已停用的帳戶）中移除個別代理伺服器指派嗎？已儲存的代理伺服器及提供者／全域指派將保留。帳戶將再次繼承提供者／全域代理伺服器設定。",
+    "accountProxiesCleared": "已移除帳戶代理伺服器指派。",
+    "clearAccountProxiesPartial": "無法完全重設 {count} 個帳戶。顯示的指派已重新整理；您可以重試。",
+    "clearAccountProxiesError": "無法重設帳戶代理伺服器或重新整理其狀態。請重新載入後再試一次。",
     "distributing": "分配中...",
     "selectedCount": "{count, plural, one {已選取 # 個} other {已選取 # 個}}",
     "accountsCount": "{count, plural, one {# 個帳戶} other {# 個帳戶}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "預設每 6 小時自動重新整理模型清單（可透過 MODEL_SYNC_INTERVAL_HOURS 設定）",
     "autoSyncEnabled": "自動同步已啟用 — 模型將定期重新整理",
     "autoSyncDisabled": "自動同步已停用",
+    "autoSyncLastSynced": "{time}已同步",
+    "autoSyncNeverSynced": "從未同步",
+    "autoSyncImmediateFailed": "自動同步已啟用，但立即重新整理模型失敗",
+    "autoSyncImmediatePartialFailure": "自動同步已啟用，但部分模型的立即重新整理失敗",
     "autoSyncToggleFailed": "切換自動同步失敗",
     "autoSyncPartialFailure": "已為部分連線更新自動同步，但並非全部",
     "clearAllModels": "清除所有模型",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "分發中...",
       "complete": "完成",
-      "defaultLabel": "分配代理伺服器"
+      "defaultLabel": "分配代理伺服器",
+      "confirmMessage": "要將已儲存的代理伺服器指派給此群組中的每個帳戶嗎？這會取代現有的帳戶指派並啟用代理伺服器路由，包括已停用的帳戶。",
+      "confirmDistribute": "分配代理伺服器",
+      "cancel": "取消"
     }
   },
   "providerTest": {

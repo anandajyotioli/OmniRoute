@@ -144,6 +144,7 @@ Tunnel, Tailscale, Ngrok) पछाडि चलाउनुहुन्छ भ�
 | `/api/settings/import-json`               | पूर्ण settings blob प्रतिस्थापन गर्छ                                     |
 | `/api/providers/health-autopilot/actions` | autopilot remediation action हरू कार्यान्वयन गर्छ                        |
 | `/api/settings/obsidian`                  | कुनै पनि vault root का लागि पुनः प्रयोगयोग्य WebDAV credential जारी गर्छ |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                             |
 
 **उल्लङ्घन हुँदा प्रतिक्रिया:** `401 Authentication required`
 

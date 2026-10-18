@@ -24,7 +24,7 @@ Bu rəqəmlər kataloq üzrə ayrı-ayrı üçüncü tərəf hesablarını və u
 | **+ regional şəxsiyyət yoxlamasının arxasında** | **+~6M**                        | `modelscope` (Alibaba Cloud əlaqələndirilməsi + materik Çində real adla təsdiqləmə). Real təkrarlanan kvota, `gatedRecurringTokens` / `gatedProviders` kimi və idarəetmə panelində göstərilir. Heç vaxt əsas göstəriciyə əlavə edilmir: regional şəxsiyyət yoxlamasının arxasında +~6M.                                                       |
 | Nəzəri maksimum (bütün sürət limitləri, 24/7)   | ~10B                            | Bütün provayderlərin sürət limitlərinin fasiləsiz istifadəyə ekstrapolyasiya edilmiş cəmi. **Zəmanət deyil** — bunu əsas göstərici kimi təqdim etməyin.                                                                                                                                                                                       |
 
-**Dürüst əsas göstərici:** _OmniRoute 35 pulsuz tarif hovuzu üzrə **ayda ~1.62B sənədləşdirilmiş pulsuz tokeni** (qeydiyyat kreditləri ilə ilk ayınızda ~2.22B-dək), üstəlik daimi pulsuz və limitsiz provayderlərin uzun siyahısını birləşdirir — RTK + Caveman sıxışdırması (15–95% token qənaəti) isə bunu daha da artırır._
+**Dürüst əsas göstərici:** _OmniRoute 34 pulsuz tarif hovuzu üzrə **ayda ~1.62B sənədləşdirilmiş pulsuz tokeni** (qeydiyyat kreditləri ilə ilk ayınızda ~2.22B-dək), üstəlik daimi pulsuz və limitsiz provayderlərin uzun siyahısını birləşdirir — RTK + Caveman sıxışdırması (15–95% token qənaəti) isə bunu daha da artırır._
 
 > **Bu göstəricinin əvvəlki ~1.94B-dan aşağı düşməsinin səbəbi.** 2026-06-17 yeniləməsi itki deyil, dürüstlük düzəlişidir: `gemini` artıq hovuz üzrə təkrarsızlaşdırılır (əvvəllər hər Flash variantının ayrıca hesablanması səbəbindən şişirdilmişdi, 462M → 60M), `cloudflare-ai` faktiki gündəlik 10k-Neurons limitinə uyğun düzəldildi (122M → 30M), `doubao` birdəfəlik qeydiyyat krediti kimi yenidən təsnif edildi (təkrarlanan deyil) və fəaliyyəti dayandırılmış səviyyələr silindi (`chutes`/`phind`/`kluster` dayandırılıb). Bu azalma `llm7` (düzgün göstərici: gündə 5M → 150M) və yeni pulsuz provayderlər (Kilo, OpenCode Zen, Z.AI GLM-Flash) tərəfindən qismən kompensasiya edilir.
 >
@@ -36,7 +36,7 @@ Bu rəqəmlər kataloq üzrə ayrı-ayrı üçüncü tərəf hesablarını və u
 >
 > **2026-09-03 tarixində düzəldildi (#11773):** `cerebras` aylıq təkrarlanan 30M qrantdan (əvvəlki, kart tələb etməyən gündə 1M token sınağı) ödəniş üsulu tələb edən birdəfəlik $5 qeydiyyat kreditinə yenidən təsnif edildi. LongCat üçün tətbiq edilən eyni dürüstlük qaydasıdır.
 >
-> **Üstəlik xKiro (2026-09-03):** yeni `xkiro-free` hovuzu (150M/ay) 35-ci təkrarlanan hovuz açarını əlavə edir. GPL-dən törəyən mənşə/lisenziyalaşdırma məsələsi HOLD statusunda qaldığı müddətdə Felo Web hesablamaya daxil edilmir. Mənbə indi **35 təkrarlanan hovuz açarı** və **~1.62B sabit həcm** göstərir — bu, canlı və CI tərəfindən yoxlanan rəqəmdir (`check:docs-counts`, bu göstərici `computeFreeModelTotals()` nəticəsindən fərqlənərsə, yığmanı uğursuz edir).
+> **Üstəlik xKiro (2026-09-03):** yeni `xkiro-free` hovuzu (150M/ay) 35-ci təkrarlanan hovuz açarını əlavə edir. GPL-dən törəyən mənşə/lisenziyalaşdırma məsələsi HOLD statusunda qaldığı müddətdə Felo Web hesablamaya daxil edilmir. Mənbə indi **34 təkrarlanan hovuz açarı** və **~1.62B sabit həcm** göstərir — bu, canlı və CI tərəfindən yoxlanan rəqəmdir (`check:docs-counts`, bu göstərici `computeFreeModelTotals()` nəticəsindən fərqlənərsə, yığmanı uğursuz edir).
 
 Ən böyük **sənədləşdirilmiş** töhfələr: `mistral` 1.00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (model üzrə beş limit), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` daxil edilmir — onun 10M-lik LongCat-2.0 qrantı təkrarlanan aylıq büdcə deyil, birdəfəlik və KYC tələbi olan qeydiyyat kreditidir.)
 
@@ -130,7 +130,6 @@ Bu sahədəki əksər "ayda pulsuz tokenlər" göstəriciləri model üzrə etik
 | `modal`          | ToS Bölmə 1.3 "Xidməti icarəyə verməyi, yenidən satmağı və ya hər hansı üçüncü tərəfə Xidmətə birbaşa giriş və ya ondan istifadə imkanı verməyi" açıq şəkildə qadağan edir — öz serverində yerləşdirilən…         |
 | `muse-spark-web` | Meta ToS əvvəlcədən icazə olmadan avtomatlaşdırılmış girişi, yazılı icazə olmadan əks mühəndisliyi və texnoloji məhdudiyyətlərdən yayınmağı açıq şəkildə qadağan edir…                                            |
 | `nlpcloud`       | ToS "başqalarının Xidmətə onun vasitəsilə daxil olmasına imkan verən proksi və ya başqa qurğu yaratmağı" açıq şəkildə qadağan edir və yalnız ötürülə bilməyən,…                                                   |
-| `opencode`       | ToS (Anomaly Innovations, Inc.) istifadəni açıq şəkildə "yalnız öz daxili istifadəniz üçün və hər hansı üçüncü tərəfin adından və ya xeyrinə deyil" şərti ilə məhdudlaşdırır — ope…                               |
 | `t3-web`         | ToS hesabları açıq şəkildə yalnız şəxsi istifadə ilə məhdudlaşdırır, giriş məlumatlarının üçüncü tərəflərlə paylaşılmasını qadağan edir və avtomatlaşdırılmış/bot/məlumat toplama girişini qadağan edir — …       |
 
 ### ✅ Ümumilikdə icazəverici — diqqət / qeyri-müəyyən / uyğundur (qalanları)
@@ -273,7 +272,6 @@ Bu sahədəki əksər "ayda pulsuz tokenlər" göstəriciləri model üzrə etik
 | `muse-spark-web` | açarsız           | —              | —              | çəkinin           | 3        |
 | `nlpcloud`       | açarsız           | —              | —              | çəkinin           | 1        |
 | `nvidia`         | açarsız           | —              | —              | ehtiyatlı         | 13       |
-| `opencode`       | açarsız           | —              | —              | çəkinin           | 7        |
 | `pollinations`   | açarsız           | —              | —              | ehtiyatlı         | 31       |
 | `publicai`       | açarsız           | —              | —              | ehtiyatlı         | 3        |
 | `reka`           | açarsız           | —              | —              | ehtiyatlı         | 2        |
@@ -284,10 +282,6 @@ Bu sahədəki əksər "ayda pulsuz tokenlər" göstəriciləri model üzrə etik
 | `uncloseai`      | açarsız           | —              | —              | ehtiyatlı         | 3        |
 
 ---
-
-## OpenCode Free: klient müqaviləsi məhdudiyyəti (#14313)
-
-Açarsız `opencode` provayderi (ictimai `https://opencode.ai/zen/v1`) OpenCode klient müqaviləsinə uyğun gəlməyən istənilən sorğunu **403 `FreeTierError`** və _"OpenCode-un pulsuz səviyyəsi yalnız OpenCode daxilindən istifadə edilə bilər"_ cümləsi ilə rədd edir. Bu, sorğu səviyyəsində rədd cavabıdır (eyni sorğu quruluşu üçün hər hesabda eyni qərar verilir), model qadağası və ya bağlantı gözləmə müddəti deyil — OmniRoute bunu `project_route_error` kimi təsnif edir, modelin bloklanmasını / gözləmə müddətini ötürür və (sintetik `noauth` yolunda) avtomatik kombinasiya üzrə yenidən seçimi qısa TTL müddətinə dayandırır. Boş olmayan alət siyahısı, `stream: true` və OpenCode sessiya/UA başlıqları (`opencodeFreeTierContract.ts`) daşıyan sorğular göndərin, əks halda 403 cavabını gözləyin.
 
 ## Göndərilmiş kataloqdan (`freeNote`) sonra nələr dəyişib
 

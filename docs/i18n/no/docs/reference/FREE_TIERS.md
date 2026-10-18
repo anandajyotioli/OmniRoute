@@ -24,7 +24,7 @@ Disse tallene beskriver separate tredjepartskontoer og kvalifikasjonskrav på tv
 | **+ bak en regional identitetskontroll**          | **+~6M**                 | `modelscope` (tilknytning til Alibaba Cloud + verifisering med ekte navn i Fastlands-Kina). Reell gjentakende kvote, eksponert som `gatedRecurringTokens` / `gatedProviders` og i kontrollpanelet. Summeres aldri inn i hovedtallet: +~6M bak regional identitetsverifisering.                            |
 | Teoretisk maksimum (alle hastighetsgrenser, 24/7) | ~10B                     | Summen av hastighetsgrensene til alle leverandører, ekstrapolert til kontinuerlig bruk. **Ingen garanti** — ikke bruk dette som hovedtall.                                                                                                                                                                |
 
-**Ærlig hovedbudskap:** _OmniRoute samler **~1.62B dokumenterte gratistokens per måned** (opptil ~2.22B den første måneden med registreringskreditter) på tvers av 35 pooler på gratisnivå — pluss et langt utvalg av permanent gratis leverandører uten tak — og komprimering med RTK + Caveman (15–95 % tokenbesparelse) strekker dette enda lenger._
+**Ærlig hovedbudskap:** _OmniRoute samler **~1.62B dokumenterte gratistokens per måned** (opptil ~2.22B den første måneden med registreringskreditter) på tvers av 34 pooler på gratisnivå — pluss et langt utvalg av permanent gratis leverandører uten tak — og komprimering med RTK + Caveman (15–95 % tokenbesparelse) strekker dette enda lenger._
 
 > **Hvorfor dette falt fra de tidligere ~1.94B.** Oppdateringen 2026-06-17 er en ærlighetskorrigering, ikke et tap: `gemini` er nå deduplisert på tvers av poolen (var overdrevet fordi hver Flash-variant ble telt separat, 462M → 60M), `cloudflare-ai` er korrigert til de faktiske 10k Neurons/dag (122M → 30M), `doubao` er omklassifisert som en engangskreditt ved registrering (ikke tilbakevendende), og nedlagte nivåer er fjernet (`chutes`/`phind`/`kluster` er avviklet). Dette oppveies delvis av `llm7` (korrekt 5M/dag → 150M) og nye gratisleverandører (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Disse tallene beskriver separate tredjepartskontoer og kvalifikasjonskrav på tv
 >
 > **Korrigert 2026-09-03 (#11773):** `cerebras` ble omklassifisert fra en tilbakevendende tildeling på 30M/mnd. (gammel prøveperiode uten kort på 1M tokens/dag) til en engangskreditt på $5 ved registrering som krever en betalingsmåte. Samme ærlighetsregel som for LongCat.
 >
-> **Pluss xKiro (2026-09-03):** den nye `xkiro-free`-poolen (150M/mnd.) gir en 35. tilbakevendende poolnøkkel. Felo Web forblir ekskludert så lenge opphavet/lisensieringen basert på GPL fortsatt er SATT PÅ VENT. Kilden rapporterer nå **35 tilbakevendende poolnøkler** og **~1.62B stabilt** — det dynamiske, CI-kontrollerte tallet (`check:docs-counts` gjør at bygget mislykkes hvis dette avviker fra `computeFreeModelTotals()`).
+> **Pluss xKiro (2026-09-03):** den nye `xkiro-free`-poolen (150M/mnd.) gir en 35. tilbakevendende poolnøkkel. Felo Web forblir ekskludert så lenge opphavet/lisensieringen basert på GPL fortsatt er SATT PÅ VENT. Kilden rapporterer nå **34 tilbakevendende poolnøkler** og **~1.62B stabilt** — det dynamiske, CI-kontrollerte tallet (`check:docs-counts` gjør at bygget mislykkes hvis dette avviker fra `computeFreeModelTotals()`).
 
 De største **dokumenterte** bidragsyterne: `mistral` 1.00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (fem grenser per modell), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` er ekskludert — LongCat-2.0-tildelingen på 10M er en KYC-betinget engangskreditt ved registrering, ikke et tilbakevendende månedsbudsjett.)
 
@@ -129,7 +129,6 @@ De fleste tall for «gratis tokens per måned» på dette området er summer av 
 | `modal`          | Avsnitt 1.3 i vilkårene forbyr uttrykkelig «å leie ut, videreselge eller på annen måte gi en tredjepart direkte tilgang til eller bruk av tjenesten» — å bygge en selvdrifte…            |
 | `muse-spark-web` | Metas vilkår forbyr uttrykkelig automatisert tilgang uten forhåndstillatelse, omvendt utvikling uten skriftlig tillatelse og omgåelse av teknologis…                                     |
 | `nlpcloud`       | Vilkårene forbyr uttrykkelig «å sette opp en proxy eller annen enhet som lar andre få tilgang til tjenesten gjennom den» og gir bare en ikke-overførbar,…                                |
-| `opencode`       | Vilkårene (Anomaly Innovations, Inc.) begrenser uttrykkelig bruken til «din egen interne bruk, og ikke på vegne av eller til fordel for noen tredjepart» — ope…                          |
 | `t3-web`         | Vilkårene begrenser uttrykkelig kontoer til kun personlig bruk, forbyr deling av påloggingsopplysninger med tredjeparter og forbyr automatisert/bot-/skrapingstilgang — en s…            |
 
 ### ✅ Generelt tillatende — vær forsiktig / uklart / ok (resten)
@@ -272,7 +271,6 @@ De fleste tall for «gratis tokens per måned» på dette området er summer av 
 | `muse-spark-web` | uten nøkkel          | —                | —                    | unngå         | 3        |
 | `nlpcloud`       | uten nøkkel          | —                | —                    | unngå         | 1        |
 | `nvidia`         | uten nøkkel          | —                | —                    | vær varsom    | 13       |
-| `opencode`       | uten nøkkel          | —                | —                    | unngå         | 7        |
 | `pollinations`   | uten nøkkel          | —                | —                    | vær varsom    | 31       |
 | `publicai`       | uten nøkkel          | —                | —                    | vær varsom    | 3        |
 | `reka`           | nøkkelfri            | —                | —                    | vær forsiktig | 2        |
@@ -283,17 +281,6 @@ De fleste tall for «gratis tokens per måned» på dette området er summer av 
 | `uncloseai`      | nøkkelfri            | —                | —                    | vær forsiktig | 3        |
 
 ---
-
-## OpenCode Free: begrensning i klientkontrakten (#14313)
-
-Den nøkkelløse `opencode`-leverandøren (offentlig `https://opencode.ai/zen/v1`) avviser alle forespørsler
-som ikke samsvarer med OpenCode-klientkontrakten, med **403 `FreeTierError`** og setningen
-_"OpenCodes gratisnivå kan bare brukes fra OpenCode"_. Dette er et avslag knyttet til
-forespørselen (samme resultat for hver konto med samme forespørselsstruktur), ikke en
-modellutestengelse eller nedkjølingsperiode for tilkoblingen — OmniRoute klassifiserer det som `project_route_error`, hopper over
-modellutestengelse/nedkjøling og setter (på den syntetiske `noauth`-banen) automatisk nytt kombinasjonsvalg
-på pause i en kort TTL-periode. Send forespørsler som inneholder en ikke-tom verktøyliste, `stream: true` og
-OpenCode-økts-/UA-hodene (`opencodeFreeTierContract.ts`), ellers må du forvente 403.
 
 ## Hva er endret siden den leverte katalogen (`freeNote`)
 

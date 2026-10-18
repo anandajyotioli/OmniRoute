@@ -180,6 +180,7 @@ LOCAL_ONLY قرار دیا جاتا ہے۔
 | `/api/settings/import-json`               | مکمل settings blob بدل دیتا ہے                           |
 | `/api/providers/health-autopilot/actions` | autopilot remediation actions چلاتا ہے                   |
 | `/api/settings/obsidian`                  | کسی بھی vault root کے لیے reusable WebDAV creds بناتا ہے |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens             |
 
 **خلاف ورزی پر response:** `401 Authentication required`
 

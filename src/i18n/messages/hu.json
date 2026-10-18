@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Kapcsolatok újrarendezése elérhetőség szerint",
     "reorderByAvailabilityError": "A kapcsolatok elérhetőség szerinti újrarendezése sikertelen",
     "distributeProxies": "Proxyk elosztása",
+    "clearAccountProxies": "Fiókproxyk eltávolítása",
+    "clearAccountProxyAssignments": "Hozzárendelések eltávolítása",
+    "clearAccountProxiesConfirm": "Eltávolítja az egyéni proxy-hozzárendeléseket a szolgáltató mind a(z) {count} fiókjából, beleértve a letiltott fiókokat is? A mentett proxyk, valamint a szolgáltatói és globális hozzárendelések megmaradnak. A fiókok ismét öröklik a szolgáltatói és globális proxybeállításokat.",
+    "accountProxiesCleared": "A fiókok proxy-hozzárendelései eltávolítva.",
+    "clearAccountProxiesPartial": "Nem sikerült teljesen visszaállítani {count} fiókot. A megjelenített hozzárendelések frissítve lettek; újra megpróbálhatja.",
+    "clearAccountProxiesError": "Nem sikerült visszaállítani a fiókproxykat, sem frissíteni az állapotukat. Töltse újra az oldalt, majd próbálja meg ismét.",
     "distributing": "Elosztás...",
     "selectedCount": "{count, plural, one {# kijelölve} other {# kijelölve}}",
     "accountsCount": "{count, plural, one {# fiók} other {# fiók}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "A modelllista alapértelmezés szerint 6 óránként automatikusan frissül (a MODEL_SYNC_INTERVAL_HOURS segítségével konfigurálható)",
     "autoSyncEnabled": "Automatikus szinkronizálás engedélyezve – a modellek rendszeresen frissülnek",
     "autoSyncDisabled": "Az automatikus szinkronizálás letiltva",
+    "autoSyncLastSynced": "Szinkronizálva: {time}",
+    "autoSyncNeverSynced": "Még nem volt szinkronizálva",
+    "autoSyncImmediateFailed": "Az automatikus szinkronizálás engedélyezve, de az azonnali modellfrissítés sikertelen volt",
+    "autoSyncImmediatePartialFailure": "Az automatikus szinkronizálás engedélyezve, de néhány azonnali modellfrissítés sikertelen volt",
     "autoSyncToggleFailed": "Az automatikus szinkronizálás átkapcsolása sikertelen",
     "autoSyncPartialFailure": "Az automatikus szinkronizálás frissült néhány kapcsolatnál, de nem mindnél",
     "clearAllModels": "Minden modell törlése",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Terjesztés...",
       "complete": "Teljesítve",
-      "defaultLabel": "Proxyk Elosztása"
+      "defaultLabel": "Proxyk Elosztása",
+      "confirmMessage": "Hozzárendeli a mentett proxykat a csoport minden fiókjához? Ez lecseréli a meglévő fiók-hozzárendeléseket, és engedélyezi a proxyalapú útválasztást, beleértve a letiltott fiókokat is.",
+      "confirmDistribute": "Proxyk elosztása",
+      "cancel": "Mégse"
     }
   },
   "providerTest": {

@@ -4,7 +4,7 @@
 
 ---
 
-> **Kwa kifupi**: Sakinisha → Unganisha mtoa huduma anayestahiki → Elekeza IDE yako kwenye OmniRoute. Imekamilika.
+> **Kwa ufupi**: Sakinisha → Unganisha mtoa huduma anayestahiki → Elekeza IDE yako kwenye OmniRoute. Imekamilika.
 
 ---
 
@@ -49,9 +49,9 @@ OmniRoute huanza kwenye `http://localhost:20128`. Dashibodi hufunguka kiotomatik
 
 ## Hatua ya 3: Unganisha Mtoa Huduma Anayestahiki
 
-Chagua mtoa huduma ambaye masharti na kiwango chake cha matumizi yanakidhi mahitaji yako. Katika **Dashibodi → Watoa Huduma**, unganisha akaunti yako mwenyewe au ufunguo wa API, kisha jaribu muunganisho. Ufikiaji wa bila malipo na upatikanaji usiohitaji ufunguo havijahakikishwa.
+Chagua mtoa huduma ambaye masharti na kiwango chake cha matumizi yanakidhi mahitaji yako. Katika **Dashboard → Providers**, unganisha akaunti yako mwenyewe au ufunguo wa API, kisha ujaribu muunganisho. Ufikiaji wa bila malipo na upatikanaji usiohitaji ufunguo havijahakikishwa.
 
-Kwa chaguomsingi, `auto` haihusishi watoa huduma waliowekewa alama `tos: avoid`, ikiwa ni pamoja na Kiro na OpenCode Free. Kuunganisha akaunti hakubadilishi sera hiyo. Chaguo la kujiunga katika **Dashibodi → Michanganyiko** linatumika kwa michanganyiko yote ya kiotomatiki. Pitia [Mwongozo wa Viwango vya Bila Malipo](./FREE-TIERS-GUIDE.md) kabla ya kuchagua mtoa huduma.
+Kwa chaguo-msingi, `auto` haiwajumuishi watoa huduma waliowekewa alama ya `tos: avoid`, ikiwa ni pamoja na Kiro. Kuunganisha akaunti hakubadilishi sera hiyo. Idhini ya kujumuishwa katika **Dashboard → Combos** inatumika kwa michanganyiko yote ya kiotomatiki. Pitia [Mwongozo wa Viwango vya Bila Malipo](./FREE-TIERS-GUIDE.md) kabla ya kuchagua mtoa huduma.
 
 ---
 
@@ -137,27 +137,27 @@ Unaweza kuona maelezo ya ombi kwa kubofya [Ufuatiliaji/Kumbukumbu](http://localh
 
 ---
 
-## Maswali ya Kawaida
+## Maswali Yanayoulizwa Mara kwa Mara
 
 ### "Je, ninahitaji ufunguo wa API?"
 
-Ufunguo wa API wa OmniRoute huthibitisha zana zako. Vitambulisho vya huduma za nje hutegemea mtoa huduma: baadhi huhitaji ufunguo wa API au kuingia kwenye akaunti. Ufikiaji wa bila malipo haujahakikishwa.
+Ufunguo wa API wa OmniRoute huthibitisha zana zako. Vitambulisho vya huduma za nje hutegemea mtoa huduma: baadhi huhitaji ufunguo wa API au kuingia katika akaunti. Ufikiaji wa bila malipo haujahakikishwa.
 
 ### "`auto` ni nini?"
 
-`auto` huiambia OmniRoute ichague kiotomatiki mtoa huduma bora kwa kila ombi. Huzingatia kasi, gharama, ubora na upatikanaji. Tazama [Mwongozo wa Auto-Combo](./AUTO-COMBO-GUIDE.md) kwa maelezo.
+`auto` huiambia OmniRoute ichague kiotomatiki mtoa huduma bora kwa kila ombi. Huzingatia kasi, gharama, ubora na upatikanaji. Tazama [Mwongozo wa Auto-Combo](./AUTO-COMBO-GUIDE.md) kwa maelezo zaidi.
 
 ### "Inagharimu kiasi gani?"
 
-OmniRoute yenyewe ni **bure na ya chanzo huria**. Unalipia tu watoa huduma unaotumia. Watoa huduma wengi wana viwango vya matumizi bila malipo — tazama [Mwongozo wa Viwango vya Bila Malipo](./FREE-TIERS-GUIDE.md).
+OmniRoute yenyewe ni **bila malipo na ya chanzo huria**. Unalipia tu watoa huduma unaotumia. Watoa huduma wengi wana viwango vya matumizi ya bila malipo — tazama [Mwongozo wa Viwango vya Bila Malipo](./FREE-TIERS-GUIDE.md).
 
 ### "Je, ninaweza kuitumia na Claude Code / Cursor / Copilot?"
 
-**Ndiyo!** OmniRoute hufanya kazi na zana yoyote inayotumia muundo wa OpenAI. Weka tu URL ya msingi kuwa `http://localhost:20128/v1`. Tazama [Mwongozo wa Zana za CLI](../reference/CLI-TOOLS.md) kwa maagizo mahususi ya usanidi.
+**Ndiyo!** OmniRoute hufanya kazi na zana yoyote inayotumia umbizo la OpenAI. Weka tu URL ya msingi kuwa `http://localhost:20128/v1`. Tazama [Mwongozo wa Zana za CLI](../reference/CLI-TOOLS.md) kwa maelekezo mahususi ya usanidi.
 
-### "Itakuwaje ikiwa mtoa huduma atakosa kupatikana?"
+### "Itakuwaje ikiwa mtoa huduma atapatwa na hitilafu?"
 
-OmniRoute huwaruka kiotomatiki watoa huduma walioshindwa na kujaribu anayefuata. Huhitaji kufanya chochote. Tazama [Mwongozo wa Auto-Combo](./AUTO-COMBO-GUIDE.md) kwa maelezo.
+OmniRoute huwaruka kiotomatiki watoa huduma walioshindwa na kujaribu anayefuata. Huhitaji kufanya chochote. Tazama [Mwongozo wa Auto-Combo](./AUTO-COMBO-GUIDE.md) kwa maelezo zaidi.
 
 ---
 

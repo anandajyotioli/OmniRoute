@@ -4,7 +4,7 @@
 
 ---
 
-> **In breve**: Installa → Connetti un provider idoneo → Configura il tuo IDE per utilizzare OmniRoute. Fatto.
+> **In breve**: Installa → Connetti un provider idoneo → Configura il tuo IDE affinché utilizzi OmniRoute. Fatto.
 
 ---
 
@@ -47,11 +47,11 @@ OmniRoute si avvia all'indirizzo `http://localhost:20128`. La dashboard si apre 
 
 ---
 
-## Passaggio 3: collega un provider idoneo
+## Passaggio 3: Connettere un provider idoneo
 
-Scegli un provider i cui termini e la cui quota siano adatti alle tue esigenze. In **Dashboard → Providers**, collega il tuo account o la tua chiave API, quindi verifica la connessione. L'accesso gratuito e la disponibilità senza chiave non sono garantiti.
+Scegli un provider i cui termini e la cui quota siano adatti alle tue esigenze. In **Dashboard → Providers**, connetti il tuo account o la tua chiave API, quindi testa la connessione. L'accesso gratuito e la disponibilità senza chiave non sono garantiti.
 
-Per impostazione predefinita, `auto` esclude i provider contrassegnati con `tos: avoid`, inclusi Kiro e OpenCode Free. Il collegamento di un account non modifica questa politica. L'adesione in **Dashboard → Combos** si applica a tutte le combinazioni automatiche. Consulta la [Guida ai livelli gratuiti](./FREE-TIERS-GUIDE.md) prima di scegliere un provider.
+Per impostazione predefinita, `auto` esclude i provider contrassegnati con `tos: avoid`, incluso Kiro. La connessione di un account non modifica questa politica. Il consenso esplicito in **Dashboard → Combos** si applica a tutte le combinazioni automatiche. Consulta la [Guida ai livelli gratuiti](./FREE-TIERS-GUIDE.md) prima di scegliere un provider.
 
 ---
 
@@ -128,9 +128,9 @@ Puoi visualizzare i dettagli della richiesta facendo clic su [Monitoraggio/Log](
 
 ---
 
-## E adesso?
+## Quali sono i prossimi passi?
 
-- **[Guida alla selezione automatica](./AUTO-COMBO-GUIDE.md)** — Lascia che OmniRoute scelga l'IA migliore per te
+- **[Guida ad Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Lascia che OmniRoute scelga la migliore IA per te
 - **[Guida ai provider](./PROVIDERS-GUIDE.md)** — Collega altri provider (gratuiti e a pagamento)
 - **[Guida ai piani gratuiti](./FREE-TIERS-GUIDE.md)** — Consulta le condizioni dei provider e i limiti dei piani gratuiti
 - **[Risoluzione dei problemi](../guides/TROUBLESHOOTING.md)** — Risolvi i problemi comuni
@@ -157,7 +157,7 @@ OmniRoute è **gratuito e open source**. Paghi solo per i provider che utilizzi.
 
 ### "Cosa succede se un provider non è disponibile?"
 
-OmniRoute ignora automaticamente i provider non disponibili e prova quello successivo. Non devi fare nulla. Per maggiori dettagli, consulta la [Guida ad Auto-Combo](./AUTO-COMBO-GUIDE.md).
+OmniRoute ignora automaticamente i provider che non rispondono e prova quello successivo. Non devi fare nulla. Per maggiori dettagli, consulta la [Guida ad Auto-Combo](./AUTO-COMBO-GUIDE.md).
 
 ---
 

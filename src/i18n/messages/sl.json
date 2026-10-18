@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Prerazporedi povezave glede na razpoložljivost",
     "reorderByAvailabilityError": "Povezav ni bilo mogoče prerazporediti glede na razpoložljivost",
     "distributeProxies": "Razporedi posredniške strežnike",
+    "clearAccountProxies": "Odstrani posredniške strežnike računov",
+    "clearAccountProxyAssignments": "Odstrani dodelitve",
+    "clearAccountProxiesConfirm": "Želite odstraniti posamezne dodelitve posredniških strežnikov iz vseh {count} računov tega ponudnika, vključno z onemogočenimi računi? Shranjeni posredniški strežniki ter dodelitve ponudnika/globalne dodelitve bodo ohranjeni. Računi bodo znova podedovali nastavitve posredniškega strežnika ponudnika/globalne nastavitve.",
+    "accountProxiesCleared": "Dodelitve posredniških strežnikov računov so odstranjene.",
+    "clearAccountProxiesPartial": "Ponastavitev {count} računov ni bila v celoti uspešna. Prikazane dodelitve so bile osvežene; poskusite lahko znova.",
+    "clearAccountProxiesError": "Posredniških strežnikov računov ni bilo mogoče ponastaviti ali osvežiti njihovega stanja. Znova naložite stran in poskusite znova.",
     "distributing": "Razporejanje ...",
     "selectedCount": "{count, plural, one {# izbran} other {# izbranih}}",
     "accountsCount": "{count, plural, one {# račun} other {# računov}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Privzeto samodejno osveži seznam modelov vsakih 6 ur (nastavljivo prek MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Samodejna sinhronizacija je omogočena — modeli se bodo redno osveževali",
     "autoSyncDisabled": "Samodejna sinhronizacija je onemogočena",
+    "autoSyncLastSynced": "Sinhronizirano {time}",
+    "autoSyncNeverSynced": "Še nikoli sinhronizirano",
+    "autoSyncImmediateFailed": "Samodejna sinhronizacija je omogočena, vendar takojšnja osvežitev modelov ni uspela",
+    "autoSyncImmediatePartialFailure": "Samodejna sinhronizacija je omogočena, vendar nekatere takojšnje osvežitve modelov niso uspele",
     "autoSyncToggleFailed": "Samodejne sinhronizacije ni bilo mogoče preklopiti",
     "autoSyncPartialFailure": "Samodejna sinhronizacija je bila posodobljena za nekatere povezave, vendar ne za vse",
     "clearAllModels": "Počisti vse modele",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Razporejanje ...",
       "complete": "Dokončano",
-      "defaultLabel": "Razporedi posredniške strežnike"
+      "defaultLabel": "Razporedi posredniške strežnike",
+      "confirmMessage": "Želite dodeliti shranjene posredniške strežnike vsakemu računu v tej skupini? S tem boste nadomestili obstoječe dodelitve računov in omogočili usmerjanje prek posredniškega strežnika, tudi za onemogočene račune.",
+      "confirmDistribute": "Porazdeli posredniške strežnike",
+      "cancel": "Prekliči"
     }
   },
   "providerTest": {

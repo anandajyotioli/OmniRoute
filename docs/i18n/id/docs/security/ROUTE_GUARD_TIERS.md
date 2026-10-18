@@ -200,6 +200,7 @@ proses server.
 | `/api/settings/import-json`               | Mengganti seluruh blob pengaturan                                                 |
 | `/api/providers/health-autopilot/actions` | Menjalankan tindakan remediasi autopilot                                          |
 | `/api/settings/obsidian`                  | Menerbitkan kredensial WebDAV yang dapat digunakan ulang untuk root vault apa pun |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                      |
 
 **Respons saat terjadi pelanggaran:** `401 Authentication required`
 

@@ -200,6 +200,7 @@ serverový proces.
 | `/api/settings/import-json`               | Nahradí celý objekt nastavení                                                    |
 | `/api/providers/health-autopilot/actions` | Provádí nápravné akce autopilota                                                 |
 | `/api/settings/obsidian`                  | Vydává opakovaně použitelné přihlašovací údaje WebDAV pro libovolný kořen vaultu |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                     |
 
 **Odpověď při porušení:** `401 Authentication required`
 

@@ -24,7 +24,7 @@ Ces chiffres correspondent à des comptes tiers et à des conditions d’éligib
 | **+ soumis à une vérification d’identité régionale**              | **+~6M**           | `modelscope` (association à Alibaba Cloud + vérification d’identité réelle en Chine continentale). Quota réellement récurrent, exposé sous `gatedRecurringTokens` / `gatedProviders` et dans le tableau de bord. Jamais inclus dans le total mis en avant : +~6M soumis à une vérification d’identité régionale.                                              |
 | Plafond théorique (toutes les limites de débit, 24 h/24 et 7 j/7) | ~10 Md             | Somme de toutes les limites de débit des fournisseurs extrapolées à une utilisation continue. **Ce n’est pas une garantie** — ne présentez pas ce chiffre comme le principal.                                                                                                                                                                                 |
 
-**Présentation honnête :** _OmniRoute agrège **~1,62 milliard de jetons gratuits documentés par mois** (jusqu’à ~2,22 milliards le premier mois avec les crédits d’inscription) répartis entre 35 pools d’offres gratuites — auxquels s’ajoute une longue traîne de fournisseurs gratuits en permanence et sans plafond — tandis que la compression RTK + Caveman (15 à 95 % d’économie de jetons) permet d’aller encore plus loin._
+**Présentation honnête :** _OmniRoute agrège **~1,62 milliard de jetons gratuits documentés par mois** (jusqu’à ~2,22 milliards le premier mois avec les crédits d’inscription) répartis entre 34 pools d’offres gratuites — auxquels s’ajoute une longue traîne de fournisseurs gratuits en permanence et sans plafond — tandis que la compression RTK + Caveman (15 à 95 % d’économie de jetons) permet d’aller encore plus loin._
 
 > **Pourquoi ce total a baissé par rapport aux ~1,94 Md précédents.** L’actualisation du 2026-06-17 est une correction par souci de transparence, pas une perte : `gemini` est désormais dédupliqué au niveau du pool (le total était auparavant gonflé par le comptage séparé de chaque variante Flash, 462 M → 60 M), `cloudflare-ai` a été corrigé pour refléter sa limite réelle de 10 000 neurones/jour (122 M → 30 M), `doubao` a été reclassé comme crédit d’inscription unique (et non récurrent), et les offres supprimées ont été retirées (`chutes`/`phind`/`kluster` abandonnés). Cela est partiellement compensé par `llm7` (valeur correcte de 5 M/jour → 150 M) et par de nouveaux fournisseurs gratuits (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Ces chiffres correspondent à des comptes tiers et à des conditions d’éligib
 >
 > **Corrigé le 2026-09-03 (#11773) :** `cerebras` a été reclassé, passant d’une allocation récurrente de 30 M/mois (ancien essai sans carte de 1 M de jetons/jour) à un crédit d’inscription unique de 5 $ nécessitant un moyen de paiement. Même règle de transparence que pour LongCat.
 >
-> **Plus xKiro (2026-09-03) :** le nouveau pool `xkiro-free` (150 M/mois) ajoute une 35e clé de pool récurrente. Felo Web reste exclu tant que la provenance et les conditions de licence dérivées de la GPL restent EN ATTENTE. La source indique désormais **35 clés de pool récurrentes** et **~1,62 Md en régime permanent** — le chiffre calculé en direct et contrôlé par la CI (`check:docs-counts` fait échouer le build s’il diverge de `computeFreeModelTotals()`).
+> **Plus xKiro (2026-09-03) :** le nouveau pool `xkiro-free` (150 M/mois) ajoute une 35e clé de pool récurrente. Felo Web reste exclu tant que la provenance et les conditions de licence dérivées de la GPL restent EN ATTENTE. La source indique désormais **34 clés de pool récurrentes** et **~1,62 Md en régime permanent** — le chiffre calculé en direct et contrôlé par la CI (`check:docs-counts` fait échouer le build s’il diverge de `computeFreeModelTotals()`).
 
 Principaux contributeurs **documentés** : `mistral` 1,00 Md, `nara` 210 M, `llm7` 150 M, `xkiro` 150 M, `groq` 30 M (cinq plafonds par modèle), `cloudflare-ai` 30 M, `api-airforce` 24 M. (`longcat` est exclu — son allocation LongCat-2.0 de 10 M est un crédit d’inscription unique soumis à une vérification KYC, et non un budget mensuel récurrent.)
 
@@ -131,7 +131,6 @@ La plupart des chiffres de « jetons gratuits par mois » dans ce domaine corres
 | `modal`          | La section 1.3 des CGU interdit explicitement de « louer, revendre ou permettre de toute autre manière à un tiers d’accéder directement au Service ou de l’utiliser » — la création d’un service auto-hébergé…      |
 | `muse-spark-web` | Les CGU de Meta interdisent explicitement l’accès automatisé sans autorisation préalable, la rétro-ingénierie sans autorisation écrite et le contournement des mesures technologi…                                  |
 | `nlpcloud`       | Les CGU interdisent explicitement de « mettre en place un proxy ou tout autre dispositif permettant à d’autres personnes d’accéder au Service par son intermédiaire » et n’accordent qu’un droit non transférable,… |
-| `opencode`       | Les CGU (Anomaly Innovations, Inc.) limitent explicitement l’utilisation à « votre propre usage interne, et non pour le compte ou au bénéfice d’un tiers » — ope…                                                   |
 | `t3-web`         | Les CGU limitent explicitement les comptes à un usage strictement personnel, interdisent le partage d’identifiants avec des tiers ainsi que les accès automatisés/par bot/par scraping — un p…                      |
 
 ### ✅ Généralement permissif — prudence / ambigu / autorisé (tous les autres)
@@ -274,7 +273,6 @@ La plupart des chiffres de « jetons gratuits par mois » dans ce domaine corres
 | `muse-spark-web` | sans clé             | —                     | —                      | à éviter  | 3       |
 | `nlpcloud`       | sans clé             | —                     | —                      | à éviter  | 1       |
 | `nvidia`         | sans clé             | —                     | —                      | prudence  | 13      |
-| `opencode`       | sans clé             | —                     | —                      | à éviter  | 7       |
 | `pollinations`   | sans clé             | —                     | —                      | prudence  | 31      |
 | `publicai`       | sans clé             | —                     | —                      | prudence  | 3       |
 | `reka`           | sans clé             | —                     | —                      | prudence  | 2       |
@@ -285,17 +283,6 @@ La plupart des chiffres de « jetons gratuits par mois » dans ce domaine corres
 | `uncloseai`      | sans clé             | —                     | —                      | prudence  | 3       |
 
 ---
-
-## OpenCode Free : restriction liée au contrat client (#14313)
-
-Le fournisseur `opencode` sans clé (service public `https://opencode.ai/zen/v1`) refuse toute requête
-qui ne respecte pas le contrat client OpenCode avec une erreur **403 `FreeTierError`** et la
-phrase _« L’offre gratuite d’OpenCode ne peut être utilisée que depuis OpenCode »_. Il s’agit d’un
-refus lié à la requête (même verdict pour chaque compte avec la même structure de requête), et non d’un
-bannissement du modèle ou d’un délai de récupération de la connexion — OmniRoute le classe comme `project_route_error`, ignore
-le verrouillage / délai de récupération du modèle et (sur le chemin synthétique `noauth`) suspend la resélection automatique
-de combinaison pendant une courte durée de vie (TTL). Envoyez des requêtes comportant une liste d’outils non vide, `stream: true` et les
-en-têtes de session/UA OpenCode (`opencodeFreeTierContract.ts`), sinon attendez-vous à une erreur 403.
 
 ## Modifications depuis le catalogue livré (`freeNote`)
 

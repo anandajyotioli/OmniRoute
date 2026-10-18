@@ -199,6 +199,7 @@ Tunnel, Tailscale, Ngrok) უკან უშვებთ, ლუპბეკი
 | `/api/settings/import-json`               | ანაცვლებს პარამეტრების სრულ blob-ს                                                         |
 | `/api/providers/health-autopilot/actions` | ასრულებს autopilot-ის გამოსასწორებელ მოქმედებებს                                           |
 | `/api/settings/obsidian`                  | ქმნის მრავალჯერადი გამოყენების WebDAV ავტორიზაციის მონაცემებს ნებისმიერი vault root-ისთვის |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                               |
 
 **პასუხი დარღვევისას:** `401 Authentication required`
 

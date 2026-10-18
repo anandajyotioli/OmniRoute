@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "उपलब्धता के अनुसार कनेक्शन पुनः क्रमबद्ध करें",
     "reorderByAvailabilityError": "उपलब्धता के अनुसार कनेक्शन पुनः क्रमबद्ध करने में विफल",
     "distributeProxies": "प्रॉक्सी वितरित करें",
+    "clearAccountProxies": "खाता प्रॉक्सी हटाएँ",
+    "clearAccountProxyAssignments": "असाइनमेंट हटाएँ",
+    "clearAccountProxiesConfirm": "इस प्रदाता के सभी {count} खातों से अलग-अलग प्रॉक्सी असाइनमेंट हटाएँ, जिनमें अक्षम खाते भी शामिल हैं? सहेजे गए प्रॉक्सी और प्रदाता/वैश्विक असाइनमेंट सुरक्षित रहेंगे। खाते फिर से प्रदाता/वैश्विक प्रॉक्सी सेटिंग्स प्राप्त करेंगे।",
+    "accountProxiesCleared": "खाता प्रॉक्सी असाइनमेंट हटा दिए गए।",
+    "clearAccountProxiesPartial": "{count} खाते पूरी तरह रीसेट नहीं किए जा सके। प्रदर्शित असाइनमेंट रीफ़्रेश कर दिए गए हैं; आप पुनः प्रयास कर सकते हैं।",
+    "clearAccountProxiesError": "खाता प्रॉक्सी रीसेट नहीं किए जा सके या उनकी स्थिति रीफ़्रेश नहीं की जा सकी। कृपया पुनः लोड करके फिर प्रयास करें।",
     "distributing": "वितरित किया जा रहा है...",
     "selectedCount": "{count, plural, one {# चयनित} other {# चयनित}}",
     "accountsCount": "{count, plural, one {# खाता} other {# खाते}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "डिफ़ॉल्ट रूप से हर 6 घंटे में मॉडल सूची अपने-आप रीफ़्रेश करें (MODEL_SYNC_INTERVAL_HOURS के ज़रिए कॉन्फ़िगर किया जा सकता है)",
     "autoSyncEnabled": "स्वतः-सिंक सक्षम है — मॉडल समय-समय पर रीफ़्रेश होंगे",
     "autoSyncDisabled": "स्वतः-सिंक अक्षम है",
+    "autoSyncLastSynced": "{time} पर सिंक किया गया",
+    "autoSyncNeverSynced": "कभी सिंक नहीं किया गया",
+    "autoSyncImmediateFailed": "ऑटो-सिंक चालू है, लेकिन मॉडलों का तत्काल रिफ्रेश विफल रहा",
+    "autoSyncImmediatePartialFailure": "ऑटो-सिंक चालू है, लेकिन कुछ मॉडलों का तत्काल रिफ्रेश विफल रहा",
     "autoSyncToggleFailed": "स्वतः-सिंक टॉगल करने में विफल",
     "autoSyncPartialFailure": "कुछ कनेक्शन के लिए स्वतः-सिंक अपडेट हुआ, लेकिन सभी के लिए नहीं",
     "clearAllModels": "सभी मॉडल हटाएँ",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "वितरित कर रहा है...",
       "complete": "पूर्ण करें",
-      "defaultLabel": "प्रॉक्सी वितरित करें"
+      "defaultLabel": "प्रॉक्सी वितरित करें",
+      "confirmMessage": "इस समूह के प्रत्येक खाते को सहेजे गए प्रॉक्सी असाइन करें? इससे मौजूदा खाता असाइनमेंट बदल जाएँगे और अक्षम खातों सहित सभी के लिए प्रॉक्सी रूटिंग सक्षम हो जाएगी।",
+      "confirmDistribute": "प्रॉक्सी वितरित करें",
+      "cancel": "रद्द करें"
     }
   },
   "providerTest": {

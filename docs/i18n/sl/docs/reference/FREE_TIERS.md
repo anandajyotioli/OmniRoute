@@ -24,7 +24,7 @@ Te številke opisujejo ločene račune tretjih oseb in pogoje upravičenosti v c
 | **+ za regionalnim preverjanjem identitete**           | **+~6M**                   | `modelscope` (povezava z Alibaba Cloud + preverjanje pravega imena za celinsko Kitajsko). Dejansko ponavljajoča se kvota, prikazana kot `gatedRecurringTokens` / `gatedProviders` in na nadzorni plošči. Nikoli ni prišteta glavni številki: +~6M za regionalnim preverjanjem identitete.                                                                  |
 | Teoretična zgornja meja (vse omejitve hitrosti, 24/7)  | ~10 mrd.                   | Vsota omejitev hitrosti vseh ponudnikov, ekstrapolirana na neprekinjeno uporabo. **Ni jamstvo** — tega ne uporabljajte kot glavno številko.                                                                                                                                                                                                                |
 
-**Poštena glavna navedba:** _OmniRoute združuje **~1,62 mrd. dokumentiranih brezplačnih žetonov na mesec** (do ~2,22 mrd. v prvem mesecu z dobroimetji ob registraciji) v 35 skupnih zalogah brezplačnih ravni — poleg tega pa še dolgo vrsto trajno brezplačnih ponudnikov brez omejitve — stiskanje RTK + Caveman (15–95-% prihranek žetonov) pa to količino še dodatno poveča._
+**Poštena glavna navedba:** _OmniRoute združuje **~1,62 mrd. dokumentiranih brezplačnih žetonov na mesec** (do ~2,22 mrd. v prvem mesecu z dobroimetji ob registraciji) v 34 skupnih zalogah brezplačnih ravni — poleg tega pa še dolgo vrsto trajno brezplačnih ponudnikov brez omejitve — stiskanje RTK + Caveman (15–95-% prihranek žetonov) pa to količino še dodatno poveča._
 
 > **Zakaj je vrednost padla s prejšnjih ~1,94B.** Osvežitev z dne 2026-06-17 je popravek zaradi zagotavljanja verodostojnosti, ne izguba: `gemini` je zdaj dedupliciran po skupini (prej je bila vrednost napihnjena, ker se je vsaka različica Flash štela ločeno, 462M → 60M), `cloudflare-ai` je bil popravljen na dejanskih 10k nevronov/dan (122M → 30M), `doubao` je bil prerazvrščen kot enkratno dobroimetje ob registraciji (in ne kot ponavljajoče se dobroimetje), ukinjene ravni pa so bile odstranjene (`chutes`/`phind`/`kluster` so ukinjeni). To deloma izravnavajo `llm7` (pravilnih 5M/dan → 150M) in novi brezplačni ponudniki (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Te številke opisujejo ločene račune tretjih oseb in pogoje upravičenosti v c
 >
 > **Popravljeno 2026-09-03 (#11773):** `cerebras` je bil prerazvrščen iz ponavljajočega se dobroimetja 30M/mesec (stari preizkus brez kartice z 1M žetonov/dan) v enkratno dobroimetje v višini $5 ob registraciji, ki zahteva plačilno sredstvo. Velja isto pravilo verodostojnosti kot pri LongCat.
 >
-> **Poleg tega xKiro (2026-09-03):** nova skupina `xkiro-free` (150M/mesec) dodaja 35. ključ ponavljajoče se skupine. Felo Web ostaja izključen, dokler njegov izvor oziroma licenciranje, izpeljano iz GPL, ostaja ZAČASNO USTAVLJENO. Vir zdaj navaja **35 ključev ponavljajočih se skupin** in **~1,62B stalne zmogljivosti** — to je sproti posodabljana številka, preverjena v CI (`check:docs-counts` povzroči neuspešno gradnjo, če se oddalji od rezultata `computeFreeModelTotals()`).
+> **Poleg tega xKiro (2026-09-03):** nova skupina `xkiro-free` (150M/mesec) dodaja 35. ključ ponavljajoče se skupine. Felo Web ostaja izključen, dokler njegov izvor oziroma licenciranje, izpeljano iz GPL, ostaja ZAČASNO USTAVLJENO. Vir zdaj navaja **34 ključev ponavljajočih se skupin** in **~1,62B stalne zmogljivosti** — to je sproti posodabljana številka, preverjena v CI (`check:docs-counts` povzroči neuspešno gradnjo, če se oddalji od rezultata `computeFreeModelTotals()`).
 
 Največji **dokumentirani** prispevki: `mistral` 1,00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (pet omejitev na model), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` je izključen — njegovo dobroimetje 10M za LongCat-2.0 je enkratno dobroimetje ob registraciji, pogojeno s preverjanjem KYC, in ne ponavljajoči se mesečni proračun.)
 
@@ -130,7 +130,6 @@ Večina navedb »brezplačnih žetonov na mesec« na tem področju je seštevek 
 | `modal`          | Razdelek 1.3 pogojev uporabe izrecno prepoveduje »oddajanje v najem, preprodajo ali drugačno omogočanje neposrednega dostopa do storitve oziroma njene uporabe kateri koli tretji osebi« — izdelava samostojno gostovane…              |
 | `muse-spark-web` | Pogoji uporabe družbe Meta izrecno prepovedujejo avtomatiziran dostop brez predhodnega dovoljenja, obratno inženirstvo brez pisnega dovoljenja in zaobidenje tehnoloških…                                                              |
 | `nlpcloud`       | Pogoji uporabe izrecno prepovedujejo »vzpostavitev posredniškega strežnika ali druge naprave, ki drugim omogoča dostop do storitve prek njega« ter podeljujejo samo neprenosljivo,…                                                    |
-| `opencode`       | Pogoji uporabe (Anomaly Innovations, Inc.) izrecno omejujejo uporabo na »vašo lastno interno uporabo in ne v imenu ali korist katere koli tretje osebe« — ope…                                                                         |
 | `t3-web`         | Pogoji uporabe izrecno omejujejo račune samo na osebno uporabo, prepovedujejo deljenje poverilnic s tretjimi osebami ter avtomatiziran dostop oziroma dostop botov/strganje podatkov — s…                                              |
 
 ### ✅ Na splošno permisivno — previdno / nejasno / v redu (preostali)
@@ -273,7 +272,6 @@ Večina navedb »brezplačnih žetonov na mesec« na tem področju je seštevek 
 | `muse-spark-web` | brez ključa                 | —                 | —                      | izogibajte se  | 3      |
 | `nlpcloud`       | brez ključa                 | —                 | —                      | izogibajte se  | 1      |
 | `nvidia`         | brez ključa                 | —                 | —                      | previdno       | 13     |
-| `opencode`       | brez ključa                 | —                 | —                      | izogibajte se  | 7      |
 | `pollinations`   | brez ključa                 | —                 | —                      | previdno       | 31     |
 | `publicai`       | brez ključa                 | —                 | —                      | previdno       | 3      |
 | `reka`           | brez ključa                 | —                 | —                      | previdno       | 2      |
@@ -284,17 +282,6 @@ Večina navedb »brezplačnih žetonov na mesec« na tem področju je seštevek 
 | `uncloseai`      | brez ključa                 | —                 | —                      | previdno       | 3      |
 
 ---
-
-## OpenCode Free: omejitev pogodbe odjemalca (#14313)
-
-Ponudnik `opencode` brez ključa (javni `https://opencode.ai/zen/v1`) zavrne vsako zahtevo,
-ki ni skladna s pogodbo odjemalca OpenCode, z napako **403 `FreeTierError`** in
-stavkom _»Brezplačno raven OpenCode je mogoče uporabljati samo znotraj OpenCode«_. To je
-zavrnitev na ravni zahteve (enaka odločitev za vsak račun pri enaki obliki zahteve), ne pa
-prepoved modela ali premor povezave — OmniRoute jo razvrsti kot `project_route_error`, preskoči
-zaklep modela / premor in (na sintetični poti `noauth`) za kratek TTL začasno ustavi ponovno
-samodejno izbiro kombinacije. Pošiljajte zahteve, ki vsebujejo neprazen seznam orodij, `stream: true` in
-glave seje/UA OpenCode (`opencodeFreeTierContract.ts`), sicer pričakujte odgovor 403.
 
 ## Kaj se je spremenilo od izdanega kataloga (`freeNote`)
 

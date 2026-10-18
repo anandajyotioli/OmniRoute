@@ -1,0 +1,1 @@
+- **fix(api):** POST /api/combos/duplicate no longer returns raw error.message in the 500 body ([#17002](https://github.com/diegosouzapw/OmniRoute/pull/17002)) — thanks @trespassmk

@@ -4,7 +4,7 @@
 
 ---
 
-> **簡而言之**：安裝 → 連線至符合資格的提供者 → 將您的 IDE 指向 OmniRoute。完成。
+> **重點摘要**：安裝 → 連接符合資格的提供者 → 將您的 IDE 指向 OmniRoute。完成。
 
 ---
 
@@ -47,11 +47,11 @@ OmniRoute 會在 `http://localhost:20128` 啟動。儀表板將自動開啟。
 
 ---
 
-## 步驟 3：連接符合資格的提供者
+## 步驟 3：連線至符合資格的提供者
 
-選擇條款與配額符合您需求的提供者。在 **Dashboard → Providers** 中，連接您自己的帳戶或 API 金鑰，然後測試連線。免費存取和免金鑰使用不一定可用。
+選擇其條款與配額符合您需求的提供者。在 **Dashboard → Providers** 中，連結您自己的帳戶或 API 金鑰，然後測試連線。不保證能免費存取或無須金鑰即可使用。
 
-`auto` 預設會排除標記為 `tos: avoid` 的提供者，包括 Kiro 和 OpenCode Free。連接帳戶並不會變更此政策。**Dashboard → Combos** 中的選擇加入設定適用於所有自動組合。選擇提供者前，請先參閱[免費方案指南](./FREE-TIERS-GUIDE.md)。
+`auto` 預設會排除標記為 `tos: avoid` 的提供者，包括 Kiro。連結帳戶不會變更此政策。**Dashboard → Combos** 中的選擇加入設定適用於所有自動組合。選擇提供者前，請先閱讀[免費方案指南](./FREE-TIERS-GUIDE.md)。
 
 ---
 
@@ -130,7 +130,7 @@ omniroute launch-codex --model auto
 
 ## 接下來呢？
 
-- **[自動組合指南](./AUTO-COMBO-GUIDE.md)** — 讓 OmniRoute 為您選擇最佳 AI
+- **[自動組合指南](./AUTO-COMBO-GUIDE.md)** — 讓 OmniRoute 為您挑選最佳的 AI
 - **[提供者指南](./PROVIDERS-GUIDE.md)** — 連接更多提供者（免費與付費）
 - **[免費方案指南](./FREE-TIERS-GUIDE.md)** — 查看提供者條款與免費方案限制
 - **[疑難排解](../guides/TROUBLESHOOTING.md)** — 修正常見問題
@@ -141,19 +141,19 @@ omniroute launch-codex --model auto
 
 ### 「我需要 API 金鑰嗎？」
 
-OmniRoute API 金鑰用於驗證您的工具。上游憑證則取決於提供者：有些需要 API 金鑰或帳號登入。不保證可免費使用。
+OmniRoute API 金鑰用於驗證您的工具。上游憑證則取決於提供者：有些需要 API 金鑰或登入帳戶。不保證可免費存取。
 
 ### 「`auto` 是什麼？」
 
-`auto` 會指示 OmniRoute 自動為每個請求選擇最佳提供者。它會考量速度、成本、品質和可用性。詳情請參閱[自動組合指南](./AUTO-COMBO-GUIDE.md)。
+`auto` 會讓 OmniRoute 自動為每個請求選擇最佳提供者。它會考量速度、成本、品質和可用性。詳情請參閱[自動組合指南](./AUTO-COMBO-GUIDE.md)。
 
 ### 「費用是多少？」
 
-OmniRoute 本身是**免費且開放原始碼的**。您只需支付所使用提供者的費用。許多提供者提供免費方案——請參閱[免費方案指南](./FREE-TIERS-GUIDE.md)。
+OmniRoute 本身是**免費且開放原始碼的**。您只需為所使用的提供者付費。許多提供者提供免費方案——請參閱[免費方案指南](./FREE-TIERS-GUIDE.md)。
 
-### 「我可以搭配 Claude Code / Cursor / Copilot 使用嗎？」
+### 「我可以將它與 Claude Code / Cursor / Copilot 搭配使用嗎？」
 
-**可以！** OmniRoute 可搭配任何支援 OpenAI 格式的工具使用。只要將基底 URL 設為 `http://localhost:20128/v1` 即可。特定的設定說明請參閱 [CLI 工具指南](../reference/CLI-TOOLS.md)。
+**可以！** OmniRoute 可與任何支援 OpenAI 格式的工具搭配使用。只需將基礎 URL 設為 `http://localhost:20128/v1`。具體設定說明請參閱 [CLI 工具指南](../reference/CLI-TOOLS.md)。
 
 ### 「如果提供者停止服務，該怎麼辦？」
 

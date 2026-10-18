@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Pārkārtot savienojumus pēc pieejamības",
     "reorderByAvailabilityError": "Neizdevās pārkārtot savienojumus pēc pieejamības",
     "distributeProxies": "Sadalīt starpniekserverus",
+    "clearAccountProxies": "Noņemt kontu starpniekserverus",
+    "clearAccountProxyAssignments": "Noņemt piešķīrumus",
+    "clearAccountProxiesConfirm": "Vai noņemt individuālos starpniekserveru piešķīrumus visiem šī pakalpojumu sniedzēja {count} kontiem, tostarp atspējotajiem kontiem? Saglabātie starpniekserveri un pakalpojumu sniedzēja/globālie piešķīrumi netiks mainīti. Konti atkal mantos pakalpojumu sniedzēja/globālos starpniekserveru iestatījumus.",
+    "accountProxiesCleared": "Kontu starpniekserveru piešķīrumi ir noņemti.",
+    "clearAccountProxiesPartial": "Neizdevās pilnībā atiestatīt kontus ({count}). Parādītie piešķīrumi ir atsvaidzināti; varat mēģināt vēlreiz.",
+    "clearAccountProxiesError": "Neizdevās atiestatīt kontu starpniekserverus vai atsvaidzināt to statusu. Lūdzu, pārlādējiet lapu un mēģiniet vēlreiz.",
     "distributing": "Notiek sadalīšana...",
     "selectedCount": "{count, plural, one {# atlasīts} other {# atlasīti}}",
     "accountsCount": "{count, plural, one {# konts} other {# konti}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Pēc noklusējuma automātiski atsvaidzināt modeļu sarakstu ik pēc 6 h (konfigurējams, izmantojot MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Automātiskā sinhronizācija iespējota — modeļi tiks periodiski atsvaidzināti",
     "autoSyncDisabled": "Automātiskā sinhronizācija atspējota",
+    "autoSyncLastSynced": "Sinhronizēts {time}",
+    "autoSyncNeverSynced": "Nekad nav sinhronizēts",
+    "autoSyncImmediateFailed": "Automātiskā sinhronizācija iespējota, bet tūlītēja modeļu atsvaidzināšana neizdevās",
+    "autoSyncImmediatePartialFailure": "Automātiskā sinhronizācija iespējota, bet dažas tūlītējas modeļu atsvaidzināšanas neizdevās",
     "autoSyncToggleFailed": "Neizdevās pārslēgt automātisko sinhronizāciju",
     "autoSyncPartialFailure": "Automātiskā sinhronizācija atjaunināta dažiem savienojumiem, bet ne visiem",
     "clearAllModels": "Notīrīt visus modeļus",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Izplatīšana...",
       "complete": "Pabeigts",
-      "defaultLabel": "Izplatīt starpniekserverus"
+      "defaultLabel": "Izplatīt starpniekserverus",
+      "confirmMessage": "Vai piešķirt saglabātos starpniekserverus katram šīs grupas kontam? Tas aizstās esošos kontu piešķīrumus un iespējos maršrutēšanu caur starpniekserveri, tostarp atspējotajiem kontiem.",
+      "confirmDistribute": "Sadalīt starpniekserverus",
+      "cancel": "Atcelt"
     }
   },
   "providerTest": {

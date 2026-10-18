@@ -4,7 +4,7 @@
 
 ---
 
-> **Īsumā**: Instalējiet → Pievienojiet atbilstošu pakalpojumu sniedzēju → Norādiet savai IDE izmantot OmniRoute. Gatavs.
+> **Īsumā**: Instalējiet → Pievienojiet piemērotu pakalpojumu sniedzēju → Norādiet IDE izmantot OmniRoute. Gatavs.
 
 ---
 
@@ -47,11 +47,11 @@ OmniRoute tiek palaists adresē `http://localhost:20128`. Informācijas panelis 
 
 ---
 
-## 3. darbība: Piemērota pakalpojumu sniedzēja pievienošana
+## 3. darbība: Pievienojiet piemērotu pakalpojumu sniedzēju
 
-Izvēlieties pakalpojumu sniedzēju, kura noteikumi un kvota atbilst jūsu vajadzībām. Sadaļā **Dashboard → Providers** pievienojiet savu kontu vai API atslēgu un pēc tam pārbaudiet savienojumu. Bezmaksas piekļuve un pieejamība bez atslēgas netiek garantēta.
+Izvēlieties pakalpojumu sniedzēju, kura noteikumi un kvota atbilst jūsu vajadzībām. Sadaļā **Informācijas panelis → Pakalpojumu sniedzēji** pievienojiet savu kontu vai API atslēgu un pēc tam pārbaudiet savienojumu. Bezmaksas piekļuve un pieejamība bez atslēgas netiek garantēta.
 
-`auto` pēc noklusējuma neiekļauj pakalpojumu sniedzējus, kas atzīmēti ar `tos: avoid`, tostarp Kiro un OpenCode Free. Konta pievienošana šo politiku nemaina. Sadaļā **Dashboard → Combos** norādītā piekrišana attiecas uz visām automātiskajām kombinācijām. Pirms pakalpojumu sniedzēja izvēles izskatiet [Bezmaksas līmeņu ceļvedi](./FREE-TIERS-GUIDE.md).
+`auto` pēc noklusējuma izslēdz pakalpojumu sniedzējus, kas atzīmēti ar `tos: avoid`, tostarp Kiro. Konta pievienošana nemaina šo politiku. Piekrišana sadaļā **Informācijas panelis → Kombinācijas** attiecas uz visām automātiskajām kombinācijām. Pirms pakalpojumu sniedzēja izvēles izlasiet [Bezmaksas līmeņu ceļvedi](./FREE-TIERS-GUIDE.md).
 
 ---
 
@@ -141,11 +141,11 @@ Pieprasījuma informāciju varat apskatīt, kreisajā sānjoslā noklikšķinot 
 
 ### "Vai man ir nepieciešama API atslēga?"
 
-OmniRoute API atslēga autentificē jūsu rīkus. Ārējo pakalpojumu akreditācijas dati ir atkarīgi no pakalpojumu sniedzēja: dažiem ir nepieciešama API atslēga vai pieteikšanās kontā. Bezmaksas piekļuve netiek garantēta.
+OmniRoute API atslēga autentificē jūsu rīkus. Ārējo pakalpojumu piekļuves dati ir atkarīgi no pakalpojumu sniedzēja: daži pieprasa API atslēgu vai pieteikšanos kontā. Bezmaksas piekļuve netiek garantēta.
 
 ### "Kas ir `auto`?"
 
-`auto` norāda OmniRoute automātiski izvēlēties labāko pakalpojumu sniedzēju katram pieprasījumam. Tas ņem vērā ātrumu, izmaksas, kvalitāti un pieejamību. Plašāku informāciju skatiet [automātisko kombināciju ceļvedī](./AUTO-COMBO-GUIDE.md).
+`auto` norāda OmniRoute automātiski izvēlēties labāko pakalpojumu sniedzēju katram pieprasījumam. Tas ņem vērā ātrumu, izmaksas, kvalitāti un pieejamību. Plašāku informāciju skatiet [automātiskās kombinēšanas ceļvedī](./AUTO-COMBO-GUIDE.md).
 
 ### "Cik tas maksā?"
 
@@ -153,11 +153,11 @@ Pats OmniRoute ir **bezmaksas un atvērtā pirmkoda** risinājums. Jūs maksāja
 
 ### "Vai varu to izmantot ar Claude Code / Cursor / Copilot?"
 
-**Jā!** OmniRoute darbojas ar jebkuru rīku, kas atbalsta OpenAI formātu. Vienkārši iestatiet bāzes URL uz `http://localhost:20128/v1`. Konkrētus iestatīšanas norādījumus skatiet [CLI rīku ceļvedī](../reference/CLI-TOOLS.md).
+**Jā!** OmniRoute darbojas ar jebkuru rīku, kas atbalsta OpenAI formātu. Vienkārši iestatiet pamata URL uz `http://localhost:20128/v1`. Konkrētas iestatīšanas instrukcijas skatiet [CLI rīku ceļvedī](../reference/CLI-TOOLS.md).
 
 ### "Kas notiek, ja pakalpojumu sniedzējs pārtrauc darboties?"
 
-OmniRoute automātiski izlaiž pakalpojumu sniedzējus, kuru darbība nav izdevusies, un izmēģina nākamo. Jums nekas nav jādara. Plašāku informāciju skatiet [automātisko kombināciju ceļvedī](./AUTO-COMBO-GUIDE.md).
+OmniRoute automātiski izlaiž pakalpojumu sniedzējus, kuru darbība neizdodas, un mēģina nākamo. Jums nekas nav jādara. Plašāku informāciju skatiet [automātiskās kombinēšanas ceļvedī](./AUTO-COMBO-GUIDE.md).
 
 ---
 

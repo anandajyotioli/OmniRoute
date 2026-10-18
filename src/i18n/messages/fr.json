@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Réorganiser les connexions par disponibilité",
     "reorderByAvailabilityError": "Échec de la réorganisation des connexions par disponibilité",
     "distributeProxies": "Distribuer les proxys",
+    "clearAccountProxies": "Supprimer les proxys des comptes",
+    "clearAccountProxyAssignments": "Supprimer les attributions",
+    "clearAccountProxiesConfirm": "Supprimer les attributions individuelles de proxys des {count} comptes de ce fournisseur, y compris les comptes désactivés ? Les proxys enregistrés et les attributions au niveau du fournisseur/globales sont conservés. Les comptes hériteront à nouveau des paramètres de proxy du fournisseur/globaux.",
+    "accountProxiesCleared": "Attributions de proxys des comptes supprimées.",
+    "clearAccountProxiesPartial": "Impossible de réinitialiser complètement {count} compte(s). Les attributions affichées ont été actualisées ; vous pouvez réessayer.",
+    "clearAccountProxiesError": "Impossible de réinitialiser les proxys des comptes ou d’actualiser leur état. Veuillez recharger la page et réessayer.",
     "distributing": "Distribution...",
     "selectedCount": "{count, plural, one {# sélectionné} other {# sélectionnés}}",
     "accountsCount": "{count, plural, one {# compte} other {# comptes}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Actualiser automatiquement la liste des modèles toutes les 6 h par défaut (configurable via MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Synchronisation automatique activée — les modèles seront actualisés périodiquement",
     "autoSyncDisabled": "Synchronisation automatique désactivée",
+    "autoSyncLastSynced": "Synchronisé à {time}",
+    "autoSyncNeverSynced": "Jamais synchronisé",
+    "autoSyncImmediateFailed": "Synchronisation automatique activée, mais l'actualisation immédiate des modèles a échoué",
+    "autoSyncImmediatePartialFailure": "Synchronisation automatique activée, mais certaines actualisations immédiates des modèles ont échoué",
     "autoSyncToggleFailed": "Échec de l'activation de la synchronisation automatique",
     "autoSyncPartialFailure": "Synchronisation automatique mise à jour pour certaines connexions, mais pas toutes",
     "clearAllModels": "Effacer tous les modèles",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Distribution...",
       "complete": "Terminé",
-      "defaultLabel": "Distribuer les proxys"
+      "defaultLabel": "Distribuer les proxys",
+      "confirmMessage": "Attribuer les proxys enregistrés à chaque compte de ce groupe ? Cette action remplace les attributions existantes et active le routage par proxy, y compris pour les comptes désactivés.",
+      "confirmDistribute": "Distribuer les proxys",
+      "cancel": "Annuler"
     }
   },
   "providerTest": {

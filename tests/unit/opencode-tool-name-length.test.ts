@@ -51,8 +51,8 @@ function transform(provider: string, body: ChatBody): ChatBody {
   return executor.transformRequest(MODEL, body, true, { apiKey: "k" }) as ChatBody;
 }
 
-test("toolNameMaxLength 64 is declared for every OpenCode registry entry", () => {
-  for (const provider of ["opencode", "opencode-zen", "opencode-go"]) {
+test("toolNameMaxLength 64 is declared for every keyed OpenCode registry entry", () => {
+  for (const provider of ["opencode-zen", "opencode-go"]) {
     assert.equal(getRegistryEntry(provider)?.toolNameMaxLength, 64, provider);
   }
 });
@@ -62,7 +62,7 @@ test("OpencodeExecutor aliases two 68-char names sharing a 64-char prefix to dis
   assert.equal(LONG_B.length, 68);
   assert.equal(LONG_A.slice(0, 64), LONG_B.slice(0, 64));
 
-  for (const provider of ["opencode", "opencode-zen", "opencode-go"]) {
+  for (const provider of ["opencode-zen", "opencode-go"]) {
     const out = transform(provider, chatBody([LONG_A, LONG_B]));
     const [aliasA, aliasB] = out.tools.map((tool) => tool.function.name);
 
@@ -108,8 +108,8 @@ test("OpencodeExecutor aliases history tool_calls, tool results and tool_choice 
 test("OpencodeExecutor keeps the same alias map when the same input is re-dispatched", () => {
   // Account rotation re-runs transformRequest on the same input body.
   const input = chatBody([LONG_A, LONG_B]);
-  const first = transform("opencode", input);
-  const second = transform("opencode", input);
+  const first = transform("opencode-zen", input);
+  const second = transform("opencode-zen", input);
 
   assert.deepEqual([...(second._toolNameMap ?? new Map())], [...(first._toolNameMap ?? [])]);
   assert.deepEqual(
@@ -129,7 +129,7 @@ test("OpencodeExecutor leaves short, charset-clean names untouched", () => {
 });
 
 test("OpencodeExecutor does not alias tool names on non chat-completions surfaces", () => {
-  const executor = new OpencodeExecutor("opencode");
+  const executor = new OpencodeExecutor("opencode-zen");
   executor._requestFormat = "claude";
   const out = executor.transformRequest(MODEL, chatBody([LONG_A]), true, {
     apiKey: "k",
@@ -140,7 +140,7 @@ test("OpencodeExecutor does not alias tool names on non chat-completions surface
 });
 
 test("aliases restore to the original names in an OpenAI response", () => {
-  const out = transform("opencode", chatBody([LONG_A, LONG_B]));
+  const out = transform("opencode-zen", chatBody([LONG_A, LONG_B]));
   const aliasB = out.tools[1].function.name;
   const response = {
     choices: [

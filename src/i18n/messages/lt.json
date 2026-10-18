@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Pertvarkyti ryšius pagal pasiekiamumą",
     "reorderByAvailabilityError": "Nepavyko pertvarkyti ryšių pagal pasiekiamumą",
     "distributeProxies": "Paskirstyti tarpinius serverius",
+    "clearAccountProxies": "Pašalinti paskyrų tarpinius serverius",
+    "clearAccountProxyAssignments": "Pašalinti priskyrimus",
+    "clearAccountProxiesConfirm": "Pašalinti atskirus tarpinių serverių priskyrimus iš visų šio teikėjo paskyrų ({count}), įskaitant išjungtas paskyras? Išsaugoti tarpiniai serveriai ir teikėjo / visuotiniai priskyrimai bus išsaugoti. Paskyros vėl paveldės teikėjo / visuotinius tarpinių serverių nustatymus.",
+    "accountProxiesCleared": "Paskyrų tarpinių serverių priskyrimai pašalinti.",
+    "clearAccountProxiesPartial": "Nepavyko visiškai iš naujo nustatyti paskyrų ({count}). Rodomi priskyrimai atnaujinti; galite bandyti dar kartą.",
+    "clearAccountProxiesError": "Nepavyko iš naujo nustatyti paskyrų tarpinių serverių arba atnaujinti jų būsenos. Įkelkite iš naujo ir bandykite dar kartą.",
     "distributing": "Paskirstoma...",
     "selectedCount": "{count, plural, one {Pasirinkta: #} other {Pasirinkta: #}}",
     "accountsCount": "{count, plural, one {Paskyrų: #} other {Paskyrų: #}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Pagal numatytuosius nustatymus automatiškai atnaujinti modelių sąrašą kas 6 val. (galima konfigūruoti naudojant MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Automatinis sinchronizavimas įjungtas — modeliai bus periodiškai atnaujinami",
     "autoSyncDisabled": "Automatinis sinchronizavimas išjungtas",
+    "autoSyncLastSynced": "Sinchronizuota {time}",
+    "autoSyncNeverSynced": "Niekada nesinchronizuota",
+    "autoSyncImmediateFailed": "Automatinis sinchronizavimas įjungtas, bet nepavyko iš karto atnaujinti modelių",
+    "autoSyncImmediatePartialFailure": "Automatinis sinchronizavimas įjungtas, bet kai kurių modelių nepavyko iš karto atnaujinti",
     "autoSyncToggleFailed": "Nepavyko perjungti automatinio sinchronizavimo",
     "autoSyncPartialFailure": "Kai kurių ryšių automatinio sinchronizavimo nuostata atnaujinta, bet ne visų",
     "clearAllModels": "Išvalyti visus modelius",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Paskirstoma...",
       "complete": "Baigta",
-      "defaultLabel": "Paskirstyti tarpinius serverius"
+      "defaultLabel": "Paskirstyti tarpinius serverius",
+      "confirmMessage": "Priskirti išsaugotus tarpinius serverius kiekvienai šios grupės paskyrai? Tai pakeis esamus paskyrų priskyrimus ir įjungs maršruto parinkimą per tarpinį serverį, įskaitant išjungtas paskyras.",
+      "confirmDistribute": "Paskirstyti tarpinius serverius",
+      "cancel": "Atšaukti"
     }
   },
   "providerTest": {

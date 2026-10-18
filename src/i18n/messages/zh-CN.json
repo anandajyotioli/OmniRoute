@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "按可用性重新排序连接",
     "reorderByAvailabilityError": "按可用性重新排序连接失败",
     "distributeProxies": "分配代理",
+    "clearAccountProxies": "移除账户代理",
+    "clearAccountProxyAssignments": "移除分配",
+    "clearAccountProxiesConfirm": "要从此提供者的全部 {count} 个账户中移除各账户的代理分配吗？这也包括已禁用的账户。已保存的代理以及提供者/全局分配将予以保留。账户将重新继承提供者/全局代理设置。",
+    "accountProxiesCleared": "已移除账户代理分配。",
+    "clearAccountProxiesPartial": "无法完全重置 {count} 个账户。显示的分配已刷新；你可以重试。",
+    "clearAccountProxiesError": "无法重置账户代理或刷新其状态。请重新加载后重试。",
     "distributing": "分配中...",
     "selectedCount": "{count, plural, one {已选择 # 项} other {已选择 # 项}}",
     "accountsCount": "{count, plural, one {# 个账户} other {# 个账户}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "默认每 6 小时自动刷新模型列表（可通过 MODEL_SYNC_INTERVAL_HOURS 配置）",
     "autoSyncEnabled": "自动同步已启用 — 模型将定期刷新",
     "autoSyncDisabled": "自动同步已禁用",
+    "autoSyncLastSynced": "{time}已同步",
+    "autoSyncNeverSynced": "从未同步",
+    "autoSyncImmediateFailed": "自动同步已启用，但立即刷新模型失败",
+    "autoSyncImmediatePartialFailure": "自动同步已启用，但部分模型的立即刷新失败",
     "autoSyncToggleFailed": "切换自动同步失败",
     "autoSyncPartialFailure": "已为部分连接更新自动同步，但并非全部",
     "clearAllModels": "清除所有模型",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "正在分发...",
       "complete": "完成",
-      "defaultLabel": "分配代理"
+      "defaultLabel": "分配代理",
+      "confirmMessage": "要将已保存的代理分配给此组中的每个账户吗？这将替换现有的账户分配并启用代理路由，包括已禁用的账户。",
+      "confirmDistribute": "分发代理",
+      "cancel": "取消"
     }
   },
   "providerTest": {

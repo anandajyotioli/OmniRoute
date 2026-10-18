@@ -1,0 +1,1 @@
+- **ci:** the nightly LLM-security guard eval runs a network-isolated `npx --yes promptfoo@0.123.0` (same version as the devDependency pin) instead of the lockfile binary, which cannot import on the release branch because the lock nests `js-yaml` 4.3.2 under `@apidevtools/json-schema-ref-parser` (#17017).

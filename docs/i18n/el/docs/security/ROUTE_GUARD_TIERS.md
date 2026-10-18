@@ -196,6 +196,7 @@ Tunnel, Tailscale, Ngrok), ο έλεγχος loopback εξακολουθεί ν�
 | `/api/settings/import-json`               | Αντικαθιστά ολόκληρο το blob ρυθμίσεων                                        |
 | `/api/providers/health-autopilot/actions` | Εκτελεί ενέργειες αποκατάστασης του autopilot                                 |
 | `/api/settings/obsidian`                  | Εκδίδει επαναχρησιμοποιήσιμα διαπιστευτήρια WebDAV για οποιαδήποτε ρίζα vault |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                  |
 
 **Απόκριση σε περίπτωση παραβίασης:** `401 Authentication required`
 

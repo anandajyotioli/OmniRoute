@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Susun semula sambungan mengikut ketersediaan",
     "reorderByAvailabilityError": "Gagal menyusun semula sambungan mengikut ketersediaan",
     "distributeProxies": "Edarkan Proksi",
+    "clearAccountProxies": "Alih keluar proksi akaun",
+    "clearAccountProxyAssignments": "Alih keluar penetapan",
+    "clearAccountProxiesConfirm": "Alih keluar penetapan proksi individu daripada kesemua {count} akaun penyedia ini, termasuk akaun yang dinyahdayakan? Proksi yang disimpan serta penetapan penyedia/global akan dikekalkan. Akaun akan mewarisi tetapan proksi penyedia/global sekali lagi.",
+    "accountProxiesCleared": "Penetapan proksi akaun telah dialih keluar.",
+    "clearAccountProxiesPartial": "Tidak dapat menetapkan semula sepenuhnya {count} akaun. Penetapan yang dipaparkan telah dimuat semula; anda boleh mencuba lagi.",
+    "clearAccountProxiesError": "Tidak dapat menetapkan semula proksi akaun atau memuat semula statusnya. Sila muat semula halaman dan cuba lagi.",
     "distributing": "Mengedarkan...",
     "selectedCount": "{count, plural, one {# dipilih} other {# dipilih}}",
     "accountsCount": "{count, plural, one {# akaun} other {# akaun}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Muat semula senarai model secara automatik setiap 6 jam secara lalai (boleh dikonfigurasikan melalui MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Autosegerak didayakan — model akan dimuat semula secara berkala",
     "autoSyncDisabled": "Autosegerak dilumpuhkan",
+    "autoSyncLastSynced": "Disegerakkan {time}",
+    "autoSyncNeverSynced": "Tidak pernah disegerakkan",
+    "autoSyncImmediateFailed": "Autosegerak didayakan, tetapi muat semula model serta-merta gagal",
+    "autoSyncImmediatePartialFailure": "Autosegerak didayakan, tetapi sebahagian muat semula model serta-merta gagal",
     "autoSyncToggleFailed": "Gagal untuk menogol autosegerak",
     "autoSyncPartialFailure": "Segerak automatik dikemas kini untuk beberapa sambungan, tetapi bukan semua",
     "clearAllModels": "Kosongkan Semua Model",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Mengagihkan...",
       "complete": "Lengkap",
-      "defaultLabel": "Sebarkan Proksi"
+      "defaultLabel": "Sebarkan Proksi",
+      "confirmMessage": "Tetapkan proksi yang disimpan kepada setiap akaun dalam kumpulan ini? Tindakan ini akan menggantikan penetapan akaun sedia ada dan mendayakan penghalaan proksi, termasuk untuk akaun yang dinyahdayakan.",
+      "confirmDistribute": "Agihkan proksi",
+      "cancel": "Batal"
     }
   },
   "providerTest": {

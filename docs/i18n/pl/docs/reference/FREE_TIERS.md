@@ -24,7 +24,7 @@ Wartości te opisują oddzielne konta zewnętrzne oraz warunki kwalifikacji w ca
 | **+ wymagające regionalnej weryfikacji tożsamości**     | **+~6 mln**                 | `modelscope` (powiązanie z Alibaba Cloud + weryfikacja prawdziwych danych osobowych w Chinach kontynentalnych). Rzeczywisty cykliczny limit, udostępniany jako `gatedRecurringTokens` / `gatedProviders` oraz w panelu. Nigdy nie jest dodawany do wartości podsumowania: +~6 mln za regionalną weryfikacją tożsamości.                                 |
 | Teoretyczne maksimum (wszystkie limity szybkości, 24/7) | ~10 mld                     | Suma limitów szybkości wszystkich dostawców ekstrapolowana na nieprzerwane użycie. **Nie jest to gwarancja** — nie przedstawiaj tej wartości jako głównej.                                                                                                                                                                                              |
 
-**Uczciwe podsumowanie:** _OmniRoute agreguje **~1,62 mld udokumentowanych bezpłatnych tokenów miesięcznie** (do ~2,22 mld w pierwszym miesiącu po uwzględnieniu kredytów za rejestrację) w ramach 35 pul bezpłatnych poziomów — wraz z szeroką gamą trwale bezpłatnych dostawców bez określonego limitu — a kompresja RTK + Caveman (15–95% oszczędności tokenów) dodatkowo zwiększa ich efektywność._
+**Uczciwe podsumowanie:** _OmniRoute agreguje **~1,62 mld udokumentowanych bezpłatnych tokenów miesięcznie** (do ~2,22 mld w pierwszym miesiącu po uwzględnieniu kredytów za rejestrację) w ramach 34 pul bezpłatnych poziomów — wraz z szeroką gamą trwale bezpłatnych dostawców bez określonego limitu — a kompresja RTK + Caveman (15–95% oszczędności tokenów) dodatkowo zwiększa ich efektywność._
 
 > **Dlaczego wartość spadła z poprzednich ~1,94B.** Aktualizacja z 2026-06-17 jest korektą rzetelności, a nie stratą: `gemini` jest teraz deduplikowany na poziomie puli (wcześniej wynik był zawyżony przez osobne zliczanie każdego wariantu Flash, 462M → 60M), `cloudflare-ai` skorygowano do rzeczywistego limitu 10k neuronów/dzień (122M → 30M), `doubao` przeklasyfikowano jako jednorazowy kredyt powitalny (a nie cykliczny), a zamknięte poziomy usunięto (`chutes`/`phind`/`kluster` zakończyły działalność). Spadek został częściowo zrównoważony przez `llm7` (prawidłowe 5M/dzień → 150M) oraz nowych bezpłatnych dostawców (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Wartości te opisują oddzielne konta zewnętrzne oraz warunki kwalifikacji w ca
 >
 > **Skorygowano 2026-09-03 (#11773):** `cerebras` przeklasyfikowano z cyklicznego przydziału 30M/mies. (dawny okres próbny bez karty z limitem 1M tokenów/dzień) na jednorazowy kredyt powitalny w wysokości 5 USD, który wymaga podania metody płatności. Obowiązuje ta sama zasada rzetelności co w przypadku LongCat.
 >
-> **Plus xKiro (2026-09-03):** nowa pula `xkiro-free` (150M/mies.) stanowi 35. klucz puli cyklicznej. Felo Web pozostaje wykluczony, dopóki status pochodzenia/licencjonowania kodu wywodzącego się z GPL pozostaje WSTRZYMANY. Źródło wskazuje teraz **35 kluczy cyklicznych pul** i **~1,62B w ujęciu stałym** — jest to aktualizowana na bieżąco liczba kontrolowana przez CI (`check:docs-counts` powoduje niepowodzenie kompilacji, jeśli odbiega ona od `computeFreeModelTotals()`).
+> **Plus xKiro (2026-09-03):** nowa pula `xkiro-free` (150M/mies.) stanowi 35. klucz puli cyklicznej. Felo Web pozostaje wykluczony, dopóki status pochodzenia/licencjonowania kodu wywodzącego się z GPL pozostaje WSTRZYMANY. Źródło wskazuje teraz **34 kluczy cyklicznych pul** i **~1,62B w ujęciu stałym** — jest to aktualizowana na bieżąco liczba kontrolowana przez CI (`check:docs-counts` powoduje niepowodzenie kompilacji, jeśli odbiega ona od `computeFreeModelTotals()`).
 
 Najwięksi **udokumentowani** dostawcy: `mistral` 1,00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (pięć limitów na model), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` jest wykluczony — jego przydział 10M dla LongCat-2.0 jest jednorazowym kredytem powitalnym wymagającym KYC, a nie cyklicznym budżetem miesięcznym).
 
@@ -124,7 +124,6 @@ Większość wartości „darmowych tokenów miesięcznie” w tej branży jest 
 | `modal`          | Punkt 1.3 regulaminu wyraźnie zabrania „wynajmowania, odsprzedawania lub umożliwiania w inny sposób osobom trzecim bezpośredniego dostępu do Usługi albo korzystania z niej” — tworzenie samodzielnie hostowanego… |
 | `muse-spark-web` | Regulamin Meta wyraźnie zabrania automatycznego dostępu bez uprzedniej zgody, inżynierii wstecznej bez pisemnej zgody oraz obchodzenia zabezpieczeń technologi…                                                    |
 | `nlpcloud`       | Regulamin wyraźnie zabrania „konfigurowania serwera proxy lub innego urządzenia umożliwiającego innym osobom dostęp do Usługi za jego pośrednictwem” i przyznaje jedynie niezbywalne,…                             |
-| `opencode`       | Regulamin (Anomaly Innovations, Inc.) wyraźnie ogranicza korzystanie do „własnego użytku wewnętrznego, a nie w imieniu ani na rzecz jakiejkolwiek osoby trzeciej” — ope…                                           |
 | `t3-web`         | Regulamin wyraźnie ogranicza konta wyłącznie do użytku osobistego, zabrania udostępniania danych uwierzytelniających osobom trzecim oraz dostępu automatycznego/przez boty/scraping — s…                           |
 
 ### ✅ Ogólnie liberalne — ostrożność / niejednoznaczne / dozwolone (pozostałe)
@@ -267,7 +266,6 @@ Większość wartości „darmowych tokenów miesięcznie” w tej branży jest 
 | `muse-spark-web` | bez klucza               | —                  | —                          | unikać          | 3      |
 | `nlpcloud`       | bez klucza               | —                  | —                          | unikać          | 1      |
 | `nvidia`         | bez klucza               | —                  | —                          | ostrożnie       | 13     |
-| `opencode`       | bez klucza               | —                  | —                          | unikać          | 7      |
 | `pollinations`   | bez klucza               | —                  | —                          | ostrożnie       | 31     |
 | `publicai`       | bez klucza               | —                  | —                          | ostrożnie       | 3      |
 | `reka`           | bez klucza               | —                  | —                          | ostrożnie       | 2      |
@@ -278,17 +276,6 @@ Większość wartości „darmowych tokenów miesięcznie” w tej branży jest 
 | `uncloseai`      | bez klucza               | —                  | —                          | ostrożnie       | 3      |
 
 ---
-
-## OpenCode Free: ograniczenie kontraktu klienta (#14313)
-
-Dostawca `opencode` bez klucza (publiczny `https://opencode.ai/zen/v1`) odrzuca każde żądanie,
-które nie jest zgodne z kontraktem klienta OpenCode, zwracając **403 `FreeTierError`** oraz
-komunikat _„Bezpłatna warstwa OpenCode może być używana wyłącznie z poziomu OpenCode”_. Jest to
-odrzucenie dotyczące konkretnego żądania (ten sam werdykt na każdym koncie dla żądania o tej samej strukturze), a nie
-blokada modelu ani okres odnowienia połączenia — OmniRoute klasyfikuje je jako `project_route_error`, pomija
-blokadę modelu / okres odnowienia i (na syntetycznej ścieżce `noauth`) wstrzymuje automatyczny ponowny wybór kombinacji
-na krótki okres TTL. Wysyłaj żądania zawierające niepustą listę narzędzi, `stream: true` oraz
-nagłówki sesji/UA OpenCode (`opencodeFreeTierContract.ts`), w przeciwnym razie spodziewaj się odpowiedzi 403.
 
 ## Co zmieniło się od czasu wydania katalogu (`freeNote`)
 

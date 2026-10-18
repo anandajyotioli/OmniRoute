@@ -1,0 +1,1 @@
+- **fix(antigravity):** keep a client-declared `google_search` callable alongside other function tools in Antigravity (Cloud Code) requests instead of promoting it to native grounding, which the v1internal endpoint rejects with HTTP 400; a sole search tool still gets native grounding. Plain Gemini (AI Studio / Gemini CLI) behavior is unchanged. (#16567)

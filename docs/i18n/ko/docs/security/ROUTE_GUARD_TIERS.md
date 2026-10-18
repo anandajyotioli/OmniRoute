@@ -196,6 +196,7 @@ LOCAL_ONLY로 분류됩니다.
 | `/api/settings/import-json`               | 전체 설정 블롭 교체                                  |
 | `/api/providers/health-autopilot/actions` | 오토파일럿 복구 작업 실행                            |
 | `/api/settings/obsidian`                  | 모든 볼트 루트에 재사용 가능한 WebDAV 자격 증명 발급 |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens         |
 
 **위반 시 응답:** `401 Authentication required`
 

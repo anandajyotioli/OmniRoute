@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Ayusin muli ang mga koneksyon ayon sa availability",
     "reorderByAvailabilityError": "Hindi maayos muli ang mga koneksyon ayon sa availability",
     "distributeProxies": "Ipamahagi ang mga Proxy",
+    "clearAccountProxies": "Alisin ang mga proxy ng account",
+    "clearAccountProxyAssignments": "Alisin ang mga pagtatalaga",
+    "clearAccountProxiesConfirm": "Alisin ang mga indibidwal na pagtatalaga ng proxy mula sa lahat ng {count} account ng provider na ito, kabilang ang mga naka-disable na account? Mananatili ang mga naka-save na proxy at mga pagtatalaga ng provider/global. Muling mamanahin ng mga account ang mga setting ng proxy ng provider/global.",
+    "accountProxiesCleared": "Inalis ang mga pagtatalaga ng proxy ng account.",
+    "clearAccountProxiesPartial": "Hindi ganap na na-reset ang {count} account. Na-refresh na ang mga ipinapakitang pagtatalaga; maaari mong subukang muli.",
+    "clearAccountProxiesError": "Hindi ma-reset ang mga proxy ng account o ma-refresh ang status ng mga ito. Paki-reload at subukang muli.",
     "distributing": "Ipinapamahagi...",
     "selectedCount": "{count, plural, one {# ang napili} other {# ang napili}}",
     "accountsCount": "{count, plural, one {# account} other {# na account}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Awtomatikong i-refresh ang listahan ng modelo kada 6 na oras bilang default (maaaring i-configure sa pamamagitan ng MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Pinagana ang auto-sync — pana-panahong magre-refresh ang mga modelo",
     "autoSyncDisabled": "Na-disable ang auto-sync",
+    "autoSyncLastSynced": "Na-sync {time}",
+    "autoSyncNeverSynced": "Hindi pa na-sync kailanman",
+    "autoSyncImmediateFailed": "Pinagana ang auto-sync, ngunit nabigo ang agarang pag-refresh ng mga modelo",
+    "autoSyncImmediatePartialFailure": "Pinagana ang auto-sync, ngunit nabigo ang ilang agarang pag-refresh ng mga modelo",
     "autoSyncToggleFailed": "Nabigong i-toggle ang auto-sync",
     "autoSyncPartialFailure": "Na-update ang auto-sync para sa ilang koneksyon, ngunit hindi lahat",
     "clearAllModels": "I-clear ang Lahat ng Modelo",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Namamahagi...",
       "complete": "Kumpleto",
-      "defaultLabel": "Ipamahagi ang mga Proxy"
+      "defaultLabel": "Ipamahagi ang mga Proxy",
+      "confirmMessage": "Italaga ang mga naka-save na proxy sa bawat account sa grupong ito? Papalitan nito ang mga kasalukuyang pagtatalaga ng account at ie-enable ang pagruruta sa proxy, kabilang ang para sa mga naka-disable na account.",
+      "confirmDistribute": "Ipamahagi ang mga proxy",
+      "cancel": "Kanselahin"
     }
   },
   "providerTest": {

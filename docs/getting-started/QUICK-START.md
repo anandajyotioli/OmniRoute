@@ -53,7 +53,7 @@ OmniRoute starts at `http://localhost:20128`. The dashboard opens automatically.
 
 Choose a provider whose terms and quota fit your needs. In **Dashboard → Providers**, connect your own account or API key, then test the connection. Free access and keyless availability are not guaranteed.
 
-`auto` excludes providers marked `tos: avoid`, including Kiro and OpenCode Free, by default. Connecting an account does not change that policy. The opt-in in **Dashboard → Combos** applies to all auto combos. Review the [Free Tiers Guide](./FREE-TIERS-GUIDE.md) before choosing a provider.
+`auto` excludes providers marked `tos: avoid`, including Kiro, by default. Connecting an account does not change that policy. The opt-in in **Dashboard → Combos** applies to all auto combos. Review the [Free Tiers Guide](./FREE-TIERS-GUIDE.md) before choosing a provider.
 
 ---
 

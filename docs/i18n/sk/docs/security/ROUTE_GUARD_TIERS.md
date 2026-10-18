@@ -203,6 +203,7 @@ ukončiť proces servera.
 | `/api/settings/import-json`               | Nahradí celý objekt nastavení                                                       |
 | `/api/providers/health-autopilot/actions` | Vykoná nápravné akcie autopilota                                                    |
 | `/api/settings/obsidian`                  | Vytvorí opakovane použiteľné prihlasovacie údaje WebDAV pre ľubovoľný koreň trezora |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                        |
 
 **Odpoveď pri porušení:** `401 Vyžaduje sa overenie totožnosti`
 

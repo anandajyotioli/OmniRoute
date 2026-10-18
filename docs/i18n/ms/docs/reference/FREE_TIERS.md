@@ -24,7 +24,7 @@ Angka ini menerangkan akaun pihak ketiga dan syarat kelayakan yang berasingan di
 | **+ di sebalik semakan identiti serantau**         | **+~6M**                        | `modelscope` (pengikatan Alibaba Cloud + pengesahan nama sebenar tanah besar China). Kuota berulang sebenar, didedahkan sebagai `gatedRecurringTokens` / `gatedProviders` dan pada papan pemuka. Tidak pernah dijumlahkan dalam angka utama: +~6M di sebalik pengesahan identiti serantau.                                        |
 | Had maksimum teori (semua had kadar, 24/7)         | ~10B                            | Jumlah setiap had kadar penyedia yang diekstrapolasi kepada penggunaan tanpa henti. **Bukan jaminan** — jangan jadikan ini sebagai angka utama.                                                                                                                                                                                   |
 
-**Tajuk utama yang jujur:** _OmniRoute mengagregatkan **~1.62B token percuma yang didokumenkan setiap bulan** (sehingga ~2.22B pada bulan pertama anda dengan kredit pendaftaran) merentasi 35 kumpulan peringkat percuma — serta rangkaian panjang penyedia percuma secara kekal tanpa had — dan pemampatan RTK + Caveman (penjimatan token sebanyak 15–95%) memanjangkannya lagi._
+**Tajuk utama yang jujur:** _OmniRoute mengagregatkan **~1.62B token percuma yang didokumenkan setiap bulan** (sehingga ~2.22B pada bulan pertama anda dengan kredit pendaftaran) merentasi 34 kumpulan peringkat percuma — serta rangkaian panjang penyedia percuma secara kekal tanpa had — dan pemampatan RTK + Caveman (penjimatan token sebanyak 15–95%) memanjangkannya lagi._
 
 > **Mengapa angka ini menurun daripada ~1.94B sebelumnya.** Penyegaran 2026-06-17 ialah pembetulan demi ketelusan, bukannya kerugian: `gemini` kini dinyahduplikasi mengikut kelompok (sebelum ini terlebih kira kerana setiap varian Flash dikira secara berasingan, 462M → 60M), `cloudflare-ai` dibetulkan kepada kadar sebenar 10k-Neurons/hari (122M → 30M), `doubao` diklasifikasikan semula sebagai kredit pendaftaran sekali sahaja (bukan berulang), dan peringkat yang telah ditamatkan dibuang (`chutes`/`phind`/`kluster` dihentikan). Ini sebahagiannya diimbangi oleh `llm7` (kadar sebenar 5M/hari → 150M) dan penyedia percuma baharu (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Angka ini menerangkan akaun pihak ketiga dan syarat kelayakan yang berasingan di
 >
 > **Dibetulkan pada 2026-09-03 (#11773):** `cerebras` diklasifikasikan semula daripada geran berulang 30M/bln (percubaan lama tanpa kad sebanyak 1M token/hari) kepada kredit pendaftaran sekali sahaja sebanyak $5 yang memerlukan kaedah pembayaran. Peraturan ketelusan yang sama seperti LongCat.
 >
-> **Ditambah xKiro (2026-09-03):** kelompok `xkiro-free` baharu (150M/bln) menambah kunci kelompok berulang yang ke-35. Felo Web kekal dikecualikan sementara asal-usul/pelesenannya yang terbit daripada GPL kekal dalam status DITANGGUHKAN. Sumber kini melaporkan **35 kunci kelompok berulang** dan **~1.62B secara berterusan** — angka langsung yang dikawal oleh CI (`check:docs-counts` akan menggagalkan binaan jika angka ini menyimpang daripada `computeFreeModelTotals()`).
+> **Ditambah xKiro (2026-09-03):** kelompok `xkiro-free` baharu (150M/bln) menambah kunci kelompok berulang yang ke-35. Felo Web kekal dikecualikan sementara asal-usul/pelesenannya yang terbit daripada GPL kekal dalam status DITANGGUHKAN. Sumber kini melaporkan **34 kunci kelompok berulang** dan **~1.62B secara berterusan** — angka langsung yang dikawal oleh CI (`check:docs-counts` akan menggagalkan binaan jika angka ini menyimpang daripada `computeFreeModelTotals()`).
 
 Penyumbang **yang didokumentasikan** terbesar: `mistral` 1.00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (lima had bagi setiap model), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` dikecualikan — geran LongCat-2.0 sebanyak 10M ialah kredit pendaftaran sekali sahaja yang memerlukan KYC, bukannya belanjawan bulanan berulang.)
 
@@ -136,7 +136,6 @@ Kebanyakan angka "token percuma sebulan" dalam ruang ini ialah jumlah label bagi
 | `modal`          | Seksyen 1.3 ToS secara nyata melarang "menyewa, menjual semula atau dengan cara lain membenarkan mana-mana pihak ketiga mengakses atau menggunakan Perkhidmatan secara langsung" — membina proksi yang dihoskan sendiri… |
 | `muse-spark-web` | ToS Meta secara nyata melarang akses automatik tanpa kebenaran terlebih dahulu, kejuruteraan songsang tanpa kebenaran bertulis dan pemintasan teknologi…                                                                 |
 | `nlpcloud`       | ToS secara nyata melarang "penyediaan proksi atau peranti lain yang membolehkan orang lain mengakses Perkhidmatan melaluinya" dan hanya memberikan hak yang tidak boleh dipindah milik,…                                 |
-| `opencode`       | ToS (Anomaly Innovations, Inc.) secara nyata mengehadkan penggunaan kepada "kegunaan dalaman anda sendiri, dan bukan bagi pihak atau untuk manfaat mana-mana pihak ketiga" — ope…                                        |
 | `t3-web`         | ToS secara nyata mengehadkan akaun kepada penggunaan peribadi sahaja, melarang perkongsian kelayakan dengan pihak ketiga dan melarang akses automatik/bot/pengikisan — sebuah s…                                         |
 
 ### ✅ Secara umumnya permisif — berhati-hati / tidak jelas / dibenarkan (selebihnya)
@@ -279,7 +278,6 @@ Kebanyakan angka "token percuma sebulan" dalam ruang ini ialah jumlah label bagi
 | `muse-spark-web` | tanpa kunci        | —               | —                    | elakkan            | 3     |
 | `nlpcloud`       | tanpa kunci        | —               | —                    | elakkan            | 1     |
 | `nvidia`         | tanpa kunci        | —               | —                    | berhati-hati       | 13    |
-| `opencode`       | tanpa kunci        | —               | —                    | elakkan            | 7     |
 | `pollinations`   | tanpa kunci        | —               | —                    | berhati-hati       | 31    |
 | `publicai`       | tanpa kunci        | —               | —                    | berhati-hati       | 3     |
 | `reka`           | tanpa kunci        | —               | —                    | berhati-hati       | 2     |
@@ -290,17 +288,6 @@ Kebanyakan angka "token percuma sebulan" dalam ruang ini ialah jumlah label bagi
 | `uncloseai`      | tanpa kunci        | —               | —                    | berhati-hati       | 3     |
 
 ---
-
-## OpenCode Free: sekatan kontrak klien (#14313)
-
-Penyedia `opencode` tanpa kunci (awam `https://opencode.ai/zen/v1`) menolak sebarang permintaan
-yang tidak sepadan dengan kontrak klien OpenCode dengan **403 `FreeTierError`** dan ayat
-_"Peringkat percuma OpenCode hanya boleh digunakan dari dalam OpenCode"_. Ini ialah
-penolakan mengikut skop permintaan (keputusan yang sama pada setiap akaun untuk bentuk permintaan yang sama), bukannya
-sekatan model atau tempoh bertenang sambungan — OmniRoute mengklasifikasikannya sebagai `project_route_error`, melangkau
-penguncian / tempoh bertenang model dan (pada laluan sintetik `noauth`) menjeda pemilihan semula auto-kombo
-untuk TTL yang singkat. Hantar permintaan yang membawa senarai alat yang tidak kosong, `stream: true`, dan
-pengepala sesi/UA OpenCode (`opencodeFreeTierContract.ts`) atau jangkakan 403.
 
 ## Perkara yang berubah sejak katalog yang dihantar (`freeNote`)
 

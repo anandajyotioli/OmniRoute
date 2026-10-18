@@ -195,6 +195,7 @@ Tunnel, Tailscale, Ngrok), בדיקת ה-loopback עדיין מגינה על ה�
 | `/api/settings/import-json`               | מחליף את מלוא אובייקט ההגדרות                        |
 | `/api/providers/health-autopilot/actions` | מבצע פעולות תיקון אוטומטיות של autopilot             |
 | `/api/settings/obsidian`                  | מנפיק פרטי גישה רב-פעמיים ל-WebDAV עבור כל שורש כספת |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens         |
 
 **תגובה במקרה של הפרה:** `401 Authentication required`
 

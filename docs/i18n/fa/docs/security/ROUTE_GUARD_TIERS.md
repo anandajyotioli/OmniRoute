@@ -195,6 +195,7 @@ Tunnel، Tailscale، Ngrok) اجرا میکنید، بررسی loopback همچن
 | `/api/settings/import-json`               | کل blob تنظیمات را جایگزین میکند                                               |
 | `/api/providers/health-autopilot/actions` | اقدامهای اصلاحی autopilot را اجرا میکند                                        |
 | `/api/settings/obsidian`                  | برای هر root مربوط به vault، credentialهای قابل استفاده مجدد WebDAV صادر میکند |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                   |
 
 **پاسخ در صورت نقض:** `401 Authentication required`
 

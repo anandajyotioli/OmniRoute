@@ -24,7 +24,7 @@ Deze cijfers beschrijven afzonderlijke accounts van derden en de toelatingsvoorw
 | **+ achter een regionale identiteitscontrole**        | **+~6M**                | `modelscope` (koppeling met Alibaba Cloud + verificatie van de echte identiteit in het Chinese vasteland). Echt terugkerend quotum, beschikbaar als `gatedRecurringTokens` / `gatedProviders` en op het dashboard. Nooit opgeteld bij het hoofdcijfer: +~6M achter regionale identiteitsverificatie.                       |
 | Theoretisch maximum (alle snelheidslimieten, 24/7)    | ~10B                    | Som van alle snelheidslimieten van providers, geëxtrapoleerd naar continu gebruik. **Geen garantie** — gebruik dit niet als hoofdcijfer.                                                                                                                                                                                   |
 
-**Eerlijk hoofdcijfer:** _OmniRoute bundelt **~1.62B gedocumenteerde gratis tokens per maand** (tot ~2.22B in uw eerste maand met inschrijftegoeden) verdeeld over 35 pools van gratis niveaus — plus een lange reeks permanent gratis providers zonder limiet — en RTK + Caveman-compressie (15–95% tokenbesparing) vergroot dat bereik nog verder._
+**Eerlijk hoofdcijfer:** _OmniRoute bundelt **~1.62B gedocumenteerde gratis tokens per maand** (tot ~2.22B in uw eerste maand met inschrijftegoeden) verdeeld over 34 pools van gratis niveaus — plus een lange reeks permanent gratis providers zonder limiet — en RTK + Caveman-compressie (15–95% tokenbesparing) vergroot dat bereik nog verder._
 
 > **Waarom dit is gedaald ten opzichte van de vorige ~1,94B.** De update van 2026-06-17 is een eerlijkheidscorrectie, geen verlies: `gemini` wordt nu op poolniveau gededupliceerd (was opgeblazen doordat elke Flash-variant afzonderlijk werd geteld, 462M → 60M), `cloudflare-ai` is gecorrigeerd naar de werkelijke 10k neuronen/dag (122M → 30M), `doubao` is opnieuw geclassificeerd als een eenmalig registratietegoed (niet terugkerend) en stopgezette niveaus zijn verwijderd (`chutes`/`phind`/`kluster` zijn beëindigd). Dit wordt gedeeltelijk gecompenseerd door `llm7` (correcte 5M/dag → 150M) en nieuwe gratis providers (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Deze cijfers beschrijven afzonderlijke accounts van derden en de toelatingsvoorw
 >
 > **Gecorrigeerd op 2026-09-03 (#11773):** `cerebras` is opnieuw geclassificeerd van een terugkerende toekenning van 30M/maand (de oude proefversie zonder betaalkaart van 1M tokens/dag) naar een eenmalig registratietegoed van $5 waarvoor een betaalmethode vereist is. Dezelfde eerlijkheidsregel als bij LongCat.
 >
-> **Plus xKiro (2026-09-03):** de nieuwe pool `xkiro-free` (150M/maand) voegt een 35e terugkerende poolsleutel toe. Felo Web blijft uitgesloten zolang de herkomst/licentiëring van het van GPL afgeleide werk is OPGESCHORT. De bron rapporteert nu **35 terugkerende poolsleutels** en **~1,62B structureel** — het live, door CI gecontroleerde aantal (`check:docs-counts` laat de build mislukken als dit afwijkt van `computeFreeModelTotals()`).
+> **Plus xKiro (2026-09-03):** de nieuwe pool `xkiro-free` (150M/maand) voegt een 35e terugkerende poolsleutel toe. Felo Web blijft uitgesloten zolang de herkomst/licentiëring van het van GPL afgeleide werk is OPGESCHORT. De bron rapporteert nu **34 terugkerende poolsleutels** en **~1,62B structureel** — het live, door CI gecontroleerde aantal (`check:docs-counts` laat de build mislukken als dit afwijkt van `computeFreeModelTotals()`).
 
 Grootste **gedocumenteerde** bijdragers: `mistral` 1,00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (vijf limieten per model), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` is uitgesloten — de toekenning van 10M voor LongCat-2.0 is een eenmalig, door KYC afgeschermd registratietegoed, geen terugkerend maandbudget.)
 
@@ -130,7 +130,6 @@ De meeste cijfers voor „gratis tokens per maand” op dit gebied zijn optelsom
 | `modal`          | Sectie 1.3 van de ToS verbiedt expliciet „het verhuren, doorverkopen of anderszins toestaan dat derden rechtstreeks toegang krijgen tot of gebruikmaken van de Dienst” — het bouwen van een zelfgehoste…      |
 | `muse-spark-web` | De ToS van Meta verbieden expliciet geautomatiseerde toegang zonder voorafgaande toestemming, reverse-engineering zonder schriftelijke toestemming en het omzeilen van technologi…                            |
 | `nlpcloud`       | De ToS verbieden expliciet „het opzetten van een proxy of ander apparaat waarmee anderen via die proxy of dat apparaat toegang tot de Dienst kunnen krijgen” en verlenen uitsluitend een niet-overdraagbaar,… |
-| `opencode`       | De ToS (Anomaly Innovations, Inc.) beperken het gebruik expliciet tot „uw eigen interne gebruik, en niet namens of ten behoeve van derden” — ope…                                                             |
 | `t3-web`         | De ToS beperken accounts expliciet tot uitsluitend persoonlijk gebruik, verbieden het delen van inloggegevens met derden en verbieden geautomatiseerde/bot-/scrapingtoegang — een z…                          |
 
 ### ✅ Over het algemeen ruimhartig — let op / onduidelijk / ok (de rest)
@@ -273,7 +272,6 @@ De meeste cijfers voor „gratis tokens per maand” op dit gebied zijn optelsom
 | `muse-spark-web` | zonder sleutel    | —                | —                   | vermijden           | 3        |
 | `nlpcloud`       | zonder sleutel    | —                | —                   | vermijden           | 1        |
 | `nvidia`         | zonder sleutel    | —                | —                   | voorzichtig         | 13       |
-| `opencode`       | zonder sleutel    | —                | —                   | vermijden           | 7        |
 | `pollinations`   | zonder sleutel    | —                | —                   | voorzichtig         | 31       |
 | `publicai`       | zonder sleutel    | —                | —                   | voorzichtig         | 3        |
 | `reka`           | sleutelloos       | —                | —                   | voorzichtig         | 2        |
@@ -284,17 +282,6 @@ De meeste cijfers voor „gratis tokens per maand” op dit gebied zijn optelsom
 | `uncloseai`      | sleutelloos       | —                | —                   | voorzichtig         | 3        |
 
 ---
-
-## OpenCode Free: clientcontractbeperking (#14313)
-
-De sleutelloze `opencode`-provider (openbare `https://opencode.ai/zen/v1`) weigert elk verzoek
-dat niet voldoet aan het OpenCode-clientcontract met **403 `FreeTierError`** en de
-zin _"De gratis versie van OpenCode kan alleen vanuit OpenCode worden gebruikt"_. Dit is een
-weigering op verzoekniveau (hetzelfde oordeel voor elk account met dezelfde verzoekstructuur), geen
-modelblokkering of verbindingscooldown — OmniRoute classificeert dit als `project_route_error`, slaat
-modeluitsluiting/cooldown over en pauzeert (op het synthetische `noauth`-pad) de automatische
-herselectie van combo's gedurende een korte TTL. Verstuur verzoeken met een niet-lege lijst met tools,
-`stream: true` en de OpenCode-sessie-/UA-headers (`opencodeFreeTierContract.ts`), anders kunt u de 403 verwachten.
 
 ## Wat is er gewijzigd sinds de uitgebrachte catalogus (`freeNote`)
 

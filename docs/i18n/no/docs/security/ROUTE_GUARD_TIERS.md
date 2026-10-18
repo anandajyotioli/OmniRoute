@@ -199,6 +199,7 @@ avslutte serverprosessen.
 | `/api/settings/import-json`               | Erstatter hele innstillingsblokken                                                       |
 | `/api/providers/health-autopilot/actions` | Utfører autopilotens utbedringstiltak                                                    |
 | `/api/settings/obsidian`                  | Utsteder gjenbrukbare WebDAV-legitimasjonsopplysninger for en hvilken som helst hvelvrot |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                             |
 
 **Respons ved brudd:** `401 Authentication required`
 

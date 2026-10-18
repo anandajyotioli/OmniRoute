@@ -201,6 +201,7 @@ mematikan proses pelayan.
 | `/api/settings/import-json`               | Menggantikan keseluruhan blob tetapan                                      |
 | `/api/providers/health-autopilot/actions` | Melaksanakan tindakan pemulihan autopilot                                  |
 | `/api/settings/obsidian`                  | Menjana kelayakan WebDAV boleh guna semula untuk sebarang akar bilik kebal |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                               |
 
 **Respons apabila berlaku pelanggaran:** `401 Authentication required`
 

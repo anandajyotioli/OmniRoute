@@ -24,7 +24,7 @@
 | **+ kvota, kuriai būtina regioninė tapatybės patikra** | **+~6M**                          | `modelscope` („Alibaba Cloud“ susiejimas + tikrojo vardo patvirtinimas žemyninėje Kinijoje). Reali pasikartojanti kvota, pateikiama kaip `gatedRecurringTokens` / `gatedProviders` ir rodoma valdymo skydelyje. Niekada neįtraukiama į antraštinę sumą: +~6M taikant regioninį tapatybės patvirtinimą.                                       |
 | Teorinė riba (visi spartos limitai, 24/7)              | ~10B                              | Visų teikėjų spartos limitų suma, ekstrapoliuota nepertraukiamam naudojimui. **Tai nėra garantija** — nepateikite šio skaičiaus antraštėje.                                                                                                                                                                                                  |
 
-**Sąžininga antraštė:** _„OmniRoute“ sujungia **~1.62B dokumentuotų nemokamų žetonų per mėnesį** (iki ~2.22B pirmąjį mėnesį su registracijos kreditais) iš 35 nemokamų planų bendrų išteklių rinkinių, taip pat daugybę visam laikui nemokamų teikėjų be nustatyto limito, o RTK + Caveman glaudinimas (sutaupoma 15–95 % žetonų) leidžia šiuos išteklius išnaudoti dar efektyviau._
+**Sąžininga antraštė:** _„OmniRoute“ sujungia **~1.62B dokumentuotų nemokamų žetonų per mėnesį** (iki ~2.22B pirmąjį mėnesį su registracijos kreditais) iš 34 nemokamų planų bendrų išteklių rinkinių, taip pat daugybę visam laikui nemokamų teikėjų be nustatyto limito, o RTK + Caveman glaudinimas (sutaupoma 15–95 % žetonų) leidžia šiuos išteklius išnaudoti dar efektyviau._
 
 > **Kodėl šis skaičius sumažėjo nuo ankstesnių ~1.94B.** 2026-06-17 atnaujinimas yra sąžiningumo pataisa, o ne praradimas: `gemini` dabar deduplikuojamas telkinio lygmeniu (anksčiau skaičius buvo išpūstas atskirai skaičiuojant kiekvieną Flash variantą, 462M → 60M), `cloudflare-ai` pataisytas pagal tikrąjį 10k Neurons per dieną limitą (122M → 30M), `doubao` perklasifikuotas kaip vienkartinis registracijos kreditas (o ne pasikartojantis), o uždaryti planai pašalinti (`chutes`/`phind`/`kluster` nebeteikiami). Tai iš dalies kompensuoja `llm7` (teisingas 5M per dieną → 150M) ir nauji nemokami teikėjai (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@
 >
 > **Pataisyta 2026-09-03 (#11773):** `cerebras` buvo perklasifikuotas iš pasikartojančios 30M per mėnesį dotacijos (senasis bandomasis planas be kortelės, suteikęs 1M žetonų per dieną) į vienkartinį $5 registracijos kreditą, kuriam būtinas mokėjimo būdas. Ta pati sąžiningumo taisyklė kaip ir LongCat atveju.
 >
-> **Taip pat xKiro (2026-09-03):** naujasis `xkiro-free` telkinys (150M per mėnesį) prideda 35-ąjį pasikartojantį telkinio raktą. Felo Web lieka neįtrauktas, kol jo iš GPL kildinama kilmė / licencijavimas tebėra SUSTABDYTAS. Dabar šaltinyje nurodomi **35 pasikartojantys telkinio raktai** ir **~1.62B stabiliai** — tai dinaminis, CI tikrinamas skaičius (`check:docs-counts` sustabdo kūrimą, jei jis ima skirtis nuo `computeFreeModelTotals()`).
+> **Taip pat xKiro (2026-09-03):** naujasis `xkiro-free` telkinys (150M per mėnesį) prideda 35-ąjį pasikartojantį telkinio raktą. Felo Web lieka neįtrauktas, kol jo iš GPL kildinama kilmė / licencijavimas tebėra SUSTABDYTAS. Dabar šaltinyje nurodomi **34 pasikartojantys telkinio raktai** ir **~1.62B stabiliai** — tai dinaminis, CI tikrinamas skaičius (`check:docs-counts` sustabdo kūrimą, jei jis ima skirtis nuo `computeFreeModelTotals()`).
 
 Didžiausi **dokumentuoti** šaltiniai: `mistral` 1.00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (penki kiekvienam modeliui taikomi limitai), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` neįtrauktas — jo 10M LongCat-2.0 dotacija yra vienkartinis, KYC reikalaujantis registracijos kreditas, o ne pasikartojantis mėnesio biudžetas.)
 
@@ -130,7 +130,6 @@ Dauguma šioje srityje nurodomų „nemokamų žetonų per mėnesį“ skaičių
 | `modal`          | ToS 1.3 skirsnis aiškiai draudžia „nuomoti, perparduoti ar kitaip leisti bet kuriai trečiajai šaliai tiesiogiai pasiekti arba naudoti Paslaugą“ — savarankiškai talpinamos…                       |
 | `muse-spark-web` | „Meta“ ToS aiškiai draudžia automatizuotą prieigą be išankstinio leidimo, apgrąžos inžineriją be rašytinio leidimo ir technologinių priemonių apėjimą…                                            |
 | `nlpcloud`       | ToS aiškiai draudžia „įrengti tarpinį serverį ar kitą įrenginį, leidžiantį kitiems per jį pasiekti Paslaugą“, ir suteikia tik neperleidžiamą,…                                                    |
-| `opencode`       | ToS („Anomaly Innovations, Inc.“) aiškiai apriboja naudojimą iki „jūsų vidinio naudojimo, o ne bet kurios trečiosios šalies vardu ar jos naudai“ — atviro…                                        |
 | `t3-web`         | ToS aiškiai apriboja paskyras tik asmeniniam naudojimui, draudžia dalytis prisijungimo duomenimis su trečiosiomis šalimis ir automatizuotą / robotų / duomenų rinkimo prieigą — s…                |
 
 ### ✅ Iš esmės leidžiama — atsargiai / neaišku / leidžiama (likusieji)
@@ -273,7 +272,6 @@ Dauguma šioje srityje nurodomų „nemokamų žetonų per mėnesį“ skaičių
 | `muse-spark-web` | be rakto               | —                     | —                      | vengti            | 3        |
 | `nlpcloud`       | be rakto               | —                     | —                      | vengti            | 1        |
 | `nvidia`         | be rakto               | —                     | —                      | atsargiai         | 13       |
-| `opencode`       | be rakto               | —                     | —                      | vengti            | 7        |
 | `pollinations`   | be rakto               | —                     | —                      | atsargiai         | 31       |
 | `publicai`       | be rakto               | —                     | —                      | atsargiai         | 3        |
 | `reka`           | be rakto               | —                     | —                      | atsargiai         | 2        |
@@ -284,17 +282,6 @@ Dauguma šioje srityje nurodomų „nemokamų žetonų per mėnesį“ skaičių
 | `uncloseai`      | be rakto               | —                     | —                      | atsargiai         | 3        |
 
 ---
-
-## OpenCode Free: kliento sutarties apribojimas (#14313)
-
-Teikėjas `opencode`, kuriam nereikia rakto (viešasis `https://opencode.ai/zen/v1`), atmeta visas užklausas,
-neatitinkančias OpenCode kliento sutarties, pateikdamas **403 `FreeTierError`** ir sakinį
-_„Nemokama OpenCode pakopa gali būti naudojama tik OpenCode viduje“_. Tai yra konkrečiai
-užklausai taikomas atmetimas (visose paskyrose tai pačiai užklausos struktūrai priimamas toks pats sprendimas), o ne
-modelio blokavimas ar ryšio atvėsimo laikotarpis — OmniRoute klasifikuoja jį kaip `project_route_error`, praleidžia
-modelio blokavimą / atvėsimo laikotarpį ir (sintetiniame `noauth` kelyje) trumpam TTL pristabdo automatinį derinių pakartotinį parinkimą.
-Siųskite užklausas su netuščiu įrankių sąrašu, `stream: true` ir
-OpenCode sesijos / UA antraštėmis (`opencodeFreeTierContract.ts`), antraip tikėkitės 403.
 
 ## Kas pasikeitė nuo pateikto katalogo (`freeNote`)
 

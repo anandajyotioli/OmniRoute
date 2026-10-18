@@ -4,7 +4,7 @@
 
 ---
 
-> **Tóm tắt**: Cài đặt → Kết nối một nhà cung cấp đủ điều kiện → Trỏ IDE của bạn đến OmniRoute. Xong.
+> **Tóm tắt**: Cài đặt → Kết nối một nhà cung cấp đủ điều kiện → Trỏ IDE của bạn đến OmniRoute. Hoàn tất.
 
 ---
 
@@ -49,9 +49,9 @@ OmniRoute khởi động tại `http://localhost:20128`. Bảng điều khiển 
 
 ## Bước 3: Kết nối một nhà cung cấp đủ điều kiện
 
-Chọn một nhà cung cấp có điều khoản và hạn ngạch phù hợp với nhu cầu của bạn. Trong **Dashboard → Providers**, hãy kết nối tài khoản hoặc khóa API của riêng bạn, sau đó kiểm tra kết nối. Quyền truy cập miễn phí và khả năng sử dụng không cần khóa không được đảm bảo.
+Chọn một nhà cung cấp có các điều khoản và hạn mức phù hợp với nhu cầu của bạn. Trong **Dashboard → Providers**, hãy kết nối tài khoản hoặc khóa API của riêng bạn, sau đó kiểm tra kết nối. Quyền truy cập miễn phí và khả năng sử dụng không cần khóa không được đảm bảo.
 
-Theo mặc định, `auto` loại trừ các nhà cung cấp được đánh dấu `tos: avoid`, bao gồm Kiro và OpenCode Free. Việc kết nối một tài khoản không làm thay đổi chính sách đó. Tùy chọn tham gia trong **Dashboard → Combos** áp dụng cho tất cả các tổ hợp tự động. Hãy xem [Hướng dẫn về các gói miễn phí](./FREE-TIERS-GUIDE.md) trước khi chọn nhà cung cấp.
+Theo mặc định, `auto` loại trừ các nhà cung cấp được đánh dấu `tos: avoid`, bao gồm cả Kiro. Việc kết nối một tài khoản không làm thay đổi chính sách đó. Tùy chọn tham gia trong **Dashboard → Combos** áp dụng cho tất cả các tổ hợp tự động. Hãy xem [Hướng dẫn về các gói miễn phí](./FREE-TIERS-GUIDE.md) trước khi chọn nhà cung cấp.
 
 ---
 
@@ -131,33 +131,33 @@ Bạn có thể xem chi tiết yêu cầu bằng cách nhấp vào [Giám sát/N
 ## Tiếp theo là gì?
 
 - **[Hướng dẫn Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Để OmniRoute chọn AI tốt nhất cho bạn
-- **[Hướng dẫn về nhà cung cấp](./PROVIDERS-GUIDE.md)** — Kết nối thêm các nhà cung cấp (miễn phí và trả phí)
+- **[Hướng dẫn về nhà cung cấp](./PROVIDERS-GUIDE.md)** — Kết nối thêm nhà cung cấp (miễn phí và trả phí)
 - **[Hướng dẫn về các gói miễn phí](./FREE-TIERS-GUIDE.md)** — Xem lại điều khoản của nhà cung cấp và giới hạn của gói miễn phí
 - **[Khắc phục sự cố](../guides/TROUBLESHOOTING.md)** — Khắc phục các sự cố thường gặp
 
 ---
 
-## Câu hỏi thường gặp
+## Các câu hỏi thường gặp
 
-### "Tôi có cần khóa API không?"
+### "Tôi có cần API key không?"
 
-Khóa API OmniRoute dùng để xác thực các công cụ của bạn. Thông tin xác thực với nhà cung cấp thượng nguồn tùy thuộc vào từng nhà cung cấp: một số yêu cầu khóa API hoặc đăng nhập tài khoản. Quyền truy cập miễn phí không được đảm bảo.
+API key của OmniRoute dùng để xác thực các công cụ của bạn. Thông tin xác thực phía nhà cung cấp phụ thuộc vào từng nhà cung cấp: một số yêu cầu API key hoặc đăng nhập tài khoản. Quyền truy cập miễn phí không được đảm bảo.
 
 ### "`auto` là gì?"
 
-`auto` yêu cầu OmniRoute tự động chọn nhà cung cấp tốt nhất cho mỗi yêu cầu. Nó xem xét tốc độ, chi phí, chất lượng và tính khả dụng. Xem [Hướng dẫn Auto-Combo](./AUTO-COMBO-GUIDE.md) để biết chi tiết.
+`auto` yêu cầu OmniRoute tự động chọn nhà cung cấp tốt nhất cho từng yêu cầu. Tính năng này cân nhắc tốc độ, chi phí, chất lượng và tính khả dụng. Xem [Hướng dẫn Auto-Combo](./AUTO-COMBO-GUIDE.md) để biết chi tiết.
 
 ### "Chi phí là bao nhiêu?"
 
-Bản thân OmniRoute **miễn phí và có mã nguồn mở**. Bạn chỉ trả phí cho các nhà cung cấp mình sử dụng. Nhiều nhà cung cấp có gói miễn phí — xem [Hướng dẫn về các gói miễn phí](./FREE-TIERS-GUIDE.md).
+Bản thân OmniRoute là phần mềm **miễn phí và mã nguồn mở**. Bạn chỉ trả phí cho các nhà cung cấp mà mình sử dụng. Nhiều nhà cung cấp có gói miễn phí — xem [Hướng dẫn về các gói miễn phí](./FREE-TIERS-GUIDE.md).
 
-### "Tôi có thể sử dụng nó với Claude Code / Cursor / Copilot không?"
+### "Tôi có thể sử dụng OmniRoute với Claude Code / Cursor / Copilot không?"
 
 **Có!** OmniRoute hoạt động với mọi công cụ hỗ trợ định dạng OpenAI. Chỉ cần đặt URL cơ sở thành `http://localhost:20128/v1`. Xem [Hướng dẫn về công cụ CLI](../reference/CLI-TOOLS.md) để biết hướng dẫn thiết lập cụ thể.
 
-### "Nếu một nhà cung cấp ngừng hoạt động thì sao?"
+### "Điều gì xảy ra nếu một nhà cung cấp ngừng hoạt động?"
 
-OmniRoute tự động bỏ qua các nhà cung cấp gặp lỗi và thử nhà cung cấp tiếp theo. Bạn không cần làm gì cả. Xem [Hướng dẫn Auto-Combo](./AUTO-COMBO-GUIDE.md) để biết chi tiết.
+OmniRoute tự động bỏ qua các nhà cung cấp gặp lỗi và thử nhà cung cấp tiếp theo. Bạn không cần thực hiện bất kỳ thao tác nào. Xem [Hướng dẫn Auto-Combo](./AUTO-COMBO-GUIDE.md) để biết chi tiết.
 
 ---
 

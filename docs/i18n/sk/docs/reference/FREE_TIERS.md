@@ -24,7 +24,7 @@ Tieto údaje opisujú samostatné účty tretích strán a podmienky oprávnenos
 | **+ za regionálnym overením totožnosti**          | **+~6M**           | `modelscope` (prepojenie s Alibaba Cloud + overenie skutočného mena v pevninskej Číne). Skutočná opakovaná kvóta, sprístupnená ako `gatedRecurringTokens` / `gatedProviders` a na ovládacom paneli. Nikdy sa nezapočítava do súhrnnej hodnoty: +~6M za regionálnym overením totožnosti.                                                                   |
 | Teoretický strop (všetky limity frekvencie, 24/7) | ~10B               | Súčet limitov frekvencie všetkých poskytovateľov extrapolovaný na nepretržité používanie. **Nie je to záruka** — neuvádzajte ho ako hlavnú hodnotu.                                                                                                                                                                                                       |
 
-**Pravdivý súhrn:** _OmniRoute agreguje **~1.62B zdokumentovaných bezplatných tokenov mesačne** (až ~2.22B počas prvého mesiaca s registračnými kreditmi) v rámci 35 fondov bezplatných úrovní — plus dlhý zoznam trvalo bezplatných poskytovateľov bez stanoveného limitu — a kompresia RTK + Caveman (úspora 15–95 % tokenov) túto kapacitu ešte ďalej rozširuje._
+**Pravdivý súhrn:** _OmniRoute agreguje **~1.62B zdokumentovaných bezplatných tokenov mesačne** (až ~2.22B počas prvého mesiaca s registračnými kreditmi) v rámci 34 fondov bezplatných úrovní — plus dlhý zoznam trvalo bezplatných poskytovateľov bez stanoveného limitu — a kompresia RTK + Caveman (úspora 15–95 % tokenov) túto kapacitu ešte ďalej rozširuje._
 
 > **Prečo táto hodnota klesla z predchádzajúcich ~1,94B.** Aktualizácia z 2026-06-17 je poctivou korekciou, nie stratou: `gemini` sa teraz deduplikuje na úrovni fondu (predtým bola hodnota nadhodnotená samostatným započítaním každého variantu Flash, 462M → 60M), `cloudflare-ai` bol opravený na skutočných 10k neurónov/deň (122M → 30M), `doubao` bol preklasifikovaný na jednorazový kredit za registráciu (nie opakovaný) a zrušené úrovne boli odstránené (`chutes`/`phind`/`kluster` boli ukončené). Čiastočne to vykompenzoval `llm7` (správne 5M/deň → 150M) a noví bezplatní poskytovatelia (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Tieto údaje opisujú samostatné účty tretích strán a podmienky oprávnenos
 >
 > **Opravené 2026-09-03 (#11773):** `cerebras` bol preklasifikovaný z opakovaného grantu 30M/mes. (starý skúšobný program bez karty s 1M tokenov/deň) na jednorazový registračný kredit $5, ktorý vyžaduje platobnú metódu. Platí rovnaké pravidlo poctivosti ako pri LongCat.
 >
-> **Plus xKiro (2026-09-03):** nový fond `xkiro-free` (150M/mes.) pridáva 35. opakovaný kľúč fondu. Felo Web zostáva vylúčený, kým jeho pôvod/licencovanie odvodené od GPL zostáva v stave HOLD. Zdroj teraz uvádza **35 opakovaných kľúčov fondov** a **~1,62B stabilne** — živú hodnotu kontrolovanú prostredníctvom CI (`check:docs-counts` zostavenie zlyhá, ak sa táto hodnota odchýli od `computeFreeModelTotals()`).
+> **Plus xKiro (2026-09-03):** nový fond `xkiro-free` (150M/mes.) pridáva 35. opakovaný kľúč fondu. Felo Web zostáva vylúčený, kým jeho pôvod/licencovanie odvodené od GPL zostáva v stave HOLD. Zdroj teraz uvádza **34 opakovaných kľúčov fondov** a **~1,62B stabilne** — živú hodnotu kontrolovanú prostredníctvom CI (`check:docs-counts` zostavenie zlyhá, ak sa táto hodnota odchýli od `computeFreeModelTotals()`).
 
 Najväčší **zdokumentovaní** prispievatelia: `mistral` 1,00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (päť limitov na model), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` je vylúčený — jeho grant 10M pre LongCat-2.0 je jednorazový registračný kredit podmienený overením KYC, nie opakovaný mesačný rozpočet.)
 
@@ -129,7 +129,6 @@ Väčšina údajov o „bezplatných tokenoch za mesiac“ v tejto oblasti je s�
 | `modal`          | Časť 1.3 ToS výslovne zakazuje „prenajímať, ďalej predávať alebo inak umožniť akejkoľvek tretej strane priamy prístup k Službe alebo jej používanie“ — vytvorenie vlastnej…                                  |
 | `muse-spark-web` | ToS spoločnosti Meta výslovne zakazujú automatizovaný prístup bez predchádzajúceho povolenia, reverzné inžinierstvo bez písomného povolenia a obchádzanie technologických…                                   |
 | `nlpcloud`       | ToS výslovne zakazujú „vytvorenie proxy alebo iného zariadenia, ktoré umožňuje ostatným pristupovať k Službe jeho prostredníctvom“ a udeľujú iba neprenosné,…                                                |
-| `opencode`       | ToS (Anomaly Innovations, Inc.) výslovne obmedzujú použitie na „vaše vlastné interné použitie, a nie v mene alebo v prospech akejkoľvek tretej strany“ — ope…                                                |
 | `t3-web`         | ToS výslovne obmedzujú účty iba na osobné použitie, zakazujú zdieľanie prihlasovacích údajov s tretími stranami a automatizovaný/botový/scrapingový prístup — s…                                             |
 
 ### ✅ Vo všeobecnosti povoľujúce — opatrnosť / nejasné / v poriadku (ostatné)
@@ -272,7 +271,6 @@ Väčšina údajov o „bezplatných tokenoch za mesiac“ v tejto oblasti je s�
 | `muse-spark-web` | bez kľúča          | —                    | —                     | vyhnúť sa     | 3      |
 | `nlpcloud`       | bez kľúča          | —                    | —                     | vyhnúť sa     | 1      |
 | `nvidia`         | bez kľúča          | —                    | —                     | opatrnosť     | 13     |
-| `opencode`       | bez kľúča          | —                    | —                     | vyhnúť sa     | 7      |
 | `pollinations`   | bez kľúča          | —                    | —                     | opatrnosť     | 31     |
 | `publicai`       | bez kľúča          | —                    | —                     | opatrnosť     | 3      |
 | `reka`           | bez kľúča          | —                    | —                     | opatrnosť     | 2      |
@@ -283,18 +281,6 @@ Väčšina údajov o „bezplatných tokenoch za mesiac“ v tejto oblasti je s�
 | `uncloseai`      | bez kľúča          | —                    | —                     | opatrnosť     | 3      |
 
 ---
-
-## OpenCode Free: obmedzenie klientskej zmluvy (#14313)
-
-Poskytovateľ `opencode` bez kľúča (verejný `https://opencode.ai/zen/v1`) odmietne každú požiadavku,
-ktorá nezodpovedá klientskej zmluve OpenCode, s chybou **403 `FreeTierError`** a vetou
-_"Bezplatnú úroveň OpenCode možno používať iba v rámci OpenCode"_. Ide o odmietnutie viazané
-na požiadavku (rovnaký výsledok pre každý účet pri rovnakom tvare požiadavky), nie o zákaz
-modelu ani časový limit pripojenia — OmniRoute ho klasifikuje ako `project_route_error`, preskočí
-zablokovanie modelu / časový limit a (na syntetickej ceste `noauth`) na krátky čas TTL pozastaví
-opätovný automatický výber kombinácie. Odosielajte požiadavky, ktoré obsahujú neprázdny zoznam
-nástrojov, `stream: true` a hlavičky relácie/UA OpenCode (`opencodeFreeTierContract.ts`), inak
-očakávajte chybu 403.
 
 ## Čo sa zmenilo od vydaného katalógu (`freeNote`)
 

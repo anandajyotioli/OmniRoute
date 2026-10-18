@@ -24,7 +24,7 @@ Dawn iċ-ċifri jiddeskrivu kontijiet separati ta' partijiet terzi u kundizzjoni
 | **+ wara verifika reġjonali tal-identità**                  | **+~6M**              | `modelscope` (konnessjoni ma' Alibaba Cloud + verifika tal-isem reali fiċ-Ċina kontinentali). Kwota rikorrenti reali, esposta bħala `gatedRecurringTokens` / `gatedProviders` u fid-dashboard. Qatt ma tiżdied maċ-ċifra ewlenija: +~6M wara verifika reġjonali tal-identità.                                                                    |
 | Limitu massimu teoretiku (il-limiti tar-rata kollha, 24/7)  | ~10B                  | Is-somma tal-limiti tar-rata ta' kull fornitur, estrapolata għal użu bla waqfien. **Mhijiex garanzija** — tagħmilhiex iċ-ċifra ewlenija.                                                                                                                                                                                                         |
 
-**Ċifra ewlenija onesta:** _OmniRoute jiġbor **~1.62B tokens bla ħlas iddokumentati fix-xahar** (sa ~2.22B fl-ewwel xahar tiegħek bil-krediti tar-reġistrazzjoni) minn 35 raggruppament tal-livell bla ħlas — flimkien ma' sensiela twila ta' fornituri bla ħlas b'mod permanenti u mingħajr limitu — u l-kompressjoni RTK + Caveman (iffrankar ta' 15–95% fit-tokens) testendi dan saħansitra aktar._
+**Ċifra ewlenija onesta:** _OmniRoute jiġbor **~1.62B tokens bla ħlas iddokumentati fix-xahar** (sa ~2.22B fl-ewwel xahar tiegħek bil-krediti tar-reġistrazzjoni) minn 34 raggruppament tal-livell bla ħlas — flimkien ma' sensiela twila ta' fornituri bla ħlas b'mod permanenti u mingħajr limitu — u l-kompressjoni RTK + Caveman (iffrankar ta' 15–95% fit-tokens) testendi dan saħansitra aktar._
 
 > **Għaliex dan niżel minn ~1.94B ta' qabel.** L-aġġornament tal-2026-06-17 huwa korrezzjoni għall-onestà, mhux telf: `gemini` issa huwa deduplikat skont il-pool (qabel kien minfuħ billi kull varjant Flash kien jingħadd separatament, 462M → 60M), `cloudflare-ai` ġie kkoreġut għall-10k Neurons/jum reali tiegħu (122M → 30M), `doubao` ġie riklassifikat bħala kreditu ta' darba mar-reġistrazzjoni (mhux rikorrenti), u tneħħew il-livelli li twaqqfu (`chutes`/`phind`/`kluster` ma tkomplewx). Dan ġie parzjalment ikkumpensat minn `llm7` (il-valur korrett ta' 5M/jum → 150M) u minn fornituri ġodda bla ħlas (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Dawn iċ-ċifri jiddeskrivu kontijiet separati ta' partijiet terzi u kundizzjoni
 >
 > **Ikkoreġut fit-2026-09-03 (#11773):** `cerebras` ġie riklassifikat minn għotja rikorrenti ta' 30M/xahar (il-prova l-antika mingħajr karta ta' 1M token/jum) għal kreditu ta' darba ta' $5 mar-reġistrazzjoni li jeħtieġ metodu ta' ħlas. L-istess regola tal-onestà bħal LongCat.
 >
-> **Flimkien ma' xKiro (2026-09-03):** il-pool il-ġdid `xkiro-free` (150M/xahar) iżid il-35 ċavetta ta' pool rikorrenti. Felo Web jibqa' eskluż sakemm il-provenjenza/liċenzjar tiegħu derivati mill-GPL jibqgħu SOSPIŻI. Is-sors issa jirrapporta **35 ċavetta ta' pools rikorrenti** u **~1.62B b'mod stabbli** — iċ-ċifra diretta u kkontrollata mis-CI (`check:docs-counts` ifalli l-build jekk din tiddevja minn `computeFreeModelTotals()`).
+> **Flimkien ma' xKiro (2026-09-03):** il-pool il-ġdid `xkiro-free` (150M/xahar) iżid il-35 ċavetta ta' pool rikorrenti. Felo Web jibqa' eskluż sakemm il-provenjenza/liċenzjar tiegħu derivati mill-GPL jibqgħu SOSPIŻI. Is-sors issa jirrapporta **34 ċavetta ta' pools rikorrenti** u **~1.62B b'mod stabbli** — iċ-ċifra diretta u kkontrollata mis-CI (`check:docs-counts` ifalli l-build jekk din tiddevja minn `computeFreeModelTotals()`).
 
 L-akbar kontributuri **dokumentati**: `mistral` 1.00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (ħames limiti għal kull mudell), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` huwa eskluż — l-għotja tiegħu ta' 10M għal LongCat-2.0 hija kreditu ta' darba mar-reġistrazzjoni, soġġett għall-KYC, mhux baġit rikorrenti ta' kull xahar.)
 
@@ -130,7 +130,6 @@ Il-biċċa l-kbira taċ-ċifri ta' "tokens b'xejn fix-xahar" f'dan il-qasam huma
 | `modal`          | It-Taqsima 1.3 tat-ToS tipprojbixxi b'mod espliċitu "il-kiri, il-bejgħ mill-ġdid jew inkella l-għoti lil kwalunkwe parti terza ta' aċċess dirett għas-Servizz jew l-użu tiegħu" — il-bini ta' proxy self-hosted… |
 | `muse-spark-web` | It-ToS ta' Meta jipprojbixxu b'mod espliċitu l-aċċess awtomatizzat mingħajr permess minn qabel, ir-reverse engineering mingħajr permess bil-miktub, u l-evitar ta' miżuri teknoloġiċi…                           |
 | `nlpcloud`       | It-ToS jipprojbixxu b'mod espliċitu "it-twaqqif ta' proxy jew apparat ieħor li jippermetti lil oħrajn jaċċessaw is-Servizz permezz tiegħu" u jagħtu biss liċenzja mhux trasferibbli,…                            |
-| `opencode`       | It-ToS (Anomaly Innovations, Inc.) jirrestrinġu b'mod espliċitu l-użu għal "l-użu intern tiegħek stess, u mhux f'isem jew għall-benefiċċju ta' kwalunkwe parti terza" — open…                                    |
 | `t3-web`         | It-ToS jirrestrinġu b'mod espliċitu l-kontijiet għall-użu personali biss, jipprojbixxu l-kondiviżjoni tal-kredenzjali ma' partijiet terzi, u jipprojbixxu l-aċċess awtomatizzat/permezz ta' bots/scraping —…     |
 
 ### ✅ Ġeneralment permissiv — attenzjoni / ambigwu / ok (il-bqija)
@@ -273,7 +272,6 @@ Il-biċċa l-kbira taċ-ċifri ta' "tokens b'xejn fix-xahar" f'dan il-qasam huma
 | `muse-spark-web` | mingħajr ċavetta           | —                    | —                       | evita               | 3       |
 | `nlpcloud`       | mingħajr ċavetta           | —                    | —                       | evita               | 1       |
 | `nvidia`         | mingħajr ċavetta           | —                    | —                       | kawtela             | 13      |
-| `opencode`       | mingħajr ċavetta           | —                    | —                       | evita               | 7       |
 | `pollinations`   | mingħajr ċavetta           | —                    | —                       | kawtela             | 31      |
 | `publicai`       | mingħajr ċavetta           | —                    | —                       | kawtela             | 3       |
 | `reka`           | mingħajr ċavetta           | —                    | —                       | kawtela             | 2       |
@@ -284,17 +282,6 @@ Il-biċċa l-kbira taċ-ċifri ta' "tokens b'xejn fix-xahar" f'dan il-qasam huma
 | `uncloseai`      | mingħajr ċavetta           | —                    | —                       | kawtela             | 3       |
 
 ---
-
-## OpenCode Free: restrizzjoni tal-kuntratt tal-klijent (#14313)
-
-Il-fornitur `opencode` mingħajr ċavetta (`https://opencode.ai/zen/v1` pubbliku) jirrifjuta kwalunkwe talba
-li ma taqbilx mal-kuntratt tal-klijent OpenCode b’**403 `FreeTierError`** u bis-sentenza
-_"Il-livell bla ħlas ta’ OpenCode jista’ jintuża biss minn ġewwa OpenCode"_. Dan huwa rifjut
-marbut mat-talba (l-istess deċiżjoni fuq kull kont għall-istess struttura tat-talba), mhux
-projbizzjoni tal-mudell jew perjodu ta’ stennija tal-konnessjoni — OmniRoute jikklassifikah bħala `project_route_error`, jaqbeż
-l-imblukkar / il-perjodu ta’ stennija tal-mudell, u (fuq il-perkors sintetiku `noauth`) iwaqqaf temporanjament l-għażla mill-ġdid
-awtomatika tal-combo għal TTL qasir. Ibgħat talbiet li jkollhom lista ta’ għodod mhux vojta, `stream: true`, u l-
-headers tas-sessjoni/UA ta’ OpenCode (`opencodeFreeTierContract.ts`), inkella stenna l-403.
 
 ## X’inbidel mill-katalgu rilaxxat (`freeNote`)
 

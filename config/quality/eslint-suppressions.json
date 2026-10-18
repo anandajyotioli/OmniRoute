@@ -1013,11 +1013,6 @@
       "count": 1
     }
   },
-  "src/app/api/relay/tokens/[id]/route.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 2
-    }
-  },
   "src/app/api/search/stats/route.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1

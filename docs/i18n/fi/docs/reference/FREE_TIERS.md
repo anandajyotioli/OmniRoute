@@ -24,7 +24,7 @@ Nämä luvut kuvaavat luettelon eri kolmansien osapuolten tilejä ja kelpoisuuse
 | **+ alueellisen henkilöllisyystarkistuksen takana**         | **+~6M**                           | `modelscope` (Alibaba Cloud -sidonta + Manner-Kiinan oikean nimen varmennus). Todellinen toistuva kiintiö, joka näkyy arvoina `gatedRecurringTokens` / `gatedProviders` sekä hallintapaneelissa. Sitä ei koskaan lasketa mukaan pääarvioon: +~6M alueellisen henkilöllisyyden varmennuksen takana.                                                                            |
 | Teoreettinen enimmäismäärä (kaikki nopeusrajoitukset, 24/7) | ~10B                               | Kaikkien palveluntarjoajien nopeusrajoitusten summa ekstrapoloituna jatkuvaan käyttöön. **Ei takuu** — älä käytä tätä pääarviona.                                                                                                                                                                                                                                             |
 
-**Rehellinen pääarvio:** _OmniRoute kokoaa yhteen **~1.62B dokumentoitua maksutonta tokenia kuukaudessa** (jopa ~2.22B ensimmäisen kuukauden aikana rekisteröitymiskrediittien kanssa) 35 maksuttoman tason poolista — lisäksi tarjolla on pitkä joukko pysyvästi maksuttomia palveluntarjoajia ilman ylärajaa — ja RTK + Caveman -pakkaus (15–95 %:n token-säästöt) kasvattaa riittoisuutta entisestään._
+**Rehellinen pääarvio:** _OmniRoute kokoaa yhteen **~1.62B dokumentoitua maksutonta tokenia kuukaudessa** (jopa ~2.22B ensimmäisen kuukauden aikana rekisteröitymiskrediittien kanssa) 34 maksuttoman tason poolista — lisäksi tarjolla on pitkä joukko pysyvästi maksuttomia palveluntarjoajia ilman ylärajaa — ja RTK + Caveman -pakkaus (15–95 %:n token-säästöt) kasvattaa riittoisuutta entisestään._
 
 > **Miksi tämä laski aiemmasta ~1.94B:stä.** Päivitys 2026-06-17 on rehellisyyttä parantava korjaus, ei menetys: `gemini` deduplikoidaan nyt poolitasolla (aiemmin lukema paisui, koska jokainen Flash-variantti laskettiin erikseen, 462M → 60M), `cloudflare-ai` korjattiin vastaamaan sen todellista 10k Neurons/päivä -rajaa (122M → 30M), `doubao` luokiteltiin uudelleen kertaluonteiseksi rekisteröitymishyvitykseksi (ei toistuvaksi), ja suljetut tasot poistettiin (`chutes`/`phind`/`kluster` lopetettu). Tätä kompensoivat osittain `llm7` (oikea 5M/päivä → 150M) ja uudet ilmaiset palveluntarjoajat (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Nämä luvut kuvaavat luettelon eri kolmansien osapuolten tilejä ja kelpoisuuse
 >
 > **Korjattu 2026-09-03 (#11773):** `cerebras` luokiteltiin uudelleen toistuvasta 30M/kk-määrästä (vanha ilman korttia saatava 1M tokenia/päivä -kokeilu) kertaluonteiseksi $5:n rekisteröitymishyvitykseksi, joka edellyttää maksutapaa. Sama rehellisyyssääntö kuin LongCatilla.
 >
-> **Lisäksi xKiro (2026-09-03):** uusi `xkiro-free`-pooli (150M/kk) nostaa toistuvien pooliavainten määrän 35:een. Felo Web pysyy poissuljettuna, kunnes sen GPL-pohjaista alkuperää ja lisensointia koskeva tilanne ei enää ole HOLD-tilassa. Lähde ilmoittaa nyt **35 toistuvaa pooliavainta** ja **~1.62B jatkuvasti** — reaaliaikaisen, CI-valvotun luvun (`check:docs-counts` keskeyttää koonnin, jos tämä poikkeaa funktion `computeFreeModelTotals()` tuloksesta).
+> **Lisäksi xKiro (2026-09-03):** uusi `xkiro-free`-pooli (150M/kk) nostaa toistuvien pooliavainten määrän 35:een. Felo Web pysyy poissuljettuna, kunnes sen GPL-pohjaista alkuperää ja lisensointia koskeva tilanne ei enää ole HOLD-tilassa. Lähde ilmoittaa nyt **34 toistuvaa pooliavainta** ja **~1.62B jatkuvasti** — reaaliaikaisen, CI-valvotun luvun (`check:docs-counts` keskeyttää koonnin, jos tämä poikkeaa funktion `computeFreeModelTotals()` tuloksesta).
 
 Suurimmat **dokumentoidut** osuudet: `mistral` 1.00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (viisi mallikohtaista rajaa), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` on jätetty pois — sen 10M:n LongCat-2.0-hyvitys on kertaluonteinen, KYC-varmennusta edellyttävä rekisteröitymishyvitys, ei toistuva kuukausibudjetti.)
 
@@ -136,7 +136,6 @@ Useimmat tällä alalla ilmoitetut ”ilmaiset tokenit kuukaudessa” -luvut ova
 | `modal`          | Käyttöehtojen kohta 1.3 kieltää nimenomaisesti ”palvelun vuokraamisen, jälleenmyynnin tai suoran käyttöoikeuden tai käytön sallimisen muille kolmansille osapuolille” — itse ylläpidettävän…                         |
 | `muse-spark-web` | Metan käyttöehdot kieltävät nimenomaisesti automaattisen käytön ilman ennakkolupaa, takaisinmallinnuksen ilman kirjallista lupaa sekä teknologisten…                                                                 |
 | `nlpcloud`       | Käyttöehdot kieltävät nimenomaisesti ”sellaisen välityspalvelimen tai muun laitteen määrittämisen, jonka kautta muut voivat käyttää palvelua” ja myöntävät vain ei-siirrettävän,…                                    |
-| `opencode`       | Käyttöehdot (Anomaly Innovations, Inc.) rajoittavat käytön nimenomaisesti ”omaan sisäiseen käyttöösi, ei minkään kolmannen osapuolen puolesta tai hyödyksi” — ope…                                                   |
 | `t3-web`         | Käyttöehdot rajoittavat tilit nimenomaisesti vain henkilökohtaiseen käyttöön, kieltävät tunnistetietojen jakamisen kolmansille osapuolille sekä automatisoidun/botti-/haravointikäytön — itse…                       |
 
 ### ✅ Yleisesti salliva — huomio / epäselvä / sallittu (muut)
@@ -279,7 +278,6 @@ Useimmat tällä alalla ilmoitetut ”ilmaiset tokenit kuukaudessa” -luvut ova
 | `muse-spark-web` | avaimeton                | —                   | —                               | vältettävä        | 3      |
 | `nlpcloud`       | avaimeton                | —                   | —                               | vältettävä        | 1      |
 | `nvidia`         | avaimeton                | —                   | —                               | varoitus          | 13     |
-| `opencode`       | avaimeton                | —                   | —                               | vältettävä        | 7      |
 | `pollinations`   | avaimeton                | —                   | —                               | varoitus          | 31     |
 | `publicai`       | avaimeton                | —                   | —                               | varoitus          | 3      |
 | `reka`           | ilman avainta            | —                   | —                               | varoitus          | 2      |
@@ -290,17 +288,6 @@ Useimmat tällä alalla ilmoitetut ”ilmaiset tokenit kuukaudessa” -luvut ova
 | `uncloseai`      | ilman avainta            | —                   | —                               | varoitus          | 3      |
 
 ---
-
-## OpenCode Free: asiakassopimusrajoitus (#14313)
-
-Avaimeton `opencode`-palveluntarjoaja (julkinen `https://opencode.ai/zen/v1`) hylkää kaikki pyynnöt,
-jotka eivät vastaa OpenCode-asiakassopimusta, palauttamalla **403 `FreeTierError`** -virheen ja
-lauseen _"OpenCoden ilmaistasoa voi käyttää vain OpenCoden sisältä"_. Tämä on
-pyyntökohtainen hylkäys (sama ratkaisu kaikilla tileillä samalla pyyntörakenteella), ei
-mallin esto tai yhteyden jäähdytysjakso — OmniRoute luokittelee sen `project_route_error`-virheeksi, ohittaa
-mallin lukituksen / jäähdytysjakson ja (synteettisellä `noauth`-polulla) keskeyttää automaattisen yhdistelmän uudelleenvalinnan
-lyhyeksi TTL-ajaksi. Lähetä pyynnöt siten, että niissä on ei-tyhjä työkaluluettelo, `stream: true` ja
-OpenCode-istunto-/UA-otsakkeet (`opencodeFreeTierContract.ts`), tai varaudu 403-virheeseen.
 
 ## Mitä on muuttunut julkaistuun luetteloon (`freeNote`) verrattuna
 

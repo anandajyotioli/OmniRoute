@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Instale → Ligue um fornecedor elegível → Direcione o seu IDE para o OmniRoute. Concluído.
+> **TL;DR**: Instale → Ligue um fornecedor elegível → Aponte o seu IDE para o OmniRoute. Concluído.
 
 ---
 
@@ -47,11 +47,11 @@ O OmniRoute é iniciado em `http://localhost:20128`. O painel abre automaticamen
 
 ---
 
-## Passo 3: Ligar um fornecedor elegível
+## Passo 3: Ligar um Fornecedor Elegível
 
-Escolha um fornecedor cujos termos e quota se adequem às suas necessidades. Em **Painel → Fornecedores**, ligue a sua própria conta ou chave de API e, em seguida, teste a ligação. O acesso gratuito e a disponibilidade sem chave não são garantidos.
+Escolha um fornecedor cujos termos e quota se adequem às suas necessidades. Em **Dashboard → Providers**, ligue a sua própria conta ou chave de API e, em seguida, teste a ligação. O acesso gratuito e a disponibilidade sem chave não são garantidos.
 
-Por predefinição, `auto` exclui os fornecedores assinalados com `tos: avoid`, incluindo Kiro e OpenCode Free. Ligar uma conta não altera essa política. A adesão em **Painel → Combinações** aplica-se a todas as combinações automáticas. Consulte o [Guia de níveis gratuitos](./FREE-TIERS-GUIDE.md) antes de escolher um fornecedor.
+Por predefinição, `auto` exclui fornecedores marcados com `tos: avoid`, incluindo o Kiro. Ligar uma conta não altera esta política. A opção de adesão em **Dashboard → Combos** aplica-se a todas as combinações automáticas. Consulte o [Guia de Planos Gratuitos](./FREE-TIERS-GUIDE.md) antes de escolher um fornecedor.
 
 ---
 
@@ -128,36 +128,36 @@ Pode ver os detalhes do pedido clicando em [Monitorização/Registos](http://loc
 
 ---
 
-## O que se segue?
+## E agora?
 
-- **[Guia do Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Deixe o OmniRoute escolher a melhor IA para si
+- **[Guia de combinação automática](./AUTO-COMBO-GUIDE.md)** — Deixe o OmniRoute escolher a melhor IA para si
 - **[Guia de fornecedores](./PROVIDERS-GUIDE.md)** — Ligue mais fornecedores (gratuitos e pagos)
-- **[Guia de níveis gratuitos](./FREE-TIERS-GUIDE.md)** — Consulte os termos dos fornecedores e os limites dos níveis gratuitos
+- **[Guia de escalões gratuitos](./FREE-TIERS-GUIDE.md)** — Consulte os termos dos fornecedores e os limites dos escalões gratuitos
 - **[Resolução de problemas](../guides/TROUBLESHOOTING.md)** — Resolva problemas comuns
 
 ---
 
-## Perguntas frequentes
+## Perguntas Frequentes
 
 ### "Preciso de uma chave de API?"
 
-A chave de API do OmniRoute autentica as suas ferramentas. As credenciais a montante dependem do fornecedor: alguns exigem uma chave de API ou o início de sessão numa conta. O acesso gratuito não é garantido.
+A chave de API do OmniRoute autentica as suas ferramentas. As credenciais de serviços externos dependem do fornecedor: alguns requerem uma chave de API ou o início de sessão numa conta. O acesso gratuito não é garantido.
 
 ### "O que é `auto`?"
 
-`auto` indica ao OmniRoute que deve escolher automaticamente o melhor fornecedor para cada pedido. Tem em conta a velocidade, o custo, a qualidade e a disponibilidade. Consulte o [Guia Auto-Combo](./AUTO-COMBO-GUIDE.md) para obter mais informações.
+`auto` indica ao OmniRoute que deve escolher automaticamente o melhor fornecedor para cada pedido. Tem em conta a velocidade, o custo, a qualidade e a disponibilidade. Consulte o [Guia do Auto-Combo](./AUTO-COMBO-GUIDE.md) para obter mais informações.
 
 ### "Quanto custa?"
 
-O OmniRoute é **gratuito e de código aberto**. Apenas paga pelos fornecedores que utilizar. Muitos fornecedores têm planos gratuitos — consulte o [Guia de planos gratuitos](./FREE-TIERS-GUIDE.md).
+O OmniRoute é **gratuito e de código aberto**. Só paga pelos fornecedores que utiliza. Muitos fornecedores têm planos gratuitos — consulte o [Guia de Planos Gratuitos](./FREE-TIERS-GUIDE.md).
 
 ### "Posso utilizá-lo com Claude Code / Cursor / Copilot?"
 
-**Sim!** O OmniRoute funciona com qualquer ferramenta que suporte o formato OpenAI. Basta definir o URL base como `http://localhost:20128/v1`. Consulte o [Guia de ferramentas CLI](../reference/CLI-TOOLS.md) para obter instruções de configuração específicas.
+**Sim!** O OmniRoute funciona com qualquer ferramenta compatível com o formato OpenAI. Basta definir o URL base como `http://localhost:20128/v1`. Consulte o [Guia de Ferramentas de CLI](../reference/CLI-TOOLS.md) para obter instruções de configuração específicas.
 
-### "O que acontece se um fornecedor ficar indisponível?"
+### "E se um fornecedor ficar indisponível?"
 
-O OmniRoute ignora automaticamente os fornecedores que falharem e tenta o seguinte. Não precisa de fazer nada. Consulte o [Guia Auto-Combo](./AUTO-COMBO-GUIDE.md) para obter mais informações.
+O OmniRoute ignora automaticamente os fornecedores com falhas e tenta o seguinte. Não precisa de fazer nada. Consulte o [Guia do Auto-Combo](./AUTO-COMBO-GUIDE.md) para obter mais informações.
 
 ---
 

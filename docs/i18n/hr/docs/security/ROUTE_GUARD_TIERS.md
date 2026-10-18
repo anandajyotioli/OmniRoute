@@ -201,6 +201,7 @@ proces poslužitelja.
 | `/api/settings/import-json`               | Zamjenjuje cijeli objekt postavki                                            |
 | `/api/providers/health-autopilot/actions` | Izvršava korektivne radnje autopilota                                        |
 | `/api/settings/obsidian`                  | Izdaje ponovno upotrebljive WebDAV vjerodajnice za bilo koji korijen trezora |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                 |
 
 **Odgovor pri kršenju:** `401 Authentication required`
 

@@ -73,7 +73,6 @@ const ALLOWED_NOAUTH_PROVIDERS = [
   "cloudflare-playground",
   "devin-cli-agentic",
   "duckduckgo-web",
-  "opencode",
   "uncloseai",
 ];
 // Keyless providers that never opted in — must stay out of every auto/* pool.

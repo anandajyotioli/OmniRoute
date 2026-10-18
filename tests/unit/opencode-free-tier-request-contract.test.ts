@@ -551,7 +551,7 @@ test("a gated request repairs a stale configured user-agent, a non-gated one kee
 });
 
 test("responses: two conversations on the same model get different session ids", () => {
-  const executor = new OpencodeExecutor("opencode");
+  const executor = new OpencodeExecutor("opencode-zen");
   executor._requestFormat = "openai-responses";
   const sessionFor = (text: string) =>
     executor.buildHeaders(null, true, null, "muse-spark-1.3-contributor-free", undefined, {

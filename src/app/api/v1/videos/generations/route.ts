@@ -1,4 +1,5 @@
 import { handleVideoGeneration } from "@omniroute/open-sse/handlers/videoGeneration.ts";
+import { runWithCallLogApiKeyContext } from "@/lib/usage/callLogApiKeyContext";
 import { resolveVideoCredentialProvider } from "@omniroute/open-sse/handlers/videoGeneration/googleFlow.ts";
 import { withInjectionGuard } from "@/middleware/promptInjectionGuard";
 import {
@@ -76,6 +77,21 @@ async function postHandler(request, context) {
   if (scope.rejection) return scope.rejection;
   const { allowedConnections } = scope;
 
+  // Bind API-key identity for every call log and usage row this request emits.
+  // Without it every video row lands with api_key_id NULL, which mis-buckets per-key
+  // usage into "unknown" and makes the row unmatchable against recorded per-key costs.
+  // Handlers fan out into provider helpers that write their own logs, so request-scoped
+  // storage is what keeps attribution attached without threading identity through every
+  // handler.
+  const withApiKeyContext = <TResult>(callback: () => TResult): TResult =>
+    runWithCallLogApiKeyContext(
+      {
+        apiKeyId: policy.apiKeyInfo?.id ?? null,
+        apiKeyName: policy.apiKeyInfo?.name ?? null,
+      },
+      callback
+    );
+
   // Detect a combo name and divert to full video combo execution, mirroring
   // the images route. Checks before the provider lookup — and before the
   // prompt-required check below — so a combo name is never rejected as an
@@ -87,19 +103,21 @@ async function postHandler(request, context) {
     const combo = await getComboByName(body.model);
     if (combo) {
       const { executeVideoCombo } = await import("@omniroute/open-sse/services/videoCombo");
-      return executeVideoCombo(
-        body.model,
-        body,
-        {
-          request,
-          policy,
-          keyScope: {
-            allowedConnections,
-            isTargetAllowed: createComboTargetKeyGate(policy, body.model),
+      return withApiKeyContext(() =>
+        executeVideoCombo(
+          body.model,
+          body,
+          {
+            request,
+            policy,
+            keyScope: {
+              allowedConnections,
+              isTargetAllowed: createComboTargetKeyGate(policy, body.model),
+            },
           },
-        },
-        startTime,
-        log
+          startTime,
+          log
+        )
       );
     }
   }
@@ -170,12 +188,14 @@ async function postHandler(request, context) {
     credentials = local.credentials;
   }
 
-  const result: MediaGenerationResultLike = await handleVideoGeneration({
-    body,
-    credentials,
-    log,
-    ...(isCustomModel && { resolvedProvider: provider }),
-  });
+  const result: MediaGenerationResultLike = await withApiKeyContext(() =>
+    handleVideoGeneration({
+      body,
+      credentials,
+      log,
+      ...(isCustomModel && { resolvedProvider: provider }),
+    })
+  );
 
   if (isMediaGenerationFailure(result)) {
     return failedMediaGenerationResponse(result, "Video generation provider error");

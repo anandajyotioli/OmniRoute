@@ -24,7 +24,7 @@
 | **+ nke dị n’azụ nyocha njirimara mpaghara**                            | **+~6M**                   | `modelscope` (ijikọ Alibaba Cloud + nkwenye ezigbo aha na China etiti). Oke n’ezie na-emegharị ugboro ugboro, nke egosiri dịka `gatedRecurringTokens` / `gatedProviders` nakwa na dashboard. A naghị achịkọta ya n’isi ọnụọgụ: +~6M dị n’azụ nkwenye njirimara mpaghara.                                                                       |
 | Oke enwere ike na tiori (oke ọsọ niile, 24/7)                           | ~10B                       | Mkpokọta oke ọsọ nke onye na-eweta ọrụ ọ bụla, gbasaa ruo n’iji ya na-enweghị nkwụsị. **Ọ bụghị nkwa** — emela ya isi akụkọ.                                                                                                                                                                                                                   |
 
-**Isi ọnụọgụ n’eziokwu:** _OmniRoute na-achịkọta **~1.62B token efughị ego edere n’akwụkwọ kwa ọnwa** (ruo ~2.22B n’ọnwa mbụ gị mgbe etinyere kredit ndebanye aha) n’ofe pool ọkwa efughị ego 35 — gbakwunyere ọtụtụ ndị na-eweta ọrụ na-adịgide efughị ego na-enweghị oke — RTK + mkpakọ Caveman (nchekwa token 15–95%) na-emekwa ka nke ahụ ruo ogologo oge karịa._
+**Isi ọnụọgụ n’eziokwu:** _OmniRoute na-achịkọta **~1.62B token efughị ego edere n’akwụkwọ kwa ọnwa** (ruo ~2.22B n’ọnwa mbụ gị mgbe etinyere kredit ndebanye aha) n’ofe pool ọkwa efughị ego 34 — gbakwunyere ọtụtụ ndị na-eweta ọrụ na-adịgide efughị ego na-enweghị oke — RTK + mkpakọ Caveman (nchekwa token 15–95%) na-emekwa ka nke ahụ ruo ogologo oge karịa._
 
 > **Ihe mere nke a ji si na ~1.94B gara aga daa.** Nwelite nke 2026-06-17 bụ mmezi iji gosipụta eziokwu, ọ bụghị mfu: ewepụla ngụkọ ugboro abụọ n'ime otu pool maka `gemini` (nke mbụ buru ibu n’ihi na a na-agụ ụdị Flash ọ bụla iche, 462M → 60M), a deziri `cloudflare-ai` ka ọ bụrụ ezigbo 10k-Neurons/day ya (122M → 30M), e degharịrị `doubao` dịka kredit ndebanye aha a na-enye naanị otu ugboro (ọ bụghị nke na-emegharị), ma wepụkwa ọkwa ndị akwụsịrị (`chutes`/`phind`/`kluster` akwụsịla). `llm7` (ezigbo 5M/day → 150M) na ndị na-eweta ọrụ ọhụrụ n’efu (Kilo, OpenCode Zen, Z.AI GLM-Flash) belatara akụkụ nke ọdịda ahụ.
 >
@@ -36,7 +36,7 @@
 >
 > **E meziri na 2026-09-03 (#11773):** e degharịrị `cerebras` site na onyinye 30M/mo na-emegharị (nnwale ochie nke token 1M kwa ụbọchị na-enweghị kaadị) gaa na kredit ndebanye aha $5 a na-enye naanị otu ugboro, nke chọrọ usoro ịkwụ ụgwọ. Otu iwu eziokwu ahụ e jiri maka LongCat.
 >
-> **Tinyekwara xKiro (2026-09-03):** pool ọhụrụ `xkiro-free` (150M/mo) na-agbakwunye igodo pool na-emegharị nke 35. Felo Web ka bụ nke ewepụrụ ebe mmalite/ikikere ya sitere na GPL ka nọ na HOLD. Isi mmalite ahụ na-akọ ugbu a **igodo pool na-emegharị 35** na **~1.62B na-adịgide adịgide** — ọnụọgụ dị ndụ nke CI na-enyocha (`check:docs-counts` ga-eme ka build daa ma ọ bụrụ na nke a apụọ na `computeFreeModelTotals()`).
+> **Tinyekwara xKiro (2026-09-03):** pool ọhụrụ `xkiro-free` (150M/mo) na-agbakwunye igodo pool na-emegharị nke 35. Felo Web ka bụ nke ewepụrụ ebe mmalite/ikikere ya sitere na GPL ka nọ na HOLD. Isi mmalite ahụ na-akọ ugbu a **igodo pool na-emegharị 34** na **~1.62B na-adịgide adịgide** — ọnụọgụ dị ndụ nke CI na-enyocha (`check:docs-counts` ga-eme ka build daa ma ọ bụrụ na nke a apụọ na `computeFreeModelTotals()`).
 
 Ndị kacha enye aka nke **e dekọrọ**: `mistral` 1.00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (oke ise nke model ọ bụla), `cloudflare-ai` 30M, `api-airforce` 24M. (Ewepụrụ `longcat` — onyinye LongCat-2.0 10M ya bụ kredit ndebanye aha a na-enye naanị otu ugboro ma chọrọ KYC, ọ bụghị mmefu ego kwa ọnwa na-emegharị.)
 
@@ -130,7 +130,6 @@ n'ebumnuche.
 | `modal`           | Nkebi 1.3 nke ToS machibidoro n'ụzọ doro anya “ịgbazite, iregharị ma ọ bụ ikwe n’ụzọ ọzọ ka onye ọ bụla ọzọ nweta ma ọ bụ jiri Ọrụ ahụ ozugbo” — iwulite nke a na-akwado n’onwe ya… |
 | `muse-spark-web`  | ToS nke Meta machibidoro n'ụzọ doro anya nnweta akpaaka na-enweghị ikike e nyere tupu oge eruo, reverse engineering na-enweghị ikike e dere ede, na ịgafe teknụzụ…                  |
 | `nlpcloud`        | ToS machibidoro n'ụzọ doro anya “ịtọlite proxy ma ọ bụ ngwaọrụ ọzọ nke na-enye ndị ọzọ ohere inweta Ọrụ ahụ site na ya” ma na-enye naanị ikike a na-apụghị inyefe,…                 |
-| `opencode`        | ToS (Anomaly Innovations, Inc.) machibidoro ojiji n'ụzọ doro anya ka ọ bụrụ “ojiji ime ụlọ nke gị, ọ bụghịkwa n’aha ma ọ bụ maka uru onye ọzọ” — ope…                               |
 | `t3-web`          | ToS machibidoro akaụntụ n'ụzọ doro anya ka ọ bụrụ naanị maka ojiji nkeonwe, machibido ịkekọrịta ozi nbanye na ndị ọzọ, ma machibido nnweta akpaaka/bot/scraping — a s…              |
 
 ### ✅ Na-enye ohere n’ozuzu — kpachara anya / edoghị anya / dị mma (ndị fọdụrụ)
@@ -273,7 +272,6 @@ n'ebumnuche.
 | `muse-spark-web` | enweghị igodo        | —                     | —               | zere          | 3      |
 | `nlpcloud`       | enweghị igodo        | —                     | —               | zere          | 1      |
 | `nvidia`         | enweghị igodo        | —                     | —               | kpachara anya | 13     |
-| `opencode`       | enweghị igodo        | —                     | —               | zere          | 7      |
 | `pollinations`   | enweghị igodo        | —                     | —               | kpachara anya | 31     |
 | `publicai`       | enweghị igodo        | —                     | —               | kpachara anya | 3      |
 | `reka`           | enweghị igodo        | —                     | —               | kpachara anya | 2      |
@@ -284,17 +282,6 @@ n'ebumnuche.
 | `uncloseai`      | enweghị igodo        | —                     | —               | kpachara anya | 3      |
 
 ---
-
-## OpenCode Free: mmachibido nkwekọrịta-klaịenti (#14313)
-
-Onye na-eweta `opencode` nke na-enweghị key (nke ọha `https://opencode.ai/zen/v1`) na-ajụ arịrịọ ọ bụla
-na-adabaghị na nkwekọrịta klaịenti OpenCode site na **403 `FreeTierError`** na
-ahịrịokwu _"Enwere ike iji ọkwa efu OpenCode naanị site n'ime OpenCode"_. Nke a bụ
-ọjụjụ metụtara naanị arịrịọ ahụ (otu mkpebi ahụ na akaụntụ niile maka otu nhazi arịrịọ), ọ bụghị
-mmachibido model ma ọ bụ oge nchere njikọ — OmniRoute na-ekewa ya dịka `project_route_error`, na-amafere
-mkpọchi model / oge nchere, ma (n'ụzọ `noauth` e mepụtara) na-akwụsị nwa oge nhọpụta auto-combo ọzọ
-ruo obere TTL. Ziga arịrịọ ndị nwere ndepụta tool na-adịghị efu, `stream: true`, yana
-headers session/UA nke OpenCode (`opencodeFreeTierContract.ts`), ma ọ bụghị ya, tụọ anya 403 ahụ.
 
 ## Ihe gbanwere kemgbe catalog e zipụrụ (`freeNote`)
 

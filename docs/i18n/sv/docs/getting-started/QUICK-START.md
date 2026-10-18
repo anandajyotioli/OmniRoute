@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort sagt**: Installera → Anslut en behörig leverantör → Rikta din IDE till OmniRoute. Klart.
+> **Kort sagt**: Installera → Anslut en berättigad leverantör → Rikta din IDE till OmniRoute. Klart.
 
 ---
 
@@ -47,11 +47,11 @@ OmniRoute startar på `http://localhost:20128`. Kontrollpanelen öppnas automati
 
 ---
 
-## Steg 3: Anslut en kvalificerad leverantör
+## Steg 3: Anslut en berättigad leverantör
 
 Välj en leverantör vars villkor och kvot passar dina behov. I **Dashboard → Providers** ansluter du ditt eget konto eller din API-nyckel och testar sedan anslutningen. Kostnadsfri åtkomst och tillgänglighet utan nyckel kan inte garanteras.
 
-`auto` utesluter som standard leverantörer markerade med `tos: avoid`, inklusive Kiro och OpenCode Free. Att ansluta ett konto ändrar inte denna policy. Anmälan i **Dashboard → Combos** gäller för alla automatiska kombinationer. Läs [Guiden om kostnadsfria nivåer](./FREE-TIERS-GUIDE.md) innan du väljer en leverantör.
+`auto` utesluter som standard leverantörer märkta med `tos: avoid`, inklusive Kiro. Att ansluta ett konto ändrar inte denna policy. Aktivt godkännande i **Dashboard → Combos** gäller för alla automatiska kombinationer. Läs [guiden om kostnadsfria nivåer](./FREE-TIERS-GUIDE.md) innan du väljer en leverantör.
 
 ---
 
@@ -141,23 +141,23 @@ Du kan se information om förfrågan genom att klicka på [Övervakning/loggar](
 
 ### "Behöver jag en API-nyckel?"
 
-OmniRoute API-nyckeln autentiserar dina verktyg. Autentiseringsuppgifterna för bakomliggande tjänster beror på leverantören: vissa kräver en API-nyckel eller kontoinloggning. Kostnadsfri åtkomst kan inte garanteras.
+OmniRoutes API-nyckel autentiserar dina verktyg. Autentiseringsuppgifter för uppströmsleverantörer beror på leverantören: vissa kräver en API-nyckel eller kontoinloggning. Kostnadsfri åtkomst kan inte garanteras.
 
 ### "Vad är `auto`?"
 
-`auto` instruerar OmniRoute att automatiskt välja den bästa leverantören för varje begäran. Hänsyn tas till hastighet, kostnad, kvalitet och tillgänglighet. Mer information finns i [guiden för automatisk kombination](./AUTO-COMBO-GUIDE.md).
+`auto` instruerar OmniRoute att automatiskt välja den bästa leverantören för varje begäran. Funktionen tar hänsyn till hastighet, kostnad, kvalitet och tillgänglighet. Mer information finns i [guiden för Auto-Combo](./AUTO-COMBO-GUIDE.md).
 
 ### "Hur mycket kostar det?"
 
-OmniRoute är i sig **kostnadsfritt och har öppen källkod**. Du betalar endast för de leverantörer du använder. Många leverantörer har kostnadsfria nivåer – se [guiden för kostnadsfria nivåer](./FREE-TIERS-GUIDE.md).
+OmniRoute är **kostnadsfritt och har öppen källkod**. Du betalar bara för de leverantörer du använder. Många leverantörer har kostnadsfria nivåer – se [guiden om kostnadsfria nivåer](./FREE-TIERS-GUIDE.md).
 
 ### "Kan jag använda det med Claude Code / Cursor / Copilot?"
 
-**Ja!** OmniRoute fungerar med alla verktyg som stöder OpenAI-formatet. Ange bara bas-URL:en som `http://localhost:20128/v1`. Specifika konfigurationsanvisningar finns i [guiden för CLI-verktyg](../reference/CLI-TOOLS.md).
+**Ja!** OmniRoute fungerar med alla verktyg som stöder OpenAI-formatet. Ange bara bas-URL:en som `http://localhost:20128/v1`. Specifika konfigurationsinstruktioner finns i [guiden för CLI-verktyg](../reference/CLI-TOOLS.md).
 
 ### "Vad händer om en leverantör slutar fungera?"
 
-OmniRoute hoppar automatiskt över leverantörer som inte fungerar och provar nästa. Du behöver inte göra någonting. Mer information finns i [guiden för automatisk kombination](./AUTO-COMBO-GUIDE.md).
+OmniRoute hoppar automatiskt över leverantörer som inte fungerar och provar nästa. Du behöver inte göra någonting. Mer information finns i [guiden för Auto-Combo](./AUTO-COMBO-GUIDE.md).
 
 ---
 

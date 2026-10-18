@@ -195,6 +195,7 @@ Tunnel, Tailscale, Ngrok), перевірка loopback і надалі захи�
 | `/api/settings/import-json`               | Замінює повний об’єкт налаштувань                                       |
 | `/api/providers/health-autopilot/actions` | Виконує дії автоматичного виправлення autopilot                         |
 | `/api/settings/obsidian`                  | Створює багаторазові облікові дані WebDAV для будь-якого кореня сховища |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                            |
 
 **Відповідь у разі порушення:** `401 Authentication required`
 

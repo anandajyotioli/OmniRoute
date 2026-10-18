@@ -49,9 +49,9 @@ OmniRoute `http://localhost:20128` manzilida ishga tushadi. Boshqaruv paneli avt
 
 ## 3-qadam: Mos provayderni ulang
 
-Shartlari va kvotasi ehtiyojlaringizga mos keladigan provayderni tanlang. **Boshqaruv paneli → Provayderlar** bo‘limida o‘z hisobingizni yoki API kalitingizni ulang, so‘ng ulanishni sinab ko‘ring. Bepul foydalanish va kalitsiz ishlash imkoniyati kafolatlanmaydi.
+Shartlari va kvotasi ehtiyojlaringizga mos keladigan provayderni tanlang. **Dashboard → Providers** bo‘limida o‘z hisobingizni yoki API kalitingizni ulang, so‘ng ulanishni sinab ko‘ring. Bepul foydalanish va kalitsiz ishlash imkoniyati kafolatlanmaydi.
 
-`auto` sukut bo‘yicha `tos: avoid` deb belgilangan provayderlarni, jumladan Kiro va OpenCode Free xizmatlarini istisno qiladi. Hisobni ulash bu siyosatni o‘zgartirmaydi. **Boshqaruv paneli → Kombinatsiyalar** bo‘limidagi ixtiyoriy rozilik barcha avtomatik kombinatsiyalarga tatbiq etiladi. Provayderni tanlashdan oldin [Bepul tariflar bo‘yicha qo‘llanma](./FREE-TIERS-GUIDE.md) bilan tanishib chiqing.
+`auto` sukut bo‘yicha `tos: avoid` bilan belgilangan provayderlarni, jumladan Kiro’ni, istisno qiladi. Hisobni ulash bu siyosatni o‘zgartirmaydi. **Dashboard → Combos** bo‘limidagi ixtiyoriy qo‘shilish barcha avtomatik kombinatsiyalarga tatbiq etiladi. Provayderni tanlashdan oldin [Bepul tariflar qo‘llanmasi](./FREE-TIERS-GUIDE.md) bilan tanishib chiqing.
 
 ---
 
@@ -141,23 +141,23 @@ Chap yon paneldagi [Monitoring/Jurnallar](http://localhost:20128/dashboard/logs)
 
 ### "Menga API kaliti kerakmi?"
 
-OmniRoute API kaliti vositalaringizni autentifikatsiya qiladi. Yuqori oqimdagi hisob maʼlumotlari provayderga bogʻliq: ayrimlari API kaliti yoki akkauntga kirishni talab qiladi. Bepul foydalanish kafolatlanmaydi.
+OmniRoute API kaliti vositalaringizni autentifikatsiya qiladi. Yuqori darajadagi hisob maʼlumotlari provayderga bogʻliq: ayrimlari API kaliti yoki hisobga kirishni talab qiladi. Bepul foydalanish kafolatlanmaydi.
 
 ### "`auto` nima?"
 
-`auto` OmniRoute'ga har bir soʻrov uchun eng yaxshi provayderni avtomatik tanlashni bildiradi. U tezlik, xarajat, sifat va mavjudlikni hisobga oladi. Batafsil maʼlumot uchun [Avtomatik kombinatsiya qoʻllanmasi](./AUTO-COMBO-GUIDE.md)ga qarang.
+`auto` OmniRouteʼga har bir soʻrov uchun eng yaxshi provayderni avtomatik tanlashni buyuradi. Bunda tezlik, narx, sifat va mavjudlik hisobga olinadi. Batafsil maʼlumot uchun [Avtomatik kombinatsiya qoʻllanmasi](./AUTO-COMBO-GUIDE.md)ga qarang.
 
 ### "Bu qancha turadi?"
 
-OmniRoute'ning oʻzi **bepul va ochiq manbali**. Siz faqat foydalanadigan provayderlaringiz uchun haq toʻlaysiz. Koʻplab provayderlarda bepul tariflar mavjud — [Bepul tariflar qoʻllanmasi](./FREE-TIERS-GUIDE.md)ga qarang.
+OmniRouteʼning oʻzi **bepul va ochiq manbali**. Siz faqat foydalanadigan provayderlaringiz uchun toʻlaysiz. Koʻplab provayderlarda bepul tariflar mavjud — [Bepul tariflar qoʻllanmasi](./FREE-TIERS-GUIDE.md)ga qarang.
 
 ### "Uni Claude Code / Cursor / Copilot bilan ishlata olamanmi?"
 
 **Ha!** OmniRoute OpenAI formatini qoʻllab-quvvatlaydigan har qanday vosita bilan ishlaydi. Asosiy URL manzilini `http://localhost:20128/v1` qilib belgilang. Muayyan sozlash koʻrsatmalari uchun [CLI vositalari qoʻllanmasi](../reference/CLI-TOOLS.md)ga qarang.
 
-### "Provayder ishlamay qolsa nima boʻladi?"
+### "Agar provayder ishlamay qolsa-chi?"
 
-OmniRoute ishlamay qolgan provayderlarni avtomatik ravishda chetlab oʻtadi va keyingisini sinab koʻradi. Hech narsa qilishingiz shart emas. Batafsil maʼlumot uchun [Avtomatik kombinatsiya qoʻllanmasi](./AUTO-COMBO-GUIDE.md)ga qarang.
+OmniRoute ishlamay qolgan provayderlarni avtomatik ravishda oʻtkazib yuboradi va keyingisini sinab koʻradi. Hech narsa qilishingiz shart emas. Batafsil maʼlumot uchun [Avtomatik kombinatsiya qoʻllanmasi](./AUTO-COMBO-GUIDE.md)ga qarang.
 
 ---
 

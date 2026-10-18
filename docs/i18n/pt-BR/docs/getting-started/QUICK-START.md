@@ -4,7 +4,7 @@
 
 ---
 
-> **Resumindo**: Instale → Conecte um provedor qualificado → Aponte seu IDE para o OmniRoute. Pronto.
+> **Resumo**: Instale → Conecte um provedor qualificado → Aponte seu IDE para o OmniRoute. Pronto.
 
 ---
 
@@ -47,11 +47,11 @@ O OmniRoute é iniciado em `http://localhost:20128`. O painel é aberto automati
 
 ---
 
-## Etapa 3: Conecte um provedor qualificado
+## Etapa 3: Conecte um provedor elegível
 
 Escolha um provedor cujos termos e cuja cota atendam às suas necessidades. Em **Dashboard → Providers**, conecte sua própria conta ou chave de API e teste a conexão. O acesso gratuito e a disponibilidade sem chave não são garantidos.
 
-Por padrão, `auto` exclui provedores marcados como `tos: avoid`, incluindo Kiro e OpenCode Free. Conectar uma conta não altera essa política. A adesão em **Dashboard → Combos** se aplica a todas as combinações automáticas. Consulte o [Guia de níveis gratuitos](./FREE-TIERS-GUIDE.md) antes de escolher um provedor.
+Por padrão, `auto` exclui provedores marcados como `tos: avoid`, incluindo o Kiro. Conectar uma conta não altera essa política. A adesão em **Dashboard → Combos** se aplica a todas as combinações automáticas. Consulte o [Guia de níveis gratuitos](./FREE-TIERS-GUIDE.md) antes de escolher um provedor.
 
 ---
 
@@ -128,7 +128,7 @@ Você pode ver os detalhes da solicitação clicando em [Monitoramento/Logs](htt
 
 ---
 
-## Próximos passos
+## E agora?
 
 - **[Guia do Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Deixe o OmniRoute escolher a melhor IA para você
 - **[Guia de provedores](./PROVIDERS-GUIDE.md)** — Conecte mais provedores (gratuitos e pagos)
@@ -137,11 +137,11 @@ Você pode ver os detalhes da solicitação clicando em [Monitoramento/Logs](htt
 
 ---
 
-## Perguntas frequentes
+## Perguntas comuns
 
 ### "Preciso de uma chave de API?"
 
-A chave de API do OmniRoute autentica suas ferramentas. As credenciais dos provedores dependem de cada um: alguns exigem uma chave de API ou login em uma conta. O acesso gratuito não é garantido.
+A chave da API do OmniRoute autentica suas ferramentas. As credenciais dos serviços upstream dependem do provedor: alguns exigem uma chave de API ou login em uma conta. O acesso gratuito não é garantido.
 
 ### "O que é `auto`?"
 
@@ -149,15 +149,15 @@ A chave de API do OmniRoute autentica suas ferramentas. As credenciais dos prove
 
 ### "Quanto custa?"
 
-O OmniRoute é **gratuito e de código aberto**. Você paga apenas pelos provedores que utiliza. Muitos provedores têm planos gratuitos — consulte o [Guia de planos gratuitos](./FREE-TIERS-GUIDE.md).
+O OmniRoute em si é **gratuito e de código aberto**. Você paga apenas pelos provedores que usa. Muitos provedores têm planos gratuitos — consulte o [Guia de Planos Gratuitos](./FREE-TIERS-GUIDE.md).
 
 ### "Posso usá-lo com Claude Code / Cursor / Copilot?"
 
-**Sim!** O OmniRoute funciona com qualquer ferramenta compatível com o formato OpenAI. Basta definir a URL base como `http://localhost:20128/v1`. Consulte o [Guia de ferramentas de CLI](../reference/CLI-TOOLS.md) para obter instruções específicas de configuração.
+**Sim!** O OmniRoute funciona com qualquer ferramenta compatível com o formato da OpenAI. Basta definir a URL base como `http://localhost:20128/v1`. Consulte o [Guia de Ferramentas de CLI](../reference/CLI-TOOLS.md) para obter instruções específicas de configuração.
 
 ### "E se um provedor ficar indisponível?"
 
-O OmniRoute ignora automaticamente os provedores que falharem e tenta o próximo. Você não precisa fazer nada. Consulte o [Guia do Auto-Combo](./AUTO-COMBO-GUIDE.md) para obter detalhes.
+O OmniRoute ignora automaticamente os provedores que falharam e tenta o próximo. Você não precisa fazer nada. Consulte o [Guia do Auto-Combo](./AUTO-COMBO-GUIDE.md) para obter detalhes.
 
 ---
 

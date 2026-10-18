@@ -143,7 +143,7 @@ export async function runSkillsExecute(id, opts, cmd) {
   const data = await mcpCallTool(
     "omniroute_skills_execute",
     { skillId: id, input },
-    { timeout: opts.timeout ?? 30000 },
+    { timeout: opts.timeout ?? 30000 }
   );
   emit(data, globalOpts);
 }
@@ -173,17 +173,66 @@ export async function runSkillsshList(opts, cmd) {
   emit(data.items ?? data, globalOpts, skillSchema);
 }
 
+const GITHUB_SEGMENT = /^[A-Za-z0-9_.-]+$/;
+const SKILL_ID = /^[A-Za-z0-9_-]+$/;
+
+/**
+ * Parse `https://skills.sh/<owner>/<repo>/<skillId>` or `<owner>/<repo>/<skillId>` into the
+ * `{ source, skillId }` pair the install route validates. Returns null for anything else; the
+ * server re-validates, this only keeps obviously wrong input from reaching it.
+ */
+export function parseSkillsshRef(input) {
+  let ref = String(input ?? "").trim();
+  if (/^[a-z][a-z0-9+.-]*:\/\//i.test(ref)) {
+    let parsed;
+    try {
+      parsed = new URL(ref);
+    } catch {
+      return null;
+    }
+    if (parsed.hostname !== "skills.sh" && parsed.hostname !== "www.skills.sh") return null;
+    ref = parsed.pathname;
+  }
+  const parts = ref.split("/").filter(Boolean);
+  if (parts.length !== 3) return null;
+  const [owner, repo, skillId] = parts;
+  for (const segment of [owner, repo]) {
+    if (!GITHUB_SEGMENT.test(segment) || segment === "." || segment === "..") return null;
+  }
+  if (!SKILL_ID.test(skillId) || skillId.length > 100) return null;
+  return { source: `${owner}/${repo}`, skillId };
+}
+
 export async function runSkillsshInstall(url, opts, cmd) {
+  const ref = parseSkillsshRef(url);
+  if (!ref) {
+    process.stderr.write(
+      "Error: expected a skills.sh skill: https://skills.sh/<owner>/<repo>/<skill> or <owner>/<repo>/<skill>\n"
+    );
+    process.exit(1);
+  }
   const res = await apiFetch("/api/skills/skillssh/install", {
     method: "POST",
-    body: { url },
+    body: {
+      name: ref.skillId.slice(0, 64),
+      description: `Installed from skills.sh (${ref.source})`,
+      source: ref.source,
+      skillId: ref.skillId,
+    },
   });
   if (!res.ok) {
-    process.stderr.write(`Error: ${res.status}\n`);
+    let detail = "";
+    try {
+      const body = await res.json();
+      if (typeof body?.error === "string") detail = ` ${body.error}`;
+    } catch {
+      // Non-JSON error body: the status code alone is enough.
+    }
+    process.stderr.write(`Error: ${res.status}${detail}\n`);
     process.exit(1);
   }
   const data = await res.json();
-  process.stdout.write(`Installed: ${data.skillId ?? url}\n`);
+  process.stdout.write(`Installed: ${data.id ?? ref.skillId}\n`);
 }
 
 export async function runMarketplaceSearch(query, opts, cmd) {

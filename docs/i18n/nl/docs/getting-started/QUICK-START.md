@@ -49,9 +49,9 @@ OmniRoute start op `http://localhost:20128`. Het dashboard wordt automatisch geo
 
 ## Stap 3: Verbind een geschikte provider
 
-Kies een provider waarvan de voorwaarden en het quotum aansluiten bij je behoeften. Verbind in **Dashboard → Providers** je eigen account of API-sleutel en test vervolgens de verbinding. Gratis toegang en beschikbaarheid zonder sleutel zijn niet gegarandeerd.
+Kies een provider waarvan de voorwaarden en het quotum bij uw behoeften passen. Verbind in **Dashboard → Providers** uw eigen account of API-sleutel en test vervolgens de verbinding. Gratis toegang en beschikbaarheid zonder sleutel zijn niet gegarandeerd.
 
-`auto` sluit providers die zijn gemarkeerd met `tos: avoid`, waaronder Kiro en OpenCode Free, standaard uit. Het verbinden van een account verandert dit beleid niet. De opt-in in **Dashboard → Combos** is van toepassing op alle automatische combo's. Raadpleeg de [Handleiding voor gratis niveaus](./FREE-TIERS-GUIDE.md) voordat je een provider kiest.
+`auto` sluit providers die zijn gemarkeerd met `tos: avoid`, waaronder Kiro, standaard uit. Het verbinden van een account verandert dit beleid niet. De opt-in in **Dashboard → Combos** geldt voor alle automatische combo's. Raadpleeg de [Handleiding voor gratis niveaus](./FREE-TIERS-GUIDE.md) voordat u een provider kiest.
 
 ---
 
@@ -141,19 +141,19 @@ Je kunt de details van het verzoek bekijken door in de linkerzijbalk op [Monitor
 
 ### "Heb ik een API-sleutel nodig?"
 
-De OmniRoute API-sleutel verifieert je tools. De benodigde toegangsgegevens voor upstreamproviders verschillen per provider: sommige vereisen een API-sleutel of aanmelding bij een account. Gratis toegang is niet gegarandeerd.
+De OmniRoute API-sleutel verifieert je tools. De vereiste toegangsgegevens voor upstreamproviders verschillen per provider: sommige vereisen een API-sleutel of aanmelding bij een account. Gratis toegang is niet gegarandeerd.
 
 ### "Wat is `auto`?"
 
-`auto` geeft OmniRoute opdracht om automatisch de beste provider voor elk verzoek te kiezen. Daarbij wordt rekening gehouden met snelheid, kosten, kwaliteit en beschikbaarheid. Raadpleeg de [handleiding voor Auto-Combo](./AUTO-COMBO-GUIDE.md) voor meer informatie.
+`auto` laat OmniRoute automatisch de beste provider voor elk verzoek kiezen. Daarbij wordt rekening gehouden met snelheid, kosten, kwaliteit en beschikbaarheid. Raadpleeg de [handleiding voor Auto-Combo](./AUTO-COMBO-GUIDE.md) voor meer informatie.
 
 ### "Hoeveel kost het?"
 
-OmniRoute zelf is **gratis en opensource**. Je betaalt alleen voor de providers die je gebruikt. Veel providers bieden gratis abonnementen aan — raadpleeg de [handleiding voor gratis abonnementen](./FREE-TIERS-GUIDE.md).
+OmniRoute zelf is **gratis en opensource**. Je betaalt alleen voor de providers die je gebruikt. Veel providers hebben gratis abonnementen — raadpleeg de [handleiding voor gratis abonnementen](./FREE-TIERS-GUIDE.md).
 
 ### "Kan ik het gebruiken met Claude Code / Cursor / Copilot?"
 
-**Ja!** OmniRoute werkt met elke tool die de OpenAI-indeling ondersteunt. Stel de basis-URL in op `http://localhost:20128/v1`. Raadpleeg de [handleiding voor CLI-tools](../reference/CLI-TOOLS.md) voor specifieke installatie-instructies.
+**Ja!** OmniRoute werkt met elke tool die de OpenAI-indeling ondersteunt. Stel de basis-URL simpelweg in op `http://localhost:20128/v1`. Raadpleeg de [handleiding voor CLI-tools](../reference/CLI-TOOLS.md) voor specifieke installatie-instructies.
 
 ### "Wat gebeurt er als een provider uitvalt?"
 

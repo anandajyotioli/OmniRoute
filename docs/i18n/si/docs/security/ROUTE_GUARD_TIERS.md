@@ -179,6 +179,7 @@ server process එක නවතා දැමීමට හැකි වනු ඇ
 | `/api/settings/import-json`               | සම්පූර්ණ settings blob එක ප්රතිස්ථාපනය කරයි                           |
 | `/api/providers/health-autopilot/actions` | Autopilot remediation actions ක්රියාත්මක කරයි                         |
 | `/api/settings/obsidian`                  | ඕනෑම vault root එකක් සඳහා නැවත භාවිත කළ හැකි WebDAV creds නිකුත් කරයි |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                          |
 
 **උල්ලංඝනයකදී response එක:** `401 Authentication required`
 

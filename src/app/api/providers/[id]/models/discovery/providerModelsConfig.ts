@@ -868,9 +868,7 @@ export const PROVIDER_MODELS_CONFIG: Record<string, ProviderModelsConfigEntry> =
         if (typeof id !== "string") return [];
         const normalizedId = id.trim();
         const name =
-          typeof model.name === "string" && model.name.trim()
-            ? model.name.trim()
-            : normalizedId;
+          typeof model.name === "string" && model.name.trim() ? model.name.trim() : normalizedId;
         return [{ ...model, id: normalizedId, name }];
       });
     },
@@ -923,10 +921,9 @@ export const PROVIDER_MODELS_CONFIG: Record<string, ProviderModelsConfigEntry> =
     authPrefix: "Bearer ",
     parseResponse: (data) => data.data || data.models || [],
   },
-  // OpenCode CLI identity headers on all three opencode-family entries (see
+  // OpenCode CLI identity headers on both opencode-family entries (see
   // buildOpencodeModelsDiscoveryEntry above for why — bare "Bun fetch" calls
   // without x-opencode-session are what OpenCode's operator warning names).
-  opencode: buildOpencodeModelsDiscoveryEntry("https://opencode.ai/zen/v1/models"),
   "opencode-zen": buildOpencodeModelsDiscoveryEntry("https://opencode.ai/zen/v1/models"),
   "opencode-go": buildOpencodeModelsDiscoveryEntry("https://opencode.ai/zen/go/v1/models"),
   "glm-cn": {

@@ -199,6 +199,7 @@ proċess tas-server.
 | `/api/settings/import-json`               | Jissostitwixxi l-blob sħiħ tas-settings                                             |
 | `/api/providers/health-autopilot/actions` | Jeżegwixxi azzjonijiet ta’ rimedju tal-autopilot                                    |
 | `/api/settings/obsidian`                  | Joħloq kredenzjali WebDAV li jistgħu jerġgħu jintużaw għal kwalunkwe root ta’ vault |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                                        |
 
 **Rispons f’każ ta’ ksur:** `401 Authentication required`
 

@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Reordenar conexiones por disponibilidad",
     "reorderByAvailabilityError": "No se pudieron reordenar las conexiones por disponibilidad",
     "distributeProxies": "Distribuir proxies",
+    "clearAccountProxies": "Eliminar proxies de las cuentas",
+    "clearAccountProxyAssignments": "Eliminar asignaciones",
+    "clearAccountProxiesConfirm": "¿Eliminar las asignaciones individuales de proxy de las {count} cuentas de este proveedor, incluidas las cuentas deshabilitadas? Los proxies guardados y las asignaciones del proveedor/globales se conservarán. Las cuentas volverán a heredar la configuración de proxy del proveedor/global.",
+    "accountProxiesCleared": "Se eliminaron las asignaciones de proxy de las cuentas.",
+    "clearAccountProxiesPartial": "No se pudieron restablecer completamente {count} cuenta(s). Las asignaciones mostradas se han actualizado; puedes volver a intentarlo.",
+    "clearAccountProxiesError": "No se pudieron restablecer los proxies de las cuentas ni actualizar su estado. Vuelve a cargar la página e inténtalo de nuevo.",
     "distributing": "Distribuyendo...",
     "selectedCount": "{count, plural, one {# seleccionado} other {# seleccionados}}",
     "accountsCount": "{count, plural, one {# cuenta} other {# cuentas}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Actualizar automáticamente la lista de modelos cada 6 h de forma predeterminada (configurable mediante MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Sincronización automática activada — los modelos se actualizarán periódicamente",
     "autoSyncDisabled": "Sincronización automática desactivada",
+    "autoSyncLastSynced": "Sincronizado {time}",
+    "autoSyncNeverSynced": "Nunca sincronizado",
+    "autoSyncImmediateFailed": "Sincronización automática activada, pero falló la actualización inmediata de modelos",
+    "autoSyncImmediatePartialFailure": "Sincronización automática activada, pero fallaron algunas actualizaciones inmediatas de modelos",
     "autoSyncToggleFailed": "Error al alternar sincronización automática",
     "autoSyncPartialFailure": "Sincronización automática actualizada para algunas conexiones, pero no todas",
     "clearAllModels": "Borrar todos los modelos",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Distribuyendo...",
       "complete": "Completo",
-      "defaultLabel": "Distribuir Proxies"
+      "defaultLabel": "Distribuir Proxies",
+      "confirmMessage": "¿Asignar los proxies guardados a todas las cuentas de este grupo? Esto sustituirá las asignaciones existentes y habilitará el enrutamiento mediante proxy, incluso para las cuentas deshabilitadas.",
+      "confirmDistribute": "Distribuir proxies",
+      "cancel": "Cancelar"
     }
   },
   "providerTest": {

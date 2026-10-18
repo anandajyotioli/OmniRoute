@@ -194,6 +194,7 @@ tàbí pa process server náà.
 | `/api/settings/import-json`               | Ó ń rọ́pò gbogbo blob ètò                                   |
 | `/api/providers/health-autopilot/actions` | Ó ń ṣe àwọn ìgbésẹ̀ àtúnṣe autopilot                        |
 | `/api/settings/obsidian`                  | Ó ń ṣe creds WebDAV tí a lè tún lò fún root vault èyíkéyìí |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens               |
 
 **Ìdáhùn sí ìrúfin:** `401 Authentication required`
 

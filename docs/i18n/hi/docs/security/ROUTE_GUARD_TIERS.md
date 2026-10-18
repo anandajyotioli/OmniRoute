@@ -181,6 +181,7 @@ LOCAL_ONLY के रूप में वर्गीकृत किया ज�
 | `/api/settings/import-json`               | पूरा सेटिंग्स ब्लॉब बदल देता है                                           |
 | `/api/providers/health-autopilot/actions` | ऑटोपायलट सुधारात्मक कार्रवाइयाँ निष्पादित करता है                         |
 | `/api/settings/obsidian`                  | किसी भी वॉल्ट रूट के लिए पुनः उपयोग योग्य WebDAV क्रेडेंशियल जारी करता है |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                              |
 
 **उल्लंघन पर रिस्पॉन्स:** `401 Authentication required`
 

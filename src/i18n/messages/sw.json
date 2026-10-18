@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Panga upya miunganisho kulingana na upatikanaji",
     "reorderByAvailabilityError": "Imeshindwa kupanga upya miunganisho kulingana na upatikanaji",
     "distributeProxies": "Sambaza Mawakala",
+    "clearAccountProxies": "Ondoa proksi za akaunti",
+    "clearAccountProxyAssignments": "Ondoa migao",
+    "clearAccountProxiesConfirm": "Ondoa migao mahususi ya proksi kutoka kwenye akaunti zote {count} za mtoa huduma huyu, ikiwemo akaunti zilizozimwa? Proksi zilizohifadhiwa na migao ya mtoa huduma/ya jumla itahifadhiwa. Akaunti zitarithi tena mipangilio ya proksi ya mtoa huduma/ya jumla.",
+    "accountProxiesCleared": "Migao ya proksi za akaunti imeondolewa.",
+    "clearAccountProxiesPartial": "Imeshindikana kuweka upya kikamilifu akaunti {count}. Migao iliyoonyeshwa imeonyeshwa upya; unaweza kujaribu tena.",
+    "clearAccountProxiesError": "Imeshindikana kuweka upya proksi za akaunti au kuonyesha upya hali yake. Tafadhali pakia upya na ujaribu tena.",
     "distributing": "Inasambaza...",
     "selectedCount": "{count, plural, one {# iliyochaguliwa} other {# zilizochaguliwa}}",
     "accountsCount": "{count, plural, one {akaunti #} other {akaunti #}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Onyesha upya orodha ya modeli kiotomatiki kila saa 6 kwa chaguomsingi (inaweza kusanidiwa kupitia MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Usawazishaji otomatiki umewezeshwa — modeli zitasasishwa mara kwa mara",
     "autoSyncDisabled": "Usawazishaji otomatiki umezimwa",
+    "autoSyncLastSynced": "Imesawazishwa {time}",
+    "autoSyncNeverSynced": "Haijawahi kusawazishwa",
+    "autoSyncImmediateFailed": "Usawazishaji otomatiki umewezeshwa, lakini kuonyesha upya modeli mara moja kumeshindwa",
+    "autoSyncImmediatePartialFailure": "Usawazishaji otomatiki umewezeshwa, lakini baadhi ya maonyesho upya ya modeli mara moja yameshindwa",
     "autoSyncToggleFailed": "Imeshindikana kubadilisha hali ya usawazishaji otomatiki",
     "autoSyncPartialFailure": "Usawazishaji otomatiki umesasishwa kwa baadhi ya miunganisho, lakini si yote",
     "clearAllModels": "Futa Modeli Zote",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Inasambaza...",
       "complete": "Kamilisha",
-      "defaultLabel": "Sambaza Proxies"
+      "defaultLabel": "Sambaza Proxies",
+      "confirmMessage": "Ungependa kugawa proksi zilizohifadhiwa kwa kila akaunti katika kikundi hiki? Hatua hii itachukua nafasi ya migao iliyopo na kuwasha uelekezaji kupitia proksi, ikiwemo kwa akaunti zilizozimwa.",
+      "confirmDistribute": "Sambaza proksi",
+      "cancel": "Ghairi"
     }
   },
   "providerTest": {

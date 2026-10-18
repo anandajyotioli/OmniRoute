@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Preusporiadať pripojenia podľa dostupnosti",
     "reorderByAvailabilityError": "Preusporiadanie pripojení podľa dostupnosti zlyhalo",
     "distributeProxies": "Distribuovať proxy",
+    "clearAccountProxies": "Odstrániť proxy priradenia účtov",
+    "clearAccountProxyAssignments": "Odstrániť priradenia",
+    "clearAccountProxiesConfirm": "Odstrániť individuálne priradenia proxy zo všetkých {count} účtov tohto poskytovateľa vrátane zakázaných účtov? Uložené proxy a priradenia poskytovateľa/globálne priradenia zostanú zachované. Účty opäť zdedia nastavenia proxy poskytovateľa/globálne nastavenia.",
+    "accountProxiesCleared": "Priradenia proxy účtov boli odstránené.",
+    "clearAccountProxiesPartial": "Nepodarilo sa úplne obnoviť {count} účtov. Zobrazené priradenia boli aktualizované; môžete to skúsiť znova.",
+    "clearAccountProxiesError": "Nepodarilo sa obnoviť proxy účtov ani aktualizovať ich stav. Znova načítajte stránku a skúste to znova.",
     "distributing": "Distribuuje sa...",
     "selectedCount": "{count, plural, one {# vybraný} few {# vybrané} other {# vybraných}}",
     "accountsCount": "{count, plural, one {# účet} few {# účty} other {# účtov}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Automaticky obnovovať zoznam modelov každých 6 h (predvolené; konfigurovateľné cez MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Automatická synchronizácia povolená – modely sa budú pravidelne obnovovať",
     "autoSyncDisabled": "Automatická synchronizácia je zakázaná",
+    "autoSyncLastSynced": "Synchronizované {time}",
+    "autoSyncNeverSynced": "Nikdy nesynchronizované",
+    "autoSyncImmediateFailed": "Automatická synchronizácia povolená, ale okamžité obnovenie modelov zlyhalo",
+    "autoSyncImmediatePartialFailure": "Automatická synchronizácia povolená, ale niektoré okamžité obnovenia modelov zlyhali",
     "autoSyncToggleFailed": "Nepodarilo sa prepnúť automatickú synchronizáciu",
     "autoSyncPartialFailure": "Automatická synchronizácia aktualizovaná pre niektoré pripojenia, ale nie všetky",
     "clearAllModels": "Vymazať všetky modely",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Distribuovanie...",
       "complete": "Dokončiť",
-      "defaultLabel": "Distribuovať proxy"
+      "defaultLabel": "Distribuovať proxy",
+      "confirmMessage": "Priradiť uložené proxy každému účtu v tejto skupine? Týmto sa nahradia existujúce priradenia účtov a povolí sa smerovanie cez proxy, a to aj pre zakázané účty.",
+      "confirmDistribute": "Distribuovať proxy",
+      "cancel": "Zrušiť"
     }
   },
   "providerTest": {

@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Urutkan ulang koneksi berdasarkan ketersediaan",
     "reorderByAvailabilityError": "Gagal mengurutkan ulang koneksi berdasarkan ketersediaan",
     "distributeProxies": "Distribusikan Proksi",
+    "clearAccountProxies": "Hapus proxy akun",
+    "clearAccountProxyAssignments": "Hapus penetapan",
+    "clearAccountProxiesConfirm": "Hapus penetapan proxy individual dari seluruh {count} akun penyedia ini, termasuk akun yang dinonaktifkan? Proxy tersimpan serta penetapan tingkat penyedia/global akan dipertahankan. Akun akan kembali mewarisi pengaturan proxy tingkat penyedia/global.",
+    "accountProxiesCleared": "Penetapan proxy akun telah dihapus.",
+    "clearAccountProxiesPartial": "Tidak dapat mereset sepenuhnya {count} akun. Penetapan yang ditampilkan telah diperbarui; Anda dapat mencoba lagi.",
+    "clearAccountProxiesError": "Tidak dapat mereset proxy akun atau memperbarui statusnya. Muat ulang dan coba lagi.",
     "distributing": "Mendistribusikan...",
     "selectedCount": "{count, plural, one {# dipilih} other {# dipilih}}",
     "accountsCount": "{count, plural, one {# akun} other {# akun}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Secara default, segarkan daftar model secara otomatis setiap 6 jam (dapat dikonfigurasi melalui MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Sinkronisasi otomatis diaktifkan — model akan disegarkan secara berkala",
     "autoSyncDisabled": "Sinkronisasi otomatis dinonaktifkan",
+    "autoSyncLastSynced": "Disinkronkan {time}",
+    "autoSyncNeverSynced": "Belum pernah disinkronkan",
+    "autoSyncImmediateFailed": "Sinkronisasi otomatis diaktifkan, tetapi penyegaran model langsung gagal",
+    "autoSyncImmediatePartialFailure": "Sinkronisasi otomatis diaktifkan, tetapi beberapa penyegaran model langsung gagal",
     "autoSyncToggleFailed": "Gagal mengaktifkan sinkronisasi otomatis",
     "autoSyncPartialFailure": "Sinkronisasi otomatis diperbarui untuk beberapa koneksi, tetapi tidak semua",
     "clearAllModels": "Hapus Semua Model",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Mendistribusikan...",
       "complete": "Lengkap",
-      "defaultLabel": "Distribusikan Proksi"
+      "defaultLabel": "Distribusikan Proksi",
+      "confirmMessage": "Tetapkan proxy tersimpan ke setiap akun dalam grup ini? Tindakan ini akan menggantikan penetapan akun yang ada dan mengaktifkan perutean proxy, termasuk untuk akun yang dinonaktifkan.",
+      "confirmDistribute": "Distribusikan proxy",
+      "cancel": "Batal"
     }
   },
   "providerTest": {

@@ -174,6 +174,7 @@ fhreastalaí a mharú.
 | `/api/settings/import-json`               | Ionadaíonn sé an bhloba iomlán socruithe                      |
 | `/api/providers/health-autopilot/actions` | Cuireann sé gníomhartha leasúcháin uathphíolóta i gcrích      |
 | `/api/settings/obsidian`                  | Gineann sé dintiúir WebDAV in-athúsáidte d'aon fhréamh boghta |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                  |
 
 **Freagra ar shárú:** `401 Authentication required`
 

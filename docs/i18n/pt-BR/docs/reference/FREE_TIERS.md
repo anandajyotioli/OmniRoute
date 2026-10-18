@@ -24,7 +24,7 @@ Esses números descrevem contas de terceiros e condições de elegibilidade dist
 | **+ condicionado a uma verificação de identidade regional** | **+~6M**            | `modelscope` (vinculação ao Alibaba Cloud + verificação de nome real na China continental). Cota recorrente real, exposta como `gatedRecurringTokens` / `gatedProviders` e no painel. Nunca incluída no total em destaque: +~6M condicionados à verificação de identidade regional.                           |
 | Limite máximo teórico (todos os limites de taxa, 24/7)      | ~10B                | Soma de todos os limites de taxa dos provedores extrapolados para uso ininterrupto. **Não é uma garantia** — não destaque esse número.                                                                                                                                                                        |
 
-**Destaque honesto:** _O OmniRoute agrega **~1,62B de tokens gratuitos documentados por mês** (até ~2,22B no primeiro mês com créditos de cadastro) em 35 pools de nível gratuito — além de uma ampla variedade de provedores permanentemente gratuitos e sem limite — e a compactação do RTK + Caveman (economia de 15–95% em tokens) amplia ainda mais esse total._
+**Destaque honesto:** _O OmniRoute agrega **~1,62B de tokens gratuitos documentados por mês** (até ~2,22B no primeiro mês com créditos de cadastro) em 34 pools de nível gratuito — além de uma ampla variedade de provedores permanentemente gratuitos e sem limite — e a compactação do RTK + Caveman (economia de 15–95% em tokens) amplia ainda mais esse total._
 
 > **Por que isso caiu em relação aos ~1,94B anteriores.** A atualização de 2026-06-17 é uma correção de transparência, não uma perda: `gemini` agora é deduplicado por pool (antes era inflado pela contagem separada de cada variante Flash, 462M → 60M), `cloudflare-ai` foi corrigido para seu limite real de 10 mil Neurons/dia (122M → 30M), `doubao` foi reclassificado como um crédito único de cadastro (não recorrente), e níveis descontinuados foram removidos (`chutes`/`phind`/`kluster` descontinuados). Isso foi parcialmente compensado por `llm7` (valor correto de 5M/dia → 150M) e por novos provedores gratuitos (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Esses números descrevem contas de terceiros e condições de elegibilidade dist
 >
 > **Corrigido em 2026-09-03 (#11773):** `cerebras` foi reclassificado de uma concessão recorrente de 30M/mês (antigo teste sem cartão de 1M de tokens/dia) para um crédito único de cadastro de $5 que exige uma forma de pagamento. A mesma regra de transparência aplicada ao LongCat.
 >
-> **Além do xKiro (2026-09-03):** o novo pool `xkiro-free` (150M/mês) adiciona uma 35ª chave de pool recorrente. O Felo Web continua excluído enquanto sua procedência/licença derivada da GPL permanece EM ESPERA. O código-fonte agora relata **35 chaves de pool recorrentes** e **~1,62B constantes** — o número dinâmico e validado pelo CI (`check:docs-counts` interrompe o build se houver divergência em relação a `computeFreeModelTotals()`).
+> **Além do xKiro (2026-09-03):** o novo pool `xkiro-free` (150M/mês) adiciona uma 35ª chave de pool recorrente. O Felo Web continua excluído enquanto sua procedência/licença derivada da GPL permanece EM ESPERA. O código-fonte agora relata **34 chaves de pool recorrentes** e **~1,62B constantes** — o número dinâmico e validado pelo CI (`check:docs-counts` interrompe o build se houver divergência em relação a `computeFreeModelTotals()`).
 
 Maiores contribuidores **documentados**: `mistral` 1,00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (cinco limites por modelo), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` está excluído — sua concessão de 10M do LongCat-2.0 é um crédito único de cadastro sujeito a KYC, não um orçamento mensal recorrente.)
 
@@ -136,7 +136,6 @@ A maioria dos números de "tokens gratuitos por mês" nesse espaço é a soma do
 | `modal`          | A Seção 1.3 dos ToS proíbe explicitamente "alugar, revender ou de outra forma permitir que terceiros tenham acesso direto ao Serviço ou o utilizem" — criar um serviço auto-hospedado…                    |
 | `muse-spark-web` | Os ToS da Meta proíbem explicitamente o acesso automatizado sem permissão prévia, engenharia reversa sem permissão por escrito e contornar mecanismos tecnológicos…                                       |
 | `nlpcloud`       | Os ToS proíbem explicitamente "configurar um proxy ou outro dispositivo que permita que outras pessoas acessem o Serviço por meio dele" e concedem apenas uma licença intransferível,…                    |
-| `opencode`       | Os ToS (Anomaly Innovations, Inc.) restringem explicitamente o uso ao "seu próprio uso interno, e não em nome ou em benefício de terceiros" — ope…                                                        |
 | `t3-web`         | Os ToS restringem explicitamente as contas apenas ao uso pessoal, proíbem compartilhar credenciais com terceiros e vetam acesso automatizado/por bots/scraping — um…                                      |
 
 ### ✅ Geralmente permissivos — atenção / ambíguo / ok (os demais)
@@ -279,7 +278,6 @@ A maioria dos números de "tokens gratuitos por mês" nesse espaço é a soma do
 | `muse-spark-web` | sem chave           | —                   | —                       | evitar            | 3       |
 | `nlpcloud`       | sem chave           | —                   | —                       | evitar            | 1       |
 | `nvidia`         | sem chave           | —                   | —                       | cautela           | 13      |
-| `opencode`       | sem chave           | —                   | —                       | evitar            | 7       |
 | `pollinations`   | sem chave           | —                   | —                       | cautela           | 31      |
 | `publicai`       | sem chave           | —                   | —                       | cautela           | 3       |
 | `reka`           | sem chave           | —                   | —                       | cuidado           | 2       |
@@ -290,17 +288,6 @@ A maioria dos números de "tokens gratuitos por mês" nesse espaço é a soma do
 | `uncloseai`      | sem chave           | —                   | —                       | cuidado           | 3       |
 
 ---
-
-## OpenCode Free: restrição de contrato do cliente (#14313)
-
-O provedor `opencode` sem chave (endpoint público `https://opencode.ai/zen/v1`) recusa qualquer solicitação
-que não corresponda ao contrato do cliente OpenCode com **403 `FreeTierError`** e a
-frase _"O nível gratuito do OpenCode só pode ser usado dentro do OpenCode"_. Essa é uma
-recusa específica da solicitação (o mesmo veredito em todas as contas para o mesmo formato de solicitação), não um
-banimento do modelo nem um período de espera da conexão — o OmniRoute a classifica como `project_route_error`, ignora
-o bloqueio/período de espera do modelo e (no caminho sintético `noauth`) pausa a nova seleção automática
-de combinações por um TTL curto. Envie solicitações que incluam uma lista de ferramentas não vazia, `stream: true` e os
-cabeçalhos de sessão/UA do OpenCode (`opencodeFreeTierContract.ts`), ou espere receber o erro 403.
 
 ## O que mudou desde o catálogo publicado (`freeNote`)
 

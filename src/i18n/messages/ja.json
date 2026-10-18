@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "可用性で接続を並べ替える",
     "reorderByAvailabilityError": "可用性による接続の並べ替えに失敗しました",
     "distributeProxies": "プロキシを分配",
+    "clearAccountProxies": "アカウントのプロキシを削除",
+    "clearAccountProxyAssignments": "割り当てを削除",
+    "clearAccountProxiesConfirm": "無効なアカウントを含む、このプロバイダーの全{count}アカウントから個別のプロキシ割り当てを削除しますか？保存済みプロキシとプロバイダー／グローバルの割り当ては保持されます。アカウントは再びプロバイダー／グローバルのプロキシ設定を継承します。",
+    "accountProxiesCleared": "アカウントのプロキシ割り当てを削除しました。",
+    "clearAccountProxiesPartial": "{count}件のアカウントを完全にリセットできませんでした。表示されている割り当ては更新されました。再試行できます。",
+    "clearAccountProxiesError": "アカウントのプロキシをリセットできず、ステータスも更新できませんでした。再読み込みしてから再試行してください。",
     "distributing": "分配中...",
     "selectedCount": "{count, plural, one {# 個選択済み} other {# 個選択済み}}",
     "accountsCount": "{count, plural, one {# アカウント} other {# アカウント}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "デフォルトでは6時間ごとにモデルリストを自動更新します（MODEL_SYNC_INTERVAL_HOURS で設定可能）",
     "autoSyncEnabled": "自動同期有効 — モデルは定期的に更新されます",
     "autoSyncDisabled": "自動同期無効",
+    "autoSyncLastSynced": "{time}に同期済み",
+    "autoSyncNeverSynced": "未同期",
+    "autoSyncImmediateFailed": "自動同期を有効にしましたが、モデルの即時更新に失敗しました",
+    "autoSyncImmediatePartialFailure": "自動同期を有効にしましたが、一部のモデルの即時更新に失敗しました",
     "autoSyncToggleFailed": "自動同期の切り替えに失敗",
     "autoSyncPartialFailure": "自動同期が一部の接続で更新されましたが、すべてではありません",
     "clearAllModels": "すべてのモデルを削除",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "配布中...",
       "complete": "完了",
-      "defaultLabel": "プロキシを配布する"
+      "defaultLabel": "プロキシを配布する",
+      "confirmMessage": "保存済みプロキシをこのグループ内のすべてのアカウントに割り当てますか？無効なアカウントを含め、既存のアカウント割り当てが置き換えられ、プロキシルーティングが有効になります。",
+      "confirmDistribute": "プロキシを配布",
+      "cancel": "キャンセル"
     }
   },
   "providerTest": {

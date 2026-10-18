@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Athordaigh naisc de réir infhaighteachta",
     "reorderByAvailabilityError": "Theip ar athordú na nasc de réir infhaighteachta",
     "distributeProxies": "Dáil Seachfhreastalaithe",
+    "clearAccountProxies": "Bain seachfhreastalaithe cuntais",
+    "clearAccountProxyAssignments": "Bain na sannacháin",
+    "clearAccountProxiesConfirm": "Bain na sannacháin aonair seachfhreastalaí ó gach ceann de na {count} cuntas de chuid an tsoláthraí seo, cuntais dhíchumasaithe san áireamh? Coinneofar seachfhreastalaithe sábháilte agus sannacháin soláthraí/dhomhanda. Gheobhaidh na cuntais socruithe seachfhreastalaí an tsoláthraí/na socruithe domhanda le hoidhreacht arís.",
+    "accountProxiesCleared": "Baineadh sannacháin seachfhreastalaí na gcuntas.",
+    "clearAccountProxiesPartial": "Níorbh fhéidir {count} cuntas a athshocrú go hiomlán. Athnuadh na sannacháin atá ar taispeáint; is féidir leat triail eile a bhaint as.",
+    "clearAccountProxiesError": "Níorbh fhéidir seachfhreastalaithe na gcuntas a athshocrú ná a stádas a athnuachan. Athlódáil agus bain triail eile as.",
     "distributing": "Ag dáileadh...",
     "selectedCount": "{count, plural, one {# roghnaithe} other {# roghnaithe}}",
     "accountsCount": "{count, plural, one {# cuntas} other {# cuntais}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Athnuaigh liosta na samhlacha go huathoibríoch gach 6 uair an chloig de réir réamhshocraithe (is féidir é a chumrú trí MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Sioncronú uathoibríoch cumasaithe — athnuafaidh múnlaí go tréimhsiúil",
     "autoSyncDisabled": "Sioncronú uathoibríoch díchumasaithe",
+    "autoSyncLastSynced": "Sioncronaíodh an uair dheireanach: {time}",
+    "autoSyncNeverSynced": "Níor sioncronaíodh riamh",
+    "autoSyncImmediateFailed": "Sioncronú uathoibríoch cumasaithe, ach theip ar athnuachan láithreach na múnlaí",
+    "autoSyncImmediatePartialFailure": "Sioncronú uathoibríoch cumasaithe, ach theip ar roinnt athnuachana láithreacha múnlaí",
     "autoSyncToggleFailed": "Theip ar shioncronú uathoibríoch a scoránú",
     "autoSyncPartialFailure": "Nuashonraíodh sioncronú uathoibríoch do roinnt naisc, ach ní do gach ceann",
     "clearAllModels": "Glan Gach Múnla",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Ag dáileadh...",
       "complete": "Críochnaithe",
-      "defaultLabel": "Dáil Seachfhreastalaithe"
+      "defaultLabel": "Dáil Seachfhreastalaithe",
+      "confirmMessage": "Sann na seachfhreastalaithe sábháilte do gach cuntas sa ghrúpa seo? Tiocfaidh sé seo in ionad na sannachán cuntais atá ann cheana agus cumasóidh sé ródú trí sheachfhreastalaí, fiú do chuntais dhíchumasaithe.",
+      "confirmDistribute": "Dáil seachfhreastalaithe",
+      "cancel": "Cealaigh"
     }
   },
   "providerTest": {

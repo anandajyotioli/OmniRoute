@@ -203,6 +203,7 @@ terminar el proceso del servidor.
 | `/api/settings/import-json`               | Reemplaza todo el blob de configuración                                |
 | `/api/providers/health-autopilot/actions` | Ejecuta acciones correctivas del piloto automático                     |
 | `/api/settings/obsidian`                  | Genera credenciales WebDAV reutilizables para cualquier raíz de bóveda |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                           |
 
 **Respuesta ante una infracción:** `401 Authentication required`
 

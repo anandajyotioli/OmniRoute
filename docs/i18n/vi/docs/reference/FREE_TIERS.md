@@ -24,7 +24,7 @@ Các số liệu này mô tả những tài khoản bên thứ ba và điều ki
 | **+ yêu cầu xác minh danh tính theo khu vực**   | **+~6M**               | `modelscope` (liên kết Alibaba Cloud + xác minh danh tính thật tại Trung Quốc đại lục). Hạn mức định kỳ thực sự, được cung cấp dưới dạng `gatedRecurringTokens` / `gatedProviders` và trên bảng điều khiển. Không bao giờ được cộng vào con số tiêu đề: +~6M yêu cầu xác minh danh tính theo khu vực.                                                          |
 | Mức trần lý thuyết (mọi giới hạn tốc độ, 24/7)  | ~10B                   | Tổng của mọi giới hạn tốc độ từ các nhà cung cấp khi ngoại suy theo mức sử dụng liên tục. **Không phải là bảo đảm** — đừng dùng con số này làm tiêu đề.                                                                                                                                                                                                        |
 
-**Tiêu đề trung thực:** _OmniRoute tổng hợp **~1.62B token miễn phí được công bố mỗi tháng** (lên tới ~2.22B trong tháng đầu tiên khi tính cả tín dụng đăng ký) từ 35 nhóm gói miễn phí — cộng thêm một danh sách dài các nhà cung cấp miễn phí vĩnh viễn, không giới hạn — và khả năng nén RTK + Caveman (tiết kiệm 15–95% token) còn giúp kéo dài ngân sách đó hơn nữa._
+**Tiêu đề trung thực:** _OmniRoute tổng hợp **~1.62B token miễn phí được công bố mỗi tháng** (lên tới ~2.22B trong tháng đầu tiên khi tính cả tín dụng đăng ký) từ 34 nhóm gói miễn phí — cộng thêm một danh sách dài các nhà cung cấp miễn phí vĩnh viễn, không giới hạn — và khả năng nén RTK + Caveman (tiết kiệm 15–95% token) còn giúp kéo dài ngân sách đó hơn nữa._
 
 > **Lý do con số này giảm so với mức ~1.94B trước đó.** Bản cập nhật ngày 2026-06-17 là một điều chỉnh để phản ánh trung thực hơn, không phải sự mất mát: `gemini` hiện được khử trùng lặp theo nhóm (trước đây bị tính cao do mỗi biến thể Flash được tính riêng, 462M → 60M), `cloudflare-ai` được điều chỉnh theo hạn mức thực tế là 10k-Neurons/ngày (122M → 30M), `doubao` được phân loại lại thành khoản tín dụng đăng ký dùng một lần (không định kỳ), và các gói đã ngừng hoạt động bị loại bỏ (`chutes`/`phind`/`kluster` đã ngừng cung cấp). Mức giảm này được bù đắp một phần bởi `llm7` (điều chỉnh đúng từ 5M/ngày → 150M) và các nhà cung cấp miễn phí mới (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Các số liệu này mô tả những tài khoản bên thứ ba và điều ki
 >
 > **Được điều chỉnh vào 2026-09-03 (#11773):** `cerebras` đã được phân loại lại từ khoản cấp định kỳ 30M/tháng (bản dùng thử cũ không cần thẻ với 1M token/ngày) thành khoản tín dụng đăng ký dùng một lần trị giá $5, yêu cầu phương thức thanh toán. Áp dụng cùng nguyên tắc trung thực như LongCat.
 >
-> **Cộng thêm xKiro (2026-09-03):** nhóm `xkiro-free` mới (150M/tháng) bổ sung khóa nhóm định kỳ thứ 35. Felo Web vẫn bị loại trừ trong khi nguồn gốc/giấy phép phái sinh từ GPL của dịch vụ này vẫn ở trạng thái HOLD. Mã nguồn hiện ghi nhận **35 khóa nhóm định kỳ** và **~1.62B ổn định** — con số trực tiếp được CI kiểm soát (`check:docs-counts` khiến bản dựng thất bại nếu con số này sai lệch so với `computeFreeModelTotals()`).
+> **Cộng thêm xKiro (2026-09-03):** nhóm `xkiro-free` mới (150M/tháng) bổ sung khóa nhóm định kỳ thứ 35. Felo Web vẫn bị loại trừ trong khi nguồn gốc/giấy phép phái sinh từ GPL của dịch vụ này vẫn ở trạng thái HOLD. Mã nguồn hiện ghi nhận **34 khóa nhóm định kỳ** và **~1.62B ổn định** — con số trực tiếp được CI kiểm soát (`check:docs-counts` khiến bản dựng thất bại nếu con số này sai lệch so với `computeFreeModelTotals()`).
 
 Các nguồn đóng góp **đã được ghi nhận bằng tài liệu** lớn nhất: `mistral` 1.00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (năm giới hạn theo từng mô hình), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` bị loại trừ — khoản cấp 10M cho LongCat-2.0 là tín dụng đăng ký dùng một lần, yêu cầu KYC, không phải ngân sách định kỳ hàng tháng.)
 
@@ -130,7 +130,6 @@ Hầu hết các con số về "token miễn phí mỗi tháng" trong lĩnh vự
 | `modal`          | Mục 1.3 của ToS nghiêm cấm rõ ràng việc "cho thuê, bán lại hoặc bằng cách khác cho phép bất kỳ bên thứ ba nào truy cập trực tiếp vào hoặc sử dụng Dịch vụ" — việc xây dựng một proxy tự lưu trữ… |
 | `muse-spark-web` | ToS của Meta nghiêm cấm rõ ràng việc truy cập tự động khi chưa được cho phép trước, kỹ thuật đảo ngược khi chưa có sự cho phép bằng văn bản và né tránh các biện pháp công nghệ…                 |
 | `nlpcloud`       | ToS nghiêm cấm rõ ràng việc "thiết lập proxy hoặc thiết bị khác cho phép người khác truy cập Dịch vụ thông qua đó" và chỉ cấp quyền không thể chuyển nhượng,…                                    |
-| `opencode`       | ToS (Anomaly Innovations, Inc.) giới hạn rõ ràng việc sử dụng ở phạm vi "sử dụng nội bộ của riêng bạn, không thay mặt hoặc vì lợi ích của bất kỳ bên thứ ba nào" — ope…                          |
 | `t3-web`         | ToS giới hạn rõ ràng tài khoản chỉ dành cho mục đích sử dụng cá nhân, cấm chia sẻ thông tin xác thực với bên thứ ba và cấm truy cập tự động/bot/thu thập dữ liệu — một s…                        |
 
 ### ✅ Nhìn chung cho phép — thận trọng / không rõ ràng / được phép (phần còn lại)
@@ -273,7 +272,6 @@ Hầu hết các con số về "token miễn phí mỗi tháng" trong lĩnh vự
 | `muse-spark-web` | không cần khóa     | —                   | —                  | nên tránh          | 3       |
 | `nlpcloud`       | không cần khóa     | —                   | —                  | nên tránh          | 1       |
 | `nvidia`         | không cần khóa     | —                   | —                  | thận trọng         | 13      |
-| `opencode`       | không cần khóa     | —                   | —                  | nên tránh          | 7       |
 | `pollinations`   | không cần khóa     | —                   | —                  | thận trọng         | 31      |
 | `publicai`       | không cần khóa     | —                   | —                  | thận trọng         | 3       |
 | `reka`           | không cần khóa     | —                   | —                  | thận trọng         | 2       |
@@ -284,17 +282,6 @@ Hầu hết các con số về "token miễn phí mỗi tháng" trong lĩnh vự
 | `uncloseai`      | không cần khóa     | —                   | —                  | thận trọng         | 3       |
 
 ---
-
-## OpenCode Free: hạn chế về hợp đồng máy khách (#14313)
-
-Nhà cung cấp `opencode` không cần khóa (địa chỉ công khai `https://opencode.ai/zen/v1`) từ chối mọi yêu cầu
-không khớp với hợp đồng máy khách OpenCode bằng **403 `FreeTierError`** và câu
-_"Gói miễn phí của OpenCode chỉ có thể được sử dụng từ bên trong OpenCode"_. Đây là sự
-từ chối theo phạm vi yêu cầu (cùng một phán quyết trên mọi tài khoản đối với cùng một cấu trúc yêu cầu), không phải là
-lệnh cấm mô hình hay thời gian chờ kết nối — OmniRoute phân loại lỗi này là `project_route_error`, bỏ qua
-việc khóa mô hình / thời gian chờ và (trên đường dẫn `noauth` tổng hợp) tạm dừng việc tự động chọn lại tổ hợp
-trong một TTL ngắn. Hãy gửi các yêu cầu có danh sách công cụ không rỗng, `stream: true` và các
-header phiên/UA của OpenCode (`opencodeFreeTierContract.ts`), nếu không sẽ nhận lỗi 403.
 
 ## Những thay đổi so với danh mục đã phát hành (`freeNote`)
 

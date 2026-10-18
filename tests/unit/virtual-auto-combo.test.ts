@@ -23,7 +23,6 @@ const ALLOWED_NOAUTH_PROVIDERS = [
   "cloudflare-playground",
   "devin-cli-agentic",
   "duckduckgo-web",
-  "opencode",
   "uncloseai",
 ];
 const EXCLUDED_NOAUTH_PROVIDERS = [
@@ -278,21 +277,6 @@ test("createVirtualAutoCombo includes clean-room ChatGPT Web and excludes its le
     false
   );
   assert.equal(combo.autoConfig.candidatePool.includes("cgpt-web"), false);
-});
-
-test("createVirtualAutoCombo includes no-auth OpenCode Free without provider_connections rows", async () => {
-  // #15059: opencode models are tos:avoid and excluded by default; opt out explicitly.
-  await settingsDb.updateSettings({ excludeTosAvoid: false });
-  const combo: VirtualComboResult = await virtualFactory.createVirtualAutoCombo("fast");
-
-  const opencode = combo.models.find((model) => model.providerId === "opencode");
-  assert.ok(
-    opencode,
-    "OpenCode Free should appear in auto/* even when it has no provider_connections row"
-  );
-  assert.equal(opencode.connectionId, "noauth");
-  assert.equal(opencode.model, "oc/big-pickle");
-  assert.ok(combo.autoConfig.candidatePool.includes("opencode"));
 });
 
 test("createVirtualAutoCombo restricts the no-auth pool to the emulated-tool-calling providers", async () => {

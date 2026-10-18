@@ -4,7 +4,7 @@
 
 ---
 
-> **En bref** : Installez → Connectez un fournisseur éligible → Configurez votre IDE pour utiliser OmniRoute. Terminé.
+> **En bref** : Installez → Connectez un fournisseur éligible → Faites pointer votre IDE vers OmniRoute. Terminé.
 
 ---
 
@@ -49,9 +49,9 @@ OmniRoute démarre à l’adresse `http://localhost:20128`. Le tableau de bord s
 
 ## Étape 3 : connecter un fournisseur éligible
 
-Choisissez un fournisseur dont les conditions et le quota correspondent à vos besoins. Dans **Tableau de bord → Fournisseurs**, connectez votre propre compte ou clé API, puis testez la connexion. L’accès gratuit et la disponibilité sans clé ne sont pas garantis.
+Choisissez un fournisseur dont les conditions d’utilisation et le quota correspondent à vos besoins. Dans **Tableau de bord → Fournisseurs**, connectez votre propre compte ou votre clé API, puis testez la connexion. L’accès gratuit et la disponibilité sans clé ne sont pas garantis.
 
-Par défaut, `auto` exclut les fournisseurs marqués `tos: avoid`, notamment Kiro et OpenCode Free. La connexion d’un compte ne modifie pas cette politique. L’activation dans **Tableau de bord → Combos** s’applique à toutes les combinaisons automatiques. Consultez le [Guide des offres gratuites](./FREE-TIERS-GUIDE.md) avant de choisir un fournisseur.
+`auto` exclut par défaut les fournisseurs marqués `tos: avoid`, notamment Kiro. La connexion d’un compte ne modifie pas cette politique. L’activation dans **Tableau de bord → Combos** s’applique à toutes les combinaisons automatiques. Consultez le [Guide des offres gratuites](./FREE-TIERS-GUIDE.md) avant de choisir un fournisseur.
 
 ---
 
@@ -128,7 +128,7 @@ Vous pouvez consulter les détails de la requête en cliquant sur [Surveillance/
 
 ---
 
-## Et maintenant ?
+## Et ensuite ?
 
 - **[Guide Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Laissez OmniRoute choisir la meilleure IA pour vous
 - **[Guide des fournisseurs](./PROVIDERS-GUIDE.md)** — Connectez davantage de fournisseurs (gratuits et payants)
@@ -155,7 +155,7 @@ OmniRoute est **gratuit et open source**. Vous ne payez que les fournisseurs que
 
 **Oui !** OmniRoute fonctionne avec tout outil prenant en charge le format OpenAI. Définissez simplement l'URL de base sur `http://localhost:20128/v1`. Consultez le [guide des outils CLI](../reference/CLI-TOOLS.md) pour obtenir des instructions de configuration spécifiques.
 
-### « Que se passe-t-il si un fournisseur tombe en panne ? »
+### « Que se passe-t-il si un fournisseur devient indisponible ? »
 
 OmniRoute ignore automatiquement les fournisseurs défaillants et essaie le suivant. Vous n'avez rien à faire. Consultez le [guide Auto-Combo](./AUTO-COMBO-GUIDE.md) pour plus de détails.
 

@@ -1,0 +1,1 @@
+- **fix(translator):** Claude Code `WebSearch` routed to Gemini/Antigravity now enables Google Search grounding and returns `server_tool_use` + `web_search_tool_result` blocks instead of plain text ([#16351](https://github.com/diegosouzapw/OmniRoute/pull/16351)) — thanks @wray-lee

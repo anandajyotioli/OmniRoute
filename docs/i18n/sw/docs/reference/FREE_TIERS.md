@@ -24,7 +24,7 @@ Takwimu hizi zinaelezea akaunti tofauti za wahusika wengine na masharti ya ustah
 | **+ nyuma ya ukaguzi wa utambulisho wa kikanda**             | **+~6M**             | `modelscope` (kuunganisha Alibaba Cloud + uthibitishaji wa jina halisi wa China bara). Kiwango halisi cha matumizi kinachojirudia, kinachoonyeshwa kama `gatedRecurringTokens` / `gatedProviders` na kwenye dashibodi. Kamwe hakijumlishwi katika takwimu kuu: +~6M nyuma ya uthibitishaji wa utambulisho wa kikanda.                     |
 | Kiwango cha juu cha kinadharia (vikomo vyote vya kasi, 24/7) | ~10B                 | Jumla ya vikomo vya kasi vya kila mtoa huduma vilivyokadiriwa kwa matumizi yasiyokoma. **Si hakikisho** — usikitumie kama takwimu kuu.                                                                                                                                                                                                    |
 
-**Takwimu kuu ya uaminifu:** _OmniRoute hujumlisha **~1.62B za tokeni za bila malipo zilizorekodiwa kwa mwezi** (hadi ~2.22B katika mwezi wako wa kwanza pamoja na salio la kujisajili) katika hifadhi 35 za viwango vya bila malipo — pamoja na mfululizo mrefu wa watoa huduma wasio na kikomo na walio bila malipo daima — huku ubanaji wa RTK + Caveman (uokoaji wa tokeni wa 15–95%) ukiongeza manufaa hayo zaidi._
+**Takwimu kuu ya uaminifu:** _OmniRoute hujumlisha **~1.62B za tokeni za bila malipo zilizorekodiwa kwa mwezi** (hadi ~2.22B katika mwezi wako wa kwanza pamoja na salio la kujisajili) katika hifadhi 34 za viwango vya bila malipo — pamoja na mfululizo mrefu wa watoa huduma wasio na kikomo na walio bila malipo daima — huku ubanaji wa RTK + Caveman (uokoaji wa tokeni wa 15–95%) ukiongeza manufaa hayo zaidi._
 
 > **Kwa nini idadi hii ilishuka kutoka ~1.94B ya awali.** Uonyeshaji upya wa 2026-06-17 ni marekebisho ya uaminifu, si upotevu: `gemini` sasa imeondolewa urudufu katika kundi (awali ilikuwa imeongezwa kupita kiasi kwa kuhesabu kila kibadala cha Flash kando, 462M → 60M), `cloudflare-ai` imesahihishwa hadi kiwango chake halisi cha Neurons 10k kwa siku (122M → 30M), `doubao` imeainishwa upya kuwa salio la mara moja wakati wa kujisajili (si linalojirudia), na viwango vilivyofungwa vimeondolewa (`chutes`/`phind`/`kluster` zilikomeshwa). Hili limefidiwa kwa sehemu na `llm7` (kiwango sahihi cha 5M kwa siku → 150M) na watoa huduma wapya wa bila malipo (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -36,7 +36,7 @@ Takwimu hizi zinaelezea akaunti tofauti za wahusika wengine na masharti ya ustah
 >
 > **Ilisahihishwa tarehe 2026-09-03 (#11773):** `cerebras` iliainishwa upya kutoka ruzuku inayojirudia ya 30M kwa mwezi (jaribio la zamani lisilohitaji kadi la tokeni 1M kwa siku) hadi salio la mara moja la $5 wakati wa kujisajili ambalo linahitaji njia ya malipo. Kanuni ileile ya uaminifu kama ya LongCat.
 >
-> **Pamoja na xKiro (2026-09-03):** kundi jipya la `xkiro-free` (150M kwa mwezi) linaongeza ufunguo wa 35 wa kundi linalojirudia. Felo Web inaendelea kuondolewa huku asili/utoaji leseni wake unaotokana na GPL ukiendelea kuwa kwenye HOLD. Chanzo sasa kinaripoti **funguo 35 za makundi yanayojirudia** na **~1.62B endelevu** — idadi ya moja kwa moja, inayodhibitiwa na CI (`check:docs-counts` hufanya ujenzi ushindwe ikiwa idadi hii inapotoka kutoka `computeFreeModelTotals()`).
+> **Pamoja na xKiro (2026-09-03):** kundi jipya la `xkiro-free` (150M kwa mwezi) linaongeza ufunguo wa 35 wa kundi linalojirudia. Felo Web inaendelea kuondolewa huku asili/utoaji leseni wake unaotokana na GPL ukiendelea kuwa kwenye HOLD. Chanzo sasa kinaripoti **funguo 34 za makundi yanayojirudia** na **~1.62B endelevu** — idadi ya moja kwa moja, inayodhibitiwa na CI (`check:docs-counts` hufanya ujenzi ushindwe ikiwa idadi hii inapotoka kutoka `computeFreeModelTotals()`).
 
 Wachangiaji wakubwa zaidi **waliorekodiwa**: `mistral` 1.00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (vikomo vitano kwa kila modeli), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` imeondolewa — ruzuku yake ya 10M ya LongCat-2.0 ni salio la mara moja wakati wa kujisajili, linalohitaji KYC, si bajeti ya kila mwezi inayojirudia.)
 
@@ -136,7 +136,6 @@ Takwimu nyingi za "tokeni zisizolipishwa kwa mwezi" katika eneo hili ni jumla ya
 | `modal`          | Sehemu ya 1.3 ya ToS inapiga marufuku waziwazi "kukodisha, kuuza tena au kwa njia nyingine kumruhusu mhusika mwingine yeyote kufikia moja kwa moja au kutumia Huduma" — kuunda huduma inayopangishwa na mtumiaji… |
 | `muse-spark-web` | ToS ya Meta inapiga marufuku waziwazi ufikiaji wa kiotomatiki bila ruhusa ya awali, uhandisi wa kinyume bila ruhusa ya maandishi, na kukwepa teknolo…                                                             |
 | `nlpcloud`       | ToS inapiga marufuku waziwazi "kuanzisha proksi au kifaa kingine kinachowaruhusu wengine kufikia Huduma kupitia humo" na inatoa tu haki isiyoweza kuhamishwa,…                                                    |
-| `opencode`       | ToS (Anomaly Innovations, Inc.) inaweka wazi matumizi kwa "matumizi yako ya ndani pekee, na si kwa niaba ya au kwa manufaa ya mhusika mwingine yeyote" — ope…                                                     |
 | `t3-web`         | ToS inaweka wazi akaunti kwa matumizi binafsi pekee, inapiga marufuku kushiriki vitambulisho na wahusika wengine, na inakataza ufikiaji wa kiotomatiki/boti/uchotaji — …                                          |
 
 ### ✅ Kwa ujumla yanaruhusu — caution / ambiguous / ok (yaliyosalia)
@@ -279,7 +278,6 @@ Takwimu nyingi za "tokeni zisizolipishwa kwa mwezi" katika eneo hili ni jumla ya
 | `muse-spark-web` | bila ufunguo        | —                      | —                        | epuka       | 3      |
 | `nlpcloud`       | bila ufunguo        | —                      | —                        | epuka       | 1      |
 | `nvidia`         | bila ufunguo        | —                      | —                        | tahadhari   | 13     |
-| `opencode`       | bila ufunguo        | —                      | —                        | epuka       | 7      |
 | `pollinations`   | bila ufunguo        | —                      | —                        | tahadhari   | 31     |
 | `publicai`       | bila ufunguo        | —                      | —                        | tahadhari   | 3      |
 | `reka`           | bila ufunguo        | —                      | —                        | tahadhari   | 2      |
@@ -290,17 +288,6 @@ Takwimu nyingi za "tokeni zisizolipishwa kwa mwezi" katika eneo hili ni jumla ya
 | `uncloseai`      | bila ufunguo        | —                      | —                        | tahadhari   | 3      |
 
 ---
-
-## OpenCode Free: kizuizi cha mkataba wa kiteja (#14313)
-
-Mtoa huduma wa `opencode` asiyehitaji ufunguo (`https://opencode.ai/zen/v1` ya umma) hukataa ombi lolote
-ambalo halilingani na mkataba wa kiteja cha OpenCode kwa **403 `FreeTierError`** na
-sentensi _"Kiwango cha bure cha OpenCode kinaweza kutumiwa tu kutoka ndani ya OpenCode"_. Huku ni
-kukataa kunakohusu ombi mahususi (uamuzi sawa kwa kila akaunti kwa muundo uleule wa ombi), si
-marufuku ya modeli au muda wa kusubiri wa muunganisho — OmniRoute hulikiainisha kama `project_route_error`, huruka
-kufungiwa kwa modeli / muda wa kusubiri, na (kwenye njia sanisi ya `noauth`) husitisha kwa muda uteuzi upya
-wa kiotomatiki wa mseto kwa TTL fupi. Tuma maombi yenye orodha ya zana isiyo tupu, `stream: true`, na
-vichwa vya kipindi/UA vya OpenCode (`opencodeFreeTierContract.ts`), la sivyo tarajia 403.
 
 ## Kilichobadilika tangu katalogi iliyotolewa (`freeNote`)
 

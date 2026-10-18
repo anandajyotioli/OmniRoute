@@ -179,6 +179,7 @@ spawn ਨਾ ਕਰਨ ਵਾਲੇ ਸਰੋਤਾਂ (ਸੰਭਾਲੀ ਸ�
 | `/api/settings/import-json`               | ਪੂਰੇ ਸੈਟਿੰਗਾਂ ਬਲੌਬ ਨੂੰ ਬਦਲਦਾ ਹੈ                                  |
 | `/api/providers/health-autopilot/actions` | ਆਟੋਪਾਇਲਟ ਸੁਧਾਰਾਤਮਕ ਕਾਰਵਾਈਆਂ ਚਲਾਉਂਦਾ ਹੈ                           |
 | `/api/settings/obsidian`                  | ਕਿਸੇ ਵੀ vault ਰੂਟ ਲਈ ਮੁੜ ਵਰਤੋਂਯੋਗ WebDAV ਕ੍ਰੈਡੈਂਸ਼ੀਅਲ ਬਣਾਉਂਦਾ ਹੈ |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                     |
 
 **ਉਲੰਘਣਾ ਉੱਤੇ ਜਵਾਬ:** `401 Authentication required`
 

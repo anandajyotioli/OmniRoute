@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Ulanishlarni mavjudligiga qarab qayta tartiblash",
     "reorderByAvailabilityError": "Ulanishlarni mavjudligiga qarab qayta tartiblab boʻlmadi",
     "distributeProxies": "Proksilarni taqsimlash",
+    "clearAccountProxies": "Akkaunt proksilarini olib tashlash",
+    "clearAccountProxyAssignments": "Biriktirishlarni olib tashlash",
+    "clearAccountProxiesConfirm": "Ushbu provayderning barcha {count} ta akkauntidan, jumladan o‘chirilgan akkauntlardan ham individual proksi biriktirishlari olib tashlansinmi? Saqlangan proksilar va provayder/global biriktirishlar saqlanib qoladi. Akkauntlar yana provayder/global proksi sozlamalarini meros qilib oladi.",
+    "accountProxiesCleared": "Akkaunt proksi biriktirishlari olib tashlandi.",
+    "clearAccountProxiesPartial": "{count} ta akkauntni to‘liq tiklab bo‘lmadi. Ko‘rsatilgan biriktirishlar yangilandi; qayta urinib ko‘rishingiz mumkin.",
+    "clearAccountProxiesError": "Akkaunt proksilarini tiklab yoki ularning holatini yangilab bo‘lmadi. Sahifani qayta yuklab, yana urinib ko‘ring.",
     "distributing": "Taqsimlanmoqda...",
     "selectedCount": "{count, plural, one {# ta tanlandi} other {# ta tanlandi}}",
     "accountsCount": "{count, plural, one {# ta hisob} other {# ta hisob}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Odatiy holatda modellar roʻyxatini har 6 soatda avtomatik yangilash (MODEL_SYNC_INTERVAL_HOURS orqali sozlanadi)",
     "autoSyncEnabled": "Avtomatik sinxronlash yoqildi — modellar muntazam yangilanadi",
     "autoSyncDisabled": "Avtomatik sinxronlash o‘chirildi",
+    "autoSyncLastSynced": "Sinxronlangan: {time}",
+    "autoSyncNeverSynced": "Hech qachon sinxronlanmagan",
+    "autoSyncImmediateFailed": "Avtomatik sinxronlash yoqildi, ammo modellarni darhol yangilash amalga oshmadi",
+    "autoSyncImmediatePartialFailure": "Avtomatik sinxronlash yoqildi, ammo ayrim modellarni darhol yangilash amalga oshmadi",
     "autoSyncToggleFailed": "Avtomatik sinxronlash holatini o‘zgartirib bo‘lmadi",
     "autoSyncPartialFailure": "Avtomatik sinxronlash ayrim ulanishlar uchun yangilandi, ammo barchasi uchun emas",
     "clearAllModels": "Barcha modellarni tozalash",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Taqsimlanmoqda...",
       "complete": "Tugallandi",
-      "defaultLabel": "Proksilarni taqsimlash"
+      "defaultLabel": "Proksilarni taqsimlash",
+      "confirmMessage": "Saqlangan proksilar ushbu guruhdagi har bir akkauntga biriktirilsinmi? Bu mavjud akkaunt biriktirishlarini almashtiradi va proksi orqali yo‘naltirishni, jumladan o‘chirilgan akkauntlar uchun ham yoqadi.",
+      "confirmDistribute": "Proksilarni taqsimlash",
+      "cancel": "Bekor qilish"
     }
   },
   "providerTest": {

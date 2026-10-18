@@ -181,6 +181,7 @@ Tunnel, Tailscale, Ngrok), लूपबॅक तपासणी तरीही
 | `/api/settings/import-json`               | संपूर्ण सेटिंग्ज ब्लॉब बदलतो                                               |
 | `/api/providers/health-autopilot/actions` | ऑटोपायलट उपचारात्मक कृती अंमलात आणतो                                       |
 | `/api/settings/obsidian`                  | कोणत्याही vault रूटसाठी पुन्हा वापरता येणारी WebDAV क्रेडेन्शियल तयार करतो |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                               |
 
 **उल्लंघन झाल्यास प्रतिसाद:** `401 Authentication required`
 

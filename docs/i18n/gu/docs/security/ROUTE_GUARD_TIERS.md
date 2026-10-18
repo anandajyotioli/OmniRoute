@@ -174,6 +174,7 @@ server process બંધ કરી શકે.
 | `/api/settings/import-json`               | સંપૂર્ણ settings blob ને બદલે છે                                |
 | `/api/providers/health-autopilot/actions` | autopilot remediation actions ચલાવે છે                          |
 | `/api/settings/obsidian`                  | કોઈપણ vault root માટે ફરી વાપરી શકાય તેવા WebDAV creds બનાવે છે |
+| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens                    |
 
 **ઉલ્લંઘન પર પ્રતિસાદ:** `401 Authentication required`
 

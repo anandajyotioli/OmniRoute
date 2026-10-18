@@ -24,7 +24,7 @@ Bu raqamlar katalogdagi alohida uchinchi tomon hisoblari va ulardan foydalanish 
 | **+ mintaqaviy shaxsni tasdiqlash ortida**            | **+~6M**                      | `modelscope` (Alibaba Cloud bilan bogʻlash + materik Xitoyda haqiqiy ismni tasdiqlash). Haqiqiy takroriy kvota, `gatedRecurringTokens` / `gatedProviders` sifatida va boshqaruv panelida koʻrsatiladi. Hech qachon asosiy koʻrsatkichga qoʻshilmaydi: mintaqaviy shaxsni tasdiqlash ortida +~6M.                                                                 |
 | Nazariy maksimum (barcha tezlik cheklovlari, 24/7)    | ~10B                          | Uzluksiz foydalanishga ekstrapolyatsiya qilingan barcha provayder tezlik cheklovlarining yigʻindisi. **Kafolat emas** — buni asosiy koʻrsatkich sifatida keltirmang.                                                                                                                                                                                             |
 
-**Halol asosiy koʻrsatkich:** _OmniRoute 35 ta bepul tarif havzasi boʻylab **oyiga ~1.62B hujjatlashtirilgan bepul tokenni** (roʻyxatdan oʻtish kreditlari bilan birinchi oyingizda ~2.22B gacha) birlashtiradi — bunga qoʻshimcha ravishda doimiy bepul, cheklovsiz provayderlarning uzun roʻyxati mavjud — RTK + Caveman siqishi esa (tokenlarni 15–95% tejash) bu imkoniyatni yanada kengaytiradi._
+**Halol asosiy koʻrsatkich:** _OmniRoute 34 ta bepul tarif havzasi boʻylab **oyiga ~1.62B hujjatlashtirilgan bepul tokenni** (roʻyxatdan oʻtish kreditlari bilan birinchi oyingizda ~2.22B gacha) birlashtiradi — bunga qoʻshimcha ravishda doimiy bepul, cheklovsiz provayderlarning uzun roʻyxati mavjud — RTK + Caveman siqishi esa (tokenlarni 15–95% tejash) bu imkoniyatni yanada kengaytiradi._
 
 > **Nega bu ko‘rsatkich avvalgi ~1.94B dan kamaydi.** 2026-06-17 dagi yangilanish yo‘qotish emas, balki haqqoniylik uchun tuzatishdir: `gemini` endi pool darajasida deduplikatsiya qilinadi (ilgari har bir Flash varianti alohida hisoblanib, ko‘rsatkich oshirib yuborilgan edi, 462M → 60M), `cloudflare-ai` haqiqiy 10k-Neurons/kun miqdoriga tuzatildi (122M → 30M), `doubao` bir martalik ro‘yxatdan o‘tish krediti sifatida qayta tasniflandi (takrorlanuvchi emas) va yopilgan tariflar olib tashlandi (`chutes`/`phind`/`kluster` faoliyati to‘xtatilgan). Bu kamayish `llm7` (to‘g‘ri qiymat: 5M/kun → 150M) va yangi bepul provayderlar (Kilo, OpenCode Zen, Z.AI GLM-Flash) hisobiga qisman qoplandi.
 >
@@ -36,7 +36,7 @@ Bu raqamlar katalogdagi alohida uchinchi tomon hisoblari va ulardan foydalanish 
 >
 > **2026-09-03 da tuzatildi (#11773):** `cerebras` takrorlanuvchi 30M/oy grantdan (karta talab qilinmaydigan eski 1M token/kunlik sinov) to‘lov usulini talab qiladigan bir martalik $5 ro‘yxatdan o‘tish kreditiga qayta tasniflandi. LongCat bilan bir xil haqqoniylik qoidasi.
 >
-> **Shuningdek, xKiro (2026-09-03):** yangi `xkiro-free` pool’i (150M/oy) 35-takrorlanuvchi pool kalitini qo‘shadi. GPL asosidagi kelib chiqishi/litsenziyalashi TO‘XTATIB TURILGAN holatda qolayotgan paytda Felo Web hisobga olinmaydi. Manba endi **35 ta takrorlanuvchi pool kaliti** va **~1.62B barqaror miqdor** haqida xabar beradi — bu jonli, CI orqali nazorat qilinadigan raqam (`check:docs-counts` ushbu qiymat `computeFreeModelTotals()` natijasidan farq qilsa, build’ni muvaffaqiyatsiz qiladi).
+> **Shuningdek, xKiro (2026-09-03):** yangi `xkiro-free` pool’i (150M/oy) 35-takrorlanuvchi pool kalitini qo‘shadi. GPL asosidagi kelib chiqishi/litsenziyalashi TO‘XTATIB TURILGAN holatda qolayotgan paytda Felo Web hisobga olinmaydi. Manba endi **34 ta takrorlanuvchi pool kaliti** va **~1.62B barqaror miqdor** haqida xabar beradi — bu jonli, CI orqali nazorat qilinadigan raqam (`check:docs-counts` ushbu qiymat `computeFreeModelTotals()` natijasidan farq qilsa, build’ni muvaffaqiyatsiz qiladi).
 
 Eng katta **hujjatlashtirilgan** hissa qo‘shuvchilar: `mistral` 1.00B, `nara` 210M, `llm7` 150M, `xkiro` 150M, `groq` 30M (har bir model uchun beshta alohida limit), `cloudflare-ai` 30M, `api-airforce` 24M. (`longcat` hisobga olinmaydi — uning 10M LongCat-2.0 granti takrorlanuvchi oylik budjet emas, balki KYC talab qilinadigan bir martalik ro‘yxatdan o‘tish kreditidir.)
 
@@ -137,7 +137,6 @@ Bu sohadagi aksariyat „oyiga bepul tokenlar“ ko‘rsatkichlari har bir model
 | `modal`          | ToS 1.3-bo‘limi „xizmatni ijaraga berish, qayta sotish yoki boshqa yo‘l bilan uchinchi tomonga to‘g‘ridan-to‘g‘ri kirish yoxud foydalanish imkonini berish“ni aniq taqiqlaydi — o‘zi joylashtiradigan…                 |
 | `muse-spark-web` | Meta ToS oldindan ruxsatsiz avtomatlashtirilgan kirish, yozma ruxsatsiz teskari muhandislik va texnologik cheklovlarni chetlab o‘tishni aniq taqiqlaydi…                                                               |
 | `nlpcloud`       | ToS „boshqalarga u orqali Xizmatga kirish imkonini beradigan proksi yoki boshqa qurilmani sozlash“ni aniq taqiqlaydi va faqat boshqalarga o‘tkazib bo‘lmaydigan…                                                       |
-| `opencode`       | ToS (Anomaly Innovations, Inc.) foydalanishni „faqat o‘zingizning ichki foydalanishingiz uchun, hech qanday uchinchi tomon nomidan yoki uning manfaati uchun emas“ deb aniq cheklaydi — ope…                           |
 | `t3-web`         | ToS hisoblarni faqat shaxsiy foydalanish bilan aniq cheklaydi, hisob ma’lumotlarini uchinchi tomonlar bilan ulashishni taqiqlaydi va avtomatlashtirilgan/bot/scraping orqali kirishni man etadi — bunday…              |
 
 ### ✅ Umuman olganda ruxsat beruvchi — ehtiyotkorlik / noaniq / ruxsat etilgan (qolganlari)
@@ -280,7 +279,6 @@ Bu sohadagi aksariyat „oyiga bepul tokenlar“ ko‘rsatkichlari har bir model
 | `muse-spark-web` | kalitsiz                  | —                    | —                   | foydalanmang          | 3        |
 | `nlpcloud`       | kalitsiz                  | —                    | —                   | foydalanmang          | 1        |
 | `nvidia`         | kalitsiz                  | —                    | —                   | ehtiyotkorlik         | 13       |
-| `opencode`       | kalitsiz                  | —                    | —                   | foydalanmang          | 7        |
 | `pollinations`   | kalitsiz                  | —                    | —                   | ehtiyotkorlik         | 31       |
 | `publicai`       | kalitsiz                  | —                    | —                   | ehtiyotkorlik         | 3        |
 | `reka`           | kalitsiz                  | —                    | —                   | ehtiyot               | 2        |
@@ -291,10 +289,6 @@ Bu sohadagi aksariyat „oyiga bepul tokenlar“ ko‘rsatkichlari har bir model
 | `uncloseai`      | kalitsiz                  | —                    | —                   | ehtiyot               | 3        |
 
 ---
-
-## OpenCode Free: mijoz shartnomasi cheklovi (#14313)
-
-Kalitsiz `opencode` provayderi (ommaviy `https://opencode.ai/zen/v1`) OpenCode mijoz shartnomasiga mos kelmaydigan har qanday soʻrovni **403 `FreeTierError`** va _"OpenCode bepul tarifidan faqat OpenCode ichida foydalanish mumkin"_ jumlasi bilan rad etadi. Bu model taqiqi yoki ulanishning vaqtincha bloklanishi emas, balki soʻrov doirasidagi rad etishdir (bir xil soʻrov tuzilishi uchun har bir hisobda bir xil qaror) — OmniRoute uni `project_route_error` sifatida tasniflaydi, model blokirovkasi / vaqtincha bloklashni chetlab oʻtadi va (sintetik `noauth` yoʻlida) qisqa TTL davomida avtomatik kombinatsiyani qayta tanlashni pauza qiladi. Boʻsh boʻlmagan vositalar roʻyxati, `stream: true` va OpenCode sessiya/UA sarlavhalari (`opencodeFreeTierContract.ts`) mavjud soʻrovlarni yuboring, aks holda 403 javobini kuting.
 
 ## Yetkazib berilgan katalogdan (`freeNote`) beri nimalar oʻzgardi
 

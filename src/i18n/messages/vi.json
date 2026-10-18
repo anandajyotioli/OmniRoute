@@ -5376,6 +5376,12 @@
     "reorderByAvailabilityTitle": "Sắp xếp lại các kết nối theo tình trạng khả dụng",
     "reorderByAvailabilityError": "Không thể sắp xếp lại các kết nối theo tình trạng khả dụng",
     "distributeProxies": "Phân phối proxy",
+    "clearAccountProxies": "Xóa proxy của tài khoản",
+    "clearAccountProxyAssignments": "Xóa các chỉ định",
+    "clearAccountProxiesConfirm": "Xóa các chỉ định proxy riêng lẻ khỏi tất cả {count} tài khoản của nhà cung cấp này, bao gồm cả các tài khoản đã vô hiệu hóa? Các proxy đã lưu và các chỉ định ở cấp nhà cung cấp/toàn cục sẽ được giữ nguyên. Các tài khoản sẽ lại kế thừa cài đặt proxy ở cấp nhà cung cấp/toàn cục.",
+    "accountProxiesCleared": "Đã xóa các chỉ định proxy của tài khoản.",
+    "clearAccountProxiesPartial": "Không thể đặt lại hoàn toàn {count} tài khoản. Các chỉ định đang hiển thị đã được làm mới; bạn có thể thử lại.",
+    "clearAccountProxiesError": "Không thể đặt lại proxy của tài khoản hoặc làm mới trạng thái của chúng. Vui lòng tải lại và thử lại.",
     "distributing": "Đang phân phối...",
     "selectedCount": "{count, plural, one {# đã chọn} other {# đã chọn}}",
     "accountsCount": "{count, plural, one {# tài khoản} other {# tài khoản}}",
@@ -5581,6 +5587,10 @@
     "autoSyncTooltip": "Tự động làm mới danh sách mô hình mỗi 6 giờ theo mặc định (có thể cấu hình qua MODEL_SYNC_INTERVAL_HOURS)",
     "autoSyncEnabled": "Đã bật tự động đồng bộ hóa — các mô hình sẽ được làm mới định kỳ",
     "autoSyncDisabled": "Đã tắt tự động đồng bộ hóa",
+    "autoSyncLastSynced": "Đã đồng bộ {time}",
+    "autoSyncNeverSynced": "Chưa từng đồng bộ",
+    "autoSyncImmediateFailed": "Đã bật tự động đồng bộ hóa, nhưng làm mới mô hình ngay lập tức không thành công",
+    "autoSyncImmediatePartialFailure": "Đã bật tự động đồng bộ hóa, nhưng một số lần làm mới mô hình ngay lập tức không thành công",
     "autoSyncToggleFailed": "Không thể chuyển đổi trạng thái tự động đồng bộ hóa",
     "autoSyncPartialFailure": "Tự động đồng bộ hóa đã cập nhật cho một số kết nối, nhưng không phải tất cả",
     "clearAllModels": "Xóa tất cả mô hình",
@@ -14680,7 +14690,10 @@
     "distributeProxies": {
       "distributing": "Đang phân phối...",
       "complete": "Hoàn tất",
-      "defaultLabel": "Phân phối proxy"
+      "defaultLabel": "Phân phối proxy",
+      "confirmMessage": "Chỉ định các proxy đã lưu cho mọi tài khoản trong nhóm này? Thao tác này sẽ thay thế các chỉ định tài khoản hiện có và bật định tuyến qua proxy, bao gồm cả đối với các tài khoản đã vô hiệu hóa.",
+      "confirmDistribute": "Phân phối proxy",
+      "cancel": "Hủy"
     }
   },
   "providerTest": {
